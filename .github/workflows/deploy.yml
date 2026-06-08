@@ -4,6 +4,7 @@ on:
   push:
     branches: 
       - master
+      - main
 
 jobs:
   deploy:
@@ -14,6 +15,12 @@ jobs:
         with:
           submodules: true
           fetch-depth: 0
+
+      - name: Install dependencies
+        run: |
+          if [ -f package.json ]; then
+            npm ci || npm install
+          fi
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
