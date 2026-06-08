@@ -1,0 +1,30 @@
+locale = "en"
+label = "English"
+direction = "ltr"
+weight = 1
+
+title = "k40t1k"
+# copyright = "Copy, _right?_ :thinking_face:"
+
+[params]
+  dateFormat = "2 January 2006"
+
+  # mainSections = ["section1", "section2"]
+   description = "My awesome website"
+
+[params.author]
+   name = "k40t1k"
+   image = "img/k40t1k.jpeg"
+  
+
+   headline = "Networking |  Digital Forensics | Active Directory | CTF-Player | Ethical Hacker" 
+
+   links = [
+   
+  #    { email = "jkilonzi301@gmail.com" },
+      { github = "https://github.com/jkilonzi" },
+      { linkedin = "https://linkedin.com/in/john-maluki" },
+      { medium = "https://medium.com/@jkilonzi301" }, 
+ #   { x-twitter = "https://twitter.com/username" },
+
+  ]
