@@ -75,6 +75,13 @@
     font-size: 0.85em;
     opacity: 0.6;
   }
+
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    grid-column: 1 / -1;
+    opacity: 0.6;
+  }
 </style>
 
 <div style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
@@ -100,24 +107,42 @@
       </a>
     {{ end }}
 
-    {{ $feed := getJSON "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@jkilonzi301" }}
-    {{ if $feed }}
-      {{ range $feed.items }}
-        <a href="{{ .link }}" target="_blank" class="writeup-card">
-          {{ $img := .thumbnail }}
-          {{ if not $img }}
-            {{ $img = "https://via.placeholder.com/400x200.png?text=Medium" }}
-          {{ end }}
-          <img src="{{ $img }}" alt="Thumbnail" class="writeup-img">
-          <div class="writeup-info">
-            <span class="tag-medium">Medium</span>
-            <h4 class="writeup-title">{{ .title }}</h4>
-            <p class="writeup-date">{{ index (split .pubDate " ") 0 }}</p>
-          </div>
-        </a>
-      {{ end }}
-    {{ end }}
-    
+    <div class="loading" id="loading-indicator">Loading Medium posts...</div>
   </div>
 </div>
+
+<script>
+  fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@jkilonzi301')
+    .then((res) => res.json())
+    .then((data) => {
+      const container = document.getElementById('blog-grid');
+      const indicator = document.getElementById('loading-indicator');
+      if (indicator) indicator.remove();
+
+      data.items.forEach((item) => {
+        let imgUrl = item.thumbnail;
+        if (!imgUrl || imgUrl === "") {
+            const imgRegex = /<img[^>]+src="([^">]+)"/;
+            const match = (item.content || item.description || "").match(imgRegex);
+            imgUrl = match ? match[1] : 'https://via.placeholder.com/400x200.png?text=Medium';
+        }
+        
+        const articleHTML = `
+          <a href="${item.link}" target="_blank" class="writeup-card">
+            <img src="${imgUrl}" alt="Thumbnail" class="writeup-img">
+            <div class="writeup-info">
+              <span class="tag-medium">Medium</span>
+              <h4 class="writeup-title">${item.title}</h4>
+              <p class="writeup-date">${item.pubDate.split(' ')[0]}</p>
+            </div>
+          </a>
+        `;
+        container.innerHTML += articleHTML;
+      });
+    })
+    .catch((error) => {
+      document.getElementById('loading-indicator').textContent = 'Failed to load Medium posts.';
+      console.error("Medium feed failed to load", error);
+    });
+</script>
 {{ end }}
