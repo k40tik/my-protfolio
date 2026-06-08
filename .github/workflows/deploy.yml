@@ -1,0 +1,21 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [master]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+      - uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: latest
+      - run: hugo --minify
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          external_repository: k40tik/k40tik.github.io
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          publish_dir: ./public

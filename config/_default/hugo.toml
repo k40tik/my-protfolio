@@ -4,7 +4,7 @@
 
 
 theme = "congo" 
-baseURL = "https://your_domain.com/"
+baseURL = "https://k40tik.github.io/"
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true
