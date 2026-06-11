@@ -101,6 +101,9 @@
         {{ end }}
 
         <div class="writeup-info">
+          {{ with index .Params.tags 0 }}
+            <span class="tag-medium">{{ . }}</span>
+          {{ end }}
           <h4 class="writeup-title">{{ .Title }}</h4>
           <p class="writeup-date">{{ .Date.Format "2006-01-02" }}</p>
         </div>

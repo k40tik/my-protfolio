@@ -20,6 +20,10 @@
   pageRef = "posts"
   weight = 10
 
+[[main]]
+  name = "Resources"
+  pageRef = "resources"
+  weight = 15
 
 [[main]]
   identifier = "search"
