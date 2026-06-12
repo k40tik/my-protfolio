@@ -1,5 +1,5 @@
 +++
-title = "Certifications"
+title = "Certificates"
 layout = "simple"
 +++
 

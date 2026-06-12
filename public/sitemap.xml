@@ -10,7 +10,7 @@
   
     
       <url>
-            <loc>http://localhost:1313/posts/dc03-hackmyvm/</loc>
+            <loc>https://k40tik.github.io/posts/dc03-hackmyvm/</loc>
             <lastmod>2026-06-11T18:43:53+03:00</lastmod>
           </url>
     
@@ -19,7 +19,7 @@
   
     
       <url>
-            <loc>http://localhost:1313/</loc>
+            <loc>https://k40tik.github.io/</loc>
             <lastmod>2026-06-11T18:43:53+03:00</lastmod>
           </url>
     
@@ -34,21 +34,28 @@
   
     
       <url>
-            <loc>http://localhost:1313/resources/</loc>
+            <loc>https://k40tik.github.io/resources/</loc>
             <lastmod>2026-06-10T10:00:00+03:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/posts/</loc>
+            <loc>https://k40tik.github.io/posts/</loc>
             <lastmod>2026-05-27T13:02:42+03:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>http://localhost:1313/about/</loc>
+            <loc>https://k40tik.github.io/medium-writeups/</loc>
+            <lastmod>2026-05-27T12:22:26+03:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://k40tik.github.io/about/</loc>
             <lastmod>2026-05-26T15:40:38+03:00</lastmod>
           </url>
     
@@ -57,7 +64,7 @@
   
     
       <url>
-            <loc>http://localhost:1313/certifications/</loc>
+            <loc>https://k40tik.github.io/certificates/</loc>
           </url>
     
   

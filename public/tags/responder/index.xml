@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Responder on k40t1k</title>
-    <link>http://localhost:1313/tags/responder/</link>
+    <link>https://k40tik.github.io/tags/responder/</link>
     <description>Recent content in Responder on k40t1k</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 11 Jun 2026 18:43:53 +0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/responder/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://k40tik.github.io/tags/responder/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>DC03 — HackMyVM</title>
-      <link>http://localhost:1313/posts/dc03-hackmyvm/</link>
+      <link>https://k40tik.github.io/posts/dc03-hackmyvm/</link>
       <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-      <guid>http://localhost:1313/posts/dc03-hackmyvm/</guid>
+      <guid>https://k40tik.github.io/posts/dc03-hackmyvm/</guid>
       <description></description>
     </item>
   </channel>
