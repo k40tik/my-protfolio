@@ -191,13 +191,47 @@
             <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
               
                 <a
-                  href=""
-                  title=""
+                  href="/posts/"
+                  title="Blog"
                   
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
                       >Blog</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certifications/"
+                  title="Certifications"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certifications</span
                     >
                   </a
                 >
@@ -223,13 +257,178 @@
     <div class="relative flex grow flex-col">
       <main id="main-content" class="grow">
         
-  
-  
-    <article
-  class="
-    h-full
-   flex flex-col items-center justify-center text-center"
->
+<style>
+  .post-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .post-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.2s ease;
+  }
+
+  .post-card:last-child {
+    border-bottom: none;
+  }
+
+  .post-card:hover {
+    transform: translateX(5px);
+  }
+
+  .post-thumbnail-link {
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+
+  .post-thumbnail {
+    position: relative;
+    width: 160px;
+    height: 90px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #4a8bf5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  .post-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .thumbnail-placeholder span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .post-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(15, 20, 30, 0.9);
+    color: #e2e8f0;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.25rem 0.5rem;
+    border-top-left-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .post-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .post-date {
+    color: #3b82f6;
+    font-weight: 600;
+  }
+
+  .post-read-time {
+    color: #64748b;
+  }
+
+  .post-title {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .post-title a {
+    color: #f8fafc;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .post-title a:hover {
+    color: #3b82f6;
+  }
+
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+  }
+
+  .tag {
+    color: #94a3b8;
+    font-size: 0.75rem;
+    text-decoration: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    background-color: rgba(15, 23, 42, 0.4);
+    transition: all 0.2s ease;
+  }
+
+  .tag:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .activities-heading {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+  }
+
+  .view-all {
+    display: inline-block;
+    margin-top: 1.5rem;
+    font-size: 0.95em;
+    font-weight: 600;
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .view-all:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: 600px) {
+    .post-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .post-thumbnail {
+      width: 100%;
+      height: 180px;
+    }
+  }
+</style>
+
+<article class="flex flex-col items-center justify-center text-center">
   
 <section
   class="not-prose 
@@ -361,12 +560,102 @@
 
   <section class="prose dark:prose-invert"></section>
 </article>
-<section>
-  
 
+<section class="activities-section" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255, 255, 255, 0.08);">
+  <h2 class="activities-heading">Recent Activities</h2>
+
+  <div class="post-list" id="activity-list">
+    
+    
+      
+      <article class="post-card">
+        <a href="/posts/dc03-hackmyvm/" class="post-thumbnail-link">
+          <div class="post-thumbnail">
+            
+              <img src="/posts/dc03-hackmyvm/feature.png" alt="DC03 — HackMyVM" loading="lazy">
+            
+            <span class="post-badge">WRITEUP</span>
+          </div>
+        </a>
+        <div class="post-content">
+          <div class="post-meta">
+            <time class="post-date" datetime="2026-06-11T18:43:53&#43;03:00">
+              11 Jun 2026
+            </time>
+            <span class="post-read-time">5 min read</span>
+          </div>
+          <h2 class="post-title">
+            <a href="/posts/dc03-hackmyvm/">DC03 — HackMyVM</a>
+          </h2>
+          <div class="post-tags">
+            
+              <span class="tag">Active Directory</span>
+            
+              <span class="tag">Privilege Escalation</span>
+            
+              <span class="tag">LLMNR Poisoning</span>
+            
+              <span class="tag">Account Operators</span>
+            
+              <span class="tag">Impacket</span>
+            
+              <span class="tag">Responder</span>
+            
+              <span class="tag">CTF Writeup</span>
+            
+          </div>
+        </div>
+      </article>
+    
+  </div>
+
+  <a href="/posts/" class="view-all">View all activities &rarr;</a>
+
+<script>
+  fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@jkilonzi301')
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      var container = document.getElementById('activity-list');
+      var localCount = container.querySelectorAll('.post-card').length;
+      var remaining = Math.max(0, 5 - localCount);
+      (data.items || []).slice(0, remaining).forEach(function(item) {
+        var imgUrl = item.thumbnail;
+        if (!imgUrl || imgUrl === '') {
+          var match = (item.content || item.description || '').match(/<img[^>]+src="([^">]+)"/);
+          imgUrl = match ? match[1] : '';
+        }
+
+        var card = document.createElement('article');
+        card.className = 'post-card';
+
+        var pubDate = new Date(item.pubDate);
+        var formattedDate = pubDate.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+
+        card.innerHTML =
+          '<a href="' + item.link + '" target="_blank" class="post-thumbnail-link">' +
+            '<div class="post-thumbnail">' +
+              (imgUrl ? '<img src="' + imgUrl + '" alt="' + item.title.replace(/"/g, '&quot;') + '" loading="lazy">' : '<div class="thumbnail-placeholder"><span>' + item.title.charAt(0) + '</span></div>') +
+              '<span class="post-badge">MEDIUM</span>' +
+            '</div>' +
+          '</a>' +
+          '<div class="post-content">' +
+            '<div class="post-meta">' +
+              '<time class="post-date">' + formattedDate + '</time>' +
+              '<span class="post-read-time">medium</span>' +
+            '</div>' +
+            '<h2 class="post-title">' +
+              '<a href="' + item.link + '" target="_blank">' + item.title + '</a>' +
+            '</h2>' +
+          '</div>';
+
+        container.appendChild(card);
+      });
+    })
+    .catch(function(err) {
+      console.error('Medium feed failed to load', err);
+    });
+</script>
 </section>
-
-  
 
       </main>
       

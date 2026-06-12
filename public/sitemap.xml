@@ -3,6 +3,50 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/posts/dc03-hackmyvm/</loc>
+            <lastmod>2026-06-11T18:43:53+03:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/</loc>
+            <lastmod>2026-06-11T18:43:53+03:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/resources/</loc>
+            <lastmod>2026-06-10T10:00:00+03:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/posts/</loc>
+            <lastmod>2026-05-27T13:02:42+03:00</lastmod>
+          </url>
+    
+  
+    
       <url>
             <loc>http://localhost:1313/about/</loc>
             <lastmod>2026-05-26T15:40:38+03:00</lastmod>
@@ -13,10 +57,8 @@
   
     
       <url>
-            <loc>http://localhost:1313/</loc>
+            <loc>http://localhost:1313/certifications/</loc>
           </url>
-    
-  
     
   
 </urlset>

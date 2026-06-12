@@ -6,6 +6,56 @@
     <description>Recent content in Tags on k40t1k</description>
     <generator>Hugo</generator>
     <language>en</language>
+    <lastBuildDate>Thu, 11 Jun 2026 18:43:53 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Account Operators</title>
+      <link>http://localhost:1313/tags/account-operators/</link>
+      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
+      <guid>http://localhost:1313/tags/account-operators/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Active Directory</title>
+      <link>http://localhost:1313/tags/active-directory/</link>
+      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
+      <guid>http://localhost:1313/tags/active-directory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CTF Writeup</title>
+      <link>http://localhost:1313/tags/ctf-writeup/</link>
+      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
+      <guid>http://localhost:1313/tags/ctf-writeup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Impacket</title>
+      <link>http://localhost:1313/tags/impacket/</link>
+      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
+      <guid>http://localhost:1313/tags/impacket/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLMNR Poisoning</title>
+      <link>http://localhost:1313/tags/llmnr-poisoning/</link>
+      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
+      <guid>http://localhost:1313/tags/llmnr-poisoning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Privilege Escalation</title>
+      <link>http://localhost:1313/tags/privilege-escalation/</link>
+      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
+      <guid>http://localhost:1313/tags/privilege-escalation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Responder</title>
+      <link>http://localhost:1313/tags/responder/</link>
+      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
+      <guid>http://localhost:1313/tags/responder/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

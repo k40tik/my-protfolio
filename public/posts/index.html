@@ -189,6 +189,40 @@
             
             <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
               
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certifications/"
+                  title="Certifications"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certifications</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
                 
                 
               
@@ -281,6 +315,13 @@
     font-size: 0.85em;
     opacity: 0.6;
   }
+
+  .loading {
+    text-align: center;
+    padding: 2rem;
+    grid-column: 1 / -1;
+    opacity: 0.6;
+  }
 </style>
 
 <div style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
@@ -291,22 +332,36 @@
 
   <div id="blog-grid" class="writeups-grid">
     
+      <a href="/posts/dc03-hackmyvm/" class="writeup-card">
+        
+        
+          <img src="/posts/dc03-hackmyvm/feature.png" alt="Thumbnail" class="writeup-img">
+        
+
+        <div class="writeup-info">
+          
+            <span class="tag-medium">Active Directory</span>
+          
+          <h4 class="writeup-title">DC03 — HackMyVM</h4>
+          <p class="writeup-date">2026-06-11</p>
+        </div>
+      </a>
     
-    
-    
+
+    <div class="loading" id="loading-indicator">Loading Medium posts...</div>
   </div>
 </div>
-
 
 <script>
   fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@jkilonzi301')
     .then((res) => res.json())
     .then((data) => {
       const container = document.getElementById('blog-grid');
-      
+      const indicator = document.getElementById('loading-indicator');
+      if (indicator) indicator.remove();
+
       data.items.forEach((item) => {
         let imgUrl = item.thumbnail;
-        
         if (!imgUrl || imgUrl === "") {
             const imgRegex = /<img[^>]+src="([^">]+)"/;
             const match = (item.content || item.description || "").match(imgRegex);
@@ -323,11 +378,13 @@
             </div>
           </a>
         `;
-        
         container.innerHTML += articleHTML;
       });
     })
-    .catch((error) => console.error("Medium feed failed to load", error));
+    .catch((error) => {
+      document.getElementById('loading-indicator').textContent = 'Failed to load Medium posts.';
+      console.error("Medium feed failed to load", error);
+    });
 </script>
 
       </main>
