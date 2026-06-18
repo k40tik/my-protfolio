@@ -94,4 +94,16 @@ layout = "simple"
       <img src="/img/certs/hkcert-2025.png" alt="HKCERT 2025" loading="lazy">
     </div>
   </div>
+
+  <div class="cert-card" onclick="this.classList.toggle('flipped')">
+    <div class="cert-face cert-front">
+      <div>
+        <h3>boroCTF 2026</h3>
+        <span class="cert-hint">click to flip</span>
+      </div>
+    </div>
+    <div class="cert-face cert-back">
+      <img src="/img/certs/boroctf-2026.png" alt="boroCTF 2026" loading="lazy">
+    </div>
+  </div>
 </div>
