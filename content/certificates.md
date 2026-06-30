@@ -110,7 +110,7 @@ layout = "simple"
   <div class="cert-card" onclick="this.classList.toggle('flipped')">
     <div class="cert-face cert-front">
       <div>
-        <h3>CAPT 2025</h3>
+        <h3>Certified Associate Penetration Tester (CAPT) 2025</h3>
         <span class="cert-hint">click to flip</span>
       </div>
     </div>
