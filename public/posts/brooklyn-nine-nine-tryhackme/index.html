@@ -1,0 +1,1174 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e174e" />
+  
+  <title>Brooklyn Nine Nine — TryHackMe &middot; k40t1k</title>
+    <meta name="title" content="Brooklyn Nine Nine — TryHackMe &middot; k40t1k" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.77a79972dfd1fba3e37eaab972e5cf479aea24376fc39d827f5760735ebc834e.css"
+    integrity="sha256-d6eZct/R&#43;6Pjfqq5cuXPR5rqJDdvw52Cf1dgc168g04="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/">
+  <meta property="og:site_name" content="k40t1k">
+  <meta property="og:title" content="Brooklyn Nine Nine — TryHackMe">
+  <meta property="og:description" content="My awesome website">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-29T11:43:00+03:00">
+    <meta property="article:modified_time" content="2026-06-29T11:43:00+03:00">
+    <meta property="article:tag" content="TryHackMe">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Boot2root">
+    <meta property="article:tag" content="Easy">
+    <meta property="article:tag" content="FTP">
+    <meta property="article:tag" content="Privilege Escalation">
+    <meta property="og:image" content="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/feature.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/feature.png">
+  <meta name="twitter:title" content="Brooklyn Nine Nine — TryHackMe">
+  <meta name="twitter:description" content="My awesome website">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "Brooklyn Nine Nine — TryHackMe",
+    "headline": "Brooklyn Nine Nine — TryHackMe",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/brooklyn-nine-nine-tryhackme\/",
+    "author" : {
+      "@type": "Person",
+      "name": "k40t1k"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-06-29T11:43:00\u002b03:00",
+    "datePublished": "2026-06-29T11:43:00\u002b03:00",
+    
+    "dateModified": "2026-06-29T11:43:00\u002b03:00",
+    
+    "keywords": ["TryHackMe","Linux","Boot2Root","Easy","FTP","Privilege Escalation","CTF Writeup"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "508"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "K40t1k",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "Blog",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Brooklyn Nine Nine — Try Hack Me",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="k40t1k" />
+  
+  
+    
+      <link href="https://github.com/jkilonzi" rel="me" />
+    
+      <link href="https://linkedin.com/in/john-maluki" rel="me" />
+    
+      <link href="https://medium.com/@jkilonzi301" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >k40t1k</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Blog"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Blog</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certificates/"
+                  title="Certificates"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certificates</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Brooklyn Nine Nine — TryHackMe
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-06-29 11:43:00 &#43;0300 EAT">29 June 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/feature_hu_3a5df8fa3d8409a.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="630"
+        height="630"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/feature.png"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8 self-start">
+          <div class="toc pe-5 sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)] print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#step-1-reconnaissance-and-enumeration">Step 1: Reconnaissance and Enumeration</a>
+      <ul>
+        <li><a href="#ftp--anonymous-access">FTP — Anonymous Access</a></li>
+        <li><a href="#ssh--password-authentication">SSH — Password Authentication</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-2-initial-access">Step 2: Initial Access</a></li>
+    <li><a href="#step-3-privilege-escalation">Step 3: Privilege Escalation</a>
+      <ul>
+        <li><a href="#getting-root">Getting Root</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a>
+      <ul>
+        <li><a href="#remediations">Remediations</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="overview" class="relative group">Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span></h2><p>This room is aimed for beginner level hackers but anyone can try to hack this box. There are two main intended ways to root the box.</p>
+<h2 id="step-1-reconnaissance-and-enumeration" class="relative group">Step 1: Reconnaissance and Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-reconnaissance-and-enumeration" aria-label="Anchor">#</a></span></h2><p>The assessment began with an nmap scan against the target IP to identify running services and potential entry points.</p>
+<pre tabindex="0"><code>nmap -sV -sC &lt;target_ip&gt;
+</code></pre><pre tabindex="0"><code>PORT   STATE SERVICE REASON         VERSION
+21/tcp open  ftp     syn-ack ttl 62 vsftpd 3.0.3
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-r--r--    1 0        0             119 May 17  2020 note_to_jake.txt
+| ftp-syst:
+|   STAT:
+| FTP server status:
+|      Connected to ::ffff:192.168.141.175
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 2
+|      vsFTPd 3.0.3 - secure, fast, stable
+|_End of status
+22/tcp open  ssh     syn-ack ttl 62 OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   2048 16:7f:2f:fe:0f:ba:98:77:7d:6d:3e:b6:25:72:c6:a3 (RSA)
+|   256 2e:3b:61:59:4b:c4:29:b5:e8:58:39:6f:6f:e9:9b:ee (ECDSA)
+|   256 ab:16:2e:79:20:3c:9b:0a:01:9c:8c:44:26:01:58:04 (ED25519)
+80/tcp open  http    syn-ack ttl 62 Apache httpd 2.4.29 ((Ubuntu))
+|_http-title: Site doesn&#39;t have a title (text/html).
+| http-methods:
+|_  Supported Methods: GET POST OPTIONS HEAD
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+</code></pre><p><strong>Key Findings:</strong></p>
+<ul>
+<li>FTP (port 21) allows anonymous login and contains a file <code>note_to_jake.txt</code>.</li>
+<li>SSH (port 22) has password authentication enabled.</li>
+<li>HTTP (port 80) is running Apache.</li>
+</ul>
+<h3 id="ftp--anonymous-access" class="relative group">FTP — Anonymous Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ftp--anonymous-access" aria-label="Anchor">#</a></span></h3><p>Connecting via anonymous FTP revealed a single file addressed to a user named Jake.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ftp-anon_hu_dae52431c33ea66b.webp 330w,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ftp-anon_hu_4e86ae2668d3dfbc.webp 660w
+            
+              
+                ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ftp-anon_hu_af6117c1db1aef4.webp 925w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ftp-anon_hu_af6117c1db1aef4.webp 925w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="925"
+        height="375"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ftp-anon_hu_1e2aef084d025a7e.png" srcset="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ftp-anon_hu_f8dc5274dd4d8740.png 330w,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ftp-anon_hu_1e2aef084d025a7e.png 660w
+          
+            ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ftp-anon.png 925w
+          
+          
+            ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ftp-anon.png 925w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="ssh--password-authentication" class="relative group">SSH — Password Authentication <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ssh--password-authentication" aria-label="Anchor">#</a></span></h3><p>Testing the SSH service confirmed that password-based authentication is permitted, making it a viable attack vector.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ssh-pass-auth_hu_11f53a39eec4fed5.webp 330w,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ssh-pass-auth_hu_48006290a6367719.webp 660w
+            
+              
+                ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ssh-pass-auth_hu_44fec983f3bdb3b2.webp 694w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ssh-pass-auth_hu_44fec983f3bdb3b2.webp 694w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="694"
+        height="184"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ssh-pass-auth_hu_e88662a97143ecc0.png" srcset="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ssh-pass-auth_hu_c9c1a8c1d73f9fbb.png 330w,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ssh-pass-auth_hu_e88662a97143ecc0.png 660w
+          
+            ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ssh-pass-auth.png 694w
+          
+          
+            ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/ssh-pass-auth.png 694w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-2-initial-access" class="relative group">Step 2: Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-initial-access" aria-label="Anchor">#</a></span></h2><p>The <code>note_to_jake.txt</code> file retrieved from the FTP server contains a message hinting at a weak password.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/note-to-jake_hu_3cc1ebb3fdac30db.webp 330w,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/note-to-jake_hu_de66ce2ae3dfc73b.webp 660w
+            
+              
+                ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/note-to-jake_hu_c6b1c2677b6f31a2.webp 926w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/note-to-jake_hu_c6b1c2677b6f31a2.webp 926w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="926"
+        height="138"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/note-to-jake_hu_8878b624b70b13a8.png" srcset="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/note-to-jake_hu_9dda04622ff490f4.png 330w,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/note-to-jake_hu_8878b624b70b13a8.png 660w
+          
+            ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/note-to-jake.png 926w
+          
+          
+            ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/note-to-jake.png 926w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>With a confirmed username (<code>jake</code>) and password authentication enabled on SSH, the credentials were brute-forced using Hydra with the <code>rockyou.txt</code> wordlist.</p>
+<pre tabindex="0"><code>hydra -l jake -P /usr/share/wordlists/rockyou.txt &lt;target_ip&gt; ssh -t 4
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/hydra-success_hu_6373379feb0dbeb8.webp 330w,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/hydra-success_hu_c9b5fe46f50a371a.webp 660w
+            
+              
+                ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/hydra-success_hu_540e5cefb62ecab3.webp 847w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/hydra-success_hu_540e5cefb62ecab3.webp 847w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="847"
+        height="184"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/hydra-success_hu_dcc1e281a8f6e041.png" srcset="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/hydra-success_hu_c91e400e8ec4f9df.png 330w,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/hydra-success_hu_dcc1e281a8f6e041.png 660w
+          
+            ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/hydra-success.png 847w
+          
+          
+            ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/hydra-success.png 847w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The brute force successfully recovered Jake&rsquo;s password, granting initial SSH access to the system.</p>
+<h2 id="step-3-privilege-escalation" class="relative group">Step 3: Privilege Escalation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-privilege-escalation" aria-label="Anchor">#</a></span></h2><p>After gaining access as <code>jake</code>, the first step was to check what sudo permissions were available.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/sudo-l_hu_a39ddae078ba836a.webp 330w,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/sudo-l_hu_550fe383345aefe1.webp 660w
+            
+              
+                ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/sudo-l_hu_4e6237b64996c68c.webp 811w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/sudo-l_hu_4e6237b64996c68c.webp 811w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="811"
+        height="131"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/sudo-l_hu_7a67b0666cfc26ae.png" srcset="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/sudo-l_hu_f69d2cf73549c109.png 330w,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/sudo-l_hu_7a67b0666cfc26ae.png 660w
+          
+            ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/sudo-l.png 811w
+          
+          
+            ,http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/sudo-l.png 811w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The user <code>jake</code> can run <code>less</code> as sudo without a password. This is a classic privilege escalation vector documented on <a href="https://gtfobins.github.io/gtfobins/less/" target="_blank" rel="noreferrer">GTFOBins</a>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/gtfo-bins_hu_b967a0c2836d313c.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="461"
+        height="23"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/gtfo-bins.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="getting-root" class="relative group">Getting Root <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#getting-root" aria-label="Anchor">#</a></span></h3><p>Using the sudo privilege on <code>less</code>, a root shell was spawned by reading any file and escaping to a shell:</p>
+<pre tabindex="0"><code>sudo less /etc/profile
+</code></pre><p>Inside <code>less</code>, the following command was used to drop into a root shell:</p>
+<pre tabindex="0"><code>!/bin/bash
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/root-shell_hu_8deb054325416dbf.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="368"
+        height="119"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/root-shell.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>This escalated privileges to root, completing the compromise.</p>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><p>This beginner-friendly room demonstrated a straightforward attack path:</p>
+<ol>
+<li><strong>Anonymous FTP</strong> leaked a note revealing a username.</li>
+<li><strong>SSH brute force</strong> with a weak password gained initial access.</li>
+<li><strong>Misconfigured sudo</strong> permission on <code>less</code> allowed privilege escalation to root via GTFOBins.</li>
+</ol>
+<h3 id="remediations" class="relative group">Remediations <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#remediations" aria-label="Anchor">#</a></span></h3><ul>
+<li><strong>Disable anonymous FTP</strong> if not required, or restrict it to non-sensitive directories.</li>
+<li><strong>Enforce strong passwords</strong> and implement account lockout policies to resist brute force attacks.</li>
+<li><strong>Audit sudo permissions</strong> regularly — binaries like <code>less</code>, <code>vim</code>, and <code>more</code> with sudo access can easily lead to root compromise.</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="960"
+        height="1280"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="k40t1k"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg" srcset="http://localhost:1313/img/k40t1k_hu_210ca2abc75c60a7.jpeg 330w,http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg 660w
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          k40t1k
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/jkilonzi"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/john-maluki"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://medium.com/@jkilonzi301"
+          target="_blank"
+          aria-label="Medium"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/posts/dc03-hackmyvm/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >DC03 — HackMyVM</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-06-11 18:43:53 &#43;0300 EAT">11 June 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="http://localhost:1313/posts/cyborg-tryhackme/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Cyborg — TryHackMe</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-06-30 15:00:00 &#43;0300 EAT">30 June 2026</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            k40t1k
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>

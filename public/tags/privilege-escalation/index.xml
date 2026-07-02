@@ -2,17 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Privilege Escalation on k40t1k</title>
-    <link>https://k40tik.github.io/tags/privilege-escalation/</link>
+    <link>http://localhost:1313/tags/privilege-escalation/</link>
     <description>Recent content in Privilege Escalation on k40t1k</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Jun 2026 18:43:53 +0300</lastBuildDate>
-    <atom:link href="https://k40tik.github.io/tags/privilege-escalation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Jul 2026 11:43:00 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/privilege-escalation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Team — TryHackMe</title>
+      <link>http://localhost:1313/posts/team-tryhackme/</link>
+      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/team-tryhackme/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cyborg — TryHackMe</title>
+      <link>http://localhost:1313/posts/cyborg-tryhackme/</link>
+      <pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/cyborg-tryhackme/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Brooklyn Nine Nine — TryHackMe</title>
+      <link>http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/</link>
+      <pubDate>Mon, 29 Jun 2026 11:43:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/</guid>
+      <description></description>
+    </item>
     <item>
       <title>DC03 — HackMyVM</title>
-      <link>https://k40tik.github.io/posts/dc03-hackmyvm/</link>
+      <link>http://localhost:1313/posts/dc03-hackmyvm/</link>
       <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-      <guid>https://k40tik.github.io/posts/dc03-hackmyvm/</guid>
+      <guid>http://localhost:1313/posts/dc03-hackmyvm/</guid>
       <description></description>
     </item>
   </channel>

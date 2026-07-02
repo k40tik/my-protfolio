@@ -2,59 +2,136 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on k40t1k</title>
-    <link>https://k40tik.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on k40t1k</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Jun 2026 18:43:53 +0300</lastBuildDate>
-    <atom:link href="https://k40tik.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Jul 2026 11:43:00 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Account Operators</title>
-      <link>https://k40tik.github.io/tags/account-operators/</link>
-      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-      <guid>https://k40tik.github.io/tags/account-operators/</guid>
+      <title>Boot2root</title>
+      <link>http://localhost:1313/tags/boot2root/</link>
+      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+      <guid>http://localhost:1313/tags/boot2root/</guid>
       <description></description>
     </item>
     <item>
-      <title>Active Directory</title>
-      <link>https://k40tik.github.io/tags/active-directory/</link>
-      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-      <guid>https://k40tik.github.io/tags/active-directory/</guid>
+      <title>Cron Job</title>
+      <link>http://localhost:1313/tags/cron-job/</link>
+      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+      <guid>http://localhost:1313/tags/cron-job/</guid>
       <description></description>
     </item>
     <item>
       <title>CTF Writeup</title>
-      <link>https://k40tik.github.io/tags/ctf-writeup/</link>
-      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-      <guid>https://k40tik.github.io/tags/ctf-writeup/</guid>
+      <link>http://localhost:1313/tags/ctf-writeup/</link>
+      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+      <guid>http://localhost:1313/tags/ctf-writeup/</guid>
       <description></description>
     </item>
     <item>
-      <title>Impacket</title>
-      <link>https://k40tik.github.io/tags/impacket/</link>
-      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-      <guid>https://k40tik.github.io/tags/impacket/</guid>
+      <title>Easy</title>
+      <link>http://localhost:1313/tags/easy/</link>
+      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+      <guid>http://localhost:1313/tags/easy/</guid>
       <description></description>
     </item>
     <item>
-      <title>LLMNR Poisoning</title>
-      <link>https://k40tik.github.io/tags/llmnr-poisoning/</link>
-      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-      <guid>https://k40tik.github.io/tags/llmnr-poisoning/</guid>
+      <title>FTP</title>
+      <link>http://localhost:1313/tags/ftp/</link>
+      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+      <guid>http://localhost:1313/tags/ftp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>http://localhost:1313/tags/linux/</link>
+      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+      <guid>http://localhost:1313/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Path Traversal</title>
+      <link>http://localhost:1313/tags/path-traversal/</link>
+      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+      <guid>http://localhost:1313/tags/path-traversal/</guid>
       <description></description>
     </item>
     <item>
       <title>Privilege Escalation</title>
-      <link>https://k40tik.github.io/tags/privilege-escalation/</link>
+      <link>http://localhost:1313/tags/privilege-escalation/</link>
+      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+      <guid>http://localhost:1313/tags/privilege-escalation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sudo Misconfiguration</title>
+      <link>http://localhost:1313/tags/sudo-misconfiguration/</link>
+      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+      <guid>http://localhost:1313/tags/sudo-misconfiguration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TryHackMe</title>
+      <link>http://localhost:1313/tags/tryhackme/</link>
+      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+      <guid>http://localhost:1313/tags/tryhackme/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Borgbackup</title>
+      <link>http://localhost:1313/tags/borgbackup/</link>
+      <pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/tags/borgbackup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Md5</title>
+      <link>http://localhost:1313/tags/md5/</link>
+      <pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/tags/md5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Squid</title>
+      <link>http://localhost:1313/tags/squid/</link>
+      <pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/tags/squid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Account Operators</title>
+      <link>http://localhost:1313/tags/account-operators/</link>
       <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-      <guid>https://k40tik.github.io/tags/privilege-escalation/</guid>
+      <guid>http://localhost:1313/tags/account-operators/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Active Directory</title>
+      <link>http://localhost:1313/tags/active-directory/</link>
+      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
+      <guid>http://localhost:1313/tags/active-directory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Impacket</title>
+      <link>http://localhost:1313/tags/impacket/</link>
+      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
+      <guid>http://localhost:1313/tags/impacket/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LLMNR Poisoning</title>
+      <link>http://localhost:1313/tags/llmnr-poisoning/</link>
+      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
+      <guid>http://localhost:1313/tags/llmnr-poisoning/</guid>
       <description></description>
     </item>
     <item>
       <title>Responder</title>
-      <link>https://k40tik.github.io/tags/responder/</link>
+      <link>http://localhost:1313/tags/responder/</link>
       <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-      <guid>https://k40tik.github.io/tags/responder/</guid>
+      <guid>http://localhost:1313/tags/responder/</guid>
       <description></description>
     </item>
   </channel>

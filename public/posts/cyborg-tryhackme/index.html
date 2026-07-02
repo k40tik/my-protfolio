@@ -1,0 +1,1670 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e174e" />
+  
+  <title>Cyborg — TryHackMe &middot; k40t1k</title>
+    <meta name="title" content="Cyborg — TryHackMe &middot; k40t1k" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.77a79972dfd1fba3e37eaab972e5cf479aea24376fc39d827f5760735ebc834e.css"
+    integrity="sha256-d6eZct/R&#43;6Pjfqq5cuXPR5rqJDdvw52Cf1dgc168g04="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/posts/cyborg-tryhackme/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/cyborg-tryhackme/">
+  <meta property="og:site_name" content="k40t1k">
+  <meta property="og:title" content="Cyborg — TryHackMe">
+  <meta property="og:description" content="My awesome website">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-30T15:00:00+03:00">
+    <meta property="article:modified_time" content="2026-06-30T15:00:00+03:00">
+    <meta property="article:tag" content="TryHackMe">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Boot2root">
+    <meta property="article:tag" content="Borgbackup">
+    <meta property="article:tag" content="Privilege Escalation">
+    <meta property="article:tag" content="Squid">
+    <meta property="og:image" content="http://localhost:1313/posts/cyborg-tryhackme/feature.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/cyborg-tryhackme/feature.png">
+  <meta name="twitter:title" content="Cyborg — TryHackMe">
+  <meta name="twitter:description" content="My awesome website">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "Cyborg — TryHackMe",
+    "headline": "Cyborg — TryHackMe",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/cyborg-tryhackme\/",
+    "author" : {
+      "@type": "Person",
+      "name": "k40t1k"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-06-30T15:00:00\u002b03:00",
+    "datePublished": "2026-06-30T15:00:00\u002b03:00",
+    
+    "dateModified": "2026-06-30T15:00:00\u002b03:00",
+    
+    "keywords": ["TryHackMe","linux","boot2root","borgbackup","privilege escalation","squid","md5"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "399"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "K40t1k",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "Blog",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Cyborg — Try Hack Me",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="k40t1k" />
+  
+  
+    
+      <link href="https://github.com/jkilonzi" rel="me" />
+    
+      <link href="https://linkedin.com/in/john-maluki" rel="me" />
+    
+      <link href="https://medium.com/@jkilonzi301" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >k40t1k</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Blog"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Blog</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certificates/"
+                  title="Certificates"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certificates</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Cyborg — TryHackMe
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-06-30 15:00:00 &#43;0300 EAT">30 June 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/cyborg-tryhackme/feature_hu_68ff6cf2f161c1b6.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="242"
+        height="209"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/feature.png"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8 self-start">
+          <div class="toc pe-5 sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)] print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#step-1-reconnaissance-and-enumeration">Step 1: Reconnaissance and Enumeration</a>
+      <ul>
+        <li><a href="#directory-busting">Directory Busting</a></li>
+        <li><a href="#admin-endpoint">/admin Endpoint</a></li>
+        <li><a href="#etc-endpoint">/etc Endpoint</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-2-initial-access">Step 2: Initial Access</a>
+      <ul>
+        <li><a href="#cracking-the-hash">Cracking the Hash</a></li>
+        <li><a href="#borg-backup-extraction">Borg Backup Extraction</a></li>
+        <li><a href="#ssh-access">SSH Access</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-3-privilege-escalation">Step 3: Privilege Escalation</a>
+      <ul>
+        <li><a href="#sudo-permissions">Sudo Permissions</a></li>
+        <li><a href="#analysing-backupsh">Analysing backup.sh</a></li>
+        <li><a href="#file-permissions">File Permissions</a></li>
+        <li><a href="#command-injection">Command Injection</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="overview" class="relative group">Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span></h2><p>Cyborg is a Linux box that involves discovering exposed directories on a web server, cracking an MD5 hash to access a Borg backup archive, recovering credentials from inside the backup, and escalating privileges via a sudo-backed script with command injection.</p>
+<h2 id="step-1-reconnaissance-and-enumeration" class="relative group">Step 1: Reconnaissance and Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-reconnaissance-and-enumeration" aria-label="Anchor">#</a></span></h2><p>An nmap scan revealed two open ports: SSH (22) and HTTP (80) running Apache.</p>
+<pre tabindex="0"><code>nmap -sV -sC 10.48.145.65
+</code></pre><pre tabindex="0"><code>PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 62 OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey:
+|   2048 db:b2:70:f3:07:ac:32:00:3f:81:b8:d0:3a:89:f3:65 (RSA)
+|   256 68:e6:85:2f:69:65:5b:e7:c6:31:2c:8e:41:67:d7:ba (ECDSA)
+|   256 56:2c:79:92:ca:23:c3:91:49:35:fa:dd:69:7c:ca:ab (ED25519)
+80/tcp open  http    syn-ack ttl 62 Apache httpd 2.4.18 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+</code></pre><p>Port 22 supports password authentication.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/cyborg-tryhackme/port22-auth_hu_c7df6601874188cd.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="547"
+        height="92"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/port22-auth.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="directory-busting" class="relative group">Directory Busting <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#directory-busting" aria-label="Anchor">#</a></span></h3><p><strong>Gobuster</strong> discovered two interesting endpoints: <code>/admin</code> and <code>/etc</code>.</p>
+<pre tabindex="0"><code>gobuster dir -u http://10.48.145.65/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/cyborg-tryhackme/gobuster_hu_1ee8559d91974078.webp 330w,http://localhost:1313/posts/cyborg-tryhackme/gobuster_hu_23a723bb289fe845.webp 660w
+            
+              
+                ,http://localhost:1313/posts/cyborg-tryhackme/gobuster_hu_b74f2aa5bae7ab5c.webp 715w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/cyborg-tryhackme/gobuster_hu_b74f2aa5bae7ab5c.webp 715w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="715"
+        height="57"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/gobuster_hu_6ca8ddbdc77fa833.png" srcset="http://localhost:1313/posts/cyborg-tryhackme/gobuster_hu_d41ad9df1cab7dca.png 330w,http://localhost:1313/posts/cyborg-tryhackme/gobuster_hu_6ca8ddbdc77fa833.png 660w
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/gobuster.png 715w
+          
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/gobuster.png 715w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="admin-endpoint" class="relative group">/admin Endpoint <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#admin-endpoint" aria-label="Anchor">#</a></span></h3><p>The <code>/admin</code> directory contained Borg backup archive files, and revealed three users: <strong>Alex</strong>, <strong>Josh</strong>, and <strong>Adam</strong>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/cyborg-tryhackme/admin-endpoint_hu_47a44ce79acdd9df.webp 330w,http://localhost:1313/posts/cyborg-tryhackme/admin-endpoint_hu_ceb0b9d2918795a3.webp 660w
+            
+              ,http://localhost:1313/posts/cyborg-tryhackme/admin-endpoint_hu_c15d47cb01023b4.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/cyborg-tryhackme/admin-endpoint_hu_64cbc5a2fa964e58.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1532"
+        height="738"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/admin-endpoint_hu_dec881ac3e1f51d0.png" srcset="http://localhost:1313/posts/cyborg-tryhackme/admin-endpoint_hu_fbc7c790acee5.png 330w,http://localhost:1313/posts/cyborg-tryhackme/admin-endpoint_hu_dec881ac3e1f51d0.png 660w
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/admin-endpoint_hu_a9bac87b057a9093.png 1024w
+          
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/admin-endpoint_hu_2dbd627d60b84aa6.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="etc-endpoint" class="relative group">/etc Endpoint <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#etc-endpoint" aria-label="Anchor">#</a></span></h3><p>The <code>/etc</code> directory exposed a <code>squid</code> folder with configuration files.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/cyborg-tryhackme/etc-squid_hu_1d5d65fd527e327e.webp 330w,http://localhost:1313/posts/cyborg-tryhackme/etc-squid_hu_a2a06754ba223b7.webp 660w
+            
+              
+                ,http://localhost:1313/posts/cyborg-tryhackme/etc-squid_hu_c748b264d0077eb3.webp 1024w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/cyborg-tryhackme/etc-squid_hu_c748b264d0077eb3.webp 1024w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1024"
+        height="297"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/etc-squid_hu_c3dd9e4ad3773e4f.png" srcset="http://localhost:1313/posts/cyborg-tryhackme/etc-squid_hu_9848c09e59542e70.png 330w,http://localhost:1313/posts/cyborg-tryhackme/etc-squid_hu_c3dd9e4ad3773e4f.png 660w
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/etc-squid.png 1024w
+          
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/etc-squid.png 1024w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>A <code>passwd</code> file contained credentials.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/cyborg-tryhackme/passwd-creds_hu_9711a17431412870.webp 330w,http://localhost:1313/posts/cyborg-tryhackme/passwd-creds_hu_4334560b653b6bbc.webp 660w
+            
+              
+                ,http://localhost:1313/posts/cyborg-tryhackme/passwd-creds_hu_a2cbff876a8e77a1.webp 824w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/cyborg-tryhackme/passwd-creds_hu_a2cbff876a8e77a1.webp 824w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="824"
+        height="109"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/passwd-creds_hu_ade26dece0364c8.png" srcset="http://localhost:1313/posts/cyborg-tryhackme/passwd-creds_hu_587fb6032a78707d.png 330w,http://localhost:1313/posts/cyborg-tryhackme/passwd-creds_hu_ade26dece0364c8.png 660w
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/passwd-creds.png 824w
+          
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/passwd-creds.png 824w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The <code>squid.conf</code> configuration file contained an MD5 hash embedded in it.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/cyborg-tryhackme/squid-conf_hu_8d0bba7fa67b1deb.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="642"
+        height="118"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/squid-conf.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-2-initial-access" class="relative group">Step 2: Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-initial-access" aria-label="Anchor">#</a></span></h2><h3 id="cracking-the-hash" class="relative group">Cracking the Hash <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#cracking-the-hash" aria-label="Anchor">#</a></span></h3><p>The MD5 hash from <code>squid.conf</code> was cracked to reveal the password.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/cyborg-tryhackme/md5-string_hu_fc212ddfd53807d4.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="486"
+        height="126"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/md5-string.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+
+
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/cyborg-tryhackme/hash-cracked_hu_80f72fe0388e0f9b.webp 330w,http://localhost:1313/posts/cyborg-tryhackme/hash-cracked_hu_99537dfca025a0f3.webp 660w
+            
+              
+                ,http://localhost:1313/posts/cyborg-tryhackme/hash-cracked_hu_940fda6c32c61aa2.webp 828w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/cyborg-tryhackme/hash-cracked_hu_940fda6c32c61aa2.webp 828w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="828"
+        height="196"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/hash-cracked_hu_f574fb1ea44a77ce.png" srcset="http://localhost:1313/posts/cyborg-tryhackme/hash-cracked_hu_4614e6cf1ccfd817.png 330w,http://localhost:1313/posts/cyborg-tryhackme/hash-cracked_hu_f574fb1ea44a77ce.png 660w
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/hash-cracked.png 828w
+          
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/hash-cracked.png 828w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="borg-backup-extraction" class="relative group">Borg Backup Extraction <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#borg-backup-extraction" aria-label="Anchor">#</a></span></h3><p>Using the cracked password, the Borg backup archive for user <strong>alex</strong> was extracted.</p>
+<pre tabindex="0"><code>borg extract /path/to/archive::alex
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/cyborg-tryhackme/borg-extract_hu_e5c4a176c37ada9c.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="358"
+        height="248"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/borg-extract.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The extracted files contained notes with Alex&rsquo;s SSH password.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/cyborg-tryhackme/alex-files_hu_da2b0e6b367e1d37.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="642"
+        height="63"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/alex-files.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+
+
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/cyborg-tryhackme/notes-password_hu_51e3868ae9796fb7.webp 330w,http://localhost:1313/posts/cyborg-tryhackme/notes-password_hu_6948805aca55688e.webp 660w
+            
+              
+                ,http://localhost:1313/posts/cyborg-tryhackme/notes-password_hu_48e9d9462b686fd5.webp 972w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/cyborg-tryhackme/notes-password_hu_48e9d9462b686fd5.webp 972w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="972"
+        height="101"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/notes-password_hu_7416288ce1c7c011.png" srcset="http://localhost:1313/posts/cyborg-tryhackme/notes-password_hu_4a55db3d20572c90.png 330w,http://localhost:1313/posts/cyborg-tryhackme/notes-password_hu_7416288ce1c7c011.png 660w
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/notes-password.png 972w
+          
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/notes-password.png 972w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="ssh-access" class="relative group">SSH Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ssh-access" aria-label="Anchor">#</a></span></h3><p>Using the recovered credentials, an SSH session was established as <strong>alex</strong>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/cyborg-tryhackme/ssh-login_hu_8b5a9c9f40ae10f.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="632"
+        height="397"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/ssh-login.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-3-privilege-escalation" class="relative group">Step 3: Privilege Escalation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-privilege-escalation" aria-label="Anchor">#</a></span></h2><h3 id="sudo-permissions" class="relative group">Sudo Permissions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sudo-permissions" aria-label="Anchor">#</a></span></h3><p>Checking sudo access revealed that <strong>alex</strong> could run <code>/etc/mp3backups/backup.sh</code> as root without a password.</p>
+<pre tabindex="0"><code>sudo -l
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/cyborg-tryhackme/sudo-l_hu_5889a1babebb0f12.webp 330w,http://localhost:1313/posts/cyborg-tryhackme/sudo-l_hu_22cbaed26e28f35d.webp 660w
+            
+              
+                ,http://localhost:1313/posts/cyborg-tryhackme/sudo-l_hu_219a13e7507d7462.webp 790w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/cyborg-tryhackme/sudo-l_hu_219a13e7507d7462.webp 790w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="790"
+        height="144"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/sudo-l_hu_26dfaa47e75fe5a9.png" srcset="http://localhost:1313/posts/cyborg-tryhackme/sudo-l_hu_cd18595a3c1a7b3b.png 330w,http://localhost:1313/posts/cyborg-tryhackme/sudo-l_hu_26dfaa47e75fe5a9.png 660w
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/sudo-l.png 790w
+          
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/sudo-l.png 790w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="analysing-backupsh" class="relative group">Analysing backup.sh <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#analysing-backupsh" aria-label="Anchor">#</a></span></h3><p>The backup script had a <code>-c</code> flag that executed arbitrary commands via <code>$command</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="k">while</span> <span class="nb">getopts</span> c: flag
+</span></span><span class="line"><span class="cl"><span class="k">do</span>
+</span></span><span class="line"><span class="cl">        <span class="k">case</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">flag</span><span class="si">}</span><span class="s2">&#34;</span> in
+</span></span><span class="line"><span class="cl">                c<span class="o">)</span> <span class="nv">command</span><span class="o">=</span><span class="si">${</span><span class="nv">OPTARG</span><span class="si">}</span><span class="p">;;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">esac</span>
+</span></span><span class="line"><span class="cl"><span class="k">done</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">cmd</span><span class="o">=</span><span class="k">$(</span><span class="nv">$command</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">echo</span> <span class="nv">$cmd</span>
+</span></span></code></pre></div><h3 id="file-permissions" class="relative group">File Permissions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#file-permissions" aria-label="Anchor">#</a></span></h3><p>Alex owned the file, so write permission was granted.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/cyborg-tryhackme/file-perms_hu_734592ae7f0020bc.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="611"
+        height="59"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/file-perms.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<pre tabindex="0"><code>chmod +w /etc/mp3backups/backup.sh
+</code></pre><h3 id="command-injection" class="relative group">Command Injection <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#command-injection" aria-label="Anchor">#</a></span></h3><p>A command was injected via the <code>-c</code> flag to spawn a root shell.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/cyborg-tryhackme/add-command_hu_b40f0dc97f69d727.webp 330w,http://localhost:1313/posts/cyborg-tryhackme/add-command_hu_7ba6a7b6d6851891.webp 660w
+            
+              
+                ,http://localhost:1313/posts/cyborg-tryhackme/add-command_hu_f5a56c47f0c75186.webp 660w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/cyborg-tryhackme/add-command_hu_f5a56c47f0c75186.webp 660w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="660"
+        height="37"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/add-command_hu_4f41181f955ef4e9.png" srcset="http://localhost:1313/posts/cyborg-tryhackme/add-command_hu_629fe2687e0be10d.png 330w,http://localhost:1313/posts/cyborg-tryhackme/add-command_hu_4f41181f955ef4e9.png 660w
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/add-command.png 660w
+          
+          
+            ,http://localhost:1313/posts/cyborg-tryhackme/add-command.png 660w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<pre tabindex="0"><code>sudo /etc/mp3backups/backup.sh -c &#39;bash&#39;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/cyborg-tryhackme/root-shell_hu_bba131026c81a2b2.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="620"
+        height="253"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/cyborg-tryhackme/root-shell.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><p>Cyborg demonstrates the importance of restricting directory listing on web servers, using strong unique passwords for archive encryption, and auditing sudo permissions. The attack chain exploited information disclosure via directory traversal, a weak MD5 hashed password, and a command injection vulnerability in a script running with elevated privileges. Remediations include disabling directory listing in Apache, using strong encryption passphrases for Borg backups, and avoiding command execution patterns in sudo-allowed scripts.</p>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="960"
+        height="1280"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="k40t1k"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg" srcset="http://localhost:1313/img/k40t1k_hu_210ca2abc75c60a7.jpeg 330w,http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg 660w
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          k40t1k
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/jkilonzi"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/john-maluki"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://medium.com/@jkilonzi301"
+          target="_blank"
+          aria-label="Medium"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Brooklyn Nine Nine — TryHackMe</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-06-29 11:43:00 &#43;0300 EAT">29 June 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="http://localhost:1313/posts/team-tryhackme/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Team — TryHackMe</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-07-02 11:43:00 &#43;0300 EAT">2 July 2026</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            k40t1k
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>

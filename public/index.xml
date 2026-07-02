@@ -2,45 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>k40t1k</title>
-    <link>https://k40tik.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on k40t1k</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 11 Jun 2026 18:43:53 +0300</lastBuildDate>
-    <atom:link href="https://k40tik.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Jul 2026 11:43:00 +0300</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Team — TryHackMe</title>
+      <link>http://localhost:1313/posts/team-tryhackme/</link>
+      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/team-tryhackme/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cyborg — TryHackMe</title>
+      <link>http://localhost:1313/posts/cyborg-tryhackme/</link>
+      <pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/cyborg-tryhackme/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Brooklyn Nine Nine — TryHackMe</title>
+      <link>http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/</link>
+      <pubDate>Mon, 29 Jun 2026 11:43:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/</guid>
+      <description></description>
+    </item>
     <item>
       <title>DC03 — HackMyVM</title>
-      <link>https://k40tik.github.io/posts/dc03-hackmyvm/</link>
+      <link>http://localhost:1313/posts/dc03-hackmyvm/</link>
       <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-      <guid>https://k40tik.github.io/posts/dc03-hackmyvm/</guid>
+      <guid>http://localhost:1313/posts/dc03-hackmyvm/</guid>
       <description></description>
     </item>
     <item>
       <title>Resources</title>
-      <link>https://k40tik.github.io/resources/</link>
+      <link>http://localhost:1313/resources/</link>
       <pubDate>Wed, 10 Jun 2026 10:00:00 +0300</pubDate>
-      <guid>https://k40tik.github.io/resources/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Medium Writeups</title>
-      <link>https://k40tik.github.io/medium-writeups/</link>
-      <pubDate>Wed, 27 May 2026 12:22:26 +0300</pubDate>
-      <guid>https://k40tik.github.io/medium-writeups/</guid>
+      <guid>http://localhost:1313/resources/</guid>
       <description></description>
     </item>
     <item>
       <title>About</title>
-      <link>https://k40tik.github.io/about/</link>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Tue, 26 May 2026 15:40:38 +0300</pubDate>
-      <guid>https://k40tik.github.io/about/</guid>
+      <guid>http://localhost:1313/about/</guid>
       <description></description>
     </item>
     <item>
       <title>Certificates</title>
-      <link>https://k40tik.github.io/certificates/</link>
+      <link>http://localhost:1313/certificates/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://k40tik.github.io/certificates/</guid>
+      <guid>http://localhost:1313/certificates/</guid>
       <description></description>
     </item>
   </channel>
