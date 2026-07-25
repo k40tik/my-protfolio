@@ -28,3 +28,9 @@ Use this when the user says "new writeup for <room-name> <platform>" or anything
    - Images referenced as `![](name.png)` with no path prefix, placed after the paragraph describing them
    - Conclusion with numbered attack chain summary and bullet-point remediations
 6. Tags should use full names like "TryHackMe", "Linux", "Privilege Escalation", "FTP", etc.
+7. **NEVER include actual passwords, credentials, hashes, or secret keys in the writeup.** Replace all sensitive values with `<REDACTED>`. This includes:
+   - Plaintext passwords in commands (e.g., `-p 'password'`, `-newpass 'password'`)
+   - Cracked passwords shown in output
+   - NTLM hashes in DCSync/secretsdump output
+   - Hardcoded credentials found in binaries or config files
+   - Any other sensitive authentication material
