@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Diamorphine on k40t1k</title>
+		<link>https://k40tik.github.io/tags/diamorphine/</link>
+		<description>Recent content in Diamorphine on k40t1k</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 25 Jul 2026 19:35:00 +0300</lastBuildDate>
+		
+			<atom:link href="https://k40tik.github.io/tags/diamorphine/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Athena — TryHackMe</title>
+				<link>https://k40tik.github.io/posts/athena-tryhackme/</link>
+				<pubDate>Sat, 25 Jul 2026 19:35:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/posts/athena-tryhackme/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>

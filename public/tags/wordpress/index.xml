@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>WordPress on k40t1k</title>
+		<link>https://k40tik.github.io/tags/wordpress/</link>
+		<description>Recent content in WordPress on k40t1k</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 07 Aug 2026 09:08:04 +0300</lastBuildDate>
+		
+			<atom:link href="https://k40tik.github.io/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Ascension — HackSmarter</title>
+				<link>https://k40tik.github.io/posts/ascension-hacksmarter/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>https://k40tik.github.io/posts/ascension-hacksmarter/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>

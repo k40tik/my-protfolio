@@ -1,138 +1,255 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on k40t1k</title>
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on k40t1k</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 02 Jul 2026 11:43:00 +0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Boot2root</title>
-      <link>http://localhost:1313/tags/boot2root/</link>
-      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/boot2root/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cron Job</title>
-      <link>http://localhost:1313/tags/cron-job/</link>
-      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/cron-job/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CTF Writeup</title>
-      <link>http://localhost:1313/tags/ctf-writeup/</link>
-      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/ctf-writeup/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Easy</title>
-      <link>http://localhost:1313/tags/easy/</link>
-      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/easy/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>FTP</title>
-      <link>http://localhost:1313/tags/ftp/</link>
-      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/ftp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>http://localhost:1313/tags/linux/</link>
-      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/linux/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Path Traversal</title>
-      <link>http://localhost:1313/tags/path-traversal/</link>
-      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/path-traversal/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Privilege Escalation</title>
-      <link>http://localhost:1313/tags/privilege-escalation/</link>
-      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/privilege-escalation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Sudo Misconfiguration</title>
-      <link>http://localhost:1313/tags/sudo-misconfiguration/</link>
-      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/sudo-misconfiguration/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>TryHackMe</title>
-      <link>http://localhost:1313/tags/tryhackme/</link>
-      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/tryhackme/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Borgbackup</title>
-      <link>http://localhost:1313/tags/borgbackup/</link>
-      <pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/borgbackup/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Md5</title>
-      <link>http://localhost:1313/tags/md5/</link>
-      <pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/md5/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Squid</title>
-      <link>http://localhost:1313/tags/squid/</link>
-      <pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
-      <guid>http://localhost:1313/tags/squid/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Account Operators</title>
-      <link>http://localhost:1313/tags/account-operators/</link>
-      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-      <guid>http://localhost:1313/tags/account-operators/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Active Directory</title>
-      <link>http://localhost:1313/tags/active-directory/</link>
-      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-      <guid>http://localhost:1313/tags/active-directory/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Impacket</title>
-      <link>http://localhost:1313/tags/impacket/</link>
-      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-      <guid>http://localhost:1313/tags/impacket/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>LLMNR Poisoning</title>
-      <link>http://localhost:1313/tags/llmnr-poisoning/</link>
-      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-      <guid>http://localhost:1313/tags/llmnr-poisoning/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Responder</title>
-      <link>http://localhost:1313/tags/responder/</link>
-      <pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-      <guid>http://localhost:1313/tags/responder/</guid>
-      <description></description>
-    </item>
-  </channel>
+	<channel>
+		<title>Tags on k40t1k</title>
+		<link>https://k40tik.github.io/tags/</link>
+		<description>Recent content in Tags on k40t1k</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 07 Aug 2026 09:08:04 +0300</lastBuildDate>
+		
+			<atom:link href="https://k40tik.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>CTF Writeup</title>
+				<link>https://k40tik.github.io/tags/ctf-writeup/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/ctf-writeup/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Easy</title>
+				<link>https://k40tik.github.io/tags/easy/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/easy/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>FTP</title>
+				<link>https://k40tik.github.io/tags/ftp/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/ftp/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>HackSmarter</title>
+				<link>https://k40tik.github.io/tags/hacksmarter/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/hacksmarter/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Hydra</title>
+				<link>https://k40tik.github.io/tags/hydra/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/hydra/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>John the Ripper</title>
+				<link>https://k40tik.github.io/tags/john-the-ripper/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/john-the-ripper/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Linux</title>
+				<link>https://k40tik.github.io/tags/linux/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/linux/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Linux Capabilities</title>
+				<link>https://k40tik.github.io/tags/linux-capabilities/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/linux-capabilities/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>NFS</title>
+				<link>https://k40tik.github.io/tags/nfs/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/nfs/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>SSH</title>
+				<link>https://k40tik.github.io/tags/ssh/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/ssh/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>WordPress</title>
+				<link>https://k40tik.github.io/tags/wordpress/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/wordpress/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Command Injection</title>
+				<link>https://k40tik.github.io/tags/command-injection/</link>
+				<pubDate>Sat, 25 Jul 2026 19:35:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/command-injection/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Diamorphine</title>
+				<link>https://k40tik.github.io/tags/diamorphine/</link>
+				<pubDate>Sat, 25 Jul 2026 19:35:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/diamorphine/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Kernel Module</title>
+				<link>https://k40tik.github.io/tags/kernel-module/</link>
+				<pubDate>Sat, 25 Jul 2026 19:35:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/kernel-module/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Privilege Escalation</title>
+				<link>https://k40tik.github.io/tags/privilege-escalation/</link>
+				<pubDate>Sat, 25 Jul 2026 19:35:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/privilege-escalation/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>SMB</title>
+				<link>https://k40tik.github.io/tags/smb/</link>
+				<pubDate>Sat, 25 Jul 2026 19:35:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/smb/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>TryHackMe</title>
+				<link>https://k40tik.github.io/tags/tryhackme/</link>
+				<pubDate>Sat, 25 Jul 2026 19:35:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/tryhackme/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Active Directory</title>
+				<link>https://k40tik.github.io/tags/active-directory/</link>
+				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
+				<guid>https://k40tik.github.io/tags/active-directory/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>BloodHound</title>
+				<link>https://k40tik.github.io/tags/bloodhound/</link>
+				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
+				<guid>https://k40tik.github.io/tags/bloodhound/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>HackTheBox</title>
+				<link>https://k40tik.github.io/tags/hackthebox/</link>
+				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
+				<guid>https://k40tik.github.io/tags/hackthebox/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Impacket</title>
+				<link>https://k40tik.github.io/tags/impacket/</link>
+				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
+				<guid>https://k40tik.github.io/tags/impacket/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>LDAP</title>
+				<link>https://k40tik.github.io/tags/ldap/</link>
+				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
+				<guid>https://k40tik.github.io/tags/ldap/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>RBCD</title>
+				<link>https://k40tik.github.io/tags/rbcd/</link>
+				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
+				<guid>https://k40tik.github.io/tags/rbcd/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Windows</title>
+				<link>https://k40tik.github.io/tags/windows/</link>
+				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
+				<guid>https://k40tik.github.io/tags/windows/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Boot2Root</title>
+				<link>https://k40tik.github.io/tags/boot2root/</link>
+				<pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/boot2root/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cron Job</title>
+				<link>https://k40tik.github.io/tags/cron-job/</link>
+				<pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/cron-job/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Path Traversal</title>
+				<link>https://k40tik.github.io/tags/path-traversal/</link>
+				<pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/path-traversal/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Sudo Misconfiguration</title>
+				<link>https://k40tik.github.io/tags/sudo-misconfiguration/</link>
+				<pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/sudo-misconfiguration/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Borgbackup</title>
+				<link>https://k40tik.github.io/tags/borgbackup/</link>
+				<pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/borgbackup/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Md5</title>
+				<link>https://k40tik.github.io/tags/md5/</link>
+				<pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/md5/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Squid</title>
+				<link>https://k40tik.github.io/tags/squid/</link>
+				<pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/squid/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Account Operators</title>
+				<link>https://k40tik.github.io/tags/account-operators/</link>
+				<pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/account-operators/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>LLMNR Poisoning</title>
+				<link>https://k40tik.github.io/tags/llmnr-poisoning/</link>
+				<pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/llmnr-poisoning/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Responder</title>
+				<link>https://k40tik.github.io/tags/responder/</link>
+				<pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/responder/</guid>
+				<description></description>
+			</item>
+	</channel>
 </rss>

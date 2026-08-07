@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Path Traversal on k40t1k</title>
-    <link>http://localhost:1313/tags/path-traversal/</link>
-    <description>Recent content in Path Traversal on k40t1k</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 02 Jul 2026 11:43:00 +0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/path-traversal/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Team — TryHackMe</title>
-      <link>http://localhost:1313/posts/team-tryhackme/</link>
-      <pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
-      <guid>http://localhost:1313/posts/team-tryhackme/</guid>
-      <description></description>
-    </item>
-  </channel>
+	<channel>
+		<title>Path Traversal on k40t1k</title>
+		<link>https://k40tik.github.io/tags/path-traversal/</link>
+		<description>Recent content in Path Traversal on k40t1k</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 02 Jul 2026 11:43:00 +0300</lastBuildDate>
+		
+			<atom:link href="https://k40tik.github.io/tags/path-traversal/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Team — TryHackMe</title>
+				<link>https://k40tik.github.io/posts/team-tryhackme/</link>
+				<pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/posts/team-tryhackme/</guid>
+				<description></description>
+			</item>
+	</channel>
 </rss>

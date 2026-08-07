@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Squid on k40t1k</title>
-    <link>http://localhost:1313/tags/squid/</link>
-    <description>Recent content in Squid on k40t1k</description>
-    <generator>Hugo</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 30 Jun 2026 15:00:00 +0300</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/squid/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Cyborg — TryHackMe</title>
-      <link>http://localhost:1313/posts/cyborg-tryhackme/</link>
-      <pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
-      <guid>http://localhost:1313/posts/cyborg-tryhackme/</guid>
-      <description></description>
-    </item>
-  </channel>
+	<channel>
+		<title>Squid on k40t1k</title>
+		<link>https://k40tik.github.io/tags/squid/</link>
+		<description>Recent content in Squid on k40t1k</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 30 Jun 2026 15:00:00 +0300</lastBuildDate>
+		
+			<atom:link href="https://k40tik.github.io/tags/squid/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Cyborg — TryHackMe</title>
+				<link>https://k40tik.github.io/posts/cyborg-tryhackme/</link>
+				<pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/posts/cyborg-tryhackme/</guid>
+				<description></description>
+			</item>
+	</channel>
 </rss>

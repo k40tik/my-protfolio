@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Windows on k40t1k</title>
+		<link>https://k40tik.github.io/tags/windows/</link>
+		<description>Recent content in Windows on k40t1k</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 03 Jul 2026 16:09:13 +0000</lastBuildDate>
+		
+			<atom:link href="https://k40tik.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Support — HackTheBox</title>
+				<link>https://k40tik.github.io/posts/support-htb/</link>
+				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
+				<guid>https://k40tik.github.io/posts/support-htb/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>
