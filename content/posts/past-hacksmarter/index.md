@@ -82,7 +82,7 @@ PORT      STATE SERVICE       REASON          VERSION
 
 ### SMB Enumeration
 
-SMB enumeration was attempted with NetExec using anonymous access.
+I began with SMB enumeration using NetExec and anonymous access.
 
 ![](nxc-smb-anon-enum.png)
 
@@ -90,7 +90,7 @@ Attempting to list the shares without valid credentials failed.
 
 ![](share-listing-fail.png)
 
-User enumeration via `rpcclient` also failed because the tool requires credentials.
+I also tried user enumeration via `rpcclient`, but it failed because the tool requires credentials.
 
 ![](rpcclient-user-enum-fail.png)
 
@@ -106,7 +106,7 @@ The guest user has read access on a non-standard share.
 
 ### User Enumeration
 
-Since the guest account was usable, user enumeration was performed over SMB.
+Since the guest account was usable, I performed user enumeration over SMB.
 
 ```
 nxc smb 10.1.162.214 -u guest -p '' --users
@@ -114,7 +114,7 @@ nxc smb 10.1.162.214 -u guest -p '' --users
 
 ![](user-enumeration.png)
 
-A RID brute-force was also carried out to enumerate all objects in the domain.
+I also ran a RID brute-force to enumerate all objects in the domain.
 
 ```
 nxc smb 10.1.162.214 -u guest -p '' --rid-brute
@@ -122,7 +122,7 @@ nxc smb 10.1.162.214 -u guest -p '' --rid-brute
 
 ![](rid-brute.png)
 
-Filtering the results for user SIDs isolates the actual user accounts from the well-known domain groups.
+I filtered the results for user SIDs to isolate the actual user accounts from the well-known domain groups.
 
 ```
 nxc smb 10.1.162.214 -u guest -p '' --rid-brute | grep 'SidTypeUser'
@@ -178,19 +178,19 @@ Only one hash was successfully cracked.
 
 ### Password Spraying
 
-The cracked password belonged to a machine account. Spraying this password against the environment successfully authenticated to one machine. I also noted that one of the machines had login restrictions in place.
+The cracked password belonged to a machine account. Spraying this password against the environment, I successfully authenticated to one machine. I also noted that one of the machines had login restrictions in place.
 
 ![](password-spray.png)
 
 ### SYSVOL Share
 
-Share listing using the machine account revealed that the account has read access on the SYSVOL share.
+Listing the shares with the machine account revealed that it has read access on the SYSVOL share.
 
 ![](machine-share-listing.png)
 
 ![](sysvol-read-access.png)
 
-Accessing the SYSVOL share:
+I accessed the SYSVOL share:
 
 ![](sysvol-share-access.png)
 
@@ -206,7 +206,7 @@ I then authenticated with `tyler`'s account using the newly obtained credentials
 
 ## Step 3: Internal Enumeration with BloodHound
 
-To map out the domain, a BloodHound collection was performed using the compromised machine account.
+To map out the domain, I performed a BloodHound collection using the compromised machine account.
 
 ```
 bloodhound-python -u 'APPDEV01$' -p '<REDACTED>' -d past.local -ns 10.1.162.214 -c All
@@ -216,13 +216,13 @@ From the BloodHound output, the machine account does not have any special privil
 
 ![](bloodhound-no-privs.png)
 
-Checking out `tyler`'s account, which had login restrictions, revealed that the user has outbound **GenericAll** control.
+Checking out `tyler`'s account, which had login restrictions, I found that the user has outbound **GenericAll** control.
 
 ![](bloodhound-tyler-restrictions.png)
 
 ![](bloodhound-tyler-genericall.png)
 
-The machine account holds DCSync rights over the domain, so if it could be compromised it would be a clear path to Domain Admin.
+The machine account holds DCSync rights over the domain, so if I could compromise it, it would be a clear path to Domain Admin.
 
 ![](bloodhound-machine-dcsync.png)
 
@@ -240,29 +240,29 @@ impacket-getTGT past.local/'tyler':'<REDACTED>' -dc-ip 10.1.162.214
 nxc smb 10.1.162.214 -u 'tyler' -k --use-kcache
 ```
 
-This bypassed the restrictions and authenticated successfully with Kerberos.
+This bypassed the restrictions and I authenticated successfully with Kerberos.
 
 ![](kerberos-ticket-auth.png)
 
-A share listing showed that the user has read/write access to the `C$` share, which stands out.
+A share listing showed that I have read/write access to the `C$` share, which stands out.
 
 ![](c-share-rw-access.png)
 
 ## Step 5: Privilege Escalation via Resource-Based Constrained Delegation
 
-Back to BloodHound to exploit the **GenericAll** permission held by `tyler`.
+I went back to BloodHound to exploit the **GenericAll** permission held by `tyler`.
 
 ![](bloodhound-genericall-1.png)
 
 ![](bloodhound-genericall-2.png)
 
-The attack chain was guided by the HackTricks documentation on Resource-Based Constrained Delegation.
+I guided the attack chain using the HackTricks documentation on Resource-Based Constrained Delegation.
 
 ![](hacktricks-rbcd-guide.png)
 
-### Step 1: Create an Attacker-Controlled Machine
+### Step 1: Create a Controlled Machine Account
 
-A new machine account was added to the domain, fully controlled by us.
+I added a new machine account to the domain that I fully control.
 
 ```
 impacket-addcomputer -computer-name 'KAOS$' -computer-pass '<REDACTED>' \
@@ -273,7 +273,7 @@ impacket-addcomputer -computer-name 'KAOS$' -computer-pass '<REDACTED>' \
 
 ### Step 2: Grant RBCD on the Target to the Controlled Machine
 
-Using `tyler`'s GenericAll permission, the ability to delegate to the target computer was granted to our controlled machine account.
+Using `tyler`'s GenericAll permission, I granted the controlled machine account the ability to delegate to the target computer.
 
 ```
 impacket-rbcd past.local/tyler -k -no-pass \
@@ -284,7 +284,7 @@ impacket-rbcd past.local/tyler -k -no-pass \
 
 ### Step 3: Get a TGT for the New Controlled Computer
 
-A Ticket Granting Ticket was requested for the new machine account.
+I requested a Ticket Granting Ticket for the new machine account.
 
 ```
 impacket-getTGT past.local/'KAOS$':'<REDACTED>' -dc-ip 10.1.162.214
@@ -294,7 +294,7 @@ impacket-getTGT past.local/'KAOS$':'<REDACTED>' -dc-ip 10.1.162.214
 
 ### Step 4: Impersonate the Administrator
 
-Using the RBCD configuration, a service ticket for the CIFS service was requested while impersonating the `Administrator`.
+Using the RBCD configuration, I requested a service ticket for the CIFS service while impersonating the `Administrator`.
 
 ```
 impacket-getST -spn cifs/EC2AMAZ-A5O4OL8.past.local -impersonate administrator \
@@ -305,7 +305,7 @@ impacket-getST -spn cifs/EC2AMAZ-A5O4OL8.past.local -impersonate administrator \
 
 ## Step 6: Domain Compromise
 
-With the Administrator service ticket, the NTDS.dit secrets were dumped using the Kerberos ticket.
+With the Administrator service ticket, I dumped the NTDS.dit secrets using the Kerberos ticket.
 
 ```
 nxc smb 10.1.162.214 -u administrator -k --use-kcache --ntds
@@ -319,7 +319,7 @@ Using the obtained Administrator NTLM hash, I authenticated over WinRM, achievin
 
 ## Step 7: Finding Ryan's Password
 
-The final objective was to locate the password for Ryan's account. The PowerShell history location was checked on the domain controller.
+The final objective was to locate the password for Ryan's account. I checked the PowerShell history location on the domain controller.
 
 ```
 (Get-PSReadlineOption).HistorySavePath
@@ -339,7 +339,7 @@ This engagement demonstrated a full Active Directory domain compromise starting 
 4. **SYSVOL scripts folder** leaked plaintext credentials for `tyler`.
 5. **Kerberos ticket authentication** bypassed `tyler`'s logon-hour restrictions.
 6. **GenericAll abuse** enabled a Resource-Based Constrained Delegation attack.
-7. An **attacker-controlled machine account** (`KAOS$`) was used to impersonate `Administrator` and dump **NTDS.dit**.
+7. A **machine account I controlled** (`KAOS$`) was used to impersonate `Administrator` and dump **NTDS.dit**.
 8. The Administrator **NTLM hash** provided full WinRM access to the domain controller.
 
 To secure the environment, the following remediations are recommended:
