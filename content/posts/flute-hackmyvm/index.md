@@ -1,7 +1,7 @@
 +++
 date = '2026-08-18T14:25:00+03:00'
 draft = false
-title = 'Hamelin — HackMyVM'
+title = 'Flute — HackMyVM'
 tags = ["HackMyVM", "Linux", "GraphQL", "Apollo Server", "Privilege Escalation", "Unix Socket", "SSH", "GraphQL Introspection", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
