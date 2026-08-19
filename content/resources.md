@@ -8,7 +8,7 @@ title = 'Resources'
 
 - [The Hacker Recipes](https://www.thehacker.recipes/) — Active Directory & security reference
 - [Payloads All The Things](https://swisskyrepo.github.io/) — Pentest cheatsheets by swisskyrepo
-- [Orange Cyberdefense](https://orange-cyberdefense.github.io/) — Security research & writeups
+- [Orange Cyberdefense](https://orange-cyberdefense.github.io/ocd-mindmaps/) — Active Directory mindmaps
 
 ### CTF & Lab Platforms
 
