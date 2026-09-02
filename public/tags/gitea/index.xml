@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Gitea on k40t1k</title>
+		<link>https://k40tik.github.io/tags/gitea/</link>
+		<description>Recent content in Gitea on k40t1k</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 24 Aug 2026 16:14:11 +0300</lastBuildDate>
+		
+			<atom:link href="https://k40tik.github.io/tags/gitea/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Devoops — HackMyVM</title>
+				<link>https://k40tik.github.io/posts/devoops-hackmyvm/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>https://k40tik.github.io/posts/devoops-hackmyvm/</guid>
+				<description></description>
+			</item>
+	</channel>
+</rss>

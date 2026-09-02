@@ -10,21 +10,343 @@
 		
 		
 		
-			<lastBuildDate>Fri, 07 Aug 2026 09:08:04 +0300</lastBuildDate>
+			<lastBuildDate>Mon, 31 Aug 2026 16:45:00 +0300</lastBuildDate>
 		
 			<atom:link href="https://k40tik.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
+				<title>Brute Force</title>
+				<link>https://k40tik.github.io/tags/brute-force/</link>
+				<pubDate>Mon, 31 Aug 2026 16:45:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/brute-force/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>CTF Writeup</title>
 				<link>https://k40tik.github.io/tags/ctf-writeup/</link>
-				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<pubDate>Mon, 31 Aug 2026 16:45:00 +0300</pubDate>
 				<guid>https://k40tik.github.io/tags/ctf-writeup/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Easy</title>
 				<link>https://k40tik.github.io/tags/easy/</link>
-				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<pubDate>Mon, 31 Aug 2026 16:45:00 +0300</pubDate>
 				<guid>https://k40tik.github.io/tags/easy/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>HackMyVM</title>
+				<link>https://k40tik.github.io/tags/hackmyvm/</link>
+				<pubDate>Mon, 31 Aug 2026 16:45:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/hackmyvm/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Hydra</title>
+				<link>https://k40tik.github.io/tags/hydra/</link>
+				<pubDate>Mon, 31 Aug 2026 16:45:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/hydra/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Linux</title>
+				<link>https://k40tik.github.io/tags/linux/</link>
+				<pubDate>Mon, 31 Aug 2026 16:45:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/linux/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>SSH</title>
+				<link>https://k40tik.github.io/tags/ssh/</link>
+				<pubDate>Mon, 31 Aug 2026 16:45:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/ssh/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Weak Credentials</title>
+				<link>https://k40tik.github.io/tags/weak-credentials/</link>
+				<pubDate>Mon, 31 Aug 2026 16:45:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/weak-credentials/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Android Debug Bridge</title>
+				<link>https://k40tik.github.io/tags/android-debug-bridge/</link>
+				<pubDate>Tue, 25 Aug 2026 17:56:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/android-debug-bridge/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Character Extraction</title>
+				<link>https://k40tik.github.io/tags/character-extraction/</link>
+				<pubDate>Tue, 25 Aug 2026 17:56:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/character-extraction/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Lrz</title>
+				<link>https://k40tik.github.io/tags/lrz/</link>
+				<pubDate>Tue, 25 Aug 2026 17:56:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/lrz/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Port Forwarding</title>
+				<link>https://k40tik.github.io/tags/port-forwarding/</link>
+				<pubDate>Tue, 25 Aug 2026 17:56:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/port-forwarding/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Privilege Escalation</title>
+				<link>https://k40tik.github.io/tags/privilege-escalation/</link>
+				<pubDate>Tue, 25 Aug 2026 17:56:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/privilege-escalation/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Chisel</title>
+				<link>https://k40tik.github.io/tags/chisel/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/chisel/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>CVE-2025-30208</title>
+				<link>https://k40tik.github.io/tags/cve-2025-30208/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/cve-2025-30208/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Gitea</title>
+				<link>https://k40tik.github.io/tags/gitea/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/gitea/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>GTFOBins</title>
+				<link>https://k40tik.github.io/tags/gtfobins/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/gtfobins/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>John the Ripper</title>
+				<link>https://k40tik.github.io/tags/john-the-ripper/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/john-the-ripper/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>JWT</title>
+				<link>https://k40tik.github.io/tags/jwt/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/jwt/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Node.js</title>
+				<link>https://k40tik.github.io/tags/node.js/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/node.js/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Vite</title>
+				<link>https://k40tik.github.io/tags/vite/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/vite/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>HTTP</title>
+				<link>https://k40tik.github.io/tags/http/</link>
+				<pubDate>Wed, 19 Aug 2026 17:35:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/http/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Lateral Movement</title>
+				<link>https://k40tik.github.io/tags/lateral-movement/</link>
+				<pubDate>Wed, 19 Aug 2026 17:35:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/lateral-movement/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Rkhunter</title>
+				<link>https://k40tik.github.io/tags/rkhunter/</link>
+				<pubDate>Wed, 19 Aug 2026 17:35:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/rkhunter/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Apollo Server</title>
+				<link>https://k40tik.github.io/tags/apollo-server/</link>
+				<pubDate>Tue, 18 Aug 2026 14:25:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/apollo-server/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>GraphQL</title>
+				<link>https://k40tik.github.io/tags/graphql/</link>
+				<pubDate>Tue, 18 Aug 2026 14:25:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/graphql/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>GraphQL Introspection</title>
+				<link>https://k40tik.github.io/tags/graphql-introspection/</link>
+				<pubDate>Tue, 18 Aug 2026 14:25:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/graphql-introspection/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Unix Socket</title>
+				<link>https://k40tik.github.io/tags/unix-socket/</link>
+				<pubDate>Tue, 18 Aug 2026 14:25:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/unix-socket/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Active Directory</title>
+				<link>https://k40tik.github.io/tags/active-directory/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/active-directory/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>BloodHound</title>
+				<link>https://k40tik.github.io/tags/bloodhound/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/bloodhound/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>DCSync</title>
+				<link>https://k40tik.github.io/tags/dcsync/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/dcsync/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>GenericAll</title>
+				<link>https://k40tik.github.io/tags/genericall/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/genericall/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>HackSmarter</title>
+				<link>https://k40tik.github.io/tags/hacksmarter/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/hacksmarter/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Hashcat</title>
+				<link>https://k40tik.github.io/tags/hashcat/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/hashcat/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Kerberos</title>
+				<link>https://k40tik.github.io/tags/kerberos/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/kerberos/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Medium</title>
+				<link>https://k40tik.github.io/tags/medium/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/medium/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>NTDS.dit</title>
+				<link>https://k40tik.github.io/tags/ntds.dit/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/ntds.dit/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Resource-Based Constrained Delegation</title>
+				<link>https://k40tik.github.io/tags/resource-based-constrained-delegation/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/resource-based-constrained-delegation/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>SYSVOL</title>
+				<link>https://k40tik.github.io/tags/sysvol/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/sysvol/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>TimeRoasting</title>
+				<link>https://k40tik.github.io/tags/timeroasting/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/timeroasting/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Windows</title>
+				<link>https://k40tik.github.io/tags/windows/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/windows/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>WinRM</title>
+				<link>https://k40tik.github.io/tags/winrm/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/winrm/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>ADCS</title>
+				<link>https://k40tik.github.io/tags/adcs/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/adcs/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Certipy</title>
+				<link>https://k40tik.github.io/tags/certipy/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/certipy/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>ESC3</title>
+				<link>https://k40tik.github.io/tags/esc3/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/esc3/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Kerbrute</title>
+				<link>https://k40tik.github.io/tags/kerbrute/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/kerbrute/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>MSSQL</title>
+				<link>https://k40tik.github.io/tags/mssql/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/mssql/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Responder</title>
+				<link>https://k40tik.github.io/tags/responder/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/tags/responder/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -32,34 +354,6 @@
 				<link>https://k40tik.github.io/tags/ftp/</link>
 				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
 				<guid>https://k40tik.github.io/tags/ftp/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>HackSmarter</title>
-				<link>https://k40tik.github.io/tags/hacksmarter/</link>
-				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
-				<guid>https://k40tik.github.io/tags/hacksmarter/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Hydra</title>
-				<link>https://k40tik.github.io/tags/hydra/</link>
-				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
-				<guid>https://k40tik.github.io/tags/hydra/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>John the Ripper</title>
-				<link>https://k40tik.github.io/tags/john-the-ripper/</link>
-				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
-				<guid>https://k40tik.github.io/tags/john-the-ripper/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Linux</title>
-				<link>https://k40tik.github.io/tags/linux/</link>
-				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
-				<guid>https://k40tik.github.io/tags/linux/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -74,13 +368,6 @@
 				<link>https://k40tik.github.io/tags/nfs/</link>
 				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
 				<guid>https://k40tik.github.io/tags/nfs/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>SSH</title>
-				<link>https://k40tik.github.io/tags/ssh/</link>
-				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
-				<guid>https://k40tik.github.io/tags/ssh/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -112,13 +399,6 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Privilege Escalation</title>
-				<link>https://k40tik.github.io/tags/privilege-escalation/</link>
-				<pubDate>Sat, 25 Jul 2026 19:35:00 +0300</pubDate>
-				<guid>https://k40tik.github.io/tags/privilege-escalation/</guid>
-				<description></description>
-			</item>
-			<item>
 				<title>SMB</title>
 				<link>https://k40tik.github.io/tags/smb/</link>
 				<pubDate>Sat, 25 Jul 2026 19:35:00 +0300</pubDate>
@@ -130,20 +410,6 @@
 				<link>https://k40tik.github.io/tags/tryhackme/</link>
 				<pubDate>Sat, 25 Jul 2026 19:35:00 +0300</pubDate>
 				<guid>https://k40tik.github.io/tags/tryhackme/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Active Directory</title>
-				<link>https://k40tik.github.io/tags/active-directory/</link>
-				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
-				<guid>https://k40tik.github.io/tags/active-directory/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>BloodHound</title>
-				<link>https://k40tik.github.io/tags/bloodhound/</link>
-				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
-				<guid>https://k40tik.github.io/tags/bloodhound/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -172,13 +438,6 @@
 				<link>https://k40tik.github.io/tags/rbcd/</link>
 				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
 				<guid>https://k40tik.github.io/tags/rbcd/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Windows</title>
-				<link>https://k40tik.github.io/tags/windows/</link>
-				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
-				<guid>https://k40tik.github.io/tags/windows/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -242,13 +501,6 @@
 				<link>https://k40tik.github.io/tags/llmnr-poisoning/</link>
 				<pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
 				<guid>https://k40tik.github.io/tags/llmnr-poisoning/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Responder</title>
-				<link>https://k40tik.github.io/tags/responder/</link>
-				<pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
-				<guid>https://k40tik.github.io/tags/responder/</guid>
 				<description></description>
 			</item>
 	</channel>

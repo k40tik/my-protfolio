@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Thu, 11 Jun 2026 18:43:53 +0300</lastBuildDate>
+			<lastBuildDate>Fri, 07 Aug 2026 17:00:00 +0300</lastBuildDate>
 		
 			<atom:link href="https://k40tik.github.io/tags/responder/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>ShadowGate — HackSmarter</title>
+				<link>https://k40tik.github.io/posts/shadowgate-hacksmarter/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/posts/shadowgate-hacksmarter/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>DC03 — HackMyVM</title>
 				<link>https://k40tik.github.io/posts/dc03-hackmyvm/</link>

