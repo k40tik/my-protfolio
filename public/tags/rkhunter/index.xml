@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Rkhunter on k40t1k</title>
-		<link>https://k40tik.github.io/tags/rkhunter/</link>
+		<link>http://localhost:1313/tags/rkhunter/</link>
 		<description>Recent content in Rkhunter on k40t1k</description>
 		<generator>Hugo</generator>
 		<language>en</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Wed, 19 Aug 2026 17:35:00 +0300</lastBuildDate>
 		
-			<atom:link href="https://k40tik.github.io/tags/rkhunter/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/rkhunter/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Hunter — HackMyVM</title>
-				<link>https://k40tik.github.io/posts/hunter-hackmyvm/</link>
+				<link>http://localhost:1313/posts/hunter-hackmyvm/</link>
 				<pubDate>Wed, 19 Aug 2026 17:35:00 +0300</pubDate>
-				<guid>https://k40tik.github.io/posts/hunter-hackmyvm/</guid>
+				<guid>http://localhost:1313/posts/hunter-hackmyvm/</guid>
 				<description></description>
 			</item>
 	</channel>

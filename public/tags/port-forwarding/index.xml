@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Port Forwarding on k40t1k</title>
-		<link>https://k40tik.github.io/tags/port-forwarding/</link>
+		<link>http://localhost:1313/tags/port-forwarding/</link>
 		<description>Recent content in Port Forwarding on k40t1k</description>
 		<generator>Hugo</generator>
 		<language>en</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Tue, 25 Aug 2026 17:56:00 +0300</lastBuildDate>
 		
-			<atom:link href="https://k40tik.github.io/tags/port-forwarding/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/port-forwarding/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Fuzzz — HackMyVM</title>
-				<link>https://k40tik.github.io/posts/fuzzz-hackmyvm/</link>
+				<link>http://localhost:1313/posts/fuzzz-hackmyvm/</link>
 				<pubDate>Tue, 25 Aug 2026 17:56:00 +0300</pubDate>
-				<guid>https://k40tik.github.io/posts/fuzzz-hackmyvm/</guid>
+				<guid>http://localhost:1313/posts/fuzzz-hackmyvm/</guid>
 				<description></description>
 			</item>
 	</channel>

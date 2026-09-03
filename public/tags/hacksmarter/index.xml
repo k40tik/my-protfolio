@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>HackSmarter on k40t1k</title>
-		<link>https://k40tik.github.io/tags/hacksmarter/</link>
+		<link>http://localhost:1313/tags/hacksmarter/</link>
 		<description>Recent content in HackSmarter on k40t1k</description>
 		<generator>Hugo</generator>
 		<language>en</language>
@@ -12,19 +12,19 @@
 		
 			<lastBuildDate>Mon, 10 Aug 2026 17:00:00 +0300</lastBuildDate>
 		
-			<atom:link href="https://k40tik.github.io/tags/hacksmarter/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/hacksmarter/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Past — HackSmarter</title>
-				<link>https://k40tik.github.io/posts/past-hacksmarter/</link>
+				<link>http://localhost:1313/posts/past-hacksmarter/</link>
 				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
-				<guid>https://k40tik.github.io/posts/past-hacksmarter/</guid>
+				<guid>http://localhost:1313/posts/past-hacksmarter/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Ascension — HackSmarter</title>
-				<link>https://k40tik.github.io/posts/ascension-hacksmarter/</link>
+				<link>http://localhost:1313/posts/ascension-hacksmarter/</link>
 				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
-				<guid>https://k40tik.github.io/posts/ascension-hacksmarter/</guid>
+				<guid>http://localhost:1313/posts/ascension-hacksmarter/</guid>
 				<description></description>
 			</item>
 	</channel>

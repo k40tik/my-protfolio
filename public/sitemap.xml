@@ -9,8 +9,40 @@
     
   
     
+  
+    
+  
+    
       <url>
-            <loc>https://k40tik.github.io/posts/gift-hackmyvm/</loc>
+            <loc>http://localhost:1313/posts/jan-hackmyvm/</loc>
+            <lastmod>2026-09-03T20:15:00+03:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/</loc>
+            <lastmod>2026-09-03T20:15:00+03:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>http://localhost:1313/posts/gift-hackmyvm/</loc>
             <lastmod>2026-08-31T16:45:00+03:00</lastmod>
           </url>
     
@@ -20,27 +52,12 @@
     
   
     
-      <url>
-            <loc>https://k40tik.github.io/</loc>
-            <lastmod>2026-08-31T16:45:00+03:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-  
-    
-  
-    
-  
-    
   
     
   
     
       <url>
-            <loc>https://k40tik.github.io/posts/fuzzz-hackmyvm/</loc>
+            <loc>http://localhost:1313/posts/fuzzz-hackmyvm/</loc>
             <lastmod>2026-08-25T17:56:00+03:00</lastmod>
           </url>
     
@@ -54,10 +71,8 @@
     
   
     
-  
-    
       <url>
-            <loc>https://k40tik.github.io/posts/devoops-hackmyvm/</loc>
+            <loc>http://localhost:1313/posts/devoops-hackmyvm/</loc>
             <lastmod>2026-08-24T16:14:11+03:00</lastmod>
           </url>
     
@@ -78,7 +93,7 @@
   
     
       <url>
-            <loc>https://k40tik.github.io/posts/hunter-hackmyvm/</loc>
+            <loc>http://localhost:1313/posts/hunter-hackmyvm/</loc>
             <lastmod>2026-08-19T17:35:00+03:00</lastmod>
           </url>
     
@@ -91,7 +106,7 @@
   
     
       <url>
-            <loc>https://k40tik.github.io/posts/flute-hackmyvm/</loc>
+            <loc>http://localhost:1313/posts/flute-hackmyvm/</loc>
             <lastmod>2026-08-18T14:25:00+03:00</lastmod>
           </url>
     
@@ -122,7 +137,7 @@
   
     
       <url>
-            <loc>https://k40tik.github.io/posts/past-hacksmarter/</loc>
+            <loc>http://localhost:1313/posts/past-hacksmarter/</loc>
             <lastmod>2026-08-10T17:00:00+03:00</lastmod>
           </url>
     
@@ -151,14 +166,14 @@
   
     
       <url>
-            <loc>https://k40tik.github.io/posts/shadowgate-hacksmarter/</loc>
+            <loc>http://localhost:1313/posts/shadowgate-hacksmarter/</loc>
             <lastmod>2026-08-07T17:00:00+03:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://k40tik.github.io/posts/ascension-hacksmarter/</loc>
+            <loc>http://localhost:1313/posts/ascension-hacksmarter/</loc>
             <lastmod>2026-08-07T09:08:04+03:00</lastmod>
           </url>
     
@@ -173,7 +188,7 @@
   
     
       <url>
-            <loc>https://k40tik.github.io/posts/athena-tryhackme/</loc>
+            <loc>http://localhost:1313/posts/athena-tryhackme/</loc>
             <lastmod>2026-07-25T19:35:00+03:00</lastmod>
           </url>
     
@@ -195,10 +210,8 @@
     
   
     
-  
-    
       <url>
-            <loc>https://k40tik.github.io/posts/support-htb/</loc>
+            <loc>http://localhost:1313/posts/support-htb/</loc>
             <lastmod>2026-07-03T16:09:13+00:00</lastmod>
           </url>
     
@@ -213,7 +226,7 @@
   
     
       <url>
-            <loc>https://k40tik.github.io/posts/team-tryhackme/</loc>
+            <loc>http://localhost:1313/posts/team-tryhackme/</loc>
             <lastmod>2026-07-02T11:43:00+03:00</lastmod>
           </url>
     
@@ -222,7 +235,7 @@
   
     
       <url>
-            <loc>https://k40tik.github.io/posts/cyborg-tryhackme/</loc>
+            <loc>http://localhost:1313/posts/cyborg-tryhackme/</loc>
             <lastmod>2026-06-30T15:00:00+03:00</lastmod>
           </url>
     
@@ -233,7 +246,7 @@
   
     
       <url>
-            <loc>https://k40tik.github.io/posts/brooklyn-nine-nine-tryhackme/</loc>
+            <loc>http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/</loc>
             <lastmod>2026-06-29T11:43:00+03:00</lastmod>
           </url>
     
@@ -242,7 +255,7 @@
   
     
       <url>
-            <loc>https://k40tik.github.io/posts/dc03-hackmyvm/</loc>
+            <loc>http://localhost:1313/posts/dc03-hackmyvm/</loc>
             <lastmod>2026-06-11T18:43:53+03:00</lastmod>
           </url>
     
@@ -251,21 +264,21 @@
   
     
       <url>
-            <loc>https://k40tik.github.io/resources/</loc>
+            <loc>http://localhost:1313/resources/</loc>
             <lastmod>2026-06-10T10:00:00+03:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://k40tik.github.io/posts/</loc>
+            <loc>http://localhost:1313/posts/</loc>
             <lastmod>2026-05-27T13:02:42+03:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://k40tik.github.io/about/</loc>
+            <loc>http://localhost:1313/about/</loc>
             <lastmod>2026-05-26T15:40:38+03:00</lastmod>
           </url>
     
@@ -274,7 +287,7 @@
   
     
       <url>
-            <loc>https://k40tik.github.io/certificates/</loc>
+            <loc>http://localhost:1313/certificates/</loc>
           </url>
     
   

