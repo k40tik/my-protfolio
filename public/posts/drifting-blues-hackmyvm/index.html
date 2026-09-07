@@ -1,0 +1,1913 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e174e" />
+  
+  <title>Drifting Blues — HackMyVM &middot; k40t1k</title>
+    <meta name="title" content="Drifting Blues — HackMyVM &middot; k40t1k" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.77a79972dfd1fba3e37eaab972e5cf479aea24376fc39d827f5760735ebc834e.css"
+    integrity="sha256-d6eZct/R&#43;6Pjfqq5cuXPR5rqJDdvw52Cf1dgc168g04="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/posts/drifting-blues-hackmyvm/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/drifting-blues-hackmyvm/">
+	<meta property="og:site_name" content="k40t1k">
+	<meta property="og:title" content="Drifting Blues — HackMyVM">
+	<meta property="og:description" content="My awesome website">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-09-07T10:00:00+03:00">
+		<meta property="article:modified_time" content="2026-09-07T10:00:00+03:00">
+		<meta property="article:tag" content="HackMyVM">
+		<meta property="article:tag" content="Linux">
+		<meta property="article:tag" content="Easy">
+		<meta property="article:tag" content="Apache">
+		<meta property="article:tag" content="Directory Bruteforcing">
+		<meta property="article:tag" content="John the Ripper">
+		<meta property="og:image" content="http://localhost:1313/posts/drifting-blues-hackmyvm/feature.png">
+
+  
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="http://localhost:1313/posts/drifting-blues-hackmyvm/feature.png">
+	<meta name="twitter:title" content="Drifting Blues — HackMyVM">
+	<meta name="twitter:description" content="My awesome website">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "Drifting Blues — HackMyVM",
+    "headline": "Drifting Blues — HackMyVM",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/drifting-blues-hackmyvm\/",
+    "author" : {
+      "@type": "Person",
+      "name": "k40t1k"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-09-07T10:00:00\u002b03:00",
+    "datePublished": "2026-09-07T10:00:00\u002b03:00",
+    
+    "dateModified": "2026-09-07T10:00:00\u002b03:00",
+    
+    "keywords": ["HackMyVM","Linux","Easy","Apache","Directory Bruteforcing","John the Ripper","DirtyCow","Privilege Escalation","CTF Writeup"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "622"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "K40t1k",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "Blog",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Drifting Blues — Hack My Vm",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="k40t1k" />
+  
+  
+    
+      <link href="https://github.com/jkilonzi" rel="me" />
+    
+      <link href="https://linkedin.com/in/john-maluki" rel="me" />
+    
+      <link href="https://medium.com/@jkilonzi301" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >k40t1k</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Blog"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Writeups</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certificates/"
+                  title="Certificates"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certificates</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Drifting Blues — HackMyVM
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-09-07 10:00:00 &#43;0300 EAT">7 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/feature_hu_48e0fea32ddf6508.webp 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/feature_hu_ce03947aebecb21a.webp 660w
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/feature_hu_e73d9176337212a1.webp 680w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/feature_hu_e73d9176337212a1.webp 680w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="680"
+        height="402"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/feature_hu_d6398eeb9ac69f8d.png" srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/feature_hu_709a502c67562f9d.png 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/feature_hu_d6398eeb9ac69f8d.png 660w
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/feature.png 680w
+          
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/feature.png 680w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8 self-start">
+          <div class="toc pe-5 sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)] print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#step-1-reconnaissance-and-enumeration">Step 1: Reconnaissance and Enumeration</a></li>
+    <li><a href="#step-2-directory-bruteforcing">Step 2: Directory Bruteforcing</a></li>
+    <li><a href="#step-3-gaining-credentials">Step 3: Gaining Credentials</a></li>
+    <li><a href="#step-4-initial-access">Step 4: Initial Access</a></li>
+    <li><a href="#step-5-enumeration">Step 5: Enumeration</a></li>
+    <li><a href="#step-6-privilege-escalation">Step 6: Privilege Escalation</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="overview" class="relative group">Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span></h2><p>Drifting Blues is a HackMyVM CTF machine that demonstrates a classic web application attack chain leading to full system compromise. The attack started with enumeration of a single web server running Apache, which led to discovering a hidden Textpattern CMS installation through robots.txt. A password-protected ZIP archive found via directory bruteforcing contained credentials for the CMS, allowing file upload of a reverse shell. After gaining initial access as www-data, I exploited a vulnerable kernel version using the DirtyCow exploit to escalate privileges to root.</p>
+<h2 id="step-1-reconnaissance-and-enumeration" class="relative group">Step 1: Reconnaissance and Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-reconnaissance-and-enumeration" aria-label="Anchor">#</a></span></h2><p>I started with an nmap scan against the target to identify running services.</p>
+<pre tabindex="0"><code>nmap -sV -sC -p- 192.168.56.113
+</code></pre><pre tabindex="0"><code>PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 64 Apache httpd 2.2.22 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.22 (Debian)
+|_http-title: driftingblues
+| http-robots.txt: 1 disallowed entry 
+|_/textpattern/textpattern
+</code></pre><p><strong>Key Findings:</strong></p>
+<ul>
+<li>Only port 80 was open, running Apache 2.2.22 on Debian.</li>
+<li>The <code>robots.txt</code> file revealed a disallowed entry pointing to <code>/textpattern/textpattern</code>.</li>
+</ul>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/landing-page_hu_14109d5265f3ab0a.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="600"
+        height="765"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/landing-page.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Visiting the landing page confirmed the server was running.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/robots-txt_hu_871f6b30bdca2a65.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="560"
+        height="133"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/robots-txt.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The <code>robots.txt</code> file contained a hint pointing to a directory bruteforce with a <code>.zip</code> extension to include.</p>
+<h2 id="step-2-directory-bruteforcing" class="relative group">Step 2: Directory Bruteforcing <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-directory-bruteforcing" aria-label="Anchor">#</a></span></h2><p>With the hint from <code>robots.txt</code>, I ran a directory bruteforce using <strong>Feroxbuster</strong>.</p>
+<pre tabindex="0"><code>feroxbuster -u http://192.168.56.113 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x .zip
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/feroxbuster-discovery_hu_69ebb7265ade46a5.webp 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/feroxbuster-discovery_hu_f9a8beb0b6b08c26.webp 660w
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/feroxbuster-discovery_hu_f61ac2de392eae20.webp 736w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/feroxbuster-discovery_hu_f61ac2de392eae20.webp 736w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="736"
+        height="188"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/feroxbuster-discovery_hu_4ffdcfac87305763.png" srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/feroxbuster-discovery_hu_51e9a7ffdf0d28bf.png 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/feroxbuster-discovery_hu_4ffdcfac87305763.png 660w
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/feroxbuster-discovery.png 736w
+          
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/feroxbuster-discovery.png 736w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The scan discovered a file called <code>/spammer.zip</code>.</p>
+<h2 id="step-3-gaining-credentials" class="relative group">Step 3: Gaining Credentials <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-gaining-credentials" aria-label="Anchor">#</a></span></h2><p>I visited the path listed in <code>robots.txt</code> and discovered a Textpattern login page.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-login_hu_f3ea0d8fd1ea96d5.webp 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-login_hu_eb15e4e9d9e1612f.webp 660w
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-login_hu_63e293818a9ac3ff.webp 895w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-login_hu_63e293818a9ac3ff.webp 895w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="895"
+        height="457"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-login_hu_4864426fd1c828c4.png" srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-login_hu_d6c5a8ed09780450.png 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-login_hu_4864426fd1c828c4.png 660w
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-login.png 895w
+          
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-login.png 895w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I needed credentials to access the site. After downloading the <code>spammer.zip</code> file, I attempted to unzip it but it was password protected. However, it contained an interesting file called <code>creds.txt</code>.</p>
+<p>I extracted the password hash using <strong>zip2john</strong>.</p>
+<pre tabindex="0"><code>zip2john spammer.zip &gt; hash
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/zip2john_hu_83cabf952fea92c.webp 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/zip2john_hu_f7c55b29ea569db0.webp 660w
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/zip2john_hu_4ad341b567b51e6c.webp 852w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/zip2john_hu_4ad341b567b51e6c.webp 852w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="852"
+        height="127"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/zip2john_hu_99b20ea2f81c241e.png" srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/zip2john_hu_aa7bbc1aa0077f0a.png 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/zip2john_hu_99b20ea2f81c241e.png 660w
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/zip2john.png 852w
+          
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/zip2john.png 852w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I cracked the hash using <strong>John the Ripper</strong> and obtained the password.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/cracked-password_hu_7e8d15c45fbfce6.webp 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/cracked-password_hu_a963a06334a1d6fb.webp 660w
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/cracked-password_hu_65c6fa313731f4d5.webp 699w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/cracked-password_hu_65c6fa313731f4d5.webp 699w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="699"
+        height="216"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/cracked-password_hu_ef468db577a33b2e.png" srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/cracked-password_hu_58bb926aec449075.png 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/cracked-password_hu_ef468db577a33b2e.png 660w
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/cracked-password.png 699w
+          
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/cracked-password.png 699w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>After unzipping with the recovered password, I found a single pair of words which were potential username and password.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/unzipped-creds_hu_85f043cebc9681a7.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="487"
+        height="60"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/unzipped-creds.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-4-initial-access" class="relative group">Step 4: Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-4-initial-access" aria-label="Anchor">#</a></span></h2><p>I used the recovered credentials to successfully log into the Textpattern CMS.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/login-success_hu_4f4aa149c8ca30a8.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="652"
+        height="634"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/login-success.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The site appeared to be a blog writing platform.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-dashboard_hu_660402dd95fb5fca.webp 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-dashboard_hu_3ef0d1229435ad07.webp 660w
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-dashboard_hu_2dcd970bf8a3fc12.webp 950w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-dashboard_hu_2dcd970bf8a3fc12.webp 950w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="950"
+        height="955"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-dashboard_hu_e1ff1a2b8620a075.png" srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-dashboard_hu_e3458976e9f6ae59.png 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-dashboard_hu_e1ff1a2b8620a075.png 660w
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-dashboard.png 950w
+          
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/textpattern-dashboard.png 950w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Exploring the site under the Content menu, I discovered a file upload functionality.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/content-menu_hu_da27ace2b870eacf.webp 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/content-menu_hu_2db0e949baaaca0e.webp 660w
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/content-menu_hu_35b8a365dedf466b.webp 944w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/content-menu_hu_35b8a365dedf466b.webp 944w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="944"
+        height="357"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/content-menu_hu_9a80312187e0657a.png" srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/content-menu_hu_d15fe32d51b9a368.png 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/content-menu_hu_9a80312187e0657a.png 660w
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/content-menu.png 944w
+          
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/content-menu.png 944w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Visiting the Files section, I uploaded a PHP reverse shell.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/file-upload_hu_a3c60c14df14a7e1.webp 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/file-upload_hu_87cfc69b0094b9ee.webp 660w
+            
+              ,http://localhost:1313/posts/drifting-blues-hackmyvm/file-upload_hu_4967074341935dde.webp 1024w
+            
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/file-upload_hu_a09a38fae881705c.webp 1037w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1037"
+        height="305"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/file-upload_hu_9936f5bc2c55739b.png" srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/file-upload_hu_9726698ecc14dcad.png 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/file-upload_hu_9936f5bc2c55739b.png 660w
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/file-upload_hu_ea30f6970cfb92d3.png 1024w
+          
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/file-upload.png 1037w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>There were no validation checks in place, so the file was successfully uploaded.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/upload-success_hu_aa167a1832bf3b7a.webp 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/upload-success_hu_caac58e888482191.webp 660w
+            
+              ,http://localhost:1313/posts/drifting-blues-hackmyvm/upload-success_hu_a74a691c8d5d475b.webp 1024w
+            
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/upload-success_hu_dcf76754bc211448.webp 1229w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1229"
+        height="370"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/upload-success_hu_d47efb7f09f1e068.png" srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/upload-success_hu_b0bfe122b313566d.png 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/upload-success_hu_d47efb7f09f1e068.png 660w
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/upload-success_hu_8f86d8ad8f6c3cfd.png 1024w
+          
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/upload-success.png 1229w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The uploaded file was saved in the Files directory.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/files-directory_hu_9e9bd9691570ac5f.webp 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/files-directory_hu_e824db8e877d1444.webp 660w
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/files-directory_hu_2b2bb57226545811.webp 829w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/files-directory_hu_2b2bb57226545811.webp 829w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="829"
+        height="294"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/files-directory_hu_9a3290f0d600576b.png" srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/files-directory_hu_324d0bc35f367c9f.png 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/files-directory_hu_9a3290f0d600576b.png 660w
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/files-directory.png 829w
+          
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/files-directory.png 829w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I caught the incoming shell using <strong>Penelope</strong>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/penelope-shell_hu_d9ac49abe52540ca.webp 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/penelope-shell_hu_567d985bc699a170.webp 660w
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/penelope-shell_hu_225881bc86d34928.webp 715w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/penelope-shell_hu_225881bc86d34928.webp 715w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="715"
+        height="69"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/penelope-shell_hu_d407e38fddc8b622.png" srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/penelope-shell_hu_6971d96d3b55d1ed.png 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/penelope-shell_hu_d407e38fddc8b622.png 660w
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/penelope-shell.png 715w
+          
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/penelope-shell.png 715w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/shell-access_hu_12425808ea31a152.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="606"
+        height="83"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/shell-access.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-5-enumeration" class="relative group">Step 5: Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-5-enumeration" aria-label="Anchor">#</a></span></h2><p>I had a shell as <code>www-data</code>.</p>
+<pre tabindex="0"><code>www-data@driftingblues:/var/www/textpattern$ id
+uid=33(www-data) gid=33(www-data) groups=33(www-data)
+</code></pre><p>Since the <code>www-data</code> user doesn&rsquo;t have a home folder, I checked if there were any other users with bash access.</p>
+<pre tabindex="0"><code>cat /etc/passwd | grep &#39;bash&#39;
+</code></pre><p>Only root had a bash shell.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/user-enumeration_hu_8ebffb69a56ec694.webp 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/user-enumeration_hu_3fed8ed24d0d0224.webp 660w
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/user-enumeration_hu_3f95a823a59e36c6.webp 683w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/user-enumeration_hu_3f95a823a59e36c6.webp 683w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="683"
+        height="63"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/user-enumeration_hu_5e7417c77d667a89.png" srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/user-enumeration_hu_c60be1d0ef729117.png 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/user-enumeration_hu_5e7417c77d667a89.png 660w
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/user-enumeration.png 683w
+          
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/user-enumeration.png 683w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-6-privilege-escalation" class="relative group">Step 6: Privilege Escalation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-6-privilege-escalation" aria-label="Anchor">#</a></span></h2><p>I started by checking for sudo access.</p>
+<pre tabindex="0"><code>www-data@driftingblues:/var/www/textpattern$ sudo
+bash: sudo: command not found
+</code></pre><p>Next, I checked the kernel version.</p>
+<pre tabindex="0"><code>uname -a
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/kernel-version_hu_779b3f67c102475d.webp 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/kernel-version_hu_911e42444dd05178.webp 660w
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/kernel-version_hu_ab90e9bb27040692.webp 671w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/kernel-version_hu_ab90e9bb27040692.webp 671w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="671"
+        height="59"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/kernel-version_hu_c34dced2248b0561.png" srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/kernel-version_hu_8ef2cacb1164e8c3.png 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/kernel-version_hu_c34dced2248b0561.png 660w
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/kernel-version.png 671w
+          
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/kernel-version.png 671w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The kernel version was vulnerable to the DirtyCow exploit.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/dirty-cow-reference_hu_deb662932d9d72de.webp 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/dirty-cow-reference_hu_3583dbe58a10a7d3.webp 660w
+            
+              ,http://localhost:1313/posts/drifting-blues-hackmyvm/dirty-cow-reference_hu_4501a13146ae332a.webp 1024w
+            
+            
+              ,http://localhost:1313/posts/drifting-blues-hackmyvm/dirty-cow-reference_hu_9e76017d711e7c6b.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1776"
+        height="203"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/dirty-cow-reference_hu_2cdc77e0f91d298a.png" srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/dirty-cow-reference_hu_2bfcccf96bae7b72.png 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/dirty-cow-reference_hu_2cdc77e0f91d298a.png 660w
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/dirty-cow-reference_hu_5e99821d1935020e.png 1024w
+          
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/dirty-cow-reference_hu_e6fe97a87ab8e97b.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I downloaded the DirtyCow exploit code, compiled it, and ran it to gain root access.</p>
+<pre tabindex="0"><code>gcc exploit.c -pthread
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/root-shell_hu_4c5f812f36b7694a.webp 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/root-shell_hu_f59ab0a4501fa1c2.webp 660w
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/root-shell_hu_3c3ed6daf514f15b.webp 710w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/drifting-blues-hackmyvm/root-shell_hu_3c3ed6daf514f15b.webp 710w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="710"
+        height="339"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/drifting-blues-hackmyvm/root-shell_hu_a2346b3bbc4510af.png" srcset="http://localhost:1313/posts/drifting-blues-hackmyvm/root-shell_hu_1496ffdd535116c4.png 330w,http://localhost:1313/posts/drifting-blues-hackmyvm/root-shell_hu_a2346b3bbc4510af.png 660w
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/root-shell.png 710w
+          
+          
+            ,http://localhost:1313/posts/drifting-blues-hackmyvm/root-shell.png 710w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><p>This machine demonstrated a straightforward web application attack chain leading to full system compromise:</p>
+<ol>
+<li>Directory bruteforcing with a <code>.zip</code> extension revealed a password-protected archive.</li>
+<li>Cracking the ZIP password exposed CMS credentials.</li>
+<li>Textpattern CMS allowed unrestricted file upload, enabling a reverse shell.</li>
+<li>The vulnerable kernel version (DirtyCow) permitted privilege escalation to root.</li>
+</ol>
+<p>To secure the environment, the following remediations are recommended:</p>
+<ul>
+<li><strong>Remove sensitive files from web-accessible directories</strong> — ZIP archives containing credentials should never be placed on public web servers.</li>
+<li><strong>Implement file upload validation</strong> — Restrict allowed file types and scan uploads for malicious content.</li>
+<li><strong>Update the kernel and system packages</strong> — The DirtyCow vulnerability was patched in 2016; ensure all systems run current, supported versions.</li>
+<li><strong>Use principle of least privilege</strong> — The web server should run with minimal permissions and have no access to sensitive files.</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="960"
+        height="1280"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="k40t1k"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg" srcset="http://localhost:1313/img/k40t1k_hu_210ca2abc75c60a7.jpeg 330w,http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg 660w
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          k40t1k
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/jkilonzi"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/john-maluki"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://medium.com/@jkilonzi301"
+          target="_blank"
+          aria-label="Medium"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/posts/jan-hackmyvm/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Jan — HackMyVM</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-09-03 20:15:00 &#43;0300 EAT">3 September 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            k40t1k
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>
