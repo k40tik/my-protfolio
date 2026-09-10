@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Chisel on k40t1k</title>
-		<link>http://localhost:1313/tags/chisel/</link>
+		<link>https://k40tik.github.io/tags/chisel/</link>
 		<description>Recent content in Chisel on k40t1k</description>
 		<generator>Hugo</generator>
 		<language>en</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Mon, 24 Aug 2026 16:14:11 +0300</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/chisel/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://k40tik.github.io/tags/chisel/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Devoops — HackMyVM</title>
-				<link>http://localhost:1313/posts/devoops-hackmyvm/</link>
+				<link>https://k40tik.github.io/posts/devoops-hackmyvm/</link>
 				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
-				<guid>http://localhost:1313/posts/devoops-hackmyvm/</guid>
+				<guid>https://k40tik.github.io/posts/devoops-hackmyvm/</guid>
 				<description></description>
 			</item>
 	</channel>

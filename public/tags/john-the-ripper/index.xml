@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>John the Ripper on k40t1k</title>
-		<link>http://localhost:1313/tags/john-the-ripper/</link>
+		<link>https://k40tik.github.io/tags/john-the-ripper/</link>
 		<description>Recent content in John the Ripper on k40t1k</description>
 		<generator>Hugo</generator>
 		<language>en</language>
@@ -10,21 +10,35 @@
 		
 		
 		
-			<lastBuildDate>Mon, 24 Aug 2026 16:14:11 +0300</lastBuildDate>
+			<lastBuildDate>Thu, 10 Sep 2026 22:26:00 +0300</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/john-the-ripper/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://k40tik.github.io/tags/john-the-ripper/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Artig — HackMyVM</title>
+				<link>https://k40tik.github.io/posts/artig-hackmyvm/</link>
+				<pubDate>Thu, 10 Sep 2026 22:26:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/posts/artig-hackmyvm/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Drifting Blues — HackMyVM</title>
+				<link>https://k40tik.github.io/posts/drifting-blues-hackmyvm/</link>
+				<pubDate>Mon, 07 Sep 2026 10:00:00 +0300</pubDate>
+				<guid>https://k40tik.github.io/posts/drifting-blues-hackmyvm/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Devoops — HackMyVM</title>
-				<link>http://localhost:1313/posts/devoops-hackmyvm/</link>
+				<link>https://k40tik.github.io/posts/devoops-hackmyvm/</link>
 				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
-				<guid>http://localhost:1313/posts/devoops-hackmyvm/</guid>
+				<guid>https://k40tik.github.io/posts/devoops-hackmyvm/</guid>
 				<description></description>
 			</item>
 			<item>
 				<title>Ascension — HackSmarter</title>
-				<link>http://localhost:1313/posts/ascension-hacksmarter/</link>
+				<link>https://k40tik.github.io/posts/ascension-hacksmarter/</link>
 				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
-				<guid>http://localhost:1313/posts/ascension-hacksmarter/</guid>
+				<guid>https://k40tik.github.io/posts/ascension-hacksmarter/</guid>
 				<description></description>
 			</item>
 	</channel>

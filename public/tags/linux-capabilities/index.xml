@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Linux Capabilities on k40t1k</title>
-		<link>http://localhost:1313/tags/linux-capabilities/</link>
+		<link>https://k40tik.github.io/tags/linux-capabilities/</link>
 		<description>Recent content in Linux Capabilities on k40t1k</description>
 		<generator>Hugo</generator>
 		<language>en</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Fri, 07 Aug 2026 09:08:04 +0300</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/linux-capabilities/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://k40tik.github.io/tags/linux-capabilities/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Ascension — HackSmarter</title>
-				<link>http://localhost:1313/posts/ascension-hacksmarter/</link>
+				<link>https://k40tik.github.io/posts/ascension-hacksmarter/</link>
 				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
-				<guid>http://localhost:1313/posts/ascension-hacksmarter/</guid>
+				<guid>https://k40tik.github.io/posts/ascension-hacksmarter/</guid>
 				<description></description>
 			</item>
 	</channel>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Weak Credentials on k40t1k</title>
-		<link>http://localhost:1313/tags/weak-credentials/</link>
+		<link>https://k40tik.github.io/tags/weak-credentials/</link>
 		<description>Recent content in Weak Credentials on k40t1k</description>
 		<generator>Hugo</generator>
 		<language>en</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Mon, 31 Aug 2026 16:45:00 +0300</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/weak-credentials/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://k40tik.github.io/tags/weak-credentials/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>GIFT — HackMyVM</title>
-				<link>http://localhost:1313/posts/gift-hackmyvm/</link>
+				<link>https://k40tik.github.io/posts/gift-hackmyvm/</link>
 				<pubDate>Mon, 31 Aug 2026 16:45:00 +0300</pubDate>
-				<guid>http://localhost:1313/posts/gift-hackmyvm/</guid>
+				<guid>https://k40tik.github.io/posts/gift-hackmyvm/</guid>
 				<description></description>
 			</item>
 	</channel>
