@@ -51,7 +51,7 @@ The login prompt confirmed that password authentication is allowed, meaning the 
 With the TCP route looking thin and offering nothing to attack directly, I decided to run a second scan, this time over UDP. The initial sweep immediately caught my attention by revealing two services running over UDP.
 
 ```
-sudo nmap -sU -A 192.168.56.118
+sudo nmap -sU  192.168.56.118
 ```
 
 ```
