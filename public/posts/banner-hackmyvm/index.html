@@ -1,0 +1,1587 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e174e" />
+  
+  <title>Banner — HackMyVM &middot; k40t1k</title>
+    <meta name="title" content="Banner — HackMyVM &middot; k40t1k" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.77a79972dfd1fba3e37eaab972e5cf479aea24376fc39d827f5760735ebc834e.css"
+    integrity="sha256-d6eZct/R&#43;6Pjfqq5cuXPR5rqJDdvw52Cf1dgc168g04="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/posts/banner-hackmyvm/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/banner-hackmyvm/">
+	<meta property="og:site_name" content="k40t1k">
+	<meta property="og:title" content="Banner — HackMyVM">
+	<meta property="og:description" content="My awesome website">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-09-18T12:00:00+03:00">
+		<meta property="article:modified_time" content="2026-09-18T12:00:00+03:00">
+		<meta property="article:tag" content="HackMyVM">
+		<meta property="article:tag" content="Linux">
+		<meta property="article:tag" content="Easy">
+		<meta property="article:tag" content="FTP">
+		<meta property="article:tag" content="SSH">
+		<meta property="article:tag" content="Hydra">
+		<meta property="og:image" content="http://localhost:1313/posts/banner-hackmyvm/feature.png">
+
+  
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="http://localhost:1313/posts/banner-hackmyvm/feature.png">
+	<meta name="twitter:title" content="Banner — HackMyVM">
+	<meta name="twitter:description" content="My awesome website">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "Banner — HackMyVM",
+    "headline": "Banner — HackMyVM",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/banner-hackmyvm\/",
+    "author" : {
+      "@type": "Person",
+      "name": "k40t1k"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-09-18T12:00:00\u002b03:00",
+    "datePublished": "2026-09-18T12:00:00\u002b03:00",
+    
+    "dateModified": "2026-09-18T12:00:00\u002b03:00",
+    
+    "keywords": ["HackMyVM","Linux","Easy","FTP","SSH","Hydra","Pattern Recognition","Sudo","Privilege Escalation","CTF Writeup"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "893"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "K40t1k",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "Blog",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Banner — Hack My Vm",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="k40t1k" />
+  
+  
+    
+      <link href="https://github.com/jkilonzi" rel="me" />
+    
+      <link href="https://linkedin.com/in/john-maluki" rel="me" />
+    
+      <link href="https://medium.com/@jkilonzi301" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >k40t1k</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Blog"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Writeups</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certificates/"
+                  title="Certificates"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certificates</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Banner — HackMyVM
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-09-18 12:00:00 &#43;0300 EAT">18 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/banner-hackmyvm/feature_hu_f2dd0786ea3c9b59.webp 330w,http://localhost:1313/posts/banner-hackmyvm/feature_hu_ee178a27a5189e20.webp 660w
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/feature_hu_219f2590abf684c5.webp 774w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/feature_hu_219f2590abf684c5.webp 774w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="774"
+        height="691"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="http://localhost:1313/posts/banner-hackmyvm/feature_hu_2bb1ba61dda8e4e0.png" srcset="http://localhost:1313/posts/banner-hackmyvm/feature_hu_5153cb75fe2ca432.png 330w,http://localhost:1313/posts/banner-hackmyvm/feature_hu_2bb1ba61dda8e4e0.png 660w
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/feature.png 774w
+          
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/feature.png 774w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8 self-start">
+          <div class="toc pe-5 sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)] print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#step-1-reconnaissance-and-enumeration">Step 1: Reconnaissance and Enumeration</a>
+      <ul>
+        <li><a href="#ftp">FTP</a></li>
+        <li><a href="#ssh">SSH</a></li>
+        <li><a href="#http">HTTP</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-2-initial-access">Step 2: Initial Access</a></li>
+    <li><a href="#step-3-privilege-escalation">Step 3: Privilege Escalation</a>
+      <ul>
+        <li><a href="#enabling-root-ssh-login">Enabling Root SSH Login</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="overview" class="relative group">Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span></h2><p>Banner is a Linux machine from HackMyVM that rewards careful observation rather than relying only on automated enumeration. The attack chain started with an FTP banner that changed over time. By collecting the changing words and recognizing their structure, I recovered a clue that led to valid SSH credentials. After gaining access, a <code>sudo</code> rule and writable SSH configuration allowed me to restart <code>sshd</code> with root login enabled and authenticate as root using an SSH key.</p>
+<h2 id="step-1-reconnaissance-and-enumeration" class="relative group">Step 1: Reconnaissance and Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-reconnaissance-and-enumeration" aria-label="Anchor">#</a></span></h2><p>I began with an Nmap service scan against the target at <code>192.168.56.116</code>.</p>
+<pre tabindex="0"><code>nmap -sV -sC 192.168.56.116
+</code></pre><pre tabindex="0"><code>PORT     STATE SERVICE VERSION
+21/tcp   open  ftp     vsftpd 2.0.8 or later
+22/tcp   open  ssh     OpenSSH 8.4p1 Debian 5+deb11u3
+8080/tcp open  http    Werkzeug 3.1.6 (Python 3.9.2)
+</code></pre><p><strong>Key Findings:</strong></p>
+<ul>
+<li>FTP was exposed on port 21, but anonymous access was not allowed.</li>
+<li>SSH allowed password authentication, making valid credentials a possible entry point.</li>
+<li>Port 8080 hosted a Python-based web application presenting a network security knowledge challenge.</li>
+</ul>
+<h3 id="ftp" class="relative group">FTP <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ftp" aria-label="Anchor">#</a></span></h3><p>Although I could not authenticate to FTP anonymously, the server banner contained an unusual instruction:</p>
+<pre tabindex="0"><code>220-Carefully observe the changes in the information above.
+</code></pre><p>The three words displayed above the instruction changed between connections. For example, one banner displayed <code>Wild Elephants Love</code>, while another displayed <code>Clever Owls Make</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/banner-hackmyvm/ftp-banner_hu_ac2d88d61930c396.webp 330w,http://localhost:1313/posts/banner-hackmyvm/ftp-banner_hu_676cc2b7d293c983.webp 660w
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/ftp-banner_hu_556a707bb70e2a35.webp 695w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/ftp-banner_hu_556a707bb70e2a35.webp 695w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="695"
+        height="319"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/banner-hackmyvm/ftp-banner_hu_2b73130f95a35666.png" srcset="http://localhost:1313/posts/banner-hackmyvm/ftp-banner_hu_a026c91ccce75c9.png 330w,http://localhost:1313/posts/banner-hackmyvm/ftp-banner_hu_2b73130f95a35666.png 660w
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/ftp-banner.png 695w
+          
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/ftp-banner.png 695w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I also noticed that the service returned a different banner when I supplied different usernames, but each attempt still ended with a permission error.</p>
+<h3 id="ssh" class="relative group">SSH <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ssh" aria-label="Anchor">#</a></span></h3><p>SSH was running on port 22 and accepted password authentication. I kept this in mind as a likely route once I identified the correct username and password.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/banner-hackmyvm/ssh-enumeration_hu_5f79060605238ce8.webp 330w,http://localhost:1313/posts/banner-hackmyvm/ssh-enumeration_hu_5ba9d6f852abf17b.webp 660w
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/ssh-enumeration_hu_6edc15e3d4cbe65b.webp 689w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/ssh-enumeration_hu_6edc15e3d4cbe65b.webp 689w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="689"
+        height="169"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/banner-hackmyvm/ssh-enumeration_hu_17991111500fcbeb.png" srcset="http://localhost:1313/posts/banner-hackmyvm/ssh-enumeration_hu_9e9120faa71d05c4.png 330w,http://localhost:1313/posts/banner-hackmyvm/ssh-enumeration_hu_17991111500fcbeb.png 660w
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/ssh-enumeration.png 689w
+          
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/ssh-enumeration.png 689w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="http" class="relative group">HTTP <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#http" aria-label="Anchor">#</a></span></h3><p>The service on port 8080 hosted a challenge site containing cybersecurity questions.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/banner-hackmyvm/security-challenge_hu_463d1e52f7d89849.webp 330w,http://localhost:1313/posts/banner-hackmyvm/security-challenge_hu_810e20a9cefd43b6.webp 660w
+            
+              ,http://localhost:1313/posts/banner-hackmyvm/security-challenge_hu_811b4cfb4c21b533.webp 1024w
+            
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/security-challenge_hu_32e99f3b6d4f821e.webp 1066w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1066"
+        height="452"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/banner-hackmyvm/security-challenge_hu_cdeff24dd9dc6bc4.png" srcset="http://localhost:1313/posts/banner-hackmyvm/security-challenge_hu_45c1b609c190929b.png 330w,http://localhost:1313/posts/banner-hackmyvm/security-challenge_hu_cdeff24dd9dc6bc4.png 660w
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/security-challenge_hu_726f465a77f09af5.png 1024w
+          
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/security-challenge.png 1066w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I used <strong>Feroxbuster</strong> to map the application:</p>
+<pre tabindex="0"><code>feroxbuster -u http://192.168.56.116:8080 \\
+  -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt \\
+  -C 404
+</code></pre><p>The scan revealed three interesting endpoints:</p>
+<ul>
+<li><code>/console</code></li>
+<li><code>/api/questions</code></li>
+<li><code>/api/submit</code></li>
+</ul>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/banner-hackmyvm/feroxbuster_hu_2c3da6ff55874ab6.webp 330w,http://localhost:1313/posts/banner-hackmyvm/feroxbuster_hu_398b11835d8507f2.webp 660w
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/feroxbuster_hu_4ea4c26f11c95165.webp 710w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/feroxbuster_hu_4ea4c26f11c95165.webp 710w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="710"
+        height="89"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/banner-hackmyvm/feroxbuster_hu_eb4d932b620f2309.png" srcset="http://localhost:1313/posts/banner-hackmyvm/feroxbuster_hu_c9778fb7b9edf1ea.png 330w,http://localhost:1313/posts/banner-hackmyvm/feroxbuster_hu_eb4d932b620f2309.png 660w
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/feroxbuster.png 710w
+          
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/feroxbuster.png 710w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The <code>/console</code> endpoint returned <code>400 Bad Request</code> for both GET and POST requests. I could not determine the required parameters, so I returned to the changing FTP banner.</p>
+<h2 id="step-2-initial-access" class="relative group">Step 2: Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-initial-access" aria-label="Anchor">#</a></span></h2><p>The FTP message told me to observe the changes, so I collected the banner words over several minutes. The first five responses were:</p>
+<pre tabindex="0"><code>Wild       Elephants   Love
+Clever     Owls        Make
+Elephants  :           Mice
+Amazing    Zebras      Eat
+Snakes     Eat         Crickets
+</code></pre><p>After the fifth response, the sequence repeated. I wrote a small script to collect each banner and build a unique wordlist.</p>
+<pre tabindex="0"><code>#!/bin/bash
+
+ip=&#34;192.168.56.116&#34;
+wordlist=&#34;ftp_words.txt&#34;
+
+for i in $(seq 1 15); do
+  echo -n &#34;$(date +%H:%M:%S) - &#34;
+  banner=$(echo &#34;QUIT&#34; | nc &#34;$ip&#34; 21 | grep &#34;^220-&#34; | head -1)
+  echo &#34;$banner&#34;
+
+  cleaned_words=$(echo &#34;$banner&#34; | sed &#39;s/^220-//&#39; | tr -d &#39;:&#39; | tr -s &#39; &#39; &#39;\n&#39; | grep -v &#39;^$&#39;)
+
+  if [ -n &#34;$cleaned_words&#34; ]; then
+    while read -r word; do
+      if ! grep -qx &#34;$word&#34; &#34;$wordlist&#34; 2&gt;/dev/null; then
+        echo &#34;$word&#34; &gt;&gt; &#34;$wordlist&#34;
+        echo &#34; [+] New word added to $wordlist: $word&#34;
+      fi
+    done &lt;&lt;&lt; &#34;$cleaned_words&#34;
+  fi
+
+  sleep 60
+done
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/banner-hackmyvm/banner-wordlist_hu_5f0d39a03a0ebdc0.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="646"
+        height="329"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/banner-hackmyvm/banner-wordlist.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The collected words did not work as a straightforward username and password wordlist. I then compared the banner structure instead of treating each word independently. The first two lines contained three words each, while the third contained two words separated by a colon. Only the first letter of each word was capitalized.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/banner-hackmyvm/banner-pattern_hu_fbfae2274dd3c36e.webp 330w,http://localhost:1313/posts/banner-hackmyvm/banner-pattern_hu_1f86fc4ae4dab382.webp 660w
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/banner-pattern_hu_236d7114ae567e16.webp 710w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/banner-pattern_hu_236d7114ae567e16.webp 710w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="710"
+        height="134"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/banner-hackmyvm/banner-pattern_hu_21ab7108606fd373.png" srcset="http://localhost:1313/posts/banner-hackmyvm/banner-pattern_hu_4fc286fc5a8463be.png 330w,http://localhost:1313/posts/banner-hackmyvm/banner-pattern_hu_21ab7108606fd373.png 660w
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/banner-pattern.png 710w
+          
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/banner-pattern.png 710w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>Reconstructing the pattern produced the phrase <code>WELCOME : MAZESEC</code>. I used <code>welcome</code> as the likely username and treated the second part as the password candidate. To avoid exposing the credential in this writeup, I have redacted it below.</p>
+<p>I placed the two lowercase candidates in <code>list.txt</code>:</p>
+<pre tabindex="0"><code>welcome
+&lt;REDACTED&gt;
+</code></pre><p>I tested the candidate combinations with Hydra:</p>
+<pre tabindex="0"><code>hydra -L list.txt -P pass.txt ssh://192.168.56.116
+</code></pre><p>The attack succeeded and provided SSH credentials. The password is intentionally omitted here as <code>&lt;REDACTED&gt;</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/banner-hackmyvm/hydra-ssh_hu_4fa7e021e54b19a1.webp 330w,http://localhost:1313/posts/banner-hackmyvm/hydra-ssh_hu_5294a88b2e77c506.webp 660w
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/hydra-ssh_hu_2a84e2dff809f528.webp 903w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/hydra-ssh_hu_2a84e2dff809f528.webp 903w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="903"
+        height="105"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/banner-hackmyvm/hydra-ssh_hu_8d113bbb49703ef9.png" srcset="http://localhost:1313/posts/banner-hackmyvm/hydra-ssh_hu_35ae62006e447c78.png 330w,http://localhost:1313/posts/banner-hackmyvm/hydra-ssh_hu_8d113bbb49703ef9.png 660w
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/hydra-ssh.png 903w
+          
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/hydra-ssh.png 903w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I used the recovered credentials to log in over SSH and gain initial access as <code>welcome</code>.</p>
+<pre tabindex="0"><code>ssh welcome@192.168.56.116
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/banner-hackmyvm/ssh-access_hu_c2a5bed9bf828d1a.webp 330w,http://localhost:1313/posts/banner-hackmyvm/ssh-access_hu_19c30f5f6816cec9.webp 660w
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/ssh-access_hu_fbd7b74901798b7b.webp 836w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/ssh-access_hu_fbd7b74901798b7b.webp 836w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="836"
+        height="353"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/banner-hackmyvm/ssh-access_hu_f99b73ac80365c2b.png" srcset="http://localhost:1313/posts/banner-hackmyvm/ssh-access_hu_ad750e6b2975.png 330w,http://localhost:1313/posts/banner-hackmyvm/ssh-access_hu_f99b73ac80365c2b.png 660w
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/ssh-access.png 836w
+          
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/ssh-access.png 836w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-3-privilege-escalation" class="relative group">Step 3: Privilege Escalation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-privilege-escalation" aria-label="Anchor">#</a></span></h2><p>Once logged in, I checked the commands available through <code>sudo</code>.</p>
+<pre tabindex="0"><code>sudo -l
+</code></pre><p>My account could restart the SSH service as root without entering a password:</p>
+<pre tabindex="0"><code>/sbin/service sshd restart
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/banner-hackmyvm/sudo-permissions_hu_d6607ed977ddfaf6.webp 330w,http://localhost:1313/posts/banner-hackmyvm/sudo-permissions_hu_1e9bfc7b619e02f3.webp 660w
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/sudo-permissions_hu_909abae15f6ecae5.webp 893w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/banner-hackmyvm/sudo-permissions_hu_909abae15f6ecae5.webp 893w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="893"
+        height="85"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/banner-hackmyvm/sudo-permissions_hu_30bdc6804182869b.png" srcset="http://localhost:1313/posts/banner-hackmyvm/sudo-permissions_hu_2ab8cdaaa0d2c414.png 330w,http://localhost:1313/posts/banner-hackmyvm/sudo-permissions_hu_30bdc6804182869b.png 660w
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/sudo-permissions.png 893w
+          
+          
+            ,http://localhost:1313/posts/banner-hackmyvm/sudo-permissions.png 893w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The restart permission alone was not enough, so I checked whether I could modify the SSH daemon configuration.</p>
+<pre tabindex="0"><code>ls -la /etc/ssh/sshd_config
+</code></pre><p>The file permissions confirmed that I could write to <code>sshd_config</code>.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/banner-hackmyvm/sshd-config-permissions_hu_1b4bb88d4375d225.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="522"
+        height="50"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/banner-hackmyvm/sshd-config-permissions.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h3 id="enabling-root-ssh-login" class="relative group">Enabling Root SSH Login <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#enabling-root-ssh-login" aria-label="Anchor">#</a></span></h3><p>I generated an SSH key pair for authentication. The private key contents are not included in this writeup.</p>
+<pre tabindex="0"><code>ssh-keygen -t rsa
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/banner-hackmyvm/ssh-keygen_hu_9e5ef6d8d00851e5.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="598"
+        height="369"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/banner-hackmyvm/ssh-keygen.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I replaced the writable SSH configuration with the following minimal settings:</p>
+<pre tabindex="0"><code>PermitRootLogin yes
+StrictModes no
+AuthorizedKeysFile /home/welcome/.ssh/id_rsa.pub
+</code></pre><p>This configuration enabled root login and instructed SSH to use my public key from the <code>welcome</code> user&rsquo;s home directory.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/banner-hackmyvm/sshd-config_hu_12a07870d8b0a072.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="425"
+        height="88"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/banner-hackmyvm/sshd-config.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>I restarted the SSH service using the permitted <code>sudo</code> command:</p>
+<pre tabindex="0"><code>sudo /sbin/service sshd restart
+</code></pre><p>Finally, I authenticated as root using the generated private key:</p>
+<pre tabindex="0"><code>ssh -F /dev/null -i /home/welcome/.ssh/id_rsa root@localhost
+</code></pre><p>This gave me a root shell on the target.</p>
+<p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/banner-hackmyvm/root-ssh_hu_6aa5930e74b860f2.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="637"
+        height="164"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/banner-hackmyvm/root-ssh.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><p>The attack chain was:</p>
+<ol>
+<li>Changing FTP banners revealed a structured word pattern.</li>
+<li>Pattern reconstruction exposed a username and password clue for SSH.</li>
+<li>SSH password authentication provided access as <code>welcome</code>.</li>
+<li>A passwordless <code>sudo</code> rule allowed restarting <code>sshd</code>.</li>
+<li>Writable SSH configuration enabled root login with a controlled public key.</li>
+<li>SSH key authentication provided a root shell.</li>
+</ol>
+<p>To secure the machine, I would recommend:</p>
+<ul>
+<li>Remove sensitive clues from service banners and keep banners static.</li>
+<li>Disable SSH password authentication after deploying key-based access.</li>
+<li>Prevent unprivileged users from modifying <code>/etc/ssh/sshd_config</code>.</li>
+<li>Restrict <code>sudo</code> permissions to the smallest required command set.</li>
+<li>Keep <code>PermitRootLogin</code> disabled and validate SSH configuration ownership and permissions.</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="960"
+        height="1280"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="k40t1k"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg" srcset="http://localhost:1313/img/k40t1k_hu_210ca2abc75c60a7.jpeg 330w,http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg 660w
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          k40t1k
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/jkilonzi"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/john-maluki"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://medium.com/@jkilonzi301"
+          target="_blank"
+          aria-label="Medium"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/posts/yuan114-hackmyvm/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Yuan114 — HackMyVM</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-09-15 20:46:38 &#43;0300 EAT">15 September 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="http://localhost:1313/posts/bonjour-hackmyvm/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Bonjour — HackMyVM</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-09-21 10:30:00 &#43;0300 EAT">21 September 2026</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            k40t1k
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>

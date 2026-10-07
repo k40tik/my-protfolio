@@ -13,6 +13,21 @@ content/posts/<room-name>-<platform>/
 - Room name should be lowercase, hyphenated (e.g. `brooklyn-nine-nine-tryhackme`, `dc03-hackmyvm`)
 - Platform suffix: `-tryhackme`, `-hackmyvm`, `-htb`, etc.
 
+### PwnZone CTF 2026
+Writeups for PwnZone CTF 2026 are regular writeups under `content/posts/` — no nested section, no separate top-level section:
+```
+content/posts/<challenge-name>-pwnzone/
+├── index.md
+├── feature.png
+└── ...
+```
+- Challenge name is lowercase, hyphenated (e.g. `harbor-lights-pwnzone`, `greenroom-atlas-pwnzone`)
+- Title format: `<Challenge Name> — PwnZone CTF 2026`
+- Tags must include `PwnZone CTF 2026`, `Cloud`, and `Cloud Security`
+- Structure follows the challenge flow naturally (e.g. Reconnaissance → Initial Access → Privilege Escalation → Credential Theft → Vulnerability Analysis → Conclusion) — do not force the DC03 step template where it doesn't fit
+- Include flags, target IPs, and tokens verbatim — these CTFs are closed and submission is over
+- All other conventions (frontmatter, images, redaction of unrelated secrets) are identical
+
 ## index.md Frontmatter
 ```yaml
 +++

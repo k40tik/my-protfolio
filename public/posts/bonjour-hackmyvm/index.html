@@ -1,0 +1,1084 @@
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0e174e" />
+  
+  <title>Bonjour — HackMyVM &middot; k40t1k</title>
+    <meta name="title" content="Bonjour — HackMyVM &middot; k40t1k" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="http://localhost:1313/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="http://localhost:1313/css/main.bundle.min.77a79972dfd1fba3e37eaab972e5cf479aea24376fc39d827f5760735ebc834e.css"
+    integrity="sha256-d6eZct/R&#43;6Pjfqq5cuXPR5rqJDdvw52Cf1dgc168g04="
+  />
+  
+  
+  
+  
+  
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="http://localhost:1313/posts/bonjour-hackmyvm/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="http://localhost:1313/posts/bonjour-hackmyvm/">
+	<meta property="og:site_name" content="k40t1k">
+	<meta property="og:title" content="Bonjour — HackMyVM">
+	<meta property="og:description" content="My awesome website">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-09-21T10:30:00+03:00">
+		<meta property="article:modified_time" content="2026-09-21T10:30:00+03:00">
+		<meta property="article:tag" content="HackMyVM">
+		<meta property="article:tag" content="Linux">
+		<meta property="article:tag" content="Easy">
+		<meta property="article:tag" content="SSH">
+		<meta property="article:tag" content="MDNS">
+		<meta property="article:tag" content="ZeroConf">
+		<meta property="og:image" content="http://localhost:1313/posts/bonjour-hackmyvm/feature.png">
+
+  
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="http://localhost:1313/posts/bonjour-hackmyvm/feature.png">
+	<meta name="twitter:title" content="Bonjour — HackMyVM">
+	<meta name="twitter:description" content="My awesome website">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "Bonjour — HackMyVM",
+    "headline": "Bonjour — HackMyVM",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/bonjour-hackmyvm\/",
+    "author" : {
+      "@type": "Person",
+      "name": "k40t1k"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-09-21T10:30:00\u002b03:00",
+    "datePublished": "2026-09-21T10:30:00\u002b03:00",
+    
+    "dateModified": "2026-09-21T10:30:00\u002b03:00",
+    
+    "keywords": ["HackMyVM","Linux","Easy","SSH","mDNS","ZeroConf","DNS-SD","Linux Capabilities","CTF Writeup"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1091"
+  }
+  </script>
+    
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/",
+       "name": "K40t1k",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "item": "http://localhost:1313/posts/",
+       "name": "Blog",
+       "position": 2
+     },
+     {
+       "@type": "ListItem",
+       "name": "Bonjour — Hack My Vm",
+       "position": 3
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="k40t1k" />
+  
+  
+    
+      <link href="https://github.com/jkilonzi" rel="me" />
+    
+      <link href="https://linkedin.com/in/john-maluki" rel="me" />
+    
+      <link href="https://medium.com/@jkilonzi301" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >k40t1k</a
+  >
+
+    </div>
+    
+    
+      <ul class="flex list-none flex-col text-end sm:flex-row">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/about/"
+                  title="About"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >About</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/posts/"
+                  title="Blog"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Writeups</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/resources/"
+                  title="Resources"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Resources</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                <a
+                  href="/certificates/"
+                  title="Certificates"
+                  
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Certificates</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0.5">
+              
+                
+                
+              
+            </li>
+          
+          
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article>
+    <header class="max-w-prose">
+      
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Bonjour — HackMyVM
+      </h1>
+      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-09-21 10:30:00 &#43;0300 EAT">21 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+  
+
+
+        </div>
+      
+      
+        <div class="prose">
+          
+          
+          
+          
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mb-6 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/bonjour-hackmyvm/feature_hu_95c574e4d5084f3.webp 330w,http://localhost:1313/posts/bonjour-hackmyvm/feature_hu_9d256410ce0d1df6.webp 660w
+            
+              
+                ,http://localhost:1313/posts/bonjour-hackmyvm/feature_hu_92caa315a4006afe.webp 668w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/bonjour-hackmyvm/feature_hu_92caa315a4006afe.webp 668w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="668"
+        height="654"
+        class="mb-6 rounded-md"
+        
+        
+        
+          src="http://localhost:1313/posts/bonjour-hackmyvm/feature_hu_b4a1fae30cfc4bc2.png" srcset="http://localhost:1313/posts/bonjour-hackmyvm/feature_hu_3b96627f12dac564.png 330w,http://localhost:1313/posts/bonjour-hackmyvm/feature_hu_b4a1fae30cfc4bc2.png 660w
+          
+            ,http://localhost:1313/posts/bonjour-hackmyvm/feature.png 668w
+          
+          
+            ,http://localhost:1313/posts/bonjour-hackmyvm/feature.png 668w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+          
+        </div>
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8 self-start">
+          <div class="toc pe-5 sticky top-20 overflow-y-auto max-h-[calc(100vh-6rem)] print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#step-1-reconnaissance-and-enumeration">Step 1: Reconnaissance and Enumeration</a>
+      <ul>
+        <li><a href="#initial-tcp-scan">Initial TCP Scan</a></li>
+        <li><a href="#ssh-password-authentication-test">SSH Password Authentication Test</a></li>
+        <li><a href="#udp-enumeration">UDP Enumeration</a></li>
+      </ul>
+    </li>
+    <li><a href="#step-2-initial-access">Step 2: Initial Access</a></li>
+    <li><a href="#step-3-privilege-escalation">Step 3: Privilege Escalation</a>
+      <ul>
+        <li><a href="#internal-enumeration">Internal Enumeration</a></li>
+        <li><a href="#looking-for-suid-binaries">Looking for SUID Binaries</a></li>
+        <li><a href="#checking-for-capabilities">Checking for Capabilities</a></li>
+      </ul>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <h2 id="overview" class="relative group">Overview <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span></h2><p>Bonjour is a Linux box that rewards patient, scope-expanding enumeration. A full TCP scan turned up only SSH, so I tested the service directly and then widened my sweep to UDP, where an mDNS responder on port 5353 leaked SSH credentials through a DNS service discovery (DNS-SD) TXT record. Once inside, the route to root was far from direct: sudo was denied, there were no crontabs, no other user to pivot to, and none of the SUID binaries could be weaponized. Only after exhausting those rabbit holes did a capability check reveal a <code>python3.13</code> binary carrying <code>cap_setuid</code>, which I abused to spawn a root shell.</p>
+<h2 id="step-1-reconnaissance-and-enumeration" class="relative group">Step 1: Reconnaissance and Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-reconnaissance-and-enumeration" aria-label="Anchor">#</a></span></h2><h3 id="initial-tcp-scan" class="relative group">Initial TCP Scan <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#initial-tcp-scan" aria-label="Anchor">#</a></span></h3><p>The assessment began with a full TCP port scan against the target (192.168.56.118) to map the attack surface.</p>
+<pre tabindex="0"><code>nmap -sV -sC -p- 192.168.56.118
+</code></pre><pre tabindex="0"><code>PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 10.0p2 Debian 7+deb13u2 (protocol 2.0)
+</code></pre><p><strong>Key Findings:</strong></p>
+<ul>
+<li>Only port 22 (SSH) is exposed over TCP.</li>
+<li>OpenSSH 10.0p2 is not affected by any known vulnerability.</li>
+<li>Nothing else is listening on the host.</li>
+</ul>
+<p>There wasn&rsquo;t much to work with: a single service, no known CVE for the version, and a completely silent picture beyond it. The only avenue left was SSH itself, so I decided to interact with the service before committing further effort.</p>
+<h3 id="ssh-password-authentication-test" class="relative group">SSH Password Authentication Test <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ssh-password-authentication-test" aria-label="Anchor">#</a></span></h3><p>Even though the version has no known vulnerability, I connected over SSH to see how the server would respond and whether password authentication was actually accepted on the system.</p>
+<pre tabindex="0"><code>ssh root@192.168.56.118
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/bonjour-hackmyvm/ssh-auth-test_hu_7834eaec7943f9.webp 330w,http://localhost:1313/posts/bonjour-hackmyvm/ssh-auth-test_hu_ffd71bee4f6646e4.webp 660w
+            
+              
+                ,http://localhost:1313/posts/bonjour-hackmyvm/ssh-auth-test_hu_a090911dcccb0645.webp 678w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/bonjour-hackmyvm/ssh-auth-test_hu_a090911dcccb0645.webp 678w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="678"
+        height="112"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/bonjour-hackmyvm/ssh-auth-test_hu_5cd46e17eacd4dc.png" srcset="http://localhost:1313/posts/bonjour-hackmyvm/ssh-auth-test_hu_ec8314a49fef14e8.png 330w,http://localhost:1313/posts/bonjour-hackmyvm/ssh-auth-test_hu_5cd46e17eacd4dc.png 660w
+          
+            ,http://localhost:1313/posts/bonjour-hackmyvm/ssh-auth-test.png 678w
+          
+          
+            ,http://localhost:1313/posts/bonjour-hackmyvm/ssh-auth-test.png 678w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The login prompt confirmed that password authentication is allowed, meaning the server was willing to accept a password. SSH could be a viable route into this box, but only if I found credentials to use it with.</p>
+<h3 id="udp-enumeration" class="relative group">UDP Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#udp-enumeration" aria-label="Anchor">#</a></span></h3><p>With the TCP route looking thin and offering nothing to attack directly, I decided to run a second scan, this time over UDP. The initial sweep immediately caught my attention by revealing two services running over UDP.</p>
+<pre tabindex="0"><code>sudo nmap -sU  192.168.56.118
+</code></pre><pre tabindex="0"><code>PORT     STATE         SERVICE
+68/udp   open|filtered dhcpc
+5353/udp open          zeroconf
+</code></pre><p>Port 5353 stood out immediately. ZeroConf, also known as multicast DNS or mDNS, is used for service discovery on local networks, and it&rsquo;s not something you typically see on a CTF box. Its presence confirmed that more services were running over UDP than the TCP scan had shown, so I decided to redo the scan, this time targeting the top 100 UDP ports with aggressive detection.</p>
+<pre tabindex="0"><code>sudo nmap -sU --top-ports 100 192.168.56.118 -A
+</code></pre><pre tabindex="0"><code>PORT     STATE SERVICE VERSION
+5353/udp open  mdns    DNS-based service discovery
+| dns-service-discovery:
+|   22/tcp ssh:
+|     ipv4: 192.168.56.118
+|     name: debian SSH
+|     hostname: debian
+|     TXT:
+|_      username=user password=&lt;REDACTED&gt;
+</code></pre><p>The aggressive scan on port 5353 paid off. The DNS service discovery (DNS-SD) records not only confirmed that the host runs an SSH service, but the TXT entry leaked what looked like potential credentials for SSH authentication.</p>
+<h2 id="step-2-initial-access" class="relative group">Step 2: Initial Access <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-2-initial-access" aria-label="Anchor">#</a></span></h2><p>Using the credentials I recovered from the mDNS leak, I gained SSH access to the target as <code>user</code>.</p>
+<pre tabindex="0"><code>ssh user@192.168.56.118
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/bonjour-hackmyvm/ssh-login_hu_e38b8bb0ee0b6e9d.webp 330w,http://localhost:1313/posts/bonjour-hackmyvm/ssh-login_hu_1f8ff7c8210d898d.webp 660w
+            
+              
+                ,http://localhost:1313/posts/bonjour-hackmyvm/ssh-login_hu_26ecfe32d46f9eaf.webp 677w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/bonjour-hackmyvm/ssh-login_hu_26ecfe32d46f9eaf.webp 677w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="677"
+        height="308"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/bonjour-hackmyvm/ssh-login_hu_b634a415368b5b7f.png" srcset="http://localhost:1313/posts/bonjour-hackmyvm/ssh-login_hu_5b24d8040529bb49.png 330w,http://localhost:1313/posts/bonjour-hackmyvm/ssh-login_hu_b634a415368b5b7f.png 660w
+          
+            ,http://localhost:1313/posts/bonjour-hackmyvm/ssh-login.png 677w
+          
+          
+            ,http://localhost:1313/posts/bonjour-hackmyvm/ssh-login.png 677w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="step-3-privilege-escalation" class="relative group">Step 3: Privilege Escalation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-3-privilege-escalation" aria-label="Anchor">#</a></span></h2><h3 id="internal-enumeration" class="relative group">Internal Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#internal-enumeration" aria-label="Anchor">#</a></span></h3><p>With a low-privileged foothold secured, I began enumerating for escalation vectors, working through the standard checklist and chasing down several rabbit holes along the way.</p>
+<p>First, I checked whether my account could execute commands with sudo. Though the system&rsquo;s language is French, the output left no doubt that <code>user</code> cannot use sudo at all.</p>
+<pre tabindex="0"><code>sudo -l
+</code></pre><pre tabindex="0"><code>user@debian:~$ sudo -l
+[sudo] Mot de passe de user :
+Désolé, l&#39;utilisateur user ne peut pas utiliser sudo sur debian.
+</code></pre><p>With sudo ruled out, I checked for any scheduled tasks that might run with higher privileges.</p>
+<pre tabindex="0"><code>user@debian:~$ crontab -l
+no crontab for user
+</code></pre><p>I then looked for other users on the system I could pivot into. The result gave me nothing to work with. <code>/home</code> contains only <code>user</code>, so lateral movement between local accounts wasn&rsquo;t an option.</p>
+<pre tabindex="0"><code>user@debian:/home$ ls
+user
+</code></pre><h3 id="looking-for-suid-binaries" class="relative group">Looking for SUID Binaries <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#looking-for-suid-binaries" aria-label="Anchor">#</a></span></h3><p>That left me with nothing but basic information, so next I checked for any SUID binaries that would enable an escalation.</p>
+<pre tabindex="0"><code>find / -type f -perm -u=s -ls 2&gt;/dev/null
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/bonjour-hackmyvm/suid-binaries_hu_f9ae7fca54fca035.webp 330w,http://localhost:1313/posts/bonjour-hackmyvm/suid-binaries_hu_5cdfa748386ac7f7.webp 660w
+            
+              
+                ,http://localhost:1313/posts/bonjour-hackmyvm/suid-binaries_hu_6d8cabcd3effd459.webp 969w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/bonjour-hackmyvm/suid-binaries_hu_6d8cabcd3effd459.webp 969w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="969"
+        height="198"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/bonjour-hackmyvm/suid-binaries_hu_d45976cb0793cfc7.png" srcset="http://localhost:1313/posts/bonjour-hackmyvm/suid-binaries_hu_eb77fdb151a22bd5.png 330w,http://localhost:1313/posts/bonjour-hackmyvm/suid-binaries_hu_d45976cb0793cfc7.png 660w
+          
+            ,http://localhost:1313/posts/bonjour-hackmyvm/suid-binaries.png 969w
+          
+          
+            ,http://localhost:1313/posts/bonjour-hackmyvm/suid-binaries.png 969w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The search returned results, but on close inspection I didn&rsquo;t find anything I could weaponize. The setuid binaries were all stock system utilities with no known abuse path on this Debian release, so this one turned into another rabbit hole.</p>
+<h3 id="checking-for-capabilities" class="relative group">Checking for Capabilities <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#checking-for-capabilities" aria-label="Anchor">#</a></span></h3><p>With the SUID path dead, I decided to check for any Linux capabilities on the system before falling back to a full LinPEAS sweep. My first attempt to run <code>getcap</code> hit a wall. The command wasn&rsquo;t found through my shell, which suggested it either wasn&rsquo;t installed or simply wasn&rsquo;t in my PATH.</p>
+<pre tabindex="0"><code>user@debian:~$ getcap
+-bash: getcap : commande introuvable
+</code></pre><p>So I first confirmed whether the command was actually installed on the system at all.</p>
+<pre tabindex="0"><code>find / -name getcap 2&gt;/dev/null
+</code></pre><p>It turned out <code>getcap</code> was installed all along, it just lives in <code>/usr/sbin</code>, a directory that isn&rsquo;t in my PATH. To use it I had to specify the full path to the binary.</p>
+<pre tabindex="0"><code>/usr/sbin/getcap -r / 2&gt;/dev/null
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            
+              srcset="http://localhost:1313/posts/bonjour-hackmyvm/getcap-python_hu_a21fcbd944945f39.webp"
+            
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="522"
+        height="60"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/bonjour-hackmyvm/getcap-python.png"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<p>The check was a hit. The Python 3.13 binary at <code>/usr/bin/python3.13</code> was found to have the <code>cap_setuid</code> capability set with effective and permitted flags (<code>ep</code>). This capability allows a process to arbitrarily change its user ID, including setting it to 0 (root), without requiring SUID root privileges. That was exactly the escalation path I&rsquo;d been looking for.</p>
+<p>Abusing it to spawn a root shell:</p>
+<pre tabindex="0"><code>python3.13 -c &#39;import os; os.setuid(0); os.system(&#34;/bin/bash&#34;)&#39;
+</code></pre><p>
+
+
+
+
+
+<figure>
+    
+    
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="mx-auto my-0 rounded-md"
+      
+    >
+      
+      
+      
+      
+        <source
+          
+            srcset="http://localhost:1313/posts/bonjour-hackmyvm/root-shell_hu_c62d8566a5ad29f0.webp 330w,http://localhost:1313/posts/bonjour-hackmyvm/root-shell_hu_6ad442a5164531d2.webp 660w
+            
+              
+                ,http://localhost:1313/posts/bonjour-hackmyvm/root-shell_hu_e57b2381e264bb36.webp 708w
+              
+            
+            
+              
+                ,http://localhost:1313/posts/bonjour-hackmyvm/root-shell_hu_e57b2381e264bb36.webp 708w
+              
+            "
+          
+          sizes="100vw"
+          type="image/webp"
+        />
+      
+      <img
+        width="708"
+        height="80"
+        class="mx-auto my-0 rounded-md"
+        
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/posts/bonjour-hackmyvm/root-shell_hu_fb01fd1f4ad24282.png" srcset="http://localhost:1313/posts/bonjour-hackmyvm/root-shell_hu_d2641d0b1a586a41.png 330w,http://localhost:1313/posts/bonjour-hackmyvm/root-shell_hu_fb01fd1f4ad24282.png 660w
+          
+            ,http://localhost:1313/posts/bonjour-hackmyvm/root-shell.png 708w
+          
+          
+            ,http://localhost:1313/posts/bonjour-hackmyvm/root-shell.png 708w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+</figure>
+</p>
+<h2 id="conclusion" class="relative group">Conclusion <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#conclusion" aria-label="Anchor">#</a></span></h2><p>This lab showed how a misconfigured network service and a loose file capability can lead to full root compromise. Taking my time and sticking to a methodical enumeration flow paid off here, because the box has a minimal attack surface:</p>
+<ol>
+<li>TCP enumeration revealed only SSH, so I tested the service and then widened the scope with a UDP scan.</li>
+<li>A UDP sweep exposed mDNS on port 5353.</li>
+<li>DNS service discovery leaked SSH credentials for the <code>user</code> account.</li>
+<li>Post-exploitation enumeration dead-ended through sudo, crontabs, other users, and SUID binaries.</li>
+<li>Linux capability enumeration found <code>python3.13</code> with <code>cap_setuid</code> set.</li>
+<li>The <code>cap_setuid</code> capability was abused to impersonate root and spawn a shell.</li>
+</ol>
+<p>To secure the environment, the following remediations are recommended:</p>
+<ul>
+<li><strong>Disable or restrict mDNS/ZeroConf</strong> on servers and ensure DNS service discovery does not expose service credentials in TXT records.</li>
+<li><strong>Remove service credential metadata</strong> from network discovery responses and manage service configuration through a secured toolchain.</li>
+<li><strong>Audit Linux capabilities:</strong> remove unnecessary capabilities such as <code>cap_setuid</code> from binaries and files.</li>
+<li><strong>Enforce least privilege</strong> on the public attack surface and reduce exposed services to those strictly required.</li>
+</ul>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+      
+      
+        
+        
+
+
+
+
+
+
+
+
+  
+    <picture
+      class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+      
+    >
+      
+      
+      
+      
+      <img
+        width="960"
+        height="1280"
+        class="!mb-0 !mt-0 me-4 w-24 h-auto rounded-full"
+        alt="k40t1k"
+        loading="lazy" decoding="async"
+        
+          src="http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg" srcset="http://localhost:1313/img/k40t1k_hu_210ca2abc75c60a7.jpeg 330w,http://localhost:1313/img/k40t1k_hu_ebd2a57fb32cf973.jpeg 660w
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          
+          
+            ,http://localhost:1313/img/k40t1k.jpeg 960w
+          "
+          sizes="100vw"
+        
+      />
+    </picture>
+  
+
+
+      
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          k40t1k
+        </div>
+      
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/jkilonzi"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://linkedin.com/in/john-maluki"
+          target="_blank"
+          aria-label="Linkedin"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://medium.com/@jkilonzi301"
+          target="_blank"
+          aria-label="Medium"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M180.5,74.262C80.813,74.262,0,155.633,0,256S80.819,437.738,180.5,437.738,361,356.373,361,256,280.191,74.262,180.5,74.262Zm288.25,10.646c-49.845,0-90.245,76.619-90.245,171.095s40.406,171.1,90.251,171.1,90.251-76.619,90.251-171.1H559C559,161.5,518.6,84.908,468.752,84.908Zm139.506,17.821c-17.526,0-31.735,68.628-31.735,153.274s14.2,153.274,31.735,153.274S640,340.631,640,256C640,171.351,625.785,102.729,608.258,102.729Z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+    </div>
+  </div>
+
+
+      
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="http://localhost:1313/posts/banner-hackmyvm/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Banner — HackMyVM</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-09-18 12:00:00 &#43;0300 EAT">18 September 2026</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="http://localhost:1313/posts/harbor-lights-pwnzone/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Harbor Lights — PwnZone CTF 2026</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2026-10-07 15:20:00 &#43;0300 EAT">7 October 2026</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+        <p class="text-sm text-neutral-500 dark:text-neutral-400">
+            &copy;
+            2026
+            k40t1k
+        </p>
+      
+      
+      
+        <p class="text-xs text-neutral-500 dark:text-neutral-400">
+          
+          
+          Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+            href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href="https://github.com/jpanther/congo" target="_blank" rel="noopener noreferrer">Congo</a>
+        </p>
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>
