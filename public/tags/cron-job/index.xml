@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Thu, 02 Jul 2026 11:43:00 +0300</lastBuildDate>
+			<lastBuildDate>Thu, 10 Sep 2026 22:26:00 +0300</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/tags/cron-job/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Artig — HackMyVM</title>
+				<link>http://localhost:1313/posts/artig-hackmyvm/</link>
+				<pubDate>Thu, 10 Sep 2026 22:26:00 +0300</pubDate>
+				<guid>http://localhost:1313/posts/artig-hackmyvm/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Team — TryHackMe</title>
 				<link>http://localhost:1313/posts/team-tryhackme/</link>

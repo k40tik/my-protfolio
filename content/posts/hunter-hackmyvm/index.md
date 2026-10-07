@@ -2,7 +2,7 @@
 date = '2026-08-19T17:35:00+03:00'
 draft = false
 title = 'Hunter — HackMyVM'
-tags = ["HackMyVM", "Linux", "Privilege Escalation", "SSH", "HTTP", "JWT", "rkhunter", "Lateral Movement", "CTF Writeup"]
+tags = ["HackMyVM", "Linux", "SSH", "HTTP", "JWT", "Information Disclosure", "Sudo Misconfiguration", "rkhunter", "Reverse Shell", "Lateral Movement", "Privilege Escalation", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

@@ -2,7 +2,7 @@
 date = '2026-08-25T17:56:00+03:00'
 draft = false
 title = 'Fuzzz — HackMyVM'
-tags = ["HackMyVM", "Linux", "Android Debug Bridge", "Port Forwarding", "SSH", "Character Extraction", "lrz", "Privilege Escalation", "CTF Writeup"]
+tags = ["HackMyVM", "Linux", "Android Debug Bridge", "Port Forwarding", "SSH", "Character Extraction", "Base64", "Reverse Shell", "Sudo Misconfiguration", "Passwd File Overwrite", "lrz", "Privilege Escalation", "Chisel", "FFUF", "Feroxbuster", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

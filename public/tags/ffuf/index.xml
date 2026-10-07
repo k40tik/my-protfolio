@@ -20,5 +20,12 @@
 				<guid>http://localhost:1313/posts/yuan114-hackmyvm/</guid>
 				<description></description>
 			</item>
+			<item>
+				<title>Fuzzz — HackMyVM</title>
+				<link>http://localhost:1313/posts/fuzzz-hackmyvm/</link>
+				<pubDate>Tue, 25 Aug 2026 17:56:00 +0300</pubDate>
+				<guid>http://localhost:1313/posts/fuzzz-hackmyvm/</guid>
+				<description></description>
+			</item>
 	</channel>
 </rss>

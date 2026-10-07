@@ -2,7 +2,7 @@
 date = '2026-10-07T15:20:00+03:00'
 draft = false
 title = 'Harbor Lights — PwnZone CTF 2026'
-tags = ["PwnZone CTF 2026", "Cloud", "Cloud Security", "CTF Writeup", "Object Storage", "Path Traversal", "Access Control Bypass"]
+tags = ["PwnZone CTF 2026", "Cloud", "Cloud Security", "Object Storage", "Path Traversal", "Access Control Bypass", "URL Encoding", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

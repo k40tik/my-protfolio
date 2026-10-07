@@ -2,7 +2,7 @@
 date = '2026-09-03T20:15:00+03:00'
 draft = false
 title = 'Jan — HackMyVM'
-tags = ["HackMyVM", "Linux", "Easy", "SSRF", "HTTP Parameter Pollution", "SSH", "Command Injection", "Privilege Escalation", "SSH Config Misconfiguration", "CTF Writeup"]
+tags = ["HackMyVM", "Linux", "Easy", "SSRF", "HTTP Parameter Pollution", "SSH", "Command Injection", "Insecure File Permissions", "Directory Bruteforcing", "Privilege Escalation", "SSH Config Misconfiguration", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

@@ -20,5 +20,12 @@
 				<guid>http://localhost:1313/posts/banner-hackmyvm/</guid>
 				<description></description>
 			</item>
+			<item>
+				<title>Artig — HackMyVM</title>
+				<link>http://localhost:1313/posts/artig-hackmyvm/</link>
+				<pubDate>Thu, 10 Sep 2026 22:26:00 +0300</pubDate>
+				<guid>http://localhost:1313/posts/artig-hackmyvm/</guid>
+				<description></description>
+			</item>
 	</channel>
 </rss>

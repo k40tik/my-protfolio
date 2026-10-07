@@ -2,7 +2,7 @@
 date = '2026-09-10T22:26:00+03:00'
 draft = false
 title = 'Artig — HackMyVM'
-tags = ["HackMyVM", "Linux", "Easy", "FTP", "WordPress", "LFI", "Redis", "SSH", "John the Ripper", "Tar Wildcard Injection", "Privilege Escalation", "CVE-2018-7422", "CTF Writeup"]
+tags = ["HackMyVM", "Linux", "Easy", "FTP", "WordPress", "WPScan", "LFI", "CVE-2018-7422", "Redis", "SSH", "Credential Reuse", "John the Ripper", "Sudo", "Cron Job", "SUID", "Tar Wildcard Injection", "Privilege Escalation", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

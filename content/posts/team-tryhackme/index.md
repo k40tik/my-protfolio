@@ -2,7 +2,7 @@
 date = '2026-07-02T11:43:00+03:00'
 draft = false
 title = 'Team — TryHackMe'
-tags = ["TryHackMe", "Linux", "Boot2Root", "Easy", "FTP", "Path Traversal", "Sudo Misconfiguration", "Cron Job", "Privilege Escalation", "CTF Writeup"]
+tags = ["TryHackMe", "Linux", "Boot2Root", "Easy", "FTP", "SSH", "Path Traversal", "Local File Inclusion", "Command Injection", "Reverse Shell", "Sudo Misconfiguration", "Cron Job", "Privilege Escalation", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

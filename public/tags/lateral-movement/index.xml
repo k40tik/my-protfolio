@@ -10,14 +10,35 @@
 		
 		
 		
-			<lastBuildDate>Wed, 19 Aug 2026 17:35:00 +0300</lastBuildDate>
+			<lastBuildDate>Mon, 24 Aug 2026 16:14:11 +0300</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/tags/lateral-movement/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Devoops — HackMyVM</title>
+				<link>http://localhost:1313/posts/devoops-hackmyvm/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>http://localhost:1313/posts/devoops-hackmyvm/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Hunter — HackMyVM</title>
 				<link>http://localhost:1313/posts/hunter-hackmyvm/</link>
 				<pubDate>Wed, 19 Aug 2026 17:35:00 +0300</pubDate>
 				<guid>http://localhost:1313/posts/hunter-hackmyvm/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Ascension — HackSmarter</title>
+				<link>http://localhost:1313/posts/ascension-hacksmarter/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>http://localhost:1313/posts/ascension-hacksmarter/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Athena — TryHackMe</title>
+				<link>http://localhost:1313/posts/athena-tryhackme/</link>
+				<pubDate>Sat, 25 Jul 2026 19:35:00 +0300</pubDate>
+				<guid>http://localhost:1313/posts/athena-tryhackme/</guid>
 				<description></description>
 			</item>
 	</channel>

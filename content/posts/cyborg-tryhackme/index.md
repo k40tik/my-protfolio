@@ -2,7 +2,7 @@
 date = '2026-06-30T15:00:00+03:00'
 draft = false
 title = 'Cyborg — TryHackMe'
-tags = ["TryHackMe", "linux", "boot2root", "borgbackup", "privilege escalation", "squid", "md5"]
+tags = ["TryHackMe", "Linux", "Boot2Root", "Apache", "Directory Bruteforcing", "Information Disclosure", "Squid", "MD5", "Password Cracking", "BorgBackup", "SSH", "Sudo Misconfiguration", "Command Injection", "Gobuster", "Privilege Escalation", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

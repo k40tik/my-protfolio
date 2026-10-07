@@ -2,7 +2,7 @@
 date = '2026-07-25T19:35:00+03:00'
 draft = false
 title = 'Athena — TryHackMe'
-tags = ["TryHackMe", "Linux", "SMB", "Command Injection", "Privilege Escalation", "Kernel Module", "Diamorphine", "CTF Writeup"]
+tags = ["TryHackMe", "Linux", "SMB", "Command Injection", "Reverse Shell", "Lateral Movement", "Insecure File Permissions", "Kernel Module", "Rootkit", "Diamorphine", "Ghidra", "Privilege Escalation", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

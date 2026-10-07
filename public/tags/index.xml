@@ -14,6 +14,13 @@
 		
 			<atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
 			<item>
+				<title>Admission Control</title>
+				<link>http://localhost:1313/tags/admission-control/</link>
+				<pubDate>Wed, 07 Oct 2026 15:23:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/admission-control/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Cloud</title>
 				<link>http://localhost:1313/tags/cloud/</link>
 				<pubDate>Wed, 07 Oct 2026 15:23:00 +0300</pubDate>
@@ -25,6 +32,13 @@
 				<link>http://localhost:1313/tags/cloud-security/</link>
 				<pubDate>Wed, 07 Oct 2026 15:23:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/cloud-security/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Credential Leakage</title>
+				<link>http://localhost:1313/tags/credential-leakage/</link>
+				<pubDate>Wed, 07 Oct 2026 15:23:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/credential-leakage/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -70,10 +84,52 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Token Auto-Mounting</title>
+				<link>http://localhost:1313/tags/token-auto-mounting/</link>
+				<pubDate>Wed, 07 Oct 2026 15:23:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/token-auto-mounting/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Broken Access Control</title>
+				<link>http://localhost:1313/tags/broken-access-control/</link>
+				<pubDate>Wed, 07 Oct 2026 15:21:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/broken-access-control/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>External ID</title>
+				<link>http://localhost:1313/tags/external-id/</link>
+				<pubDate>Wed, 07 Oct 2026 15:21:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/external-id/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>IAM</title>
 				<link>http://localhost:1313/tags/iam/</link>
 				<pubDate>Wed, 07 Oct 2026 15:21:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/iam/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Information Disclosure</title>
+				<link>http://localhost:1313/tags/information-disclosure/</link>
+				<pubDate>Wed, 07 Oct 2026 15:21:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/information-disclosure/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Role Assumption</title>
+				<link>http://localhost:1313/tags/role-assumption/</link>
+				<pubDate>Wed, 07 Oct 2026 15:21:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/role-assumption/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Session Tags</title>
+				<link>http://localhost:1313/tags/session-tags/</link>
+				<pubDate>Wed, 07 Oct 2026 15:21:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/session-tags/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -109,6 +165,13 @@
 				<link>http://localhost:1313/tags/path-traversal/</link>
 				<pubDate>Wed, 07 Oct 2026 15:20:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/path-traversal/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>URL Encoding</title>
+				<link>http://localhost:1313/tags/url-encoding/</link>
+				<pubDate>Wed, 07 Oct 2026 15:20:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/url-encoding/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -161,10 +224,24 @@
 				<description></description>
 			</item>
 			<item>
+				<title>UDP Scan</title>
+				<link>http://localhost:1313/tags/udp-scan/</link>
+				<pubDate>Mon, 21 Sep 2026 10:30:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/udp-scan/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>ZeroConf</title>
 				<link>http://localhost:1313/tags/zeroconf/</link>
 				<pubDate>Mon, 21 Sep 2026 10:30:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/zeroconf/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Feroxbuster</title>
+				<link>http://localhost:1313/tags/feroxbuster/</link>
+				<pubDate>Fri, 18 Sep 2026 12:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/feroxbuster/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -189,10 +266,24 @@
 				<description></description>
 			</item>
 			<item>
+				<title>SSH Configuration Tampering</title>
+				<link>http://localhost:1313/tags/ssh-configuration-tampering/</link>
+				<pubDate>Fri, 18 Sep 2026 12:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/ssh-configuration-tampering/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Sudo</title>
 				<link>http://localhost:1313/tags/sudo/</link>
 				<pubDate>Fri, 18 Sep 2026 12:00:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/sudo/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Burp Suite</title>
+				<link>http://localhost:1313/tags/burp-suite/</link>
+				<pubDate>Tue, 15 Sep 2026 20:46:38 +0300</pubDate>
+				<guid>http://localhost:1313/tags/burp-suite/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -231,10 +322,45 @@
 				<description></description>
 			</item>
 			<item>
+				<title>PID Fuzzing</title>
+				<link>http://localhost:1313/tags/pid-fuzzing/</link>
+				<pubDate>Tue, 15 Sep 2026 20:46:38 +0300</pubDate>
+				<guid>http://localhost:1313/tags/pid-fuzzing/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Plaintext Passwords</title>
+				<link>http://localhost:1313/tags/plaintext-passwords/</link>
+				<pubDate>Tue, 15 Sep 2026 20:46:38 +0300</pubDate>
+				<guid>http://localhost:1313/tags/plaintext-passwords/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Proc Filesystem</title>
+				<link>http://localhost:1313/tags/proc-filesystem/</link>
+				<pubDate>Tue, 15 Sep 2026 20:46:38 +0300</pubDate>
+				<guid>http://localhost:1313/tags/proc-filesystem/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Sudo Misconfiguration</title>
 				<link>http://localhost:1313/tags/sudo-misconfiguration/</link>
 				<pubDate>Tue, 15 Sep 2026 20:46:38 +0300</pubDate>
 				<guid>http://localhost:1313/tags/sudo-misconfiguration/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Credential Reuse</title>
+				<link>http://localhost:1313/tags/credential-reuse/</link>
+				<pubDate>Thu, 10 Sep 2026 22:26:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/credential-reuse/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cron Job</title>
+				<link>http://localhost:1313/tags/cron-job/</link>
+				<pubDate>Thu, 10 Sep 2026 22:26:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/cron-job/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -259,6 +385,13 @@
 				<description></description>
 			</item>
 			<item>
+				<title>SUID</title>
+				<link>http://localhost:1313/tags/suid/</link>
+				<pubDate>Thu, 10 Sep 2026 22:26:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/suid/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Tar Wildcard Injection</title>
 				<link>http://localhost:1313/tags/tar-wildcard-injection/</link>
 				<pubDate>Thu, 10 Sep 2026 22:26:00 +0300</pubDate>
@@ -270,6 +403,13 @@
 				<link>http://localhost:1313/tags/wordpress/</link>
 				<pubDate>Thu, 10 Sep 2026 22:26:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/wordpress/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>WPScan</title>
+				<link>http://localhost:1313/tags/wpscan/</link>
+				<pubDate>Thu, 10 Sep 2026 22:26:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/wpscan/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -294,6 +434,41 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Kernel Exploit</title>
+				<link>http://localhost:1313/tags/kernel-exploit/</link>
+				<pubDate>Mon, 07 Sep 2026 10:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/kernel-exploit/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Reverse Shell</title>
+				<link>http://localhost:1313/tags/reverse-shell/</link>
+				<pubDate>Mon, 07 Sep 2026 10:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/reverse-shell/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Textpattern</title>
+				<link>http://localhost:1313/tags/textpattern/</link>
+				<pubDate>Mon, 07 Sep 2026 10:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/textpattern/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Unrestricted File Upload</title>
+				<link>http://localhost:1313/tags/unrestricted-file-upload/</link>
+				<pubDate>Mon, 07 Sep 2026 10:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/unrestricted-file-upload/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Zip2john</title>
+				<link>http://localhost:1313/tags/zip2john/</link>
+				<pubDate>Mon, 07 Sep 2026 10:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/zip2john/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Command Injection</title>
 				<link>http://localhost:1313/tags/command-injection/</link>
 				<pubDate>Thu, 03 Sep 2026 20:15:00 +0300</pubDate>
@@ -305,6 +480,13 @@
 				<link>http://localhost:1313/tags/http-parameter-pollution/</link>
 				<pubDate>Thu, 03 Sep 2026 20:15:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/http-parameter-pollution/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Insecure File Permissions</title>
+				<link>http://localhost:1313/tags/insecure-file-permissions/</link>
+				<pubDate>Thu, 03 Sep 2026 20:15:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/insecure-file-permissions/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -343,10 +525,24 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Base64</title>
+				<link>http://localhost:1313/tags/base64/</link>
+				<pubDate>Tue, 25 Aug 2026 17:56:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/base64/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Character Extraction</title>
 				<link>http://localhost:1313/tags/character-extraction/</link>
 				<pubDate>Tue, 25 Aug 2026 17:56:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/character-extraction/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Chisel</title>
+				<link>http://localhost:1313/tags/chisel/</link>
+				<pubDate>Tue, 25 Aug 2026 17:56:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/chisel/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -357,6 +553,13 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Passwd File Overwrite</title>
+				<link>http://localhost:1313/tags/passwd-file-overwrite/</link>
+				<pubDate>Tue, 25 Aug 2026 17:56:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/passwd-file-overwrite/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Port Forwarding</title>
 				<link>http://localhost:1313/tags/port-forwarding/</link>
 				<pubDate>Tue, 25 Aug 2026 17:56:00 +0300</pubDate>
@@ -364,10 +567,10 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Chisel</title>
-				<link>http://localhost:1313/tags/chisel/</link>
+				<title>Arbitrary File Read</title>
+				<link>http://localhost:1313/tags/arbitrary-file-read/</link>
 				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
-				<guid>http://localhost:1313/tags/chisel/</guid>
+				<guid>http://localhost:1313/tags/arbitrary-file-read/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -375,6 +578,13 @@
 				<link>http://localhost:1313/tags/cve-2025-30208/</link>
 				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
 				<guid>http://localhost:1313/tags/cve-2025-30208/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Git History</title>
+				<link>http://localhost:1313/tags/git-history/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>http://localhost:1313/tags/git-history/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -399,10 +609,38 @@
 				<description></description>
 			</item>
 			<item>
+				<title>JWT Forgery</title>
+				<link>http://localhost:1313/tags/jwt-forgery/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>http://localhost:1313/tags/jwt-forgery/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Lateral Movement</title>
+				<link>http://localhost:1313/tags/lateral-movement/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>http://localhost:1313/tags/lateral-movement/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Node.js</title>
 				<link>http://localhost:1313/tags/node.js/</link>
 				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
 				<guid>http://localhost:1313/tags/node.js/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Remote Code Execution</title>
+				<link>http://localhost:1313/tags/remote-code-execution/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>http://localhost:1313/tags/remote-code-execution/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Source Code Exposure</title>
+				<link>http://localhost:1313/tags/source-code-exposure/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>http://localhost:1313/tags/source-code-exposure/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -417,13 +655,6 @@
 				<link>http://localhost:1313/tags/http/</link>
 				<pubDate>Wed, 19 Aug 2026 17:35:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/http/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Lateral Movement</title>
-				<link>http://localhost:1313/tags/lateral-movement/</link>
-				<pubDate>Wed, 19 Aug 2026 17:35:00 +0300</pubDate>
-				<guid>http://localhost:1313/tags/lateral-movement/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -452,6 +683,20 @@
 				<link>http://localhost:1313/tags/graphql-introspection/</link>
 				<pubDate>Tue, 18 Aug 2026 14:25:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/graphql-introspection/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>LinPEAS</title>
+				<link>http://localhost:1313/tags/linpeas/</link>
+				<pubDate>Tue, 18 Aug 2026 14:25:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/linpeas/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Plaintext Credentials</title>
+				<link>http://localhost:1313/tags/plaintext-credentials/</link>
+				<pubDate>Tue, 18 Aug 2026 14:25:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/plaintext-credentials/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -511,6 +756,20 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Login Restriction Bypass</title>
+				<link>http://localhost:1313/tags/login-restriction-bypass/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/login-restriction-bypass/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>NetExec</title>
+				<link>http://localhost:1313/tags/netexec/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/netexec/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>NTDS.dit</title>
 				<link>http://localhost:1313/tags/ntds.dit/</link>
 				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
@@ -518,10 +777,24 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Password Spraying</title>
+				<link>http://localhost:1313/tags/password-spraying/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/password-spraying/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Resource-Based Constrained Delegation</title>
 				<link>http://localhost:1313/tags/resource-based-constrained-delegation/</link>
 				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/resource-based-constrained-delegation/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>SMB</title>
+				<link>http://localhost:1313/tags/smb/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/smb/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -539,6 +812,13 @@
 				<description></description>
 			</item>
 			<item>
+				<title>User Enumeration</title>
+				<link>http://localhost:1313/tags/user-enumeration/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/user-enumeration/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Windows</title>
 				<link>http://localhost:1313/tags/windows/</link>
 				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
@@ -550,6 +830,20 @@
 				<link>http://localhost:1313/tags/winrm/</link>
 				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/winrm/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>ACL Abuse</title>
+				<link>http://localhost:1313/tags/acl-abuse/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/acl-abuse/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>AD Recycle Bin</title>
+				<link>http://localhost:1313/tags/ad-recycle-bin/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/ad-recycle-bin/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -574,10 +868,38 @@
 				<description></description>
 			</item>
 			<item>
+				<title>ESC7</title>
+				<link>http://localhost:1313/tags/esc7/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/esc7/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>ForceChangePassword</title>
+				<link>http://localhost:1313/tags/forcechangepassword/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/forcechangepassword/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Impacket</title>
+				<link>http://localhost:1313/tags/impacket/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/impacket/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Kerbrute</title>
 				<link>http://localhost:1313/tags/kerbrute/</link>
 				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/kerbrute/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>LDAP</title>
+				<link>http://localhost:1313/tags/ldap/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/ldap/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -588,10 +910,31 @@
 				<description></description>
 			</item>
 			<item>
+				<title>MSSQL Impersonation</title>
+				<link>http://localhost:1313/tags/mssql-impersonation/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/mssql-impersonation/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>NTLMv2</title>
+				<link>http://localhost:1313/tags/ntlmv2/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/ntlmv2/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Responder</title>
 				<link>http://localhost:1313/tags/responder/</link>
 				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/responder/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>MySQL</title>
+				<link>http://localhost:1313/tags/mysql/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>http://localhost:1313/tags/mysql/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -609,6 +952,13 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Ghidra</title>
+				<link>http://localhost:1313/tags/ghidra/</link>
+				<pubDate>Sat, 25 Jul 2026 19:35:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/ghidra/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Kernel Module</title>
 				<link>http://localhost:1313/tags/kernel-module/</link>
 				<pubDate>Sat, 25 Jul 2026 19:35:00 +0300</pubDate>
@@ -616,10 +966,10 @@
 				<description></description>
 			</item>
 			<item>
-				<title>SMB</title>
-				<link>http://localhost:1313/tags/smb/</link>
+				<title>Rootkit</title>
+				<link>http://localhost:1313/tags/rootkit/</link>
 				<pubDate>Sat, 25 Jul 2026 19:35:00 +0300</pubDate>
-				<guid>http://localhost:1313/tags/smb/</guid>
+				<guid>http://localhost:1313/tags/rootkit/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -637,17 +987,17 @@
 				<description></description>
 			</item>
 			<item>
-				<title>Impacket</title>
-				<link>http://localhost:1313/tags/impacket/</link>
+				<title>Hardcoded Credentials</title>
+				<link>http://localhost:1313/tags/hardcoded-credentials/</link>
 				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
-				<guid>http://localhost:1313/tags/impacket/</guid>
+				<guid>http://localhost:1313/tags/hardcoded-credentials/</guid>
 				<description></description>
 			</item>
 			<item>
-				<title>LDAP</title>
-				<link>http://localhost:1313/tags/ldap/</link>
+				<title>Machine Account Creation</title>
+				<link>http://localhost:1313/tags/machine-account-creation/</link>
 				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
-				<guid>http://localhost:1313/tags/ldap/</guid>
+				<guid>http://localhost:1313/tags/machine-account-creation/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -658,17 +1008,17 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Reverse Engineering</title>
+				<link>http://localhost:1313/tags/reverse-engineering/</link>
+				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
+				<guid>http://localhost:1313/tags/reverse-engineering/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Boot2root</title>
 				<link>http://localhost:1313/tags/boot2root/</link>
 				<pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/boot2root/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Cron Job</title>
-				<link>http://localhost:1313/tags/cron-job/</link>
-				<pubDate>Thu, 02 Jul 2026 11:43:00 +0300</pubDate>
-				<guid>http://localhost:1313/tags/cron-job/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -683,6 +1033,13 @@
 				<link>http://localhost:1313/tags/md5/</link>
 				<pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
 				<guid>http://localhost:1313/tags/md5/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Password Cracking</title>
+				<link>http://localhost:1313/tags/password-cracking/</link>
+				<pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/tags/password-cracking/</guid>
 				<description></description>
 			</item>
 			<item>
@@ -704,6 +1061,13 @@
 				<link>http://localhost:1313/tags/llmnr-poisoning/</link>
 				<pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
 				<guid>http://localhost:1313/tags/llmnr-poisoning/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Password Reset</title>
+				<link>http://localhost:1313/tags/password-reset/</link>
+				<pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
+				<guid>http://localhost:1313/tags/password-reset/</guid>
 				<description></description>
 			</item>
 	</channel>

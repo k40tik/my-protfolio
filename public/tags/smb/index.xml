@@ -10,9 +10,23 @@
 		
 		
 		
-			<lastBuildDate>Sat, 25 Jul 2026 19:35:00 +0300</lastBuildDate>
+			<lastBuildDate>Mon, 10 Aug 2026 17:00:00 +0300</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/tags/smb/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Past — HackSmarter</title>
+				<link>http://localhost:1313/posts/past-hacksmarter/</link>
+				<pubDate>Mon, 10 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/posts/past-hacksmarter/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>ShadowGate — HackSmarter</title>
+				<link>http://localhost:1313/posts/shadowgate-hacksmarter/</link>
+				<pubDate>Fri, 07 Aug 2026 17:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/posts/shadowgate-hacksmarter/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Athena — TryHackMe</title>
 				<link>http://localhost:1313/posts/athena-tryhackme/</link>
@@ -25,6 +39,13 @@
 				<link>http://localhost:1313/posts/support-htb/</link>
 				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
 				<guid>http://localhost:1313/posts/support-htb/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>DC03 — HackMyVM</title>
+				<link>http://localhost:1313/posts/dc03-hackmyvm/</link>
+				<pubDate>Thu, 11 Jun 2026 18:43:53 +0300</pubDate>
+				<guid>http://localhost:1313/posts/dc03-hackmyvm/</guid>
 				<description></description>
 			</item>
 	</channel>

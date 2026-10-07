@@ -2,7 +2,7 @@
 date = '2026-09-07T10:00:00+03:00'
 draft = false
 title = 'Drifting Blues — HackMyVM'
-tags = ["HackMyVM", "Linux", "Easy", "Apache", "Directory Bruteforcing", "John the Ripper", "DirtyCow", "Privilege Escalation", "CTF Writeup"]
+tags = ["HackMyVM", "Linux", "Easy", "Apache", "Textpattern", "Directory Bruteforcing", "Unrestricted File Upload", "Reverse Shell", "DirtyCow", "Kernel Exploit", "zip2john", "John the Ripper", "Feroxbuster", "Privilege Escalation", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

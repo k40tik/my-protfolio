@@ -56,6 +56,13 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Devoops — HackMyVM</title>
+				<link>http://localhost:1313/posts/devoops-hackmyvm/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>http://localhost:1313/posts/devoops-hackmyvm/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Hunter — HackMyVM</title>
 				<link>http://localhost:1313/posts/hunter-hackmyvm/</link>
 				<pubDate>Wed, 19 Aug 2026 17:35:00 +0300</pubDate>
@@ -74,6 +81,20 @@
 				<link>http://localhost:1313/posts/ascension-hacksmarter/</link>
 				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
 				<guid>http://localhost:1313/posts/ascension-hacksmarter/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cyborg — TryHackMe</title>
+				<link>http://localhost:1313/posts/cyborg-tryhackme/</link>
+				<pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/posts/cyborg-tryhackme/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Brooklyn Nine Nine — TryHackMe</title>
+				<link>http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/</link>
+				<pubDate>Mon, 29 Jun 2026 11:43:00 +0300</pubDate>
+				<guid>http://localhost:1313/posts/brooklyn-nine-nine-tryhackme/</guid>
 				<description></description>
 			</item>
 	</channel>

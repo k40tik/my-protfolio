@@ -2,7 +2,7 @@
 date = '2026-06-29T11:43:00+03:00'
 draft = false
 title = 'Brooklyn Nine Nine — TryHackMe'
-tags = ["TryHackMe", "Linux", "Boot2Root", "Easy", "FTP", "Privilege Escalation", "CTF Writeup"]
+tags = ["TryHackMe", "Linux", "Boot2Root", "Easy", "FTP", "SSH", "Hydra", "Brute Force", "Sudo", "Privilege Escalation", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

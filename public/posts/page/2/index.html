@@ -242,10 +242,10 @@
 <style>
   .writeups-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 1.5rem; 
-    width: 100%; 
-    margin: 20px 0 0 0; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    margin: 20px 0 0 0;
     padding: 0;
   }
 
@@ -322,13 +322,228 @@
     grid-column: 1 / -1;
     opacity: 0.6;
   }
+
+  [hidden] {
+    display: none !important;
+  }
+
+  .writeup-search {
+    margin-top: 1.5rem;
+    width: 100%;
+  }
+
+  .search-input-wrap {
+    position: relative;
+    max-width: 560px;
+  }
+
+  #search-input {
+    width: 100%;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.04);
+    color: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    box-sizing: border-box;
+  }
+
+  #search-input::placeholder {
+    opacity: 0.5;
+  }
+
+  #search-input:focus {
+    border-color: rgba(59, 130, 246, 0.6);
+  }
+
+  .search-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    right: 0;
+    background: #10182b;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    z-index: 30;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    max-height: 280px;
+    overflow-y: auto;
+  }
+
+  .search-dropdown-label {
+    padding: 0.5rem 0.9rem 0.2rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.5;
+  }
+
+  .search-dropdown-item {
+    padding: 0.55rem 0.9rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .search-dropdown-item:hover,
+  .search-dropdown-item.active {
+    background: rgba(59, 130, 246, 0.15);
+  }
+
+  .search-dropdown-item .item-count {
+    opacity: 0.5;
+    font-size: 0.75em;
+  }
+
+  .platform-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.9rem;
+  }
+
+  .pill {
+    color: #94a3b8;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 0.3rem 0.9rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    background-color: rgba(15, 23, 42, 0.4);
+    transition: all 0.2s ease;
+    user-select: none;
+  }
+
+  .pill:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .pill.active {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+    border-color: rgba(59, 130, 246, 0.5);
+    font-weight: 600;
+  }
+
+  .tag-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.7rem;
+    max-height: 100px;
+    overflow-y: auto;
+    padding-bottom: 2px;
+  }
+
+  .chip {
+    color: #94a3b8;
+    font-size: 0.75rem;
+    cursor: pointer;
+    padding: 0.25rem 0.7rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    background-color: rgba(15, 23, 42, 0.4);
+    transition: all 0.2s ease;
+    user-select: none;
+  }
+
+  .chip:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .chip.active {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+    border-color: rgba(59, 130, 246, 0.5);
+    font-weight: 600;
+  }
+
+  .search-status {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .search-status .result-count {
+    opacity: 0.75;
+    margin-right: 0.3rem;
+  }
+
+  .active-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+    border-radius: 9999px;
+    background: rgba(59, 130, 246, 0.2);
+    color: #3b82f6;
+    border: 1px solid rgba(59, 130, 246, 0.5);
+    cursor: pointer;
+  }
+
+  .active-tag:hover {
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
+    border-color: rgba(239, 68, 68, 0.4);
+  }
+
+  .clear-all {
+    background: none;
+    border: none;
+    color: #3b82f6;
+    cursor: pointer;
+    font-size: 0.85rem;
+    padding: 0.2rem 0.4rem;
+    text-decoration: underline;
+  }
+
+  .clear-all:hover {
+    opacity: 0.7;
+  }
+
+  .search-empty {
+    text-align: center;
+    padding: 3rem 1rem;
+    opacity: 0.6;
+    grid-column: 1 / -1;
+  }
 </style>
 
 <div style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-  
+
   <h1 style="font-size: 2.5rem; font-weight: 800; margin-top: 2rem; margin-bottom: 2rem;">
     Blog
   </h1>
+
+  <div class="writeup-search" id="writeup-search">
+    <div class="search-input-wrap">
+      <input id="search-input" type="text" placeholder="Search writeups by title or tag..."
+             autocomplete="off" spellcheck="false" aria-label="Search writeups">
+      <div id="search-dropdown" class="search-dropdown" hidden></div>
+    </div>
+
+    <div class="platform-pills" id="platform-pills"></div>
+    <div class="tag-chips" id="tag-chips"></div>
+
+    <div class="search-status" id="search-status" hidden>
+      <span class="result-count" id="result-count"></span>
+      <span id="active-tags"></span>
+      <button class="clear-all" id="clear-all" type="button">Clear all</button>
+    </div>
+  </div>
 
   <div id="blog-grid" class="writeups-grid">
     
@@ -370,7 +585,7 @@
 
         <div class="writeup-info">
           
-            <span class="tag-medium">Active Directory</span>
+            <span class="tag-medium">HackMyVM</span>
           
           <h4 class="writeup-title">DC03 — HackMyVM</h4>
           <p class="writeup-date">2026-06-11</p>
@@ -381,7 +596,11 @@
     <div class="loading" id="loading-indicator">Loading Medium posts...</div>
   </div>
 
-  
+  <div id="search-results" class="writeups-grid" hidden></div>
+  <div id="search-empty" class="search-empty" hidden>No writeups match your search.</div>
+
+  <div id="pagination-wrap">
+    
     <ul class="mt-8 flex flex-row">
         <li>
           <a
@@ -413,41 +632,444 @@
         </li>
     </ul>
 
+  </div>
 </div>
 
+<script id="writeup-index" type="application/json">
+[{"title": "Greenroom Atlas — PwnZone CTF 2026",
+"url": "/posts/greenroom-atlas-pwnzone/",
+"date": "2026-10-07",
+"platform": "PwnZone CTF 2026",
+"tags": ["PwnZone CTF 2026","Cloud","Cloud Security","Kubernetes","RBAC","Service Account","Privilege Escalation","Token Auto-Mounting","Credential Leakage","Admission Control","CTF Writeup"],
+"thumb": "/posts/greenroom-atlas-pwnzone/feature.png"},{"title": "Stageworks — PwnZone CTF 2026",
+"url": "/posts/stageworks-pwnzone/",
+"date": "2026-10-07",
+"platform": "PwnZone CTF 2026",
+"tags": ["PwnZone CTF 2026","Cloud","Cloud Security","IAM","Trust Policy","External ID","Session Tags","Tag Injection","Role Assumption","Information Disclosure","Broken Access Control","Privilege Escalation","CTF Writeup"],
+"thumb": "/posts/stageworks-pwnzone/feature.png"},{"title": "Harbor Lights — PwnZone CTF 2026",
+"url": "/posts/harbor-lights-pwnzone/",
+"date": "2026-10-07",
+"platform": "PwnZone CTF 2026",
+"tags": ["PwnZone CTF 2026","Cloud","Cloud Security","Object Storage","Path Traversal","Access Control Bypass","URL Encoding","CTF Writeup"],
+"thumb": "/posts/harbor-lights-pwnzone/feature.png"},{"title": "Bonjour — HackMyVM",
+"url": "/posts/bonjour-hackmyvm/",
+"date": "2026-09-21",
+"platform": "HackMyVM",
+"tags": ["HackMyVM","Linux","Easy","UDP Scan","SSH","mDNS","ZeroConf","DNS-SD","Linux Capabilities","Privilege Escalation","CTF Writeup"],
+"thumb": "/posts/bonjour-hackmyvm/feature.png"},{"title": "Banner — HackMyVM",
+"url": "/posts/banner-hackmyvm/",
+"date": "2026-09-18",
+"platform": "HackMyVM",
+"tags": ["HackMyVM","Linux","Easy","FTP","SSH","Hydra","Feroxbuster","Pattern Recognition","Sudo","SSH Configuration Tampering","Privilege Escalation","CTF Writeup"],
+"thumb": "/posts/banner-hackmyvm/feature.png"},{"title": "Yuan114 — HackMyVM",
+"url": "/posts/yuan114-hackmyvm/",
+"date": "2026-09-15",
+"platform": "HackMyVM",
+"tags": ["HackMyVM","Linux","Medium","Burp Suite","FFUF","Gobuster","LFI","Local File Inclusion","Proc Filesystem","PID Fuzzing","Plaintext Passwords","Sudo Misconfiguration","Privilege Escalation","CTF Writeup"],
+"thumb": "/posts/yuan114-hackmyvm/feature.png"},{"title": "Artig — HackMyVM",
+"url": "/posts/artig-hackmyvm/",
+"date": "2026-09-10",
+"platform": "HackMyVM",
+"tags": ["HackMyVM","Linux","Easy","FTP","WordPress","WPScan","LFI","CVE-2018-7422","Redis","SSH","Credential Reuse","John the Ripper","Sudo","Cron Job","SUID","Tar Wildcard Injection","Privilege Escalation","CTF Writeup"],
+"thumb": "/posts/artig-hackmyvm/feature.png"},{"title": "Drifting Blues — HackMyVM",
+"url": "/posts/drifting-blues-hackmyvm/",
+"date": "2026-09-07",
+"platform": "HackMyVM",
+"tags": ["HackMyVM","Linux","Easy","Apache","Textpattern","Directory Bruteforcing","Unrestricted File Upload","Reverse Shell","DirtyCow","Kernel Exploit","zip2john","John the Ripper","Feroxbuster","Privilege Escalation","CTF Writeup"],
+"thumb": "/posts/drifting-blues-hackmyvm/feature.png"},{"title": "Jan — HackMyVM",
+"url": "/posts/jan-hackmyvm/",
+"date": "2026-09-03",
+"platform": "HackMyVM",
+"tags": ["HackMyVM","Linux","Easy","SSRF","HTTP Parameter Pollution","SSH","Command Injection","Insecure File Permissions","Directory Bruteforcing","Privilege Escalation","SSH Config Misconfiguration","CTF Writeup"],
+"thumb": "/posts/jan-hackmyvm/feature.png"},{"title": "GIFT — HackMyVM",
+"url": "/posts/gift-hackmyvm/",
+"date": "2026-08-31",
+"platform": "HackMyVM",
+"tags": ["HackMyVM","Linux","Easy","SSH","Hydra","Brute Force","Weak Credentials","CTF Writeup"],
+"thumb": "/posts/gift-hackmyvm/feature.png"},{"title": "Fuzzz — HackMyVM",
+"url": "/posts/fuzzz-hackmyvm/",
+"date": "2026-08-25",
+"platform": "HackMyVM",
+"tags": ["HackMyVM","Linux","Android Debug Bridge","Port Forwarding","SSH","Character Extraction","Base64","Reverse Shell","Sudo Misconfiguration","Passwd File Overwrite","lrz","Privilege Escalation","Chisel","FFUF","Feroxbuster","CTF Writeup"],
+"thumb": "/posts/fuzzz-hackmyvm/feature.png"},{"title": "Devoops — HackMyVM",
+"url": "/posts/devoops-hackmyvm/",
+"date": "2026-08-24",
+"platform": "HackMyVM",
+"tags": ["HackMyVM","Linux","Easy","Vite","CVE-2025-30208","Arbitrary File Read","Source Code Exposure","JWT","JWT Forgery","Remote Code Execution","Node.js","Gitea","Git History","Chisel","SSH","Lateral Movement","Sudo Misconfiguration","GTFOBins","Privilege Escalation","Reverse Shell","Feroxbuster","John the Ripper","CTF Writeup"],
+"thumb": "/posts/devoops-hackmyvm/feature.png"},{"title": "Hunter — HackMyVM",
+"url": "/posts/hunter-hackmyvm/",
+"date": "2026-08-19",
+"platform": "HackMyVM",
+"tags": ["HackMyVM","Linux","SSH","HTTP","JWT","Information Disclosure","Sudo Misconfiguration","rkhunter","Reverse Shell","Lateral Movement","Privilege Escalation","CTF Writeup"],
+"thumb": "/posts/hunter-hackmyvm/feature.png"},{"title": "Flute — HackMyVM",
+"url": "/posts/flute-hackmyvm/",
+"date": "2026-08-18",
+"platform": "HackMyVM",
+"tags": ["HackMyVM","Linux","GraphQL","Apollo Server","GraphQL Introspection","Plaintext Credentials","SSH","Unix Socket","Reverse Shell","Privilege Escalation","LinPEAS","CTF Writeup"],
+"thumb": "/posts/flute-hackmyvm/feature.png"},{"title": "Past — HackSmarter",
+"url": "/posts/past-hacksmarter/",
+"date": "2026-08-10",
+"platform": "HackSmarter",
+"tags": ["HackSmarter","Windows","Active Directory","Medium","SMB","NetExec","TimeRoasting","Hashcat","John the Ripper","SYSVOL","BloodHound","GenericAll","Resource-Based Constrained Delegation","Kerberos","DCSync","NTDS.dit","WinRM","Password Spraying","User Enumeration","Login Restriction Bypass","Privilege Escalation","CTF Writeup"],
+"thumb": "/posts/past-hacksmarter/feature.png"},{"title": "ShadowGate — HackSmarter",
+"url": "/posts/shadowgate-hacksmarter/",
+"date": "2026-08-07",
+"platform": "HackSmarter",
+"tags": ["HackSmarter","Windows","Active Directory","ADCS","ESC3","ESC7","MSSQL","MSSQL Impersonation","ACL Abuse","ForceChangePassword","Kerberos","NTLMv2","SMB","WinRM","LDAP","BloodHound","Responder","Certipy","Kerbrute","Impacket","AD Recycle Bin","Privilege Escalation","CTF Writeup"],
+"thumb": "/posts/shadowgate-hacksmarter/feature.png"},{"title": "Ascension — HackSmarter",
+"url": "/posts/ascension-hacksmarter/",
+"date": "2026-08-07",
+"platform": "HackSmarter",
+"tags": ["HackSmarter","Linux","Easy","FTP","NFS","Gobuster","WordPress","MySQL","SSH","John the Ripper","Hydra","Brute Force","Credential Reuse","Lateral Movement","Linux Capabilities","Privilege Escalation","CTF Writeup"],
+"thumb": "/posts/ascension-hacksmarter/feature.png"},{"title": "Athena — TryHackMe",
+"url": "/posts/athena-tryhackme/",
+"date": "2026-07-25",
+"platform": "TryHackMe",
+"tags": ["TryHackMe","Linux","SMB","Command Injection","Reverse Shell","Lateral Movement","Insecure File Permissions","Kernel Module","Rootkit","Diamorphine","Ghidra","Privilege Escalation","CTF Writeup"],
+"thumb": "/posts/athena-tryhackme/feature.png"},{"title": "Support — HackTheBox",
+"url": "/posts/support-htb/",
+"date": "2026-07-03",
+"platform": "HackTheBox",
+"tags": ["HackTheBox","Windows","Active Directory","LDAP","SMB","Hardcoded Credentials","Plaintext Passwords","Reverse Engineering","WinRM","Kerberos","Machine Account Creation","GenericAll","RBCD","DCSync","Impacket","BloodHound","Privilege Escalation","CTF Writeup"],
+"thumb": "/posts/support-htb/feature.png"},{"title": "Team — TryHackMe",
+"url": "/posts/team-tryhackme/",
+"date": "2026-07-02",
+"platform": "TryHackMe",
+"tags": ["TryHackMe","Linux","Boot2Root","Easy","FTP","SSH","Path Traversal","Local File Inclusion","Command Injection","Reverse Shell","Sudo Misconfiguration","Cron Job","Privilege Escalation","CTF Writeup"],
+"thumb": "/posts/team-tryhackme/feature.png"},{"title": "Cyborg — TryHackMe",
+"url": "/posts/cyborg-tryhackme/",
+"date": "2026-06-30",
+"platform": "TryHackMe",
+"tags": ["TryHackMe","Linux","Boot2Root","Apache","Directory Bruteforcing","Information Disclosure","Squid","MD5","Password Cracking","BorgBackup","SSH","Sudo Misconfiguration","Command Injection","Gobuster","Privilege Escalation","CTF Writeup"],
+"thumb": "/posts/cyborg-tryhackme/feature.png"},{"title": "Brooklyn Nine Nine — TryHackMe",
+"url": "/posts/brooklyn-nine-nine-tryhackme/",
+"date": "2026-06-29",
+"platform": "TryHackMe",
+"tags": ["TryHackMe","Linux","Boot2Root","Easy","FTP","SSH","Hydra","Brute Force","Sudo","Privilege Escalation","CTF Writeup"],
+"thumb": "/posts/brooklyn-nine-nine-tryhackme/feature.png"},{"title": "DC03 — HackMyVM",
+"url": "/posts/dc03-hackmyvm/",
+"date": "2026-06-11",
+"platform": "HackMyVM",
+"tags": ["HackMyVM","Windows","Active Directory","Privilege Escalation","LLMNR Poisoning","NTLMv2","Account Operators","Password Reset","Password Cracking","NTDS.dit","WinRM","SMB","LDAP","Kerbrute","Impacket","Responder","CTF Writeup"],
+"thumb": "/posts/dc03-hackmyvm/feature.png"}]
+</script>
+
 <script>
+(function () {
+  var input = document.getElementById('search-input');
+  var dropdown = document.getElementById('search-dropdown');
+  var pillsEl = document.getElementById('platform-pills');
+  var chipsEl = document.getElementById('tag-chips');
+  var statusEl = document.getElementById('search-status');
+  var countEl = document.getElementById('result-count');
+  var activeTagsEl = document.getElementById('active-tags');
+  var clearAllBtn = document.getElementById('clear-all');
+  var grid = document.getElementById('blog-grid');
+  var resultsEl = document.getElementById('search-results');
+  var emptyEl = document.getElementById('search-empty');
+  var pagination = document.getElementById('pagination-wrap');
+
+  var local;
+  try {
+    local = JSON.parse(document.getElementById('writeup-index').textContent);
+  } catch (err) {
+    console.error('Writeup index JSON parse failed', err);
+    local = [];
+  }
+  local = local.map(function (p) {
+    p.tags = Array.isArray(p.tags) ? p.tags : [];
+    return p;
+  });
+  var medium = [];
+  var all = local.slice();
+
+  var state = { q: '', platform: 'All', tags: {} };
+
+  var PLATFORM_ORDER = ['HackMyVM', 'HackTheBox', 'HackSmarter', 'TryHackMe', 'PwnZone CTF 2026', 'Medium'];
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+
+  function isSearchActive() {
+    return state.q !== '' || state.platform !== 'All' || Object.keys(state.tags).length > 0;
+  }
+
+  function tagCounts() {
+    var counts = {};
+    all.forEach(function (p) {
+      (p.tags || []).forEach(function (t) {
+        counts[t] = (counts[t] || 0) + 1;
+      });
+    });
+    return counts;
+  }
+
+  function platforms() {
+    var seen = {};
+    all.forEach(function (p) { if (p.platform) seen[p.platform] = true; });
+    var list = Object.keys(seen);
+    list.sort(function (a, b) {
+      var ia = PLATFORM_ORDER.indexOf(a), ib = PLATFORM_ORDER.indexOf(b);
+      if (ia === -1) ia = 999;
+      if (ib === -1) ib = 999;
+      if (ia !== ib) return ia - ib;
+      return a.localeCompare(b);
+    });
+    return list;
+  }
+
+  function renderPills() {
+    var html = '<span class="pill' + (state.platform === 'All' ? ' active' : '') + '" data-platform="All">All</span>';
+    platforms().forEach(function (pl) {
+      html += '<span class="pill' + (state.platform === pl ? ' active' : '') + '" data-platform="' +
+        escapeHtml(pl) + '">' + escapeHtml(pl) + '</span>';
+    });
+    pillsEl.innerHTML = html;
+  }
+
+  function renderChips() {
+    var counts = tagCounts();
+    var q = state.q.toLowerCase();
+    var list = Object.keys(counts).filter(function (t) {
+      return q === '' || t.toLowerCase().indexOf(q) !== -1;
+    });
+    list.sort(function (a, b) {
+      if (counts[b] !== counts[a]) return counts[b] - counts[a];
+      return a.localeCompare(b);
+    });
+    list = list.slice(0, 32);
+    chipsEl.innerHTML = list.map(function (t) {
+      var active = !!state.tags[t];
+      return '<span class="chip' + (active ? ' active' : '') + '" data-tag="' +
+        escapeHtml(t) + '">' + escapeHtml(t) + ' (' + counts[t] + ')</span>';
+    }).join('');
+  }
+
+  function renderStatus(matchCount) {
+    var activeTagKeys = Object.keys(state.tags);
+    if (!isSearchActive()) {
+      statusEl.hidden = true;
+      return;
+    }
+    statusEl.hidden = false;
+    countEl.textContent = matchCount + ' writeup' + (matchCount === 1 ? '' : 's') + ' found';
+    activeTagsEl.innerHTML = activeTagKeys.map(function (t) {
+      return '<span class="active-tag" data-tag="' + escapeHtml(t) + '">' +
+        escapeHtml(t) + ' &times;</span>';
+    }).join(' ');
+  }
+
+  function matches(p) {
+    if (state.platform !== 'All' && p.platform !== state.platform) return false;
+    var activeTagKeys = Object.keys(state.tags);
+    for (var i = 0; i < activeTagKeys.length; i++) {
+      var wanted = activeTagKeys[i].toLowerCase();
+      var found = (p.tags || []).some(function (t) { return t.toLowerCase() === wanted; });
+      if (!found) return false;
+    }
+    if (state.q) {
+      var q = state.q.toLowerCase();
+      var inTitle = p.title.toLowerCase().indexOf(q) !== -1;
+      var inTags = (p.tags || []).some(function (t) { return t.toLowerCase().indexOf(q) !== -1; });
+      if (!inTitle && !inTags) return false;
+    }
+    return true;
+  }
+
+  function cardHTML(p) {
+    var img = p.thumb
+      ? '<img src="' + escapeHtml(p.thumb) + '" alt="Thumbnail" class="writeup-img">'
+      : '<img src="https://via.placeholder.com/400x200.png?text=Writeup" alt="Thumbnail" class="writeup-img">';
+    var badge = (p.tags && p.tags[0]) || p.platform || 'Writeup';
+    return '<a href="' + escapeHtml(p.url) + '" class="writeup-card">' + img +
+      '<div class="writeup-info">' +
+      '<span class="tag-medium">' + escapeHtml(badge) + '</span>' +
+      '<h4 class="writeup-title">' + escapeHtml(p.title) + '</h4>' +
+      '<p class="writeup-date">' + escapeHtml(p.date || '') + '</p>' +
+      '</div></a>';
+  }
+
+  function runSearch() {
+    if (!isSearchActive()) {
+      grid.hidden = false;
+      pagination.hidden = false;
+      resultsEl.hidden = true;
+      emptyEl.hidden = true;
+      renderStatus(0);
+      renderChips();
+      return;
+    }
+    var results = all.filter(matches);
+    grid.hidden = true;
+    pagination.hidden = true;
+    resultsEl.hidden = false;
+    emptyEl.hidden = results.length === 0;
+    resultsEl.innerHTML = results.map(cardHTML).join('');
+    renderStatus(results.length);
+    renderChips();
+  }
+
+  function toggleTag(tag) {
+    if (state.tags[tag]) delete state.tags[tag];
+    else state.tags[tag] = true;
+    renderPills();
+    runSearch();
+  }
+
+  function renderDropdown() {
+    var q = state.q.toLowerCase();
+    var counts = tagCounts();
+    var tags = Object.keys(counts).filter(function (t) {
+      return q === '' || t.toLowerCase().indexOf(q) !== -1;
+    });
+    tags.sort(function (a, b) {
+      if (counts[b] !== counts[a]) return counts[b] - counts[a];
+      return a.localeCompare(b);
+    });
+    tags = tags.slice(0, 12);
+
+    var html = '';
+    if (tags.length) {
+      html += '<div class="search-dropdown-label">Tags</div>';
+      tags.forEach(function (t) {
+        html += '<div class="search-dropdown-item" data-tag="' + escapeHtml(t) + '">' +
+          '<span>' + escapeHtml(t) + '</span><span class="item-count">' + counts[t] + '</span></div>';
+      });
+    }
+    if (!html) {
+      dropdown.hidden = true;
+      return;
+    }
+    dropdown.innerHTML = html;
+    dropdown.hidden = false;
+  }
+
+  function closeDropdown() {
+    dropdown.hidden = true;
+  }
+
+  var debounceTimer = null;
+  input.addEventListener('input', function () {
+    state.q = input.value.trim();
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function () {
+      renderDropdown();
+      runSearch();
+    }, 150);
+  });
+
+  input.addEventListener('focus', function () {
+    renderDropdown();
+  });
+
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      closeDropdown();
+      if (state.q) {
+        input.value = '';
+        state.q = '';
+        runSearch();
+      }
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    if (e.target && e.target.closest && !e.target.closest('.search-input-wrap')) closeDropdown();
+  });
+
+  dropdown.addEventListener('click', function (e) {
+    var item = e.target.closest('.search-dropdown-item');
+    if (!item) return;
+    toggleTag(item.getAttribute('data-tag'));
+    closeDropdown();
+  });
+
+  pillsEl.addEventListener('click', function (e) {
+    var pill = e.target.closest('.pill');
+    if (!pill) return;
+    state.platform = pill.getAttribute('data-platform');
+    renderPills();
+    runSearch();
+  });
+
+  chipsEl.addEventListener('click', function (e) {
+    var chip = e.target.closest('.chip');
+    if (!chip) return;
+    toggleTag(chip.getAttribute('data-tag'));
+  });
+
+  activeTagsEl.addEventListener('click', function (e) {
+    var tag = e.target.closest('.active-tag');
+    if (!tag) return;
+    toggleTag(tag.getAttribute('data-tag'));
+  });
+
+  clearAllBtn.addEventListener('click', function () {
+    state = { q: '', platform: 'All', tags: {} };
+    input.value = '';
+    closeDropdown();
+    renderPills();
+    runSearch();
+  });
+
+  renderPills();
+  renderChips();
+  runSearch();
+
   fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@jkilonzi301')
-    .then((res) => res.json())
-    .then((data) => {
-      const container = document.getElementById('blog-grid');
-      const indicator = document.getElementById('loading-indicator');
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      var container = document.getElementById('blog-grid');
+      var indicator = document.getElementById('loading-indicator');
       if (indicator) indicator.remove();
 
-      data.items.forEach((item) => {
-        let imgUrl = item.thumbnail;
-        if (!imgUrl || imgUrl === "") {
-            const imgRegex = /<img[^>]+src="([^">]+)"/;
-            const match = (item.content || item.description || "").match(imgRegex);
-            imgUrl = match ? match[1] : 'https://via.placeholder.com/400x200.png?text=Medium';
+      (data.items || []).forEach(function (item) {
+        var imgUrl = item.thumbnail;
+        if (!imgUrl || imgUrl === '') {
+          var match = (item.content || item.description || '').match(/<img[^>]+src="([^">]+)"/);
+          imgUrl = match ? match[1] : '';
         }
-        
-        const articleHTML = `
-          <a href="${item.link}" target="_blank" class="writeup-card">
-            <img src="${imgUrl}" alt="Thumbnail" class="writeup-img">
-            <div class="writeup-info">
-              <span class="tag-medium">Medium</span>
-              <h4 class="writeup-title">${item.title}</h4>
-              <p class="writeup-date">${item.pubDate.split(' ')[0]}</p>
-            </div>
-          </a>
-        `;
-        container.innerHTML += articleHTML;
+
+        medium.push({
+          title: item.title,
+          url: item.link,
+          date: (item.pubDate || '').split(' ')[0],
+          platform: 'Medium',
+          tags: [],
+          thumb: imgUrl || ''
+        });
+
+        var pubDate = new Date(item.pubDate);
+        var formattedDate = pubDate.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
+
+        var card = document.createElement('a');
+        card.href = item.link;
+        card.target = '_blank';
+        card.className = 'writeup-card';
+        card.innerHTML =
+          '<img src="' + (imgUrl || 'https://via.placeholder.com/400x200.png?text=Medium') + '" alt="Thumbnail" class="writeup-img">' +
+          '<div class="writeup-info">' +
+            '<span class="tag-medium">Medium</span>' +
+            '<h4 class="writeup-title">' + escapeHtml(item.title) + '</h4>' +
+            '<p class="writeup-date">' + formattedDate + '</p>' +
+          '</div>';
+        container.appendChild(card);
       });
+
+      all = local.concat(medium);
+      renderPills();
+      renderChips();
+      runSearch();
     })
-    .catch((error) => {
-      document.getElementById('loading-indicator').textContent = 'Failed to load Medium posts.';
-      console.error("Medium feed failed to load", error);
+    .catch(function (err) {
+      console.error('Medium feed failed to load', err);
+      var indicator = document.getElementById('loading-indicator');
+      if (indicator) indicator.textContent = 'Failed to load Medium posts.';
     });
+})();
 </script>
 
       </main>

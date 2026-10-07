@@ -2,7 +2,7 @@
 date = '2026-08-10T17:00:00+03:00'
 draft = false
 title = 'Past — HackSmarter'
-tags = ["HackSmarter", "Active Directory", "Windows", "Medium", "TimeRoasting", "Hashcat", "SYSVOL", "BloodHound", "GenericAll", "Resource-Based Constrained Delegation", "Kerberos", "DCSync", "NTDS.dit", "WinRM", "Privilege Escalation", "CTF Writeup"]
+tags = ["HackSmarter", "Windows", "Active Directory", "Medium", "SMB", "NetExec", "TimeRoasting", "Hashcat", "John the Ripper", "SYSVOL", "BloodHound", "GenericAll", "Resource-Based Constrained Delegation", "Kerberos", "DCSync", "NTDS.dit", "WinRM", "Password Spraying", "User Enumeration", "Login Restriction Bypass", "Privilege Escalation", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

@@ -2,7 +2,7 @@
 date = '2026-08-07T17:00:00+03:00'
 draft = false
 title = 'ShadowGate — HackSmarter'
-tags = ["Active Directory", "Windows", "ADCS", "ESC3", "MSSQL", "BloodHound", "Responder", "Certipy", "Kerbrute", "Privilege Escalation", "CTF Writeup"]
+tags = ["HackSmarter", "Windows", "Active Directory", "ADCS", "ESC3", "ESC7", "MSSQL", "MSSQL Impersonation", "ACL Abuse", "ForceChangePassword", "Kerberos", "NTLMv2", "SMB", "WinRM", "LDAP", "BloodHound", "Responder", "Certipy", "Kerbrute", "Impacket", "AD Recycle Bin", "Privilege Escalation", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

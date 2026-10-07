@@ -2,7 +2,7 @@
 date = '2026-06-11T18:43:53+03:00'
 draft = false
 title = 'DC03 — HackMyVM'
-tags = ["Active Directory", "Privilege Escalation", "LLMNR Poisoning", "Account Operators", "Impacket", "Responder", "CTF Writeup"]
+tags = ["HackMyVM", "Windows", "Active Directory", "Privilege Escalation", "LLMNR Poisoning", "NTLMv2", "Account Operators", "Password Reset", "Password Cracking", "NTDS.dit", "WinRM", "SMB", "LDAP", "Kerbrute", "Impacket", "Responder", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

@@ -2,7 +2,7 @@
 date = '2026-09-15T20:46:38+03:00'
 draft = false
 title = 'Yuan114 — HackMyVM'
-tags = ["HackMyVM", "Linux", "Medium", "LFI", "Local File Inclusion", "FFUF", "Gobuster", "Sudo Misconfiguration", "Privilege Escalation", "CTF Writeup"]
+tags = ["HackMyVM", "Linux", "Medium", "Burp Suite", "FFUF", "Gobuster", "LFI", "Local File Inclusion", "Proc Filesystem", "PID Fuzzing", "Plaintext Passwords", "Sudo Misconfiguration", "Privilege Escalation", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

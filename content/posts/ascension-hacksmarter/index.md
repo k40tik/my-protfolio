@@ -2,7 +2,7 @@
 date = '2026-08-07T09:08:04+03:00'
 draft = false
 title = 'Ascension — HackSmarter'
-tags = ["HackSmarter", "Linux", "Easy", "FTP", "NFS", "WordPress", "SSH", "John the Ripper", "Hydra", "Linux Capabilities", "CTF Writeup"]
+tags = ["HackSmarter", "Linux", "Easy", "FTP", "NFS", "Gobuster", "WordPress", "MySQL", "SSH", "John the Ripper", "Hydra", "Brute Force", "Credential Reuse", "Lateral Movement", "Linux Capabilities", "Privilege Escalation", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

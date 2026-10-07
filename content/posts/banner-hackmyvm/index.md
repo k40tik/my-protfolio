@@ -2,7 +2,7 @@
 date = '2026-09-18T12:00:00+03:00'
 draft = false
 title = 'Banner — HackMyVM'
-tags = ["HackMyVM", "Linux", "Easy", "FTP", "SSH", "Hydra", "Pattern Recognition", "Sudo", "Privilege Escalation", "CTF Writeup"]
+tags = ["HackMyVM", "Linux", "Easy", "FTP", "SSH", "Hydra", "Feroxbuster", "Pattern Recognition", "Sudo", "SSH Configuration Tampering", "Privilege Escalation", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

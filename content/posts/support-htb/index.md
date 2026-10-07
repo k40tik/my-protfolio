@@ -2,7 +2,7 @@
 date = '2026-07-03T16:09:13+00:00'
 draft = false
 title = 'Support — HackTheBox'
-tags = ["HackTheBox", "Windows", "Active Directory", "LDAP", "SMB", "RBCD", "Impacket", "BloodHound", "CTF Writeup"]
+tags = ["HackTheBox", "Windows", "Active Directory", "LDAP", "SMB", "Hardcoded Credentials", "Plaintext Passwords", "Reverse Engineering", "WinRM", "Kerberos", "Machine Account Creation", "GenericAll", "RBCD", "DCSync", "Impacket", "BloodHound", "Privilege Escalation", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

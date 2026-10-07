@@ -28,6 +28,13 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Bonjour — HackMyVM</title>
+				<link>http://localhost:1313/posts/bonjour-hackmyvm/</link>
+				<pubDate>Mon, 21 Sep 2026 10:30:00 +0300</pubDate>
+				<guid>http://localhost:1313/posts/bonjour-hackmyvm/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Banner — HackMyVM</title>
 				<link>http://localhost:1313/posts/banner-hackmyvm/</link>
 				<pubDate>Fri, 18 Sep 2026 12:00:00 +0300</pubDate>
@@ -70,6 +77,13 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Devoops — HackMyVM</title>
+				<link>http://localhost:1313/posts/devoops-hackmyvm/</link>
+				<pubDate>Mon, 24 Aug 2026 16:14:11 +0300</pubDate>
+				<guid>http://localhost:1313/posts/devoops-hackmyvm/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Hunter — HackMyVM</title>
 				<link>http://localhost:1313/posts/hunter-hackmyvm/</link>
 				<pubDate>Wed, 19 Aug 2026 17:35:00 +0300</pubDate>
@@ -98,10 +112,24 @@
 				<description></description>
 			</item>
 			<item>
+				<title>Ascension — HackSmarter</title>
+				<link>http://localhost:1313/posts/ascension-hacksmarter/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>http://localhost:1313/posts/ascension-hacksmarter/</guid>
+				<description></description>
+			</item>
+			<item>
 				<title>Athena — TryHackMe</title>
 				<link>http://localhost:1313/posts/athena-tryhackme/</link>
 				<pubDate>Sat, 25 Jul 2026 19:35:00 +0300</pubDate>
 				<guid>http://localhost:1313/posts/athena-tryhackme/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Support — HackTheBox</title>
+				<link>http://localhost:1313/posts/support-htb/</link>
+				<pubDate>Fri, 03 Jul 2026 16:09:13 +0000</pubDate>
+				<guid>http://localhost:1313/posts/support-htb/</guid>
 				<description></description>
 			</item>
 			<item>

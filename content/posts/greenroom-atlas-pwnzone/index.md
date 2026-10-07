@@ -2,7 +2,7 @@
 date = '2026-10-07T15:23:00+03:00'
 draft = false
 title = 'Greenroom Atlas — PwnZone CTF 2026'
-tags = ["PwnZone CTF 2026", "Cloud", "Cloud Security", "CTF Writeup", "Kubernetes", "RBAC", "Privilege Escalation", "Service Account"]
+tags = ["PwnZone CTF 2026", "Cloud", "Cloud Security", "Kubernetes", "RBAC", "Service Account", "Privilege Escalation", "Token Auto-Mounting", "Credential Leakage", "Admission Control", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

@@ -20,5 +20,19 @@
 				<guid>http://localhost:1313/posts/yuan114-hackmyvm/</guid>
 				<description></description>
 			</item>
+			<item>
+				<title>Ascension — HackSmarter</title>
+				<link>http://localhost:1313/posts/ascension-hacksmarter/</link>
+				<pubDate>Fri, 07 Aug 2026 09:08:04 +0300</pubDate>
+				<guid>http://localhost:1313/posts/ascension-hacksmarter/</guid>
+				<description></description>
+			</item>
+			<item>
+				<title>Cyborg — TryHackMe</title>
+				<link>http://localhost:1313/posts/cyborg-tryhackme/</link>
+				<pubDate>Tue, 30 Jun 2026 15:00:00 +0300</pubDate>
+				<guid>http://localhost:1313/posts/cyborg-tryhackme/</guid>
+				<description></description>
+			</item>
 	</channel>
 </rss>

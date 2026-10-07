@@ -2,7 +2,7 @@
 date = '2026-08-24T16:14:11+03:00'
 draft = false
 title = 'Devoops — HackMyVM'
-tags = ["HackMyVM", "Linux", "Easy", "Vite", "CVE-2025-30208", "JWT", "Node.js", "Gitea", "Chisel", "GTFOBins", "John the Ripper", "CTF Writeup"]
+tags = ["HackMyVM", "Linux", "Easy", "Vite", "CVE-2025-30208", "Arbitrary File Read", "Source Code Exposure", "JWT", "JWT Forgery", "Remote Code Execution", "Node.js", "Gitea", "Git History", "Chisel", "SSH", "Lateral Movement", "Sudo Misconfiguration", "GTFOBins", "Privilege Escalation", "Reverse Shell", "Feroxbuster", "John the Ripper", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++

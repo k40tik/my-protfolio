@@ -2,7 +2,7 @@
 date = '2026-10-07T15:21:00+03:00'
 draft = false
 title = 'Stageworks — PwnZone CTF 2026'
-tags = ["PwnZone CTF 2026", "Cloud", "Cloud Security", "CTF Writeup", "IAM", "Trust Policy", "Tag Injection", "Privilege Escalation"]
+tags = ["PwnZone CTF 2026", "Cloud", "Cloud Security", "IAM", "Trust Policy", "External ID", "Session Tags", "Tag Injection", "Role Assumption", "Information Disclosure", "Broken Access Control", "Privilege Escalation", "CTF Writeup"]
 feature = 'feature.png'
 showTableOfContents = true
 +++
